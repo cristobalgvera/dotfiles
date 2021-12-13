@@ -1,0 +1,27 @@
+[user]
+	email = cristobalgajardo.v@gmail.com
+	name = Cristobal Gajardo Vera
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+[init]
+	defaultBranch = main
+	
+[core]
+  	safecrlf = warn
+
+# Conditional configuration based on OS 
+
+[includeIf "gitdir/i:C:/"]
+	path = ~/.gitconfig-windows
+
+[includeIf "gitdir/i:D:/"]
+	path = ~/.gitconfig-windows
+	
+[includeIf "gitdir/i:Users/"]
+	path = ~/.gitconfig-mac

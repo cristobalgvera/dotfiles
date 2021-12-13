@@ -16,6 +16,13 @@ function GetSharedFiles {
             From  = "$SHARED\.ideavimrc";
             To    = "$HOME\.ideavimrc";
             Force = $Force
+        },
+
+        # Git configuration
+        [PSCustomObject]@{
+            From  = "$SHARED\.gitconfig";
+            To    = "$HOME\.gitconfig";
+            Force = $Force
         }
     )
 }
@@ -35,7 +42,14 @@ function GetWindowsFiles {
             From  = "$WINDOWS\files\Microsoft.PowerShell_profile.ps1";
             To    = $PROFILE;
             Force = $Force
-        }
+        },
+
+        # Git configuration (Windows only)
+        [PSCustomObject]@{
+            From  = "$WINDOWS\files\.gitconfig";
+            To    = "$HOME\.gitconfig-windows";
+            Force = $Force
+        },
 
         # SpaceVim configuration
         [PSCustomObject]@{
