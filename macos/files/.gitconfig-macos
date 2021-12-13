@@ -1,6 +1,6 @@
 [core]
-    autocrlf = input 
-    editor = lvim
+autocrlf = input
+editor = lvim
 
 [credential]
-    helper = osxkeychain
+helper = osxkeychain

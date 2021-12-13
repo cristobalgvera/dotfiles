@@ -146,7 +146,6 @@ fi
 ZSHZ_CASE=smart
 
 # Aliases
-
 alias repos='cd ~/Documents/Repositories'
 alias ls='colorls -A --sd'
 alias bup='brew cu -a --cleanup'
