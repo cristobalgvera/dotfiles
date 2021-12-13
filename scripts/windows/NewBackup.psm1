@@ -26,7 +26,7 @@ function NewBackup {
         Remove-Item -Path $BackupFilePath -Force -Recurse -ErrorAction Stop
       }
       else {
-        Write-Host "`nThere is already a backup file in '$BackupFilePath'. If you want to override backups, use -Force flag."
+        Write-Information "`nThere is already a backup file in '$BackupFilePath'. If you want to override backups, use -Force flag."
         return
       }
     }
@@ -34,6 +34,6 @@ function NewBackup {
     Rename-Item -Path $Path -NewName $BackupFilePath -ErrorAction Stop
   }
   catch {
-    Write-Host "`nAn error ocurred when doing backup for '$Path': $_"
+    Write-Error "`nAn error ocurred when doing backup for '$Path': $_"
   }
 }

@@ -39,6 +39,6 @@ function NewSymlink {
     $SeparatedFromPath = $FromPath.Split("\")
     $FromFileName = $SeparatedFromPath[-1]
 
-    Write-Host "`nWas not created '$FromFileName': $_" -Fore yellow 
+    Write-Warning "`nWas not created '$FromFileName': $_"
   }
 }
