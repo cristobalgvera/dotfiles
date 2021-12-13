@@ -46,7 +46,7 @@ function GetWindowsFiles {
 
         # Git configuration (Windows only)
         [PSCustomObject]@{
-            From  = "$WINDOWS\files\.gitconfig";
+            From  = "$WINDOWS\files\.gitconfig-windows";
             To    = "$HOME\.gitconfig-windows";
             Force = $Force
         },
@@ -57,6 +57,13 @@ function GetWindowsFiles {
             To       = "$HOME\.SpaceVim.d";
             IsFolder = $true;
             Force    = $Force
+        },
+
+        # Winrar key
+        [PSCustomObject]@{
+            From  = "$WINDOWS\files\rarreg.key";
+            To    = "$Env:ProgramFiles\winRAR\rarreg.key";
+            Force = $Force
         }
     )
 }
