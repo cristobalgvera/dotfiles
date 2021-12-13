@@ -1,4 +1,7 @@
 [core]
 	longpaths = true
-	editor = nvim
   	autocrlf = true
+	editor = nvim
+
+[credential]
+	helper = manager
