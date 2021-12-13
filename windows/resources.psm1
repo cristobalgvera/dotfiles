@@ -60,6 +60,10 @@ function GetModules {
 
         [PSCustomObject]@{
             Name = "Terminal-Icons";
+        },
+
+        [PSCustomObject]@{
+            Name = "PSFzf";
         }
     )
 }

@@ -38,14 +38,11 @@ function SetConsoleTheme {
   }
 }
 
-function SetLocationToRepositoriesFolder { Set-Location D:\crist\Documents\Repositorios }
-
 # Start executions
 SetConsoleTheme
 
 # Alias
-New-Alias repos SetLocationToRepositoriesFolder 
-New-Alias v nvim
+Set-Alias v nvim
 
 # Z port to PowerShell
 ImportModule z
@@ -56,6 +53,27 @@ ImportModule Terminal-Icons
 # History based auto-completion
 ImportModule PSReadLine
 Set-PSReadLineOption -PredictionSource History
+
+# Fuzzy finder
+Import-Module PSFzf
+Set-PSFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+
+# Utilities
+function repos { Set-Location D:\crist\Documents\Repositorios }
+
+function which {
+  [CmdletBinding()]
+  param (
+    [Parameter(Mandatory)]
+    [string]
+    $Command
+  )
+
+  $Command = $Command -replace ' ', '\ '
+  $Command = $Command -replace '"', '\"'
+
+  Invoke-Expression "where.exe $Command"
+}
 
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"

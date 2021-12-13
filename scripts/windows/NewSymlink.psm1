@@ -31,7 +31,7 @@ function NewSymlink {
   try {
     New-Item `
       -Path $ToPath `
-      -ItemType $($IsFoldel ? "Junction" : "SymbolicLink") `
+      -ItemType $($IsFolder ? "Junction" : "SymbolicLink") `
       -Value (Get-Item "$FromPath").FullName `
       -ErrorAction Stop
   }
@@ -39,6 +39,6 @@ function NewSymlink {
     $SeparatedFromPath = $FromPath.Split("\")
     $FromFileName = $SeparatedFromPath[-1]
 
-    Write-Host "`nWas not created '$FromFileName': $_" -Fore red
+    Write-Host "`nWas not created '$FromFileName': $_" -Fore yellow 
   }
 }
