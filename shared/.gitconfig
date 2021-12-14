@@ -7,7 +7,7 @@ co = checkout
 ci = commit
 st = status
 br = branch
-hist = log --graph --abbrev-commit --decorate --date=format:'%a %d %b %Y %H:%M' --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+hist = log --graph --abbrev-commit --decorate --date=format:'%a %d %b %Y %H:%M' --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
 
 [init]
 defaultBranch = main
