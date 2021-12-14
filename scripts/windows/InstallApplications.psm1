@@ -112,6 +112,7 @@ function ConfigureChocolatey {
 function AddChocolateyApps {
     $Applications = @(
         "git",
+        "golang",
         "googlechrome",
         "google-drive-file-stream",
         "lightshot.install",
@@ -148,6 +149,15 @@ function AddApplications {
     AddChocolateyApps
 }
 
+function PostAddApplications {
+    # Create GO working directory
+    New-Item -ItemType Directory -Path $HOME\go\bin
+    New-Item -ItemType Directory -Path $HOME\go\src
+
+    # Add GO bin folder to PATH
+    setx PATH "$($Env:PATH);$GOPATH\bin" /m
+}
+
 function InstallApplications {
     InstallPackageManagers
     RefreshEnvironment
@@ -157,6 +167,8 @@ function InstallApplications {
 
     AddApplications
     RefreshEnvironment
+
+    PostAddApplications
 }
 
 Export-ModuleMember -Function InstallApplications 
