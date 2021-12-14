@@ -1,87 +1,74 @@
-#=============================================================================
-# dark_powered.toml --- dark powered configuration example for SpaceVim
-# Copyright (c) 2016-2020 Wang Shidong & Contributors
-# Author: Wang Shidong < wsdjeg at 163.com >
-# URL: https://spacevim.org
-# License: GPLv3
-#=============================================================================
-
 # All SpaceVim option below [option] section
 [options]
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer
-    colorscheme = "halcyon"
-    colorscheme_bg = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
-    enable_guicolors = true
+  colorscheme = "halcyon"
+  colorscheme_bg = "dark"
+  enable_guicolors = true
 
-    # install nerd fonts
-    statusline_separator = "arrow"
-    statusline_iseparator = "arrow"
-    buffer_index_type = 4
-    enable_tabline_filetype_icon = true
-    enable_statusline_mode = false
-    filemanager = "defx"
+  # Layer: core#statusline
+  statusline_separator = "arrow"
+  statusline_iseparator = "arrow"
+  buffer_index_type = 4
+  enable_statusline_mode = true
 
-# Enable autocomplete layer
+  # Layer: core#tabline
+  enable_tabline_filetype_icon = true
+
+  # Layer: autocomplete
+  autocomplete_method = 'coc'
+
+# Autocomplete
 [[layers]]
-    name = 'autocomplete'
-    auto_completion_return_key_behavior = "complete"
-    auto_completion_tab_key_behavior = "smart"
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "smart"
 
+# Improved default options
 [[layers]]
-    name = 'shell'
-    default_position = 'top'
-    default_height = 30
+  name = 'default'
 
-# Enable fuzzy finder (another fine option is 'unite')
+# Fuzzy finder
 [[layers]]
-    name = "denite"
+  name = 'fzf'
 
-# Custom theme https://github.com/mhartington/oceanic-next
-[[custom_plugins]]
-    repo = "mhartington/oceanic-next"
-    merged = 0
+# Git support
+[[layers]]
+  name = 'git'
 
-# Custom theme https://github.com/drewtempelmeyer/palenight.vim
-[[custom_plugins]]
-    repo = "https://github.com/drewtempelmeyer/palenight.vim"
-    merged = false
+# Create terminal sessions inside Neovim
+[[layers]]
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
+
+# Add extra Vim tools
+[[layers]]
+  name = 'tools'
+
+# Language support
+[[layers]]
+  name = 'lang#javascript'
+  auto_fix = true
+# [[layers]]
+#   name = 'lang#typescript'
+[[layers]]
+  name = 'lang#python'
+[[layers]]
+  name = 'lang#go'
+[[layers]]
+  name = 'lang#html'
+[[layers]]
+  name = 'lang#powershell'
+[[layers]]
+  name = 'lang#markdown'
 
 # Custom theme https://github.com/NieTiger/halcyon-neovim
 [[custom_plugins]]
   repo = "https://github.com/NieTiger/halcyon-neovim"
   merged = false
-
-# Custom theme https://github.com/KeitaNakamura/neodark.vim
-[[custom_plugins]]
-  repo = "https://github.com/KeitaNakamura/neodark.vim"
-  merged = false
-
-# Custom theme https://github.com/ghifarit53/tokyonight-vim
-[[custom_plugins]]
-  repo = "https://github.com/ghifarit53/tokyonight-vim" 
-  merged = 0
-
 # Custom icons https://github.com/ryanoasis/vim-devicons
+
 [[custom_plugins]]
    repo = "ryanoasis/vim-devicons"
    # note: you need to disable merged feature
    merged = false
 
-# This repo throws errors when Neovim open
-# Custom icons https://github.com/kristijanhusak/defx-icons
-#    repo = "https://github.com/kristijanhusak/defx-icons"
-#   merged = false
-
-# Language support
-[[layers]]
-    name = "lang#javascript"
-
-[[layers]]
-    name = "lang#typescript"
-
-[[layers]]
-    name = "lang#python"
