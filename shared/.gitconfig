@@ -23,5 +23,5 @@ path = ~/.gitconfig-windows
 [includeIf "gitdir/i:D:/"]
 path = ~/.gitconfig-windows
 
-[includeIf "gitdir/i:/Users/"]
+[includeIf "gitdir/i:Users/"]
 path = ~/.gitconfig-macos

@@ -3,7 +3,19 @@ param
 (
     [Parameter()]
     [switch]
-    $Force
+    $Force,
+
+    [Parameter()]
+    [switch]
+    $NoApps,
+
+    [Parameter()]
+    [switch]
+    $NoModules,
+
+    [Parameter()]
+    [switch]
+    $NoSymlinks
 )
 
 if (-not ([Security.Principal.WindowsPrincipal] `
@@ -21,11 +33,23 @@ Import-Module $SCRIPTS\InstallApplications
 Import-Module $PSScriptRoot\resources
 
 # Install base applications
-InstallApplications
+if ($NoApps) { Write-Host "Skipping installation of base applications" -ForegroundColor Blue }
+else { 
+    Write-Host "Installing base applications" -ForegroundColor Green
+    InstallApplications 
+}
 
 # Install all required modules
-AddModules (GetModules)
+if ($NoModules) { Write-Host "Skipping installation of modules" -ForegroundColor Blue }
+else { 
+    Write-Host "Installing modules" -ForegroundColor Green 
+    AddModules (GetModules)
+}
 
 # Add symbolic links to each dotfile
-AddSymlinks (GetSharedFiles $Force) 
-AddSymlinks (GetWindowsFiles $Force)
+if ($NoSymlinks) { Write-Host "Skipping creation of symbolic links" -ForegroundColor Blue }
+else { 
+    Write-Host "Creating symbolic links" -ForegroundColor Green
+    AddSymlinks (GetSharedFiles $Force) 
+    AddSymlinks (GetWindowsFiles $Force)
+}
