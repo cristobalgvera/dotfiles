@@ -10,8 +10,12 @@ In administrator mode.
 windows/install.ps1
 ```
 
+More options in [Windows README](windows/README.md)
+
 ## MacOS
 
 ```bash
 macos/install.sh
 ```
+
+More options in [MacOS README](macos/README.md)

@@ -7,3 +7,72 @@ In administrator mode.
 ```powershell
 install.ps1
 ```
+
+## What will be installed?
+
+Installation process will bootstrap following applications and configurations:
+
+### Apps
+
+- Chocolatey:
+  - git
+  - googlechrome
+  - google-drive-file-stream
+  - lightshot.install
+  - microsoft-windows-terminal
+  - neovim
+  - powershell-core
+  - powertoys
+  - python
+  - vscode
+  - whatsapp
+  - winrar
+- Scoop:
+  - aria2
+  - fzf
+  - psutils
+  - oh-my-posh
+  - 7zip
+
+### Modules
+
+- PowerShell:
+  - PSReadLine
+  - z
+  - Terminal-Icons
+  - PSFzf
+
+### Dotfiles
+
+- Git
+- IdeaVim
+- PowerShell profile
+- SpaceVim
+- WinRAR lifetime key
+
+#### Recommendations
+
+SpaceVim autocomplete layer uses COC, you should define your own convenience languages.
+Useful list [here](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+
+## Flags
+
+You can provide special flags to avoid certain processes.
+Available flags are:
+
+| Flag   | Description                     |
+| ------ | ------------------------------- |
+| NoApps | Doesn't install any Windows application |
+| NoModules | Doesn't install any PowerShell module |
+| NoSymlinks | Doesn't install any Windows symlinks |
+| Force | Force symbolic links creation |
+
+### Usage
+
+```powershell
+install.ps1 [-Flags]
+
+# Example:
+# Just will create symbolic links and overwrite backups if exists.
+install.ps1 -NoApps -NoModules -Force
+```
