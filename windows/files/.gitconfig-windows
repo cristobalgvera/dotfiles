@@ -4,4 +4,4 @@
 	editor = nvim
 
 [credential]
-	helper = credential-manager-core
+	helper = manager-core
