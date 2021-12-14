@@ -9,6 +9,10 @@ function AppExists {
     return Test-Path ((where.exe $AppName) ?? '')
 }
 
+function RefreshEnvironment {
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+}
+
 function InstallScoop {
     Write-Host "Installing Scoop..."
 
@@ -146,8 +150,14 @@ function AddApplications {
 
 function InstallApplications {
     InstallPackageManagers
+    RefreshEnvironment
+
     ConfigurePackageManagers
+    RefreshEnvironment
+
     AddApplications
+    RefreshEnvironment
 }
 
 Export-ModuleMember -Function InstallApplications 
+

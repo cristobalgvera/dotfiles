@@ -14,10 +14,6 @@ function NewBackup {
     $Force = $false
   )
 
-  if (-not(FindPath $Path)) {
-    return
-  }
-
   $BackupFilePath = "$Path.backup"
 
   try {
