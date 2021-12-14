@@ -2,7 +2,7 @@
 
 Bootstrap Windows configuration.
 
-```bash
+```powershell
 # With administrator permissions
 
 install.ps1
