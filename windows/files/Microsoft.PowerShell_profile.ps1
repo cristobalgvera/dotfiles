@@ -59,7 +59,10 @@ Import-Module PSFzf
 Set-PSFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Utilities
-function repos { Set-Location D:\crist\Documents\Repositorios }
+function repos {
+  $MyDocuments = [Environment]::GetFolderPath([Environment+SpecialFolder]::MyDocuments)
+  Set-Location "$MyDocuments\Repositories"
+}
 
 function which {
   [CmdletBinding()]
