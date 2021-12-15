@@ -59,6 +59,13 @@ function GetWindowsFiles {
             Force    = $Force
         },
 
+        # Windows Terminal configuration
+        [PSCustomObject]@{
+            From  = "$WINDOWS\files\wt-settings.json";
+            To    = "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json";
+            Force = $Force
+        },
+
         # Winrar key
         [PSCustomObject]@{
             From  = "$WINDOWS\files\rarreg.key";
