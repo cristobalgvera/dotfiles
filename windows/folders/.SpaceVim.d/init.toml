@@ -6,13 +6,13 @@
   bootstrap_after = 'config#after'
 
   # Base configuration
-  colorscheme = "halcyon"
-  colorscheme_bg = "dark"
+  colorscheme = 'halcyon'
+  colorscheme_bg = 'dark'
   enable_guicolors = true
 
   # Layer: core#statusline
-  statusline_separator = "arrow"
-  statusline_iseparator = "arrow"
+  statusline_separator = 'arrow'
+  statusline_iseparator = 'arrow'
   buffer_index_type = 4
   enable_statusline_mode = true
 
@@ -25,8 +25,8 @@
 # Autocomplete
 [[layers]]
   name = 'autocomplete'
-  auto_completion_return_key_behavior = "complete"
-  auto_completion_tab_key_behavior = "smart"
+  auto_completion_return_key_behavior = 'complete'
+  auto_completion_tab_key_behavior = 'smart'
 
 # Improved default options
 [[layers]]
@@ -73,18 +73,18 @@
 
 # Custom theme https://github.com/NieTiger/halcyon-neovim
 [[custom_plugins]]
-  repo = "NieTiger/halcyon-neovim"
+  repo = 'NieTiger/halcyon-neovim'
   merged = true
 
 # Custom icons https://github.com/ryanoasis/vim-devicons
 [[custom_plugins]]
-  repo = "ryanoasis/vim-devicons"
+  repo = 'ryanoasis/vim-devicons'
   # note: you need to disable merged feature
   merged = false
 
 # Vim WakaTime
 [[custom_plugins]]
-  repo = "wakatime/vim-wakatime"
+  repo = 'wakatime/vim-wakatime'
   merged = true
 
 # Github Copilot
@@ -97,3 +97,18 @@
   repo = 'phaazon/hop.nvim'
   merged = true
   on_event = 'BufRead'
+
+# AutoSave
+[[custom_plugins]]
+  repo = 'Pocco81/AutoSave.nvim'
+  merged = true
+
+# DiffView -> Plenary
+[[custom_plugins]]
+  repo = 'nvim-lua/plenary.nvim'
+  merged = true
+
+# DiffView
+[[custom_plugins]]
+  repo = 'sindrets/diffview.nvim'
+  merged = true
