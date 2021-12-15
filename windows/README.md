@@ -52,20 +52,20 @@ Installation process will bootstrap following applications and configurations:
 
 #### Recommendations
 
-SpaceVim autocomplete layer uses COC, you should define your own convenience languages.
-Useful list [here](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+1. SpaceVim autocomplete layer uses COC, you should define your own convenience languages via `:CocInstall coc-[language_server]`. Useful list [here](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+2. After the first modules installation, run `:GoInstallBinaries` to get all Golang layer used Go binaries.
 
 ## Flags
 
 You can provide special flags to avoid certain processes.
 Available flags are:
 
-| Flag   | Description                     |
-| ------ | ------------------------------- |
-| NoApps | Doesn't install any Windows application |
-| NoModules | Doesn't install any PowerShell module |
-| NoSymlinks | Doesn't install any Windows symlinks |
-| Force | Force symbolic links creation |
+| Flag       | Description                             |
+| ---------- | --------------------------------------- |
+| NoApps     | Doesn't install any Windows application |
+| NoModules  | Doesn't install any PowerShell module   |
+| NoSymlinks | Doesn't install any Windows symlinks    |
+| Force      | Force symbolic links creation           |
 
 ### Usage
 
