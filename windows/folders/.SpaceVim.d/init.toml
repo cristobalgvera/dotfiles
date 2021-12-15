@@ -63,12 +63,21 @@
 
 # Custom theme https://github.com/NieTiger/halcyon-neovim
 [[custom_plugins]]
-  repo = "https://github.com/NieTiger/halcyon-neovim"
+  repo = "NieTiger/halcyon-neovim"
   merged = false
+
 # Custom icons https://github.com/ryanoasis/vim-devicons
-
 [[custom_plugins]]
-   repo = "ryanoasis/vim-devicons"
-   # note: you need to disable merged feature
-   merged = false
+  repo = "ryanoasis/vim-devicons"
+  # note: you need to disable merged feature
+  merged = false
 
+# Vim WakaTime
+[[custom_plugins]]
+  repo = "wakatime/vim-wakatime"
+  merged = true
+
+# Github Copilot
+[[custom_plugins]]
+  repo = 'github/copilot.vim'
+  merged = true
