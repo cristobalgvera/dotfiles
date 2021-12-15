@@ -1,3 +1,17 @@
 {
-  "coc.preferences.extensionUpdateCheck": "weekly"
+  "coc.preferences.extensionUpdateCheck": "weekly",
+  "cSpellExt.enableDictionaries": ["spanish"],
+  "cSpell.language": "en,es",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "js",
+    "jsx",
+    "ts",
+    "tsx",
+    "html",
+    "css",
+    "scss",
+    "markdown",
+    "json",
+    "yaml"
+  ]
 }
