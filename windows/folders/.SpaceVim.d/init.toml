@@ -112,3 +112,8 @@
 [[custom_plugins]]
   repo = 'sindrets/diffview.nvim'
   merged = true
+
+# Vim Floaterm
+[[custom_plugins]]
+  repo = 'voldikss/vim-floaterm'
+  merged = true
