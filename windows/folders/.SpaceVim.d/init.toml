@@ -1,6 +1,5 @@
 # All SpaceVim option below [option] section
 [options]
-  
   # Bootstrap options
   bootstrap_before = 'config#before'
   bootstrap_after = 'config#after'

@@ -59,6 +59,13 @@ function GetWindowsFiles {
             Force    = $Force
         },
 
+        # CoC settings
+        [PSCustomObject]@{
+            From  = "$WINDOWS\files\coc-settings.json";
+            To    = "$HOME\.SpaceVim\coc-settings.json";
+            Force = $Force
+        },
+
         # Windows Terminal configuration
         [PSCustomObject]@{
             From  = "$WINDOWS\files\wt-settings.json";
