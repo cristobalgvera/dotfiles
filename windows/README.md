@@ -16,6 +16,7 @@ Installation process will bootstrap following applications and configurations:
 
 - Chocolatey:
   - git
+  - go
   - googlechrome
   - google-drive-file-stream
   - lightshot.install
@@ -44,10 +45,11 @@ Installation process will bootstrap following applications and configurations:
 
 ### Dotfiles
 
-- Git
-- IdeaVim
+- Git config
+- IdeaVim config
 - PowerShell profile
-- SpaceVim
+- SpaceVim settings
+- Windows Terminal settings
 - WinRAR lifetime key
 
 #### Recommendations
