@@ -1,5 +1,11 @@
 # All SpaceVim option below [option] section
 [options]
+  
+  # Bootstrap options
+  bootstrap_before = 'config#before'
+  bootstrap_after = 'config#after'
+
+  # Base configuration
   colorscheme = "halcyon"
   colorscheme_bg = "dark"
   enable_guicolors = true
@@ -25,6 +31,10 @@
 # Improved default options
 [[layers]]
   name = 'default'
+
+[[layers]]
+  name = 'core'
+  filetree_show_hidden = true
 
 # Fuzzy finder
 [[layers]]
@@ -64,7 +74,7 @@
 # Custom theme https://github.com/NieTiger/halcyon-neovim
 [[custom_plugins]]
   repo = "NieTiger/halcyon-neovim"
-  merged = false
+  merged = true
 
 # Custom icons https://github.com/ryanoasis/vim-devicons
 [[custom_plugins]]
@@ -81,3 +91,9 @@
 [[custom_plugins]]
   repo = 'github/copilot.vim'
   merged = true
+
+# Hop
+[[custom_plugins]]
+  repo = 'phaazon/hop.nvim'
+  merged = true
+  on_event = 'BufRead'
