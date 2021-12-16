@@ -1,8 +1,7 @@
-# All SpaceVim option below [option] section
 [options]
   # Bootstrap options
-  bootstrap_before = 'config#before'
-  bootstrap_after = 'config#after'
+  bootstrap_before = 'init#before'
+  bootstrap_after = 'init#after'
 
   # Base configuration
   colorscheme = 'halcyon'
