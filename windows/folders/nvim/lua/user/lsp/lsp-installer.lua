@@ -21,9 +21,9 @@ lsp_installer.on_server_ready(function(server)
 		opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
 	end
 
-  if server.name == "tsserver" then
-    local tsserver_opts = require("user.lsp.settings.tsserver")
-    opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
+  if server.name == "html" then
+    local html_opts = require("user.lsp.settings.html")
+    opts = vim.tbl_deep_extend("force", html_opts, opts)
   end
 
 	-- This setup() function is exactly the same as lspconfig's setup function.
