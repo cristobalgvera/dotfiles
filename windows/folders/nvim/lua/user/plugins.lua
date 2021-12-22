@@ -43,16 +43,22 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
   use {
-    -- CMP plugins
+    -- Autocompletion plugins
     "hrsh7th/nvim-cmp",                         -- completion plugin
     "hrsh7th/cmp-buffer",                       -- buffer completions
     "hrsh7th/cmp-path",                         -- path completions
     "hrsh7th/cmp-cmdline",                      -- cmdline completions
     "saadparwaiz1/cmp_luasnip",                 -- snippet completions
+    "hrsh7th/cmp-nvim-lua",                     -- autocompletion support for lua
+    "hrsh7th/cmp-nvim-lsp",                     -- autocompletion support for lsp
 
     -- Snippets
     "L3MON4D3/LuaSnip",                         -- snippet engine
     "rafamadriz/friendly-snippets",             -- a bunch of snippets to use
+
+    -- LSP
+    "neovim/nvim-lspconfig",                    -- enable lsp
+    "williamboman/nvim-lsp-installer",          -- simple to use language server installer
 
     -- Colorschemes
     "folke/tokyonight.nvim",                    -- tokyonight colorscheme
