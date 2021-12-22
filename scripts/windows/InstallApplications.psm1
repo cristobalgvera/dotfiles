@@ -64,12 +64,20 @@ function AddScoopApps {
             Name = "7zip";
         },
         [PSCustomObject]@{
-            CLI = "wget";
+            CLI  = "wget";
             Name = "wget";
         },
         [PSCustomObject]@{
-            CLI = "gzip";
+            CLI  = "gzip";
             Name = "gzip";
+        },
+        [PSCustomObject]@{
+            CLI  = "rg";
+            Name = "ripgrep";
+        },
+        [PSCustomObject]@{
+            CLI  = "fd";
+            Name = "fd";
         }
     )
 

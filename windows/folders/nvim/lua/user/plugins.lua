@@ -49,7 +49,10 @@ return packer.startup(function(use)
     "hrsh7th/cmp-path",                         -- path completions
     "hrsh7th/cmp-cmdline",                      -- cmdline completions
     "saadparwaiz1/cmp_luasnip",                 -- snippet completions
-    "hrsh7th/cmp-nvim-lua",                     -- autocompletion support for lua
+    {
+      "hrsh7th/cmp-nvim-lua",                     -- autocompletion support for lua
+      ft = { "lua" }
+    },
     "hrsh7th/cmp-nvim-lsp",                     -- autocompletion support for lsp
 
     -- Snippets
@@ -59,6 +62,14 @@ return packer.startup(function(use)
     -- LSP
     "neovim/nvim-lspconfig",                    -- enable lsp
     "williamboman/nvim-lsp-installer",          -- simple to use language server installer
+
+    -- Telescope
+    "nvim-telescope/telescope.nvim",            -- telescope support
+    "nvim-telescope/telescope-media-files.nvim",-- telescope for media files
+    "nvim-telescope/telescope-fzy-native.nvim", -- fzf finder
+
+    -- Web development icons
+    "kyazdani42/nvim-web-devicons",             -- icons pack
 
     -- Colorschemes
     "folke/tokyonight.nvim",                    -- tokyonight colorscheme
