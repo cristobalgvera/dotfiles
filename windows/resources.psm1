@@ -59,6 +59,14 @@ function GetWindowsFiles {
             Force    = $Force
         },
 
+	# Nvim configuration
+	[PSCustomObject]@{
+            From     = "$WINDOWS\folders\nvim";
+            To       = "$Env:LocalAppData\nvim";
+            IsFolder = $true;
+            Force    = $Force
+	},
+
         # CoC settings
         [PSCustomObject]@{
             From  = "$WINDOWS\files\coc-settings.json";
