@@ -62,11 +62,18 @@ return packer.startup(function(use)
     -- LSP
     "neovim/nvim-lspconfig",                    -- enable lsp
     "williamboman/nvim-lsp-installer",          -- simple to use language server installer
+    "tamago324/nlsp-settings.nvim",         -- language server settings defined in json for
 
     -- Telescope
     "nvim-telescope/telescope.nvim",            -- telescope support
     "nvim-telescope/telescope-media-files.nvim",-- telescope for media files
     "nvim-telescope/telescope-fzy-native.nvim", -- fzf finder
+
+    -- TreeSitter
+    {
+      "nvim-treesitter/nvim-treesitter",        -- treesitter support
+      run = ":TSUpdate"
+    },
 
     -- Web development icons
     "kyazdani42/nvim-web-devicons",             -- icons pack
