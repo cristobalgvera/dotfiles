@@ -40,8 +40,6 @@ local globals = {
     transparent_background = true,              -- transparent background (Default: false)
     italic_comments = true,                     -- italic comments (Default: true)
     italic_keywords = true,                     -- italic keywords (Default: true)
-    italic_functions = true,                    -- italic functions (Default: false)
-    italic_variables = true,                    -- italic variables (Default: false)
   },
   tokyonight = {
     style = "storm",                            -- can be 'storm', 'night' or 'day'
