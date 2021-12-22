@@ -43,15 +43,26 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
   use {
+    -- CMP plugins
+    "hrsh7th/nvim-cmp",                         -- completion plugin
+    "hrsh7th/cmp-buffer",                       -- buffer completions
+    "hrsh7th/cmp-path",                         -- path completions
+    "hrsh7th/cmp-cmdline",                      -- cmdline completions
+    "saadparwaiz1/cmp_luasnip",                 -- snippet completions
+
+    -- Snippets
+    "L3MON4D3/LuaSnip",                         -- snippet engine
+    "rafamadriz/friendly-snippets",             -- a bunch of snippets to use
+
     -- Colorschemes
-    "folke/tokyonight.nvim", -- Tokyo Night colorscheme
+    "folke/tokyonight.nvim",                    -- tokyonight colorscheme
 
     -- Common plugins
-    "nvim-lua/popup.nvim", -- An implementation of the Popup API from vim in Neovim
-    "nvim-lua/plenary.nvim", -- Useful lua functions used ny lots of plugins
+    "nvim-lua/popup.nvim",                      -- an implementation of the popup api from vim in neovim
+    "nvim-lua/plenary.nvim",                    -- useful lua functions used ny lots of plugins
 
     -- Packer base
-    "wbthomason/packer.nvim", -- Have packer manage itself
+    "wbthomason/packer.nvim",                   -- have packer manage itself
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
