@@ -33,6 +33,10 @@ keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require
 keymap("n", "<Leader>t", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope fd<cr>", opts)
 
+-- Hop
+keymap("n", "f", ":HopChar2<CR>", opts)
+keymap("n", "F", ":HopWord<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
