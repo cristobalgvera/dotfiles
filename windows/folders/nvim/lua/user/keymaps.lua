@@ -30,8 +30,8 @@ keymap("n", "<Leader>e", ":Lex 30<cr>", opts)
 -- Telescope
 -- keymap("n", "<Leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<C-a>", "<cmd>Telescope fd<cr>", opts)
+keymap("n", "<Leader>t", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<C-t>", "<cmd>Telescope fd<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
