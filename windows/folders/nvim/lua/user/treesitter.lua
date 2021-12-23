@@ -40,5 +40,8 @@ configs.setup {
     -- disable = { "jsx", "tsx" },  -- disable on specific files
     extended_mode = true,           -- also highlight non-brackets delimiters like html tags, boolean or table: lang -> boolean
     max_file_lines = nil,           -- disable when file lines are greater than n (int)
+  },
+  autotag = {
+    enable = true,
   }
 }

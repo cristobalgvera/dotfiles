@@ -74,6 +74,7 @@ return packer.startup(function(use)
       run = ":TSUpdate"
     },
     "p00f/nvim-ts-rainbow",                     -- rainbow brackets
+    "windwp/nvim-ts-autotag",                   -- auto close html tags
 
     -- Web development icons
     "kyazdani42/nvim-web-devicons",             -- icons pack
