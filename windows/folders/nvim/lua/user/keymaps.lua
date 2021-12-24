@@ -54,6 +54,13 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- Bufferline
+keymap("n", "gb", "<cmd>BufferLinePick<cr>", opts)
+keymap("n", "<", "<cmd>BufferLineCyclePrev<cr>", opts)
+keymap("n", ">", "<cmd>BufferLineCycleNext<cr>", opts)
+keymap("n", "<C-[>", "<cmd>BufferLineMovePrev<cr>", opts)
+keymap("n", "<C-]>", "<cmd>BufferLineMoveNext<cr>", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)

@@ -8,4 +8,6 @@ require "user.telescope"
 require "user.treesitter"
 require "user.hop"
 require "user.gitsigns"
+require "user.trouble"
+require "user.bufferline"
 

@@ -100,6 +100,12 @@ return packer.startup(function(use)
     -- Web development icons
     "kyazdani42/nvim-web-devicons",             -- icons pack
 
+    -- Bufferline
+    {
+      "akinsho/bufferline.nvim",                -- tabs-like buffer usage
+      requires = "kyazdani42/nvim-web-devicons"
+    },
+
     -- Colorschemes
     "folke/tokyonight.nvim",                    -- tokyonight colorscheme
 
