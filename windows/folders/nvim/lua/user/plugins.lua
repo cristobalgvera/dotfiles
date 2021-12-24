@@ -91,6 +91,12 @@ return packer.startup(function(use)
       requires = "nvim-lua/plenary.nvim",
     },
 
+    -- Troubles manager
+    {
+      "folke/trouble.nvim",                     -- troubles easy management
+      requires = "kyazdani42/nvim-web-devicons",
+    },
+
     -- Web development icons
     "kyazdani42/nvim-web-devicons",             -- icons pack
 

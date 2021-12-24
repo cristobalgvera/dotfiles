@@ -28,14 +28,21 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<Leader>e", ":Lex 30<cr>", opts)
 
 -- Telescope
--- keymap("n", "<Leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<Leader>f", ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<Leader>t", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<C-t>", "<cmd>Telescope fd<cr>", opts)
+keymap("n", "<C-t>", "<cmd>Telescope find_files<cr>", opts)
 
 -- Hop
-keymap("n", "f", ":HopChar2<CR>", opts)
-keymap("n", "F", ":HopWord<CR>", opts)
+keymap("n", "f", "<cmd>HopChar2<CR>", opts)
+keymap("n", "F", "<cmd>HopWord<CR>", opts)
+
+-- Trouble
+keymap("n", "<leader>xx", "<cmd>Trouble<cr>", opts)
+keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", opts)
+keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", opts)
+keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", opts)
+keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", opts)
+keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
