@@ -85,6 +85,11 @@ return packer.startup(function(use)
     -- Hop
     "phaazon/hop.nvim",                         -- easymotion-like to nvim
 
+    -- Git signs
+    {
+      "lewis6991/gitsigns.nvim",                -- shows git changes
+      requires = "nvim-lua/plenary.nvim",
+    },
 
     -- Web development icons
     "kyazdani42/nvim-web-devicons",             -- icons pack
