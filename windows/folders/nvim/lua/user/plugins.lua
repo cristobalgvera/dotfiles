@@ -127,6 +127,12 @@ return packer.startup(function(use)
     -- Neovim Scroll
     "karb94/neoscroll.nvim",                    -- smooth scroll
 
+    -- Sorround
+    "tpope/vim-surround",                       -- sorround words
+
+    -- Multiple cursor
+    "mg979/vim-visual-multi",                   -- easily create multiple cursors
+
     -- NvimTree
     {
       'kyazdani42/nvim-tree.lua',               -- file tree explorer
