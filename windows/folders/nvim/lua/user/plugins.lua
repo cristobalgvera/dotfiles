@@ -109,6 +109,8 @@ return packer.startup(function(use)
 
     -- Colorschemes
     "folke/tokyonight.nvim",                    -- tokyonight colorscheme
+    -- Github Copilot
+    "github/copilot.vim",                       -- github copilot
 
     -- Common plugins
     "nvim-lua/popup.nvim",                      -- an implementation of the popup api from vim in neovim
