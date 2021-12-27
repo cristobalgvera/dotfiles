@@ -25,7 +25,9 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- File manager
-keymap("n", "<Leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<Leader>e", "<cmd>NvimTreeToggle<CR>", opts)
+keymap("n", "<Leader>r", "<cmd>NvimTreeRefresh<CR>", opts)
+keymap("n", "<Leader>n", "<cmd>NvimTreeFindFile<CR>", opts)
 
 -- Telescope
 keymap("n", "<Leader>f", ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)

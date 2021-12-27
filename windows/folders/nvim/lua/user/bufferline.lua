@@ -22,8 +22,7 @@ bufferline.setup {
     middle_mouse_command = "bdelete! %d",                       -- delete buffer when middle click it
     offsets = {
       {
-        -- filetype = "NvimTree",
-        filetype = "netrw",
+        filetype = "NvimTree",
         text = "  File Explorer",
         highlight = "Directory",
         text_align = "left"

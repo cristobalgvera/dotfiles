@@ -117,6 +117,15 @@ return packer.startup(function(use)
 
     -- Neovim Scroll
     "karb94/neoscroll.nvim",                    -- smooth scroll
+
+    -- NvimTree
+    {
+      'kyazdani42/nvim-tree.lua',               -- file tree explorer
+      requires = {
+        'kyazdani42/nvim-web-devicons',         -- optional, for file icon
+      },
+    },
+
     -- Common plugins
     "nvim-lua/popup.nvim",                      -- an implementation of the popup api from vim in neovim
     "nvim-lua/plenary.nvim",                    -- useful lua functions used ny lots of plugins
