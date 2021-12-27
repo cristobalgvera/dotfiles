@@ -64,6 +64,7 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",                    -- enable lsp
     "williamboman/nvim-lsp-installer",          -- simple to use language server installer
     "tamago324/nlsp-settings.nvim",             -- language server settings defined in json for
+    "ray-x/lsp_signature.nvim",                 -- show method's signature
 
     -- Comments
     "terrortylor/nvim-comment",                 -- fast comment toggle
