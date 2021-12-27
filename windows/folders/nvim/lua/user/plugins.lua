@@ -112,6 +112,8 @@ return packer.startup(function(use)
     -- Github Copilot
     "github/copilot.vim",                       -- github copilot
 
+    -- Neovim Scroll
+    "karb94/neoscroll.nvim",                    -- smooth scroll
     -- Common plugins
     "nvim-lua/popup.nvim",                      -- an implementation of the popup api from vim in neovim
     "nvim-lua/plenary.nvim",                    -- useful lua functions used ny lots of plugins

@@ -10,4 +10,5 @@ require "user.hop"
 require "user.gitsigns"
 require "user.trouble"
 require "user.bufferline"
+require "user.neoscroll"
 
