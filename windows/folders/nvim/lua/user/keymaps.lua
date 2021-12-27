@@ -39,11 +39,11 @@ keymap("n", "f", "<cmd>HopChar2<CR>", opts)
 keymap("n", "F", "<cmd>HopWord<CR>", opts)
 
 -- Trouble
-keymap("n", "<leader>xx", "<cmd>Trouble<cr>", opts)
-keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", opts)
-keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", opts)
-keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", opts)
-keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", opts)
+keymap("n", "<Leader>xx", "<cmd>Trouble<cr>", opts)
+keymap("n", "<Leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", opts)
+keymap("n", "<Leader>xd", "<cmd>Trouble document_diagnostics<cr>", opts)
+keymap("n", "<Leader>xl", "<cmd>Trouble loclist<cr>", opts)
+keymap("n", "<Leader>xq", "<cmd>Trouble quickfix<cr>", opts)
 keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
 
 -- Resize with arrows
@@ -58,6 +58,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Bufferline
 keymap("n", "gb", "<cmd>BufferLinePick<cr>", opts)
+keymap("n", "<Leader>bd", "<cmd>BufferLinePickClose<cr>", opts)
 keymap("n", "<", "<cmd>BufferLineCyclePrev<cr>", opts)
 keymap("n", ">", "<cmd>BufferLineCycleNext<cr>", opts)
 keymap("n", "<C-[>", "<cmd>BufferLineMovePrev<cr>", opts)
