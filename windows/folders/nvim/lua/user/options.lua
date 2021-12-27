@@ -44,6 +44,12 @@ local globals = {
   tokyonight = {
     style = "storm",                            -- can be 'storm', 'night' or 'day'
     trasparent = true,                          -- disable setting the background color
+  },
+
+  blamer = {
+    enabled = 1,
+    delay = 500,
+    prefix = " ﰖ ",
   }
 }
 
@@ -60,10 +66,12 @@ end
 -- Set each entry in globals variable
 for category, options in pairs(globals) do
   for option, value in pairs(options) do
-    if category == "tokyonight" then
-      vim.g["tokyonight_" .. option] = value
-    else
+    if category == "general" then
       vim.g[option] = value
+      return
     end
+
+    local full_option = category .. "_" .. option
+    vim.g[full_option] = value
   end
 end

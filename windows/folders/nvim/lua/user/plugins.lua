@@ -105,6 +105,9 @@ return packer.startup(function(use)
       requires = "nvim-lua/plenary.nvim",
     },
 
+    -- Git blame
+    "APZelos/blamer.nvim",                      -- show git blame in current line
+
     -- Troubles manager
     {
       "folke/trouble.nvim",                     -- troubles easy management
