@@ -125,6 +125,12 @@ return packer.startup(function(use)
 
     -- Colorschemes
     "folke/tokyonight.nvim",                    -- tokyonight colorscheme
+    "haishanh/night-owl.vim",                   -- night-owl colorscheme
+
+    -- Throws an error that opens CMD windows randomly
+    -- Wakatime
+    -- "wakatime/vim-wakatime",                    -- vim wakatime
+
     -- Github Copilot
     "github/copilot.vim",                       -- github copilot
 
