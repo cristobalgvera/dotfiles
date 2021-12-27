@@ -80,11 +80,20 @@ return packer.startup(function(use)
     "p00f/nvim-ts-rainbow",                     -- rainbow brackets
     "windwp/nvim-ts-autotag",                   -- auto close html tags
 
-    -- TODO: To be used when a statusline is packed
-    -- {
-    --   "SmiteshP/nvim-gps",                      -- show current position un buffer
-    --   requires = "nvim-treesitter/nvim-treesitter"
-    -- },
+    -- Lualine
+    {
+      'nvim-lualine/lualine.nvim',              -- statuline
+      requires = {
+        'kyazdani42/nvim-web-devicons',
+        'SmiteshP/nvim-gps',
+      },
+    },
+
+    -- Nvim GPS
+    {
+      "SmiteshP/nvim-gps",                      -- show current position un buffer
+      requires = "nvim-treesitter/nvim-treesitter",
+    },
 
     -- Hop
     "phaazon/hop.nvim",                         -- easymotion-like to nvim

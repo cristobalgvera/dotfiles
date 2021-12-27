@@ -13,4 +13,5 @@ require "user.bufferline"
 require "user.nvim-comment"
 require "user.neoscroll"
 require "user.nvim-tree"
+require "user.lualine"
 
