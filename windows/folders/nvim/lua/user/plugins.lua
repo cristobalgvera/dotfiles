@@ -65,6 +65,9 @@ return packer.startup(function(use)
     "williamboman/nvim-lsp-installer",          -- simple to use language server installer
     "tamago324/nlsp-settings.nvim",             -- language server settings defined in json for
 
+    -- Comments
+    "terrortylor/nvim-comment",                 -- fast comment toggle
+
     -- Telescope
     "nvim-telescope/telescope.nvim",            -- telescope support
     "nvim-telescope/telescope-fzy-native.nvim", -- fzf finder

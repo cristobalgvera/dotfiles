@@ -10,5 +10,6 @@ require "user.hop"
 require "user.gitsigns"
 require "user.trouble"
 require "user.bufferline"
+require "user.nvim-comment"
 require "user.neoscroll"
 
