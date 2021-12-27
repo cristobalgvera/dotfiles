@@ -1,4 +1,4 @@
-local options = {
+local general_options = {
   backup = false,                               -- creates a backup file
   clipboard = "unnamedplus",                    -- allows neovim to access the system clipboard
   cmdheight = 2,                                -- more space in the neovim command line for displaying messages
@@ -59,7 +59,7 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 
 -- Set each entry in options variable
-for option, value in pairs(options) do
+for option, value in pairs(general_options) do
   vim.opt[option] = value
 end
 
