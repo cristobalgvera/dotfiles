@@ -158,6 +158,9 @@ return packer.startup(function(use)
       requires = 'nvim-telescope/telescope.nvim',
     },
 
+    -- ToggleTerm
+    "akinsho/toggleterm.nvim",                  -- terminal in nvim as popup
+
     -- Common plugins
     "nvim-lua/popup.nvim",                      -- an implementation of the popup api from vim in neovim
     "nvim-lua/plenary.nvim",                    -- useful lua functions used ny lots of plugins
