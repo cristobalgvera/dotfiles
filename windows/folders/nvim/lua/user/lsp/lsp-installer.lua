@@ -3,6 +3,28 @@ if not status_ok then
 	return
 end
 
+local servers = {
+  "gopls",
+  "cssls",
+  "html",
+  "jsonls",
+  "sumneko_lua",
+  "tailwindcss",
+  "tsserver",
+}
+
+-- Install LSP servers if they're not already installed
+for _, name in pairs(servers) do
+    local config_ok, server = lsp_installer.get_server(name)
+    -- Check that the server is supported in nvim-lsp-installer
+    if config_ok then
+        if not server:is_installed() then
+            print("Installing " .. name)
+            server:install()
+        end
+    end
+end
+
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
 lsp_installer.on_server_ready(function(server)

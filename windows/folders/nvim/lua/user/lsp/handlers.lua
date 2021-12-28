@@ -1,23 +1,24 @@
 local M = {}
 
+local max_width = math.max(math.floor(vim.o.columns * 0.7), 100)
+local max_height = math.max(math.floor(vim.o.lines * 0.3), 30)
+
 M.setup = function()
   local signs = {
-    { name = "DiagnosticSignError", text = "" },
-    { name = "DiagnosticSignWarn", text = "" },
-    { name = "DiagnosticSignHint", text = "" },
-    { name = "DiagnosticSignInfo", text = "" },
+    Error = "",
+    Warn = "",
+    Hint = "",
+    Info = "",
   }
 
-  for _, sign in ipairs(signs) do
-    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+  for type, icon in pairs(signs) do
+    local name = "DiagnosticSign" .. type
+    vim.fn.sign_define(name, {texthl = name, text = icon, numhl = ""})
   end
 
-  local config = {
+  vim.diagnostic.config {
     virtual_text = true,
-    -- show signs
-    signs = {
-      active = signs,
-    },
+    signs = { active = signs }, -- show signs
     update_in_insert = true,
     underline = true,
     severity_sort = true,
@@ -31,14 +32,16 @@ M.setup = function()
     },
   }
 
-  vim.diagnostic.config(config)
-
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
     border = "rounded",
+    max_width = max_width,
+    max_height = max_height,
   })
 
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
     border = "rounded",
+    max_width = max_width,
+    max_height = max_height,
   })
 end
 
@@ -46,15 +49,13 @@ local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
   if client.resolved_capabilities.document_highlight then
     vim.api.nvim_exec(
-      [[
+    [[
       augroup lsp_document_highlight
         autocmd! * <buffer>
         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
         autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
       augroup END
-    ]],
-      false
-    )
+    ]], false)
   end
 end
 
@@ -97,6 +98,8 @@ M.on_attach = function(client, bufnr)
       floating_window = false,    -- show hint in a floating window, set to false for virtual text only mode
       transparency = nil,         -- disabled by default, allow floating win transparent value 1~100
       toggle_key = "<C-s>",       -- toggle signature on and off in insert mode,  e.g. toggle_key = '<M-x>'
+      max_height = max_height,    -- max height of signature floating_window, if content is more than max_height, can scroll down
+      max_width = max_width,      -- max_width of signature floating_window, line will be wrapped if exceed max_width
     }, bufnr)
   end
 end
