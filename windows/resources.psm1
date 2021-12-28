@@ -23,6 +23,13 @@ function GetSharedFiles {
             From  = "$SHARED\.gitconfig";
             To    = "$HOME\.gitconfig";
             Force = $Force
+        },
+
+        # Lazygit configuration
+        [PSCustomObject]@{
+            From  = "$SHARED\config.lazygit.yml";
+            To    = "$Env:AppData\lazygit\config.yml";
+            Force = $Force
         }
     )
 }
@@ -51,27 +58,12 @@ function GetWindowsFiles {
             Force = $Force
         },
 
-        # SpaceVim configuration
+        # Nvim configuration
         [PSCustomObject]@{
-            From     = "$WINDOWS\folders\.SpaceVim.d";
-            To       = "$HOME\.SpaceVim.d";
-            IsFolder = $true;
-            Force    = $Force
-        },
-
-	# Nvim configuration
-	[PSCustomObject]@{
-            From     = "$WINDOWS\folders\nvim";
-            To       = "$Env:LocalAppData\nvim";
-            IsFolder = $true;
-            Force    = $Force
-	},
-
-        # CoC settings
-        [PSCustomObject]@{
-            From  = "$WINDOWS\files\coc-settings.json";
-            To    = "$HOME\.SpaceVim\coc-settings.json";
-            Force = $Force
+                  From     = "$WINDOWS\folders\nvim";
+                  To       = "$Env:LocalAppData\nvim";
+                  IsFolder = $true;
+                  Force    = $Force
         },
 
         # Windows Terminal configuration

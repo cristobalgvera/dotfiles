@@ -135,6 +135,7 @@ function AddChocolateyApps {
         "golang",
         "googlechrome",
         "google-drive-file-stream",
+        "lazygit",
         "lightshot.install",
         "microsoft-windows-terminal",
         "neovim",
