@@ -123,6 +123,9 @@ return packer.startup(function(use)
       requires = "kyazdani42/nvim-web-devicons"
     },
 
+    -- Bbye
+    "moll/vim-bbye",                            -- easily close buffers
+
     -- Colorschemes
     "folke/tokyonight.nvim",                    -- tokyonight colorscheme
     "haishanh/night-owl.vim",                   -- night-owl colorscheme

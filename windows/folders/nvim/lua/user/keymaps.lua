@@ -64,6 +64,9 @@ keymap("n", ">", "<cmd>BufferLineCycleNext<cr>", opts)
 keymap("n", "<C-[>", "<cmd>BufferLineMovePrev<cr>", opts)
 keymap("n", "<C-]>", "<cmd>BufferLineMoveNext<cr>", opts)
 
+-- Bbye
+keymap("n", "<Leader>q", "<cmd>Bdelete<cr>", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
