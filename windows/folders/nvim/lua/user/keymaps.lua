@@ -67,6 +67,9 @@ keymap("n", "<C-]>", "<cmd>BufferLineMoveNext<cr>", opts)
 -- Bbye
 keymap("n", "<Leader>q", "<cmd>Bdelete<cr>", opts)
 
+-- ToggleTerm
+keymap("n", "<Leader>t", "<cmd>ToggleTerm<cr>", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)

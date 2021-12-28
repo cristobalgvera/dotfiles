@@ -6,7 +6,7 @@ end
 local personal_shell = vim.fn.has("windows") and "pwsh --nologo" or vim.o.shell
 
 toggleterm.setup {
-  open_mapping = [[<Leader>t]],
+  -- open_mapping = [[<Leader>t]],
   direction = "float",
   float_opts = {
     border = 'curved',
