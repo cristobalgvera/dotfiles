@@ -1,3 +1,5 @@
+require "user.impatient"
+
 require "user.options"
 require "user.globals"
 require "user.keymaps"

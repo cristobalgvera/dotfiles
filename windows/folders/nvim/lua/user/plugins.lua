@@ -40,7 +40,7 @@ packer.init {
 }
 
 -- Install your plugins here
-return packer.startup(function(use)
+return packer.startup({function(use)
   -- My plugins here
   use {
     -- Autocompletion plugins
@@ -164,6 +164,7 @@ return packer.startup(function(use)
     -- Common plugins
     "nvim-lua/popup.nvim",                      -- an implementation of the popup api from vim in neovim
     "nvim-lua/plenary.nvim",                    -- useful lua functions used ny lots of plugins
+    "lewis6991/impatient.nvim",                 -- speed up startup time
 
     -- Packer base
     "wbthomason/packer.nvim",                   -- have packer manage itself
@@ -174,4 +175,8 @@ return packer.startup(function(use)
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
-end)
+end,
+config = {
+  -- Move to lua dir so impatient.nvim can cache it
+  compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
+}})
