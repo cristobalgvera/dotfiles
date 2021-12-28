@@ -1,4 +1,5 @@
 require "user.options"
+require "user.globals"
 require "user.keymaps"
 require "user.plugins"
 

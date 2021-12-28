@@ -1,4 +1,4 @@
-local general_options = {
+local options = {
   backup = false,                               -- creates a backup file
   clipboard = "unnamedplus",                    -- allows neovim to access the system clipboard
   cmdheight = 2,                                -- more space in the neovim command line for displaying messages
@@ -35,58 +35,13 @@ local general_options = {
   guifont = "monospace:h17",                    -- the font used in graphical neovim applications
 }
 
-local globals = {
-  general = {
-    transparent_background = true,              -- transparent background (Default: false)
-    italic_comments = true,                     -- italic comments (Default: true)
-    italic_keywords = true,                     -- italic keywords (Default: true)
-  },
-
-  tokyonight = {
-    style = "storm",                            -- can be 'storm', 'night' or 'day'
-    trasparent = true,                          -- disable setting the background color
-  },
-
-  blamer = {
-    enabled = 1,
-    delay = 500,
-    prefix = " ﰖ ",
-  },
-
-  dashboard = {
-    default_executive = "telescope",            -- use telescope as fzf
-    disable_statusline = 1,
-    custom_header = {
-     '███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
-     '████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
-     '██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
-     '██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
-     '██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
-     '╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
-    },
-    custom_footer = {},
-  }
-}
-
 vim.opt.shortmess:append "c"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 
 -- Set each entry in options variable
-for option, value in pairs(general_options) do
+for option, value in pairs(options) do
   vim.opt[option] = value
 end
 
--- Set each entry in globals variable
-for category, options in pairs(globals) do
-  for option, value in pairs(options) do
-    if category == "general" then
-      vim.g[option] = value
-      return
-    end
-
-    local full_option = category .. "_" .. option
-    vim.g[full_option] = value
-  end
-end
