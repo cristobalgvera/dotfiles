@@ -19,6 +19,7 @@ Installation process will bootstrap following applications and configurations:
   - go
   - googlechrome
   - google-drive-file-stream
+  - lazygit
   - lightshot.install
   - microsoft-windows-terminal
   - neovim
@@ -35,6 +36,11 @@ Installation process will bootstrap following applications and configurations:
   - psutils
   - oh-my-posh
   - 7zip
+  - wget
+  - gzip
+  - ripgrep
+  - fd
+  - zig
 
 ### Modules
 
@@ -49,19 +55,11 @@ Installation process will bootstrap following applications and configurations:
 - Git config
 - IdeaVim config
 - PowerShell profile
-- SpaceVim
-  - Self settings
-  - CoC settings
+- Neovim
 - Windows Terminal settings
 - WinRAR lifetime key
 
 #### Recommendations
-
-1. SpaceVim autocomplete layer uses COC, you should define your own convenience
-languages via `:CocInstall coc-[language_server]`. Useful list [here](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-
-2. After the first modules installation, run `:GoInstallBinaries` to get all
-Golang layer used Go binaries.
 
 ## Flags
 
