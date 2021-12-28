@@ -13,6 +13,11 @@ if npairs_status_ok then
   npairs.setup(cmp)
 end
 
+local tabnine_status_ok, tabnine = pcall(require, "user.cmp.tabnine")
+if tabnine_status_ok then
+  tabnine.setup()
+end
+
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -59,9 +64,9 @@ cmp.setup {
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+    ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
+    ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+    -- ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     ["<C-q>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
     ["<C-e>"] = cmp.mapping {
@@ -110,6 +115,7 @@ cmp.setup {
         nvim_lsp = "[LSP]",
         nvim_lua = "[Lua]",
         luasnip = "[Snippet]",
+        cmp_tabnine = "[TabNine]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
@@ -117,10 +123,19 @@ cmp.setup {
     end,
   },
   sources = {
-    { name = "nvim_lsp" },
-    { name = "nvim_lua" },
-    { name = "luasnip" },
-    { name = "buffer" },
+    { name = "nvim_lsp", max_item_count = 5 },
+    { name = "nvim_lua", max_item_count = 5 },
+    { name = "luasnip", max_item_count = 5 },
+ 	  { name = 'cmp_tabnine' },
+		{
+			name = "buffer",
+			option = { -- Use all open buffers
+				get_bufnrs = function()
+					return vim.api.nvim_list_bufs()
+				end,
+			},
+      max_item_count = 10
+		},
     { name = "path" },
   },
   confirm_opts = {
@@ -128,7 +143,8 @@ cmp.setup {
     select = false,
   },
   documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    border = "rounded",
+		winhighlight = "Normal:CmpDocumentation,FloatBorder:CmpDocumentationBorder",
   },
   experimental = {
     ghost_text = false,

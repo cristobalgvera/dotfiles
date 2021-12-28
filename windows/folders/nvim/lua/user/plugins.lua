@@ -39,6 +39,10 @@ packer.init {
   },
 }
 
+local tabnine_run = vim.fn.has("windows")
+  and 'powershell ./install.ps1'
+  or './install.sh'
+
 -- Install your plugins here
 return packer.startup({function(use)
   -- My plugins here
@@ -55,6 +59,12 @@ return packer.startup({function(use)
     },
     "hrsh7th/cmp-nvim-lsp",                     -- autocompletion support for lsp
     "windwp/nvim-autopairs",                    -- autopairs when possible
+    {
+      'tzachar/cmp-tabnine',                    -- tabnine ai autocompletion
+      after = "nvim-cmp",
+      run = tabnine_run,
+      requires = 'hrsh7th/nvim-cmp'
+    },
 
     -- Snippets
     "L3MON4D3/LuaSnip",                         -- snippet engine
