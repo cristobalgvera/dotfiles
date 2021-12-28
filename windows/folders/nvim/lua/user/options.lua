@@ -41,6 +41,7 @@ local globals = {
     italic_comments = true,                     -- italic comments (Default: true)
     italic_keywords = true,                     -- italic keywords (Default: true)
   },
+
   tokyonight = {
     style = "storm",                            -- can be 'storm', 'night' or 'day'
     trasparent = true,                          -- disable setting the background color
@@ -50,6 +51,20 @@ local globals = {
     enabled = 1,
     delay = 500,
     prefix = " ﰖ ",
+  },
+
+  dashboard = {
+    default_executive = "telescope",            -- use telescope as fzf
+    disable_statusline = 1,
+    custom_header = {
+     '███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
+     '████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
+     '██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
+     '██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
+     '██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
+     '╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
+    },
+    custom_footer = {},
   }
 }
 

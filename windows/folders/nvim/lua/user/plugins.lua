@@ -146,9 +146,13 @@ return packer.startup(function(use)
     -- NvimTree
     {
       'kyazdani42/nvim-tree.lua',               -- file tree explorer
-      requires = {
-        'kyazdani42/nvim-web-devicons',         -- optional, for file icon
-      },
+      requires = 'kyazdani42/nvim-web-devicons',-- optional, for file icon
+    },
+
+    -- Dashboard
+    {
+      "glepnir/dashboard-nvim",                 -- fancy welcome page
+      requires = 'nvim-telescope/telescope.nvim',
     },
 
     -- Common plugins
