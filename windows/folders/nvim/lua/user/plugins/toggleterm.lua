@@ -14,4 +14,4 @@ toggleterm.setup {
   shell = personal_shell
 }
 
-require "user.toggleterm.lazygit"
+require "user.plugins.toggleterm.lazygit"

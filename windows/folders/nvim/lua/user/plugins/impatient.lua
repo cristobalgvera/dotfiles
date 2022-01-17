@@ -3,6 +3,6 @@ if not status_ok then
   return
 end
 
-require "packer_compiled"
+pcall(require, "packer_compiled")
 
 impatient.enable_profile()

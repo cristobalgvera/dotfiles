@@ -28,23 +28,26 @@ end
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
 lsp_installer.on_server_ready(function(server)
+  local lsp_path = "user.plugins.lsp."
+  local lsp_settings_path = lsp_path .. "settings."
+
   local opts = {
-    on_attach = require("user.lsp.handlers").on_attach,
-    capabilities = require("user.lsp.handlers").capabilities,
+    on_attach = require(lsp_path .. "handlers").on_attach,
+    capabilities = require(lsp_path .. "handlers").capabilities,
   }
 
 	if server.name == "jsonls" then
-		local jsonls_opts = require("user.lsp.settings.jsonls")
+		local jsonls_opts = require(lsp_settings_path .. "jsonls")
 		opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
 	end
 
 	if server.name == "sumneko_lua" then
-		local sumneko_opts = require("user.lsp.settings.sumneko_lua")
+		local sumneko_opts = require(lsp_settings_path .. "sumneko_lua")
 		opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
 	end
 
   if server.name == "html" then
-    local html_opts = require("user.lsp.settings.html")
+    local html_opts = require(lsp_settings_path .. "html")
     opts = vim.tbl_deep_extend("force", html_opts, opts)
   end
 
