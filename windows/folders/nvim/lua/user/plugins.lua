@@ -163,10 +163,13 @@ return packer.startup({function(use)
     },
 
     -- Dashboard
-    {
-      "glepnir/dashboard-nvim",                 -- fancy welcome page
-      requires = 'nvim-telescope/telescope.nvim',
-    },
+    -- {
+    --   "glepnir/dashboard-nvim",                 -- fancy welcome page
+    --   requires = 'nvim-telescope/telescope.nvim',
+    -- },
+
+    -- Alpha
+    "goolord/alpha-nvim",                   -- fancy welcome page
 
     -- ToggleTerm
     "akinsho/toggleterm.nvim",                  -- terminal in nvim as popup
