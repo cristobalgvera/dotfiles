@@ -139,6 +139,7 @@ return packer.startup({function(use)
     -- Colorschemes
     "folke/tokyonight.nvim",                    -- tokyonight colorscheme
     "haishanh/night-owl.vim",                   -- night-owl colorscheme
+    -- "olimorris/onedarkpro.nvim",                -- onedarkpro colorscheme
 
     -- Throws an error that opens CMD windows randomly
     -- Wakatime

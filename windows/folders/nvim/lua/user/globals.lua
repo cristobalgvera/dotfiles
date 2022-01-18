@@ -8,6 +8,7 @@ local globals = {
   tokyonight = {
     style = "storm",                            -- can be 'storm', 'night' or 'day'
     trasparent = true,                          -- disable setting the background color
+    italic_keywords = false,                    -- disable italic in keywords
   },
 
   blamer = {
