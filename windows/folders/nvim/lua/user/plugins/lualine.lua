@@ -8,6 +8,7 @@ local default_theme = "auto"
 local lualine_setup = {
   options = {
     theme = default_theme,
+    disabled_filetypes = {'alpha'},
   },
   sections = {
     lualine_a = {'mode'},
