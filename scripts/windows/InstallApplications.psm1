@@ -79,10 +79,10 @@ function AddScoopApps {
             CLI  = "fd";
             Name = "fd";
         },
-        [PSCustomObject]@{
-            CLI  = "zig";
-            Name = "zig";
-        }
+        # [PSCustomObject]@{
+        #     CLI  = "zig";
+        #     Name = "zig";
+        # }
     )
 
     Write-Host "Adding Scoop apps..." -ForegroundColor Green
@@ -137,6 +137,7 @@ function AddChocolateyApps {
         "google-drive-file-stream",
         "lazygit",
         "lightshot.install",
+        "llvm",
         "microsoft-windows-terminal",
         "neovim",
         "powershell-core",
