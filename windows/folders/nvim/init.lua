@@ -1,5 +1,6 @@
 require "user.plugins.impatient"
 
+require "user.hosts"
 require "user.options"
 require "user.globals"
 require "user.keymaps"
