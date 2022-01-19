@@ -21,6 +21,7 @@ local plugins = {
   -- "neoscroll",
   "nvim-tree",
   "lualine",
+  "session-manager",
   "toggleterm",
 }
 

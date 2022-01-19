@@ -175,6 +175,12 @@ return packer.startup({function(use)
     -- ToggleTerm
     "akinsho/toggleterm.nvim",                  -- terminal in nvim as popup
 
+    -- Dressing
+    "stevearc/dressing.nvim",                   -- selection popup
+
+    -- Session manager
+    "Shatur/neovim-session-manager",            -- manage sessions in neovim
+
     -- Common plugins
     "nvim-lua/popup.nvim",                      -- an implementation of the popup api from vim in neovim
     "nvim-lua/plenary.nvim",                    -- useful lua functions used ny lots of plugins
