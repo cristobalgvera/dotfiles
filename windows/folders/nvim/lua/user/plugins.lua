@@ -170,7 +170,7 @@ return packer.startup({function(use)
     -- },
 
     -- Alpha
-    "goolord/alpha-nvim",                   -- fancy welcome page
+    "goolord/alpha-nvim",                       -- fancy welcome page
 
     -- ToggleTerm
     "akinsho/toggleterm.nvim",                  -- terminal in nvim as popup

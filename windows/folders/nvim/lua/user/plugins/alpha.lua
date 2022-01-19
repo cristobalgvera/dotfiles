@@ -31,21 +31,22 @@ end
 
 -- Header
 dashboard.section.header.val = header()
+dashboard.section.header.opts.hl = "Function"
 
 -- Menu
 dashboard.section.buttons.val = {
+	button("s", "  Load session", "<cmd>SessionManager load_session<CR>"),
   button("n", "  New file" , "<cmd>ene <BAR> startinsert <CR>"),
   button("f", "  Find file", "<cmd>Telescope find_files<CR>"),
   button("r", "  Recently opened files", "<cmd>Telescope oldfiles<CR>"),
   button("w", "  Find word", "<cmd>Telescope live_grep<CR>"),
 	button("u", "  Update plugins", "<cmd>PackerSync<CR>"),
-	button("s", "  Settings", "<cmd>e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
+	button("S", "  Settings", "<cmd>e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
   button("q", "  Quit Neovim" , "<cmd>qa<CR>"),
 }
 
 -- Footer
 dashboard.section.footer.val = footer()
-dashboard.section.footer.opts.hl = "Type"
 
 dashboard.opts.opts.noautocmd = true
 
