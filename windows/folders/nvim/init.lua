@@ -23,6 +23,7 @@ local plugins = {
   "lualine",
   "session-manager",
   "toggleterm",
+  "whichkey",
 }
 
 for _, plugin in ipairs(plugins) do

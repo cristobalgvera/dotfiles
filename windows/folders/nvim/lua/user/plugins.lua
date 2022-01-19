@@ -175,6 +175,9 @@ return packer.startup({function(use)
     -- ToggleTerm
     "akinsho/toggleterm.nvim",                  -- terminal in nvim as popup
 
+    -- Which Key
+    "folke/which-key.nvim",                     -- key bindings helper
+
     -- Dressing
     "stevearc/dressing.nvim",                   -- selection popup
 
