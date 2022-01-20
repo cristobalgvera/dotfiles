@@ -11,6 +11,7 @@ local servers = {
   "sumneko_lua",
   "tailwindcss",
   "tsserver",
+  "rust_analyzer",
 }
 
 -- Install LSP servers if they're not already installed
