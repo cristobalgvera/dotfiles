@@ -79,6 +79,9 @@ return packer.startup({function(use)
     -- Null-ls
     "jose-elias-alvarez/null-ls.nvim",           -- for formatters and linters
 
+    -- Rust tools
+    "simrat39/rust-tools.nvim",                 -- rust language adition tools
+
     -- Comments
     "terrortylor/nvim-comment",                 -- fast comment toggle
 
