@@ -79,18 +79,24 @@ local function lsp_keymaps(bufnr)
   -- vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
-M.on_attach = function(client, bufnr)
+local function define_client_capabilities(client)
+  local function disable_formatting()
+    local capabilities = client.resolved_capabilities
+
+    capabilities.document_formatting = false
+    capabilities.document_range_formatting = false
+  end
+
   if client.name == "tsserver" then
-    client.resolved_capabilities.document_formatting = false
+    disable_formatting()
   end
 
   if client.name == "rust_analyzer" then
-    client.resolved_capabilities.document_formatting = false
+    disable_formatting()
   end
+end
 
-  lsp_keymaps(bufnr)
-  lsp_highlight_document(client)
-
+local function make_signature_help(bufnr)
   local status_ok, lsp_signature = pcall(require, "lsp_signature")
   if status_ok then
     lsp_signature.on_attach({
@@ -106,6 +112,13 @@ M.on_attach = function(client, bufnr)
       max_width = max_width,      -- max_width of signature floating_window, line will be wrapped if exceed max_width
     }, bufnr)
   end
+end
+
+M.on_attach = function(client, bufnr)
+  define_client_capabilities(client)
+  lsp_highlight_document(client)
+  lsp_keymaps(bufnr)
+  make_signature_help(bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
