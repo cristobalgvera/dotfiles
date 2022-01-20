@@ -76,6 +76,9 @@ return packer.startup({function(use)
     "tamago324/nlsp-settings.nvim",             -- language server settings defined in json for
     "ray-x/lsp_signature.nvim",                 -- show method's signature
 
+    -- Null-ls
+    "jose-elias-alvarez/null-ls.nvim",           -- for formatters and linters
+
     -- Comments
     "terrortylor/nvim-comment",                 -- fast comment toggle
 
