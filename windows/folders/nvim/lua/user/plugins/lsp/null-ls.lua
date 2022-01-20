@@ -12,10 +12,10 @@ null_ls.setup({
 	sources = {
 		formatting.prettier.with({
 			extra_args = { "--single-quote", "--jsx-single-quote", "--trailing-comma all" },
+      -- disabled_filetypes = { "markdown" },
 			timeout = 1000
 		}),
 		formatting.stylua,
-		formatting.markdownlint,
     formatting.rustfmt.with({
       extra_args = function(params)
         local Path = require("plenary.path")
@@ -37,6 +37,7 @@ null_ls.setup({
     -- diagnostics.cspell,
     diagnostics.eslint_d,
     diagnostics.jsonlint,
+    diagnostics.markdownlint,
     code_actions.eslint_d,
 	},
 })
