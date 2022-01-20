@@ -3,6 +3,9 @@ if not status_ok then
 	return
 end
 
+-- Cloudformation diagnostics
+-- local diagnostics_cfn_lint = require("user.plugins.lsp.null-ls.cfn-lint")
+
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
@@ -14,8 +17,8 @@ null_ls.setup({
 			extra_args = { "--single-quote", "--jsx-single-quote", "--trailing-comma all" },
       -- disabled_filetypes = { "markdown" },
 			timeout = 1000
-		}),
-		formatting.stylua,
+		}), -- yarn global add prettier
+		formatting.stylua, -- cargo install stylua
     formatting.rustfmt.with({
       extra_args = function(params)
         local Path = require("plenary.path")
@@ -32,12 +35,14 @@ null_ls.setup({
         -- default edition when we don't find `Cargo.toml` or the `edition` in it.
         return { "--edition=2021" }
       end,
-    }),
-    formatting.rustywind,
-    -- diagnostics.cspell,
-    diagnostics.eslint_d,
-    diagnostics.jsonlint,
-    diagnostics.markdownlint,
-    code_actions.eslint_d,
+    }), -- rustup component add rustfmt
+    formatting.rustywind, --yarn global add rustywind
+    -- diagnostics.cspell, -- yarn global add cspell
+    diagnostics.eslint_d, -- yarn global add eslint_d
+    diagnostics.jsonlint, -- yarn global add jsonlint
+    diagnostics.markdownlint, -- yarn global add markdownlint
+    diagnostics.yamllint, -- pip install yamllint --user
+    -- diagnostics_cfn_lint, -- pip install cfn-lint --user
+    code_actions.eslint_d, -- yarn global add eslint_d
 	},
 })

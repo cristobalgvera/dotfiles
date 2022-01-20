@@ -12,6 +12,7 @@ local servers = {
   "tailwindcss",
   "tsserver",
   "rust_analyzer",
+  "yamlls",
 }
 
 -- Install LSP servers if they're not already installed
@@ -31,25 +32,24 @@ end
 lsp_installer.on_server_ready(function(server)
   local lsp_path = "user.plugins.lsp."
   local lsp_settings_path = lsp_path .. "settings."
-
   local opts = {
     on_attach = require(lsp_path .. "handlers").on_attach,
     capabilities = require(lsp_path .. "handlers").capabilities,
   }
 
-	if server.name == "jsonls" then
-		local jsonls_opts = require(lsp_settings_path .. "jsonls")
-		opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
-	end
+  local custom_servers_config = {
+    "jsonls",
+    "html",
+    "sumneko_lua",
+    "yamlls",
+  }
 
-	if server.name == "sumneko_lua" then
-		local sumneko_opts = require(lsp_settings_path .. "sumneko_lua")
-		opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
-	end
-
-  if server.name == "html" then
-    local html_opts = require(lsp_settings_path .. "html")
-    opts = vim.tbl_deep_extend("force", html_opts, opts)
+  for _, server_name in ipairs(custom_servers_config) do
+    if server.name == server_name then
+      local custom_opts = require(lsp_settings_path .. server_name)
+      opts = vim.tbl_deep_extend("force", custom_opts, opts)
+      break
+    end
   end
 
 	-- This setup() function is exactly the same as lspconfig's setup function.
