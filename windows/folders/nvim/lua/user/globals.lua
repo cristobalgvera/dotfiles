@@ -10,12 +10,6 @@ local globals = {
     trasparent = true,                          -- disable setting the background color
     italic_keywords = false,                    -- disable italic in keywords
   },
-
-  blamer = {
-    enabled = 1,
-    delay = 500,
-    prefix = " ﰖ ",
-  },
 }
 
 -- Set each entry in globals variable
@@ -30,4 +24,3 @@ for category, options in pairs(globals) do
     vim.g[full_option] = value
   end
 end
-

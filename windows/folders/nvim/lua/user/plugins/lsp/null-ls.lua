@@ -44,5 +44,6 @@ null_ls.setup({
     diagnostics.yamllint, -- pip install yamllint --user
     -- diagnostics_cfn_lint, -- pip install cfn-lint --user
     code_actions.eslint_d, -- yarn global add eslint_d
+    code_actions.gitsigns,
 	},
 })
