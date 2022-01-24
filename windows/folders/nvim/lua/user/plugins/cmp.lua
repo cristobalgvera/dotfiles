@@ -8,12 +8,12 @@ if not snip_status_ok then
   return
 end
 
-local npairs_status_ok, npairs = pcall(require, "user.cmp.nvim-autopairs")
+local npairs_status_ok, npairs = pcall(require, "user.plugins.cmp.nvim-autopairs")
 if npairs_status_ok then
   npairs.setup(cmp)
 end
 
-local tabnine_status_ok, tabnine = pcall(require, "user.cmp.tabnine")
+local tabnine_status_ok, tabnine = pcall(require, "user.plugins.cmp.tabnine")
 if tabnine_status_ok then
   tabnine.setup()
 end
