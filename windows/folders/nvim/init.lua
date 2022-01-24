@@ -24,6 +24,7 @@ local plugins = {
   "session-manager",
   "toggleterm",
   "whichkey",
+  "indent-blankline",
 }
 
 for _, plugin in ipairs(plugins) do

@@ -188,6 +188,9 @@ return packer.startup({function(use)
     -- Session manager
     "Shatur/neovim-session-manager",            -- manage sessions in neovim
 
+    -- Indent Blankline
+    "lukas-reineke/indent-blankline.nvim",      -- style to indented blanklines
+
     -- Common plugins
     "nvim-lua/popup.nvim",                      -- an implementation of the popup api from vim in neovim
     "nvim-lua/plenary.nvim",                    -- useful lua functions used ny lots of plugins
