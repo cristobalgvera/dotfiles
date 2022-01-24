@@ -83,7 +83,7 @@ return packer.startup({function(use)
     "simrat39/rust-tools.nvim",                 -- rust language adition tools
 
     -- Comments
-    "terrortylor/nvim-comment",                 -- fast comment toggle
+    "numToStr/Comment.nvim",                    -- fast comment toggle
 
     -- Telescope
     "nvim-telescope/telescope.nvim",            -- telescope support
@@ -96,6 +96,7 @@ return packer.startup({function(use)
     },
     "p00f/nvim-ts-rainbow",                     -- rainbow brackets
     "windwp/nvim-ts-autotag",                   -- auto close html tags
+    "JoosepAlviste/nvim-ts-context-commentstring", -- js world improvement to context support
 
     -- Lualine
     {

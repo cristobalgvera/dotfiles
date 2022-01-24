@@ -17,7 +17,7 @@ local plugins = {
   "gitsigns",
   "trouble",
   "bufferline",
-  "nvim-comment",
+  "comment",
   -- "neoscroll",
   "nvim-tree",
   "lualine",
