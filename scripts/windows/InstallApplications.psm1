@@ -78,7 +78,7 @@ function AddScoopApps {
         [PSCustomObject]@{
             CLI  = "fd";
             Name = "fd";
-        },
+        }
         # [PSCustomObject]@{
         #     CLI  = "zig";
         #     Name = "zig";
