@@ -148,8 +148,9 @@ alias py='python'
 
 if lvim_loc="$(type -p "lvim")" || [[ -z $lvim_loc ]]; then
   alias v='lvim'
-  alias vi='lvim'
   alias nvim='lvim'
+elif nvim_loc="$(type -p "nvim")" || [[ -z $nvim_loc ]]; then
+  alias v='nvim'
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
