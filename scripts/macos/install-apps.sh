@@ -19,6 +19,7 @@ function install_apps {
 		git
 		neovim
 		jesseduffield/lazygit/lazygit
+		shellcheck
 	)
 
 	for formulae in "${formulaes[@]}"; do
