@@ -57,7 +57,7 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Bufferline
-keymap("n", "gb", "<cmd>BufferLinePick<cr>", opts)
+keymap("n", "<Leader>gb", "<cmd>BufferLinePick<cr>", opts)
 keymap("n", "<Leader>bd", "<cmd>BufferLinePickClose<cr>", opts)
 keymap("n", "<", "<cmd>BufferLineCyclePrev<cr>", opts)
 keymap("n", ">", "<cmd>BufferLineCycleNext<cr>", opts)

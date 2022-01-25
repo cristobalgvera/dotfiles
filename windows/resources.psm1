@@ -30,6 +30,14 @@ function GetSharedFiles {
             From  = "$SHARED\config.lazygit.yml";
             To    = "$Env:AppData\lazygit\config.yml";
             Force = $Force
+        },
+
+        # Nvim configuration
+        [PSCustomObject]@{
+            From     = "$SHARED\folders\nvim";
+            To       = "$Env:LocalAppData\nvim";
+            IsFolder = $true;
+            Force    = $Force
         }
     )
 }
@@ -56,14 +64,6 @@ function GetWindowsFiles {
             From  = "$WINDOWS\files\.gitconfig-windows";
             To    = "$HOME\.gitconfig-windows";
             Force = $Force
-        },
-
-        # Nvim configuration
-        [PSCustomObject]@{
-                  From     = "$WINDOWS\folders\nvim";
-                  To       = "$Env:LocalAppData\nvim";
-                  IsFolder = $true;
-                  Force    = $Force
         },
 
         # Windows Terminal configuration
