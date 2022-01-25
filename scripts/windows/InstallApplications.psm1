@@ -47,38 +47,52 @@ function AddScoopApps {
             CLI  = "aria2";
             Name = "aria2";
         },
+
         [PSCustomObject]@{
             CLI  = "fzf";
             Name = "fzf";
         },
+
         [PSCustomObject]@{
             CLI  = "sudo";
             Name = "psutils";
         },
+
         [PSCustomObject]@{
             CLI  = "oh-my-posh";
             Name = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json";
         },
+
         [PSCustomObject]@{
             CLI  = "7zip";
             Name = "7zip";
         },
+
         [PSCustomObject]@{
             CLI  = "wget";
             Name = "wget";
         },
+
         [PSCustomObject]@{
             CLI  = "gzip";
             Name = "gzip";
         },
+
         [PSCustomObject]@{
             CLI  = "rg";
             Name = "ripgrep";
         },
+
         [PSCustomObject]@{
             CLI  = "fd";
             Name = "fd";
+        },
+
+        [PSCustomObject]@{
+            CLI  = "shellcheck";
+            Name = "shellcheck";
         }
+
         # [PSCustomObject]@{
         #     CLI  = "zig";
         #     Name = "zig";

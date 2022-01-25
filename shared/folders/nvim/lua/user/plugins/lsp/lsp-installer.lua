@@ -13,6 +13,7 @@ local servers = {
   "tsserver",
   "rust_analyzer",
   "yamlls",
+  "bashls", -- yarn global add bash-language-server
 }
 
 -- Install LSP servers if they're not already installed
