@@ -99,13 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='nvim'
-fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -146,10 +139,14 @@ alias ls='colorls -A --sd'
 alias bup='brew cu -a --cleanup'
 alias py='python'
 
-if lvim_loc="$(type -p "lvim")" || [[ -z $lvim_loc ]]; then
-  alias v='lvim'
-  alias nvim='lvim'
-elif nvim_loc="$(type -p "nvim")" || [[ -z $nvim_loc ]]; then
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='nvim'
+fi
+
+if nvim_loc="$(type -p "nvim")" || [[ -z $nvim_loc ]]; then
   alias v='nvim'
 fi
 
