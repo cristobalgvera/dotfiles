@@ -1,15 +1,55 @@
+""" Enable plugins
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+
+" Install IdeaVim-EasyMotion and AceJump extensions first
+Plug 'easymotion/vim-easymotion'
+
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set commentary
+set easymotion
+"set multiple-cursors
+"set argtextobj
+"set textobj-entire
+"set ReplaceWithRegister
+
+""" Plugin settings -------------------------
+"let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+set showmode
 set relativenumber
 set number
 set scrolloff=5
 set incsearch
 set hlsearch
 
+""" Idea specific settings ------------------
+set ideajoin
+set idearefactormode=keep
+"set ideastatusicon=gray
+
+""" Mappings --------------------------------
+map <leader>f <Plug>(easymotion-bd-f)
+
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+map <leader>c <Action>(Stop)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <S-Space> <Action>(GotoNextError)
+
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
+
 nnoremap <S-Left> :action EditorLeftWithSelection<CR>
 nnoremap <S-Right> :action EditorRightWithSelection<CR>
 nnoremap <S-Up> :action EditorUpWithSelection<CR>
 nnoremap <S-Down> :action EditorDownWithSelection<CR>
-
-inoremap <S-Left> <C-O>:action EditorLeftWithSelection<CR>
-inoremap <S-Right> <C-O>:action EditorRightWithSelection<CR>
-inoremap <S-Up> <C-O>:action EditorUpWithSelection<CR>
-inoremap <S-Down> <C-O>:action EditorDownWithSelection<CR>
