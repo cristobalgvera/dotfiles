@@ -15,6 +15,7 @@ null_ls.setup({
 	sources = {
 		formatting.prettier.with({
 			extra_args = { "--single-quote", "--jsx-single-quote", "--trailing-comma all" },
+      extra_filetypes = { "toml" },
 			-- disabled_filetypes = { "markdown" },
 			timeout = 1000,
 		}), -- yarn global add prettier
