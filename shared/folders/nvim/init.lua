@@ -25,6 +25,7 @@ local plugins = {
   "toggleterm",
   "whichkey",
   "indent-blankline",
+  "close-buffers",
 }
 
 for _, plugin in ipairs(plugins) do

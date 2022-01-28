@@ -24,27 +24,30 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Better file management
+keymap("n", "<Leader>w", ":w<CR>", opts)
+
 -- File manager
 keymap("n", "<Leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 keymap("n", "<Leader>r", "<cmd>NvimTreeRefresh<CR>", opts)
 keymap("n", "<Leader>n", "<cmd>NvimTreeFindFile<CR>", opts)
 
 -- Telescope
-keymap("n", "<Leader>f", ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<C-s>", "<cmd>Telescope live_grep<cr>", opts)
--- keymap("n", "<C-s>", "<cmd>Telescope find_files<cr>", opts)
+keymap( "n", "<Leader>f", ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
+keymap("n", "<C-s>", "<cmd>Telescope live_grep<CR>", opts)
+-- keymap("n", "<C-s>", "<cmd>Telescope find_files<CR>", opts)
 
 -- Hop
 keymap("n", "f", "<cmd>HopChar2<CR>", opts)
 keymap("n", "F", "<cmd>HopWord<CR>", opts)
 
 -- Trouble
-keymap("n", "<Leader>xx", "<cmd>Trouble<cr>", opts)
-keymap("n", "<Leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", opts)
-keymap("n", "<Leader>xd", "<cmd>Trouble document_diagnostics<cr>", opts)
-keymap("n", "<Leader>xl", "<cmd>Trouble loclist<cr>", opts)
-keymap("n", "<Leader>xq", "<cmd>Trouble quickfix<cr>", opts)
-keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
+keymap("n", "<Leader>xx", "<cmd>Trouble<CR>", opts)
+keymap("n", "<Leader>xw", "<cmd>Trouble workspace_diagnostics<CR>", opts)
+keymap("n", "<Leader>xd", "<cmd>Trouble document_diagnostics<CR>", opts)
+keymap("n", "<Leader>xl", "<cmd>Trouble loclist<CR>", opts)
+keymap("n", "<Leader>xq", "<cmd>Trouble quickfix<CR>", opts)
+keymap("n", "gR", "<cmd>Trouble lsp_references<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -57,18 +60,23 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Bufferline
-keymap("n", "<Leader>gb", "<cmd>BufferLinePick<cr>", opts)
-keymap("n", "<Leader>bd", "<cmd>BufferLinePickClose<cr>", opts)
-keymap("n", "<", "<cmd>BufferLineCyclePrev<cr>", opts)
-keymap("n", ">", "<cmd>BufferLineCycleNext<cr>", opts)
-keymap("n", "<C-[>", "<cmd>BufferLineMovePrev<cr>", opts)
-keymap("n", "<C-]>", "<cmd>BufferLineMoveNext<cr>", opts)
+keymap("n", "<Leader>bgp", "<cmd>BufferLinePick<CR>", opts)
+keymap("n", "<Leader>bcp", "<cmd>BufferLinePickClose<CR>", opts)
+keymap("n", "<Leader>bg<", "<cmd>BufferLineCyclePrev<CR>", opts)
+keymap("n", "<Leader>bg>", "<cmd>BufferLineCycleNext<CR>", opts)
+keymap("n", "<C-[>", "<cmd>BufferLineMovePrev<CR>", opts)
+keymap("n", "<C-]>", "<cmd>BufferLineMoveNext<CR>", opts)
 
--- Bbye
-keymap("n", "<Leader>q", "<cmd>Bdelete<cr>", opts)
+-- Close Buffers
+keymap("n", "<Leader>q", "<cmd>lua require('close_buffers').delete({type = 'this'})<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>bct", "<cmd>lua require('close_buffers').delete({type = 'this'})<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>bco", "<cmd>lua require('close_buffers').delete({type = 'other'})<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>bch", "<cmd>lua require('close_buffers').delete({type = 'hidden'})<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>bcu", "<cmd>lua require('close_buffers').delete({type = 'unnamed'})<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>bca", "<cmd>lua require('close_buffers').delete({type = 'all'})<CR>", { noremap = true, silent = true })
 
 -- ToggleTerm
-keymap("n", "<Leader>t", "<cmd>ToggleTerm<cr>", opts)
+keymap("n", "<Leader>t", "<cmd>ToggleTerm<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -97,4 +105,3 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
