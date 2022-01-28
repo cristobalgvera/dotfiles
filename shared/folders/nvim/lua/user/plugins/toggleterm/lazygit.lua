@@ -13,4 +13,4 @@ function Toggle_lazygit()
   lazygit:toggle()
 end
 
-keymap("n", "<Leader>g", "<cmd>lua Toggle_lazygit()<CR>", opts)
+keymap("n", "<Leader>tg", "<cmd>lua Toggle_lazygit()<CR>", opts)

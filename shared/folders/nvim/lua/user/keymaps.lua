@@ -30,12 +30,10 @@ keymap("n", "<Leader>w", ":w<CR>", opts)
 -- File manager
 keymap("n", "<Leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 keymap("n", "<Leader>r", "<cmd>NvimTreeRefresh<CR>", opts)
-keymap("n", "<Leader>n", "<cmd>NvimTreeFindFile<CR>", opts)
 
 -- Telescope
-keymap( "n", "<Leader>f", ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
-keymap("n", "<C-s>", "<cmd>Telescope live_grep<CR>", opts)
--- keymap("n", "<C-s>", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<Leader>ff", ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
+keymap("n", "<Leader>fw", "<cmd>Telescope live_grep<CR>", opts)
 
 -- Hop
 keymap("n", "f", "<cmd>HopChar2<CR>", opts)
@@ -43,11 +41,11 @@ keymap("n", "F", "<cmd>HopWord<CR>", opts)
 
 -- Trouble
 keymap("n", "<Leader>xx", "<cmd>Trouble<CR>", opts)
-keymap("n", "<Leader>xw", "<cmd>Trouble workspace_diagnostics<CR>", opts)
-keymap("n", "<Leader>xd", "<cmd>Trouble document_diagnostics<CR>", opts)
+keymap("n", "<Leader>xwd", "<cmd>Trouble workspace_diagnostics<CR>", opts)
+keymap("n", "<Leader>xdd", "<cmd>Trouble document_diagnostics<CR>", opts)
 keymap("n", "<Leader>xl", "<cmd>Trouble loclist<CR>", opts)
 keymap("n", "<Leader>xq", "<cmd>Trouble quickfix<CR>", opts)
-keymap("n", "gR", "<cmd>Trouble lsp_references<CR>", opts)
+keymap("n", "<Leader>xr", "<cmd>Trouble lsp_references<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -62,8 +60,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Bufferline
 keymap("n", "<Leader>bgp", "<cmd>BufferLinePick<CR>", opts)
 keymap("n", "<Leader>bcp", "<cmd>BufferLinePickClose<CR>", opts)
-keymap("n", "<Leader>bg<", "<cmd>BufferLineCyclePrev<CR>", opts)
-keymap("n", "<Leader>bg>", "<cmd>BufferLineCycleNext<CR>", opts)
+keymap("n", "<TAB>", "<cmd>BufferLineCycleNext<CR>", opts)
+keymap("n", "<S-TAB>", "<cmd>BufferLineCyclePrev<CR>", opts)
 keymap("n", "<C-[>", "<cmd>BufferLineMovePrev<CR>", opts)
 keymap("n", "<C-]>", "<cmd>BufferLineMoveNext<CR>", opts)
 
@@ -84,8 +82,8 @@ keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+keymap("v", "<S-h>", "<gv", opts)
+keymap("v", "<S-l>", ">gv", opts)
 
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
