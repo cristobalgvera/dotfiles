@@ -80,19 +80,32 @@ local function lsp_keymaps(bufnr)
 end
 
 local function define_client_capabilities(client)
-  local function disable_formatting()
+  local function define_capabilities(opts)
     local capabilities = client.resolved_capabilities
 
-    capabilities.document_formatting = false
-    capabilities.document_range_formatting = false
+    if not opts then
+      return capabilities
+    end
+
+    if opts.disable_formatting then
+      capabilities.document_formatting = false
+      capabilities.document_range_formatting = false
+    end
+
+    return capabilities
   end
 
   if client.name == "tsserver" then
-    disable_formatting()
+    define_capabilities({disable_formatting = true})
   end
 
   if client.name == "rust_analyzer" then
-    disable_formatting()
+    define_capabilities({disable_formatting = true})
+  end
+
+  if client.name == "jsonls" then
+    local capabilities = define_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
   end
 end
 
