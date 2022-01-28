@@ -1,21 +1,15 @@
-""" Enable plugins
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-
-" Install IdeaVim-EasyMotion and AceJump extensions first
-Plug 'easymotion/vim-easymotion'
-
 """ Map leader to space ---------------------
 let mapleader=" "
 
 """ Plugins  --------------------------------
-set surround
-set commentary
-set easymotion
-"set multiple-cursors
-"set argtextobj
-"set textobj-entire
-"set ReplaceWithRegister
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
+
+" Install IdeaVim-EasyMotion and AceJump extensions first
+Plug 'easymotion/vim-easymotion'
 
 """ Plugin settings -------------------------
 "let g:argtextobj_pairs="[:],(:),<:>"
@@ -34,21 +28,13 @@ set idearefactormode=keep
 "set ideastatusicon=gray
 
 """ Mappings --------------------------------
-map <leader>f <Plug>(easymotion-bd-f)
+"EasyMotion
+nmap f <Plug>(easymotion-bd-f)
 
-map <leader>d <Action>(Debug)
-map <leader>r <Action>(RenameElement)
-map <leader>c <Action>(Stop)
-map <leader>z <Action>(ToggleDistractionFreeMode)
+"NERDtree
+nnoremap <Leader>e :NERDTreeToggle<CR>
 
-map <leader>s <Action>(SelectInProjectView)
-map <leader>a <Action>(Annotate)
-map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
-map <S-Space> <Action>(GotoNextError)
-
-map <leader>b <Action>(ToggleLineBreakpoint)
-map <leader>o <Action>(FileStructurePopup)
-
+"Selection improvement
 nnoremap <S-Left> :action EditorLeftWithSelection<CR>
 nnoremap <S-Right> :action EditorRightWithSelection<CR>
 nnoremap <S-Up> :action EditorUpWithSelection<CR>
