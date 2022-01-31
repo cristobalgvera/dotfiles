@@ -14,7 +14,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier.with({
-			extra_args = { "--single-quote", "--jsx-single-quote", "--trailing-comma all" },
+			-- extra_args = { "--single-quote", "--jsx-single-quote", "--trailing-comma all" },
       extra_filetypes = { "toml" },
 			disabled_filetypes = { "json", "jsonc" },
 			timeout = 1000,
@@ -42,13 +42,15 @@ null_ls.setup({
 			extra_args = { "-w", "." },
 		}), -- go install mvdan.cc/sh/v3/cmd/shfmt@latest
 		-- diagnostics.cspell, -- yarn global add cspell
-		diagnostics.eslint_d, -- yarn global add eslint_d
+		-- diagnostics.eslint_d, -- yarn global add eslint_d
+		diagnostics.eslint, -- yarn global add eslint
 		diagnostics.jsonlint, -- yarn global add jsonlint
 		diagnostics.markdownlint, -- yarn global add markdownlint
 		diagnostics.yamllint, -- pip install yamllint --user
 		diagnostics.shellcheck, -- scoop/choco install shellcheck
 		-- diagnostics_cfn_lint, -- pip install cfn-lint --user
-		code_actions.eslint_d, -- yarn global add eslint_d
+		-- code_actions.eslint_d, -- yarn global add eslint_d
+		code_actions.eslint, -- yarn global add eslint
 		code_actions.gitsigns,
 		code_actions.refactoring,
 		code_actions.shellcheck, -- scoop/choco install shellcheck
