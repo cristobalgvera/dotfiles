@@ -1,3 +1,5 @@
+local util = require("user.util")
+
 local function get_volta_neovim_node_host()
   if not vim.fn.executable("volta") then
     return
@@ -5,7 +7,7 @@ local function get_volta_neovim_node_host()
 
   local neovim_node_host_path = vim.trim(vim.fn.system("volta which neovim-node-host"))
 
-  if not vim.fn.has("windows") then
+  if not util.is_windows then
     return neovim_node_host_path
   end
 

@@ -1,3 +1,4 @@
+local util = require("user.util")
 local fn = vim.fn
 
 -- Automatically install Packer
@@ -39,7 +40,7 @@ packer.init {
   },
 }
 
-local tabnine_run = vim.fn.has("windows")
+local tabnine_run = util.is_windows
   and 'powershell ./install.ps1'
   or './install.sh'
 
