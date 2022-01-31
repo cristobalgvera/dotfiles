@@ -30,7 +30,7 @@ if nvim_gps_status_ok then
 	}
 end
 
-local colorscheme_status_ok, colorscheme = pcall(require, "user.colorscheme")
+local colorscheme_status_ok, colorscheme = pcall(require, "user.plugins.colorscheme")
 if colorscheme_status_ok then
 	lualine_setup.options.theme = colorscheme or default_theme
 end
