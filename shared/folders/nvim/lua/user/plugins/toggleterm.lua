@@ -9,7 +9,7 @@ toggleterm.setup {
   open_mapping = [[<Leader>tt]],
   direction = "float",
   float_opts = {
-    border = 'curved',
+    border = "rounded",
   },
   shell = personal_shell
 }
