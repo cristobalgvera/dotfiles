@@ -74,7 +74,7 @@ keymap("n", "<Leader>bcu", "<cmd>lua require('close_buffers').delete({type = 'un
 keymap("n", "<Leader>bca", "<cmd>lua require('close_buffers').delete({type = 'all'})<CR>", { noremap = true, silent = true })
 
 -- ToggleTerm
-keymap("n", "<Leader>t", "<cmd>ToggleTerm<CR>", opts)
+keymap("n", "<Leader>tt", "<cmd>ToggleTerm<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
