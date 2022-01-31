@@ -1,6 +1,6 @@
 local status_ok, toggleterm = pcall(require, "toggleterm.terminal")
 if not status_ok then
-  return
+	return
 end
 
 local terminal = toggleterm.Terminal
@@ -10,7 +10,7 @@ local util = require("user.util")
 local keymap = util.keymap
 
 function Toggle_lazygit()
-  lazygit:toggle()
+	lazygit:toggle()
 end
 
 keymap("n", "<Leader>tg", "<cmd>lua Toggle_lazygit()<CR>")

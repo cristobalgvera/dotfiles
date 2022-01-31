@@ -40,7 +40,7 @@ gitsigns.setup({
 			blame_info.author = "You"
 		end
 		local text
-    -- Default author name when none commit were created
+		-- Default author name when none commit were created
 		if blame_info.author == "Not Committed Yet" then
 			text = "ﰜ Not commited yet"
 		else

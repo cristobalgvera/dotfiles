@@ -1,12 +1,12 @@
 local status_ok, null_ls = pcall(require, "null-ls")
 if not status_ok then
-  return
+	return
 end
 
 local null_helpers = require("null-ls.helpers")
 
 local cfn_lint = {
-  name = "cfn-lint",
+	name = "cfn-lint",
 	method = null_ls.methods.DIAGNOSTICS,
 	filetypes = { "yaml" },
 	generator = null_helpers.generator_factory({

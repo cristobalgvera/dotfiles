@@ -10,10 +10,10 @@ M.keymap = function(mode, keybinding, command, opts)
 end
 
 M.buf_keymap = function(bufnr, mode, keybinding, command, opts)
-  local buffer_keymap = vim.api.nvim_buf_set_keymap
+	local buffer_keymap = vim.api.nvim_buf_set_keymap
 	local keymap_opts = opts or default_opts
 
-  buffer_keymap(bufnr, mode, keybinding, command, keymap_opts)
+	buffer_keymap(bufnr, mode, keybinding, command, keymap_opts)
 end
 
 M.is_windows = vim.fn.has("win32") == 1

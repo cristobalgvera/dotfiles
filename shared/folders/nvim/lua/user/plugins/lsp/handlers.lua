@@ -63,7 +63,7 @@ local function lsp_highlight_document(client)
 end
 
 local function lsp_keymaps(bufnr)
-  local keymap = util.buf_keymap
+	local keymap = util.buf_keymap
 
 	keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
 	keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
