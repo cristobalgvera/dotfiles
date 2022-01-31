@@ -151,7 +151,7 @@ return packer.startup({function(use)
     -- "wakatime/vim-wakatime",                    -- vim wakatime
 
     -- Github Copilot
-    "github/copilot.vim",                       -- github copilot
+    -- "github/copilot.vim",                       -- github copilot
 
     -- Neovim Scroll
     "karb94/neoscroll.nvim",                    -- smooth scroll
