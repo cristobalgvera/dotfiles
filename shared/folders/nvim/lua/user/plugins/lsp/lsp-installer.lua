@@ -4,15 +4,15 @@ if not status_ok then
 end
 
 local servers = {
-  "gopls",
-  "cssls",
-  "html",
-  "jsonls",
-  "sumneko_lua",
-  "tailwindcss",
-  "tsserver",
+  "gopls", -- go install golang.org/x/tools/gopls@latest
+  "cssls", -- yarn global add vscode-langservers-extracted
+  "html", -- yarn global add vscode-langservers-extracted
+  "jsonls", -- yarn global add vscode-langservers-extracted
+  "sumneko_lua", -- install Lua from VSCode (extension)
+  "tailwindcss", -- yarn global add tailwindcss @tailwindcss/language-server
+  "tsserver", -- yarn global add typescript typescript-language-server
   "rust_analyzer",
-  "yamlls",
+  "yamlls", -- yarn global add yaml-language-server
   "bashls", -- yarn global add bash-language-server
 }
 
