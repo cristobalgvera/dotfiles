@@ -80,6 +80,10 @@ local function lsp_keymaps(bufnr)
 end
 
 local function define_client_capabilities(client)
+  local base_opts = {
+    disable_formatting = true
+  }
+
   local function define_capabilities(opts)
     local capabilities = client.resolved_capabilities
 
@@ -96,15 +100,15 @@ local function define_client_capabilities(client)
   end
 
   if client.name == "tsserver" then
-    define_capabilities({disable_formatting = true})
+    define_capabilities(base_opts)
   end
 
   if client.name == "rust_analyzer" then
-    define_capabilities({disable_formatting = true})
+    define_capabilities(base_opts)
   end
 
   if client.name == "jsonls" then
-    local capabilities = define_capabilities()
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
   end
 end

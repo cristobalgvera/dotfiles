@@ -16,7 +16,7 @@ null_ls.setup({
 		formatting.prettier.with({
 			extra_args = { "--single-quote", "--jsx-single-quote", "--trailing-comma all" },
       extra_filetypes = { "toml" },
-			-- disabled_filetypes = { "markdown" },
+			disabled_filetypes = { "json", "jsonc" },
 			timeout = 1000,
 		}), -- yarn global add prettier
 		formatting.stylua, -- cargo install stylua
