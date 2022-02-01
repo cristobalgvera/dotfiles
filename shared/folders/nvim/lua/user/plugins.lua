@@ -102,10 +102,6 @@ return packer.startup({
 				"ray-x/lsp_signature.nvim", -- show method's signature
 				requires = "neovim/nvim-lspconfig",
 			},
-			{
-				"ThePrimeagen/refactoring.nvim", -- code refactoring base in good practices
-				requires = "neovim/nvim-lspconfig",
-			},
 
 			-- Null-ls
 			{
