@@ -210,10 +210,10 @@ return packer.startup({
 			-- "github/copilot.vim",                       -- github copilot
 
 			-- Neovim Scroll
-			"karb94/neoscroll.nvim", -- smooth scroll
+			-- "karb94/neoscroll.nvim", -- smooth scroll
 
 			-- Sorround
-			"tpope/vim-surround", -- sorround words
+			"blackCauldron7/surround.nvim", -- surround words
 
 			-- Multiple cursor
 			"mg979/vim-visual-multi", -- easily create multiple cursors

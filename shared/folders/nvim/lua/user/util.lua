@@ -52,9 +52,10 @@ M.require = function(module, options)
 	local status_ok, result = pcall(require, module)
 
 	if not status_ok then
-		M.notify(opts.error_title or module, opts.error_message, opts.message_level)
+		M.notify(opts.error_title or module, opts.error_message, opts.error_level)
+
 		if opts.throws then
-			error("Unable to load " .. module)
+			error("Unable to load " .. module, opts.error_level or vim.lsp.log_levels.WARN)
 		end
 	end
 
