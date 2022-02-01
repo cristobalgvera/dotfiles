@@ -48,16 +48,31 @@ return packer.startup({
 		use({
 			-- Autocompletion plugins
 			"hrsh7th/nvim-cmp", -- completion plugin
-			"hrsh7th/cmp-buffer", -- buffer completions
-			"hrsh7th/cmp-path", -- path completions
-			"hrsh7th/cmp-cmdline", -- cmdline completions
-			"saadparwaiz1/cmp_luasnip", -- snippet completions
+			{
+				"hrsh7th/cmp-buffer", -- buffer completions
+				requires = "hrsh7th/nvim-cmp",
+			},
+			{
+				"hrsh7th/cmp-path", -- path completions
+				requires = "hrsh7th/nvim-cmp",
+			},
+			{
+				"hrsh7th/cmp-cmdline", -- cmdline completions
+				requires = "hrsh7th/nvim-cmp",
+			},
+			{
+				"saadparwaiz1/cmp_luasnip", -- snippet completions
+				requires = "hrsh7th/nvim-cmp",
+			},
 			{
 				"hrsh7th/cmp-nvim-lua", -- autocompletion support for lua
 				ft = { "lua" },
+				requires = "hrsh7th/nvim-cmp",
 			},
-			"hrsh7th/cmp-nvim-lsp", -- autocompletion support for lsp
-			"windwp/nvim-autopairs", -- autopairs when possible
+			{
+				"windwp/nvim-autopairs", -- autopairs when possible
+				requires = "hrsh7th/nvim-cmp",
+			},
 			{
 				"tzachar/cmp-tabnine", -- tabnine ai autocompletion
 				after = "nvim-cmp",
@@ -71,22 +86,50 @@ return packer.startup({
 
 			-- LSP
 			"neovim/nvim-lspconfig", -- enable lsp
-			"williamboman/nvim-lsp-installer", -- simple to use language server installer
-			"tamago324/nlsp-settings.nvim", -- language server settings defined in json for
-			"ray-x/lsp_signature.nvim", -- show method's signature
-			"ThePrimeagen/refactoring.nvim", -- code refactoring base in good practices
+			{
+				"hrsh7th/cmp-nvim-lsp", -- autocompletion support for lsp
+				requires = "neovim/nvim-lspconfig",
+			},
+			{
+				"williamboman/nvim-lsp-installer", -- simple to use language server installer
+				requires = "neovim/nvim-lspconfig",
+			},
+			{
+				"tamago324/nlsp-settings.nvim", -- language server settings defined in json for
+				requires = "neovim/nvim-lspconfig",
+			},
+			{
+				"ray-x/lsp_signature.nvim", -- show method's signature
+				requires = "neovim/nvim-lspconfig",
+			},
+			{
+				"ThePrimeagen/refactoring.nvim", -- code refactoring base in good practices
+				requires = "neovim/nvim-lspconfig",
+			},
 
 			-- Null-ls
-			"jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
+			{
+				"jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
+				requires = "neovim/nvim-lspconfig",
+			},
 
 			-- Rust tools
-			"simrat39/rust-tools.nvim", -- rust language adition tools
+			{
+				"simrat39/rust-tools.nvim", -- rust language adition tools
+				requires = "neovim/nvim-lspconfig",
+			},
 
 			-- Comments
-			"numToStr/Comment.nvim", -- fast comment toggle
+			{
+				"numToStr/Comment.nvim", -- fast comment toggle
+				requires = "neovim/nvim-lspconfig",
+			},
 
 			-- Fidget
-			"j-hui/fidget.nvim", -- nvim-lsp progress ui
+			{
+				"j-hui/fidget.nvim", -- nvim-lsp progress ui
+				requires = "neovim/nvim-lspconfig",
+			},
 
 			-- Telescope
 			"nvim-telescope/telescope.nvim", -- telescope support
@@ -97,9 +140,24 @@ return packer.startup({
 				"nvim-treesitter/nvim-treesitter", -- treesitter support
 				run = ":TSUpdate",
 			},
-			"p00f/nvim-ts-rainbow", -- rainbow brackets
-			"windwp/nvim-ts-autotag", -- auto close html tags
-			"JoosepAlviste/nvim-ts-context-commentstring", -- js world improvement to context support
+			{
+				"p00f/nvim-ts-rainbow", -- rainbow brackets
+				requires = "nvim-treesitter/nvim-treesitter",
+			},
+			{
+				"windwp/nvim-ts-autotag", -- auto close html tags
+				requires = "nvim-treesitter/nvim-treesitter",
+			},
+			{
+				"JoosepAlviste/nvim-ts-context-commentstring", -- js world improvement to context support
+				requires = "nvim-treesitter/nvim-treesitter",
+			},
+
+			-- Nvim GPS
+			{
+				"SmiteshP/nvim-gps", -- show current position un buffer
+				requires = "nvim-treesitter/nvim-treesitter",
+			},
 
 			-- Lualine
 			{
@@ -108,12 +166,6 @@ return packer.startup({
 					"kyazdani42/nvim-web-devicons",
 					"SmiteshP/nvim-gps",
 				},
-			},
-
-			-- Nvim GPS
-			{
-				"SmiteshP/nvim-gps", -- show current position un buffer
-				requires = "nvim-treesitter/nvim-treesitter",
 			},
 
 			-- Hop
