@@ -1,9 +1,8 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local configs = util.require("nvim-treesitter.configs")
+local install = util.require("nvim-treesitter.install")
 
-require("nvim-treesitter.install").compilers = { "clang" }
+install.compilers = { "clang" }
 
 configs.setup({
 	ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages

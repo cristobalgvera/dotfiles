@@ -1,13 +1,11 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status_ok then
-	return
-end
-
 local util = require("user.util")
+local lsp_installer = util.require("nvim-lsp-installer")
+
 local servers = {
 	"gopls", -- go install golang.org/x/tools/gopls@latest
 	"cssls", -- yarn global add vscode-langservers-extracted
 	"html", -- yarn global add vscode-langservers-extracted
+	"eslint", -- yarn global add vscode-langservers-extracted
 	"jsonls", -- yarn global add vscode-langservers-extracted
 	"sumneko_lua", -- install Lua from VSCode (extension)
 	"tailwindcss", -- yarn global add tailwindcss @tailwindcss/language-server
@@ -35,9 +33,10 @@ end
 lsp_installer.on_server_ready(function(server)
 	local lsp_path = "user.plugins.lsp."
 	local lsp_settings_path = lsp_path .. "settings."
+	local handlers = util.require(lsp_path .. "handlers")
 	local opts = {
-		on_attach = require(lsp_path .. "handlers").on_attach,
-		capabilities = require(lsp_path .. "handlers").capabilities,
+		on_attach = handlers.on_attach,
+		capabilities = handlers.capabilities,
 	}
 
 	local custom_servers_config = util.Set({
@@ -50,7 +49,10 @@ lsp_installer.on_server_ready(function(server)
 	})
 
 	if custom_servers_config[server.name] then
-		local custom_opts = require(lsp_settings_path .. server.name)
+		local custom_opts = util.require(lsp_settings_path .. server.name, {
+			error_title = "LSP Installer",
+			error_message = "Unable to load '" .. server.name .. "' server",
+		})
 		opts = vim.tbl_deep_extend("force", custom_opts, opts)
 	end
 

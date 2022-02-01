@@ -1,9 +1,7 @@
-local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local alpha = util.require("alpha")
 
-local dashboard = require("alpha.themes.dashboard")
+local dashboard = util.require("alpha.themes.dashboard")
 local button = dashboard.button
 
 local function footer()

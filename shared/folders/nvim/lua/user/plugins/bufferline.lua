@@ -1,7 +1,5 @@
-local status_ok, bufferline = pcall(require, "bufferline")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local bufferline = util.require("bufferline")
 
 bufferline.setup({
 	options = {

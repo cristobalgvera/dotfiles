@@ -1,10 +1,8 @@
-local status_ok, telescope = pcall(require, "telescope")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local telescope = util.require("telescope")
 
-local actions = require("telescope.actions")
-local trouble = require("trouble.providers.telescope")
+local actions = util.require("telescope.actions")
+local trouble = util.require("trouble.providers.telescope")
 
 telescope.setup({
 	defaults = {
@@ -124,3 +122,4 @@ telescope.setup({
 })
 
 telescope.load_extension("fzy_native")
+telescope.load_extension("notify")

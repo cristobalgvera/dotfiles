@@ -1,24 +1,15 @@
-local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
-	return
-end
+local util = require("user.util")
+local cmp = util.require("cmp")
+local luasnip = util.require("luasnip")
 
-local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
-	return
-end
+local npairs = util.require("user.plugins.cmp.nvim-autopairs")
+npairs.setup(cmp)
 
-local npairs_status_ok, npairs = pcall(require, "user.plugins.cmp.nvim-autopairs")
-if npairs_status_ok then
-	npairs.setup(cmp)
-end
+local tabnine = util.require("user.plugins.cmp.tabnine")
+tabnine.setup()
 
-local tabnine_status_ok, tabnine = pcall(require, "user.plugins.cmp.tabnine")
-if tabnine_status_ok then
-	tabnine.setup()
-end
-
-require("luasnip/loaders/from_vscode").lazy_load()
+local luasnip_loaders = util.require("luasnip/loaders/from_vscode")
+luasnip_loaders.lazy_load()
 
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1

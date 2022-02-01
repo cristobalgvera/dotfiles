@@ -1,7 +1,5 @@
-local status_ok, refactoring = pcall(require, "refactoring")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local refactoring = util.require("refactoring")
 
 refactoring.setup({
 	-- prompt for return type

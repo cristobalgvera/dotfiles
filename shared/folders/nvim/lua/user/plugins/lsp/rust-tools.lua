@@ -1,6 +1,4 @@
-local status_ok, rust_tools = pcall(require, "rust-tools")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local rust_tools = util.require("rust-tools")
 
 rust_tools.setup({})

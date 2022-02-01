@@ -1,7 +1,5 @@
-local status_ok, null_ls = pcall(require, "null-ls")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local null_ls = util.require("null-ls")
 
 -- Cloudformation diagnostics
 -- local diagnostics_cfn_lint = require("user.plugins.lsp.null-ls.cfn-lint")

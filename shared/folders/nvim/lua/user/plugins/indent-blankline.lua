@@ -1,7 +1,5 @@
-local status_ok, indent_blankline = pcall(require, "indent_blankline")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local indent_blankline = util.require("indent_blankline")
 
 indent_blankline.setup({
 	show_current_context = true,

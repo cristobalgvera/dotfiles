@@ -1,8 +1,6 @@
-local close_buffers_status_ok, close_buffers = pcall(require, "close_buffers")
-local bufferline_status_ok, bufferline = pcall(require, "bufferline")
-if not (close_buffers_status_ok and bufferline_status_ok) then
-	return
-end
+local util = require("user.util")
+local close_buffers = util.require("close_buffers")
+local bufferline = util.require("bufferline")
 
 close_buffers.setup({
 	preserve_window_layout = { "this" },

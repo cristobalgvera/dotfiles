@@ -1,8 +1,7 @@
-local default_schemas = nil
-local status_ok, jsonls_settings = pcall(require, "nlspsettings.jsonls")
-if status_ok then
-	default_schemas = jsonls_settings.get_default_schemas()
-end
+local util = require("user.util")
+local jsonls_settings = util.require("nlspsettings.jsonls")
+
+local default_schemas = jsonls_settings.get_default_schemas()
 
 -- Find more schemas here: https://www.schemastore.org/json/
 local schemas = {
@@ -182,14 +181,7 @@ local schemas = {
 	},
 }
 
-local function extend(tab1, tab2)
-	for _, value in ipairs(tab2) do
-		table.insert(tab1, value)
-	end
-	return tab1
-end
-
-local extended_schemas = extend(schemas, default_schemas)
+local extended_schemas = vim.tbl_deep_extend("force", schemas, default_schemas or {})
 
 local opts = {
 	settings = {
@@ -199,9 +191,7 @@ local opts = {
 	},
 }
 
-local snippet_support = require("user.plugins.lsp.settings.common.cmp-snippet-support")
-local snippet_support_capabilitites = snippet_support.setup()
-
-local extended_opts = vim.tbl_deep_extend("error", opts, snippet_support_capabilitites)
+local snippet_support = util.require("user.plugins.lsp.settings.common.cmp-snippet-support")
+local extended_opts = vim.tbl_deep_extend("error", opts, snippet_support.setup())
 
 return extended_opts

@@ -1,12 +1,10 @@
-local status_ok, _ = pcall(require, "lspconfig")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+util.require("lspconfig")
 
 local lsp_path = "user.plugins.lsp."
 
-require(lsp_path .. "lsp-installer")
-require(lsp_path .. "handlers").setup()
-require(lsp_path .. "null-ls")
-require(lsp_path .. "rust-tools")
-require(lsp_path .. "refactoring")
+util.require(lsp_path .. "lsp-installer")
+util.require(lsp_path .. "handlers").setup()
+util.require(lsp_path .. "null-ls")
+util.require(lsp_path .. "rust-tools")
+util.require(lsp_path .. "refactoring")

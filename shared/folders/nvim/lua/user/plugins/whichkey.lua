@@ -1,6 +1,4 @@
-local status_ok, whichkey = pcall(require, "which-key")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local which_key = util.require("which-key")
 
-whichkey.setup()
+which_key.setup()

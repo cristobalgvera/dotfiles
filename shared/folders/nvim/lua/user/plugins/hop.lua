@@ -1,6 +1,4 @@
-local status_ok, hop = pcall(require, "hop")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local hop = util.require("hop")
 
 hop.setup()

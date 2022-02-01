@@ -1,7 +1,5 @@
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local lualine = util.require("lualine")
 
 local default_theme = "auto"
 
@@ -20,19 +18,15 @@ local lualine_setup = {
 	},
 }
 
-local nvim_gps_status_ok, nvim_gps = pcall(require, "nvim-gps")
-if nvim_gps_status_ok then
-	nvim_gps.setup()
+local nvim_gps = util.require("nvim-gps")
+nvim_gps.setup()
 
-	lualine_setup.sections.lualine_c = {
-		"filename",
-		{ nvim_gps.get_location, cond = nvim_gps.is_available },
-	}
-end
+lualine_setup.sections.lualine_c = {
+	"filename",
+	{ nvim_gps.get_location, cond = nvim_gps.is_available },
+}
 
-local colorscheme_status_ok, colorscheme = pcall(require, "user.plugins.colorscheme")
-if colorscheme_status_ok then
-	lualine_setup.options.theme = colorscheme or default_theme
-end
+local colorscheme = util.require("user.plugins.colorscheme")
+lualine_setup.options.theme = colorscheme or default_theme
 
 lualine.setup(lualine_setup)

@@ -1,6 +1,4 @@
-local status_ok, neoscroll = pcall(require, "neoscroll")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local neoscroll = util.require("neoscroll")
 
 neoscroll.setup()

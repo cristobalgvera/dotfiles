@@ -1,7 +1,5 @@
-local status_ok, session_manager = pcall(require, "session_manager")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local session_manager = util.require("session_manager")
 
 session_manager.setup({
 	path_replacer = "__", -- The character to which the path separator will be replaced for session files.

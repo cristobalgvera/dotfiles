@@ -1,6 +1,4 @@
-local status_ok, trouble = pcall(require, "trouble")
-if not status_ok then
-	return
-end
+local util = require("user.util")
+local trouble = util.require("trouble")
 
 trouble.setup()

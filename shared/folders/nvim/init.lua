@@ -30,5 +30,5 @@ local plugins = {
 }
 
 for _, plugin in ipairs(plugins) do
-	require("user.plugins." .. plugin)
+	pcall(require, "user.plugins." .. plugin)
 end
