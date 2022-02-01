@@ -75,6 +75,9 @@ keymap("n", "<Leader>bca", "<cmd>lua require('close_buffers').delete({type = 'al
 -- ToggleTerm
 keymap("n", "<Leader>tt", "<cmd>ToggleTerm<CR>")
 
+-- Neogen
+keymap("n", "<Leader>cg", "<cmd>lua require('neogen').generate()<CR>")
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>")

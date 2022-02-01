@@ -159,6 +159,12 @@ return packer.startup({
 				requires = "nvim-treesitter/nvim-treesitter",
 			},
 
+			-- Neogen
+			{
+				"danymat/neogen", -- annotations toolkit
+				requires = "nvim-treesitter/nvim-treesitter",
+			},
+
 			-- Lualine
 			{
 				"nvim-lualine/lualine.nvim", -- statuline

@@ -9,6 +9,7 @@ require("user.plugins")
 local plugins = {
 	"notify",
 	"fidget",
+	"neogen",
 	"alpha",
 	"colorscheme",
 	"cmp",
