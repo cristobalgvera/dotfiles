@@ -38,6 +38,8 @@ packer.init({
 			return require("packer.util").float({ border = "rounded" })
 		end,
 	},
+	auto_clean = true,
+	compile_on_sync = true,
 })
 
 local tabnine_run = util.is_windows and "powershell ./install.ps1" or "./install.sh"
