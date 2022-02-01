@@ -10,7 +10,7 @@ local servers = {
 	"sumneko_lua", -- install Lua from VSCode (extension)
 	"tailwindcss", -- yarn global add tailwindcss @tailwindcss/language-server
 	"tsserver", -- yarn global add typescript typescript-language-server
-	"rust_analyzer",
+	"rust_analyzer", -- rustup component add rust-src
 	"yamlls", -- yarn global add yaml-language-server
 	"bashls", -- yarn global add bash-language-server
 	"emmet_ls", -- yarn global add emmet-ls
