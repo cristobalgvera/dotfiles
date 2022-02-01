@@ -54,6 +54,10 @@ keymap("n", "<C-Down>", ":resize +2<CR>")
 keymap("n", "<C-Left>", ":vertical resize -2<CR>")
 keymap("n", "<C-Right>", ":vertical resize +2<CR>")
 
+-- Focus
+keymap("n", "<Leader>bft", "<cmd>FocusToggle<CR>")
+keymap("n", "<Leader>bff", "<cmd>FocusMaxOrEqual<CR>")
+
 -- Bufferline
 keymap("n", "<Leader>bgp", "<cmd>BufferLinePick<CR>")
 keymap("n", "<Leader>bcp", "<cmd>BufferLinePickClose<CR>")

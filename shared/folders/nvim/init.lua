@@ -10,6 +10,7 @@ local plugins = {
 	"notify",
 	"fidget",
 	"neogen",
+	"focus",
 	"alpha",
 	"colorscheme",
 	"cmp",

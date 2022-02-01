@@ -245,6 +245,9 @@ return packer.startup({
 			-- Nvim Notify
 			"rcarriga/nvim-notify", -- notification manager
 
+			-- Focus
+			"beauwilliams/focus.nvim", -- manage focused buffers sizes
+
 			-- Common plugins
 			"nvim-lua/popup.nvim", -- an implementation of the popup api from vim in neovim
 			"nvim-lua/plenary.nvim", -- useful lua functions used ny lots of plugins
