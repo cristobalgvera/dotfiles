@@ -85,6 +85,9 @@ return packer.startup({
 			-- Comments
 			"numToStr/Comment.nvim", -- fast comment toggle
 
+			-- Fidget
+			"j-hui/fidget.nvim", -- nvim-lsp progress ui
+
 			-- Telescope
 			"nvim-telescope/telescope.nvim", -- telescope support
 			"nvim-telescope/telescope-fzy-native.nvim", -- fzf finder

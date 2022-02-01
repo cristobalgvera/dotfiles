@@ -8,6 +8,7 @@ require("user.plugins")
 
 local plugins = {
 	"notify",
+	"fidget",
 	"alpha",
 	"colorscheme",
 	"cmp",
