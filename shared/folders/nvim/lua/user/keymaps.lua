@@ -54,14 +54,12 @@ keymap("n", "<C-Down>", ":resize +2<CR>")
 keymap("n", "<C-Left>", ":vertical resize -2<CR>")
 keymap("n", "<C-Right>", ":vertical resize +2<CR>")
 
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>")
-keymap("n", "<S-h>", ":bprevious<CR>")
-
 -- Bufferline
 keymap("n", "<Leader>bgp", "<cmd>BufferLinePick<CR>")
 keymap("n", "<Leader>bcp", "<cmd>BufferLinePickClose<CR>")
+keymap("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
 keymap("n", "<TAB>", "<cmd>BufferLineCycleNext<CR>")
+keymap("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
 keymap("n", "<S-TAB>", "<cmd>BufferLineCyclePrev<CR>")
 keymap("n", "<C-[>", "<cmd>BufferLineMovePrev<CR>")
 keymap("n", "<C-]>", "<cmd>BufferLineMoveNext<CR>")
