@@ -7,6 +7,7 @@ require("user.keymaps")
 require("user.plugins")
 
 local plugins = {
+	"notify",
 	"alpha",
 	"colorscheme",
 	"cmp",

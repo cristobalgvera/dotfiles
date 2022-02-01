@@ -188,6 +188,9 @@ return packer.startup({
 			-- Indent Blankline
 			"lukas-reineke/indent-blankline.nvim", -- style to indented blanklines
 
+			-- Nvim Notify
+			"rcarriga/nvim-notify", -- notification manager
+
 			-- Common plugins
 			"nvim-lua/popup.nvim", -- an implementation of the popup api from vim in neovim
 			"nvim-lua/plenary.nvim", -- useful lua functions used ny lots of plugins
