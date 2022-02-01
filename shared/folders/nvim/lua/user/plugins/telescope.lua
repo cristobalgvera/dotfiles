@@ -3,6 +3,8 @@ local telescope = util.require("telescope")
 
 local actions = util.require("telescope.actions")
 local trouble = util.require("trouble.providers.telescope")
+local sorters = util.require("telescope.sorters")
+local previewers = util.require("telescope.previewers")
 
 telescope.setup({
 	defaults = {
@@ -91,6 +93,7 @@ telescope.setup({
 		sorting_strategy = "ascending",
 		layout_strategy = "horizontal",
 		layout_config = {
+			scroll_speed = 15,
 			horizontal = {
 				prompt_position = "top",
 				preview_width = 0.55,
@@ -103,9 +106,9 @@ telescope.setup({
 			height = 0.80,
 			preview_cutoff = 120,
 		},
-		file_sorter = require("telescope.sorters").get_fuzzy_file,
+		file_sorter = sorters.get_fuzzy_file,
 		file_ignore_patterns = { "node_modules" },
-		generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
+		generic_sorter = sorters.get_generic_fuzzy_sorter,
 		path_display = { "smart" },
 		winblend = 0,
 		border = {},
@@ -113,13 +116,19 @@ telescope.setup({
 		color_devicons = true,
 		use_less = true,
 		set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
-		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+		file_previewer = previewers.vim_buffer_cat.new,
+		grep_previewer = previewers.vim_buffer_vimgrep.new,
+		qflist_previewer = previewers.vim_buffer_qflist.new,
 		-- Developer configurations: Not meant for general override
-		buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
+		buffer_previewer_maker = previewers.buffer_previewer_maker,
 	},
 })
 
-telescope.load_extension("fzy_native")
-telescope.load_extension("notify")
+local extensions = {
+	"fzy_native",
+	"notify",
+}
+
+for _, extension in ipairs(extensions) do
+	telescope.load_extension(extension)
+end
