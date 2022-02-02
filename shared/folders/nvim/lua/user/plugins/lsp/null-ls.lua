@@ -46,7 +46,6 @@ null_ls.setup({
 		diagnostics.shellcheck, -- scoop/choco install shellcheck
 		-- diagnostics_cfn_lint, -- pip install cfn-lint --user
 		code_actions.gitsigns,
-		code_actions.refactoring,
 		code_actions.shellcheck, -- scoop/choco install shellcheck
 	},
 })
