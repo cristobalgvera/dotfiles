@@ -2,7 +2,7 @@ local util = require("user.util")
 local configs = util.require("nvim-treesitter.configs")
 local install = util.require("nvim-treesitter.install")
 
-install.compilers = { "clang" }
+install.compilers = { "clang", "gcc" }
 
 configs.setup({
 	ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
