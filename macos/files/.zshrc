@@ -1,7 +1,4 @@
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -14,7 +11,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/cristobalgvera/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -113,16 +110,16 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source $(dirname $(gem which colorls))/tab_complete.sh
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export LOCALPATH=$HOME/.local
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PYENVPATH=$HOME/.pyenv
-export PATH="${PYENVPATH}/shims:${GOPATH}/bin:${GOROOT}/bin:${LOCALPATH}/bin:$PATH"
+export VOLTA_HOME=$HOME/.volta
+export RBENVPATH=$HOME/.rbenv
+
+export PATH="${RBENVPATH}/bin:${VOLTA_HOME}/bin:${PYENVPATH}/bin:${GOPATH}/bin:${GOROOT}/bin:${LOCALPATH}/bin:$PATH"
 
 if aws_loc="$(type -p "aws")" || [[ -z $aws_loc ]]; then
   export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id)
@@ -134,9 +131,8 @@ fi
 ZSHZ_CASE=smart
 
 # Aliases
-alias repos='cd ~/Documents/Repositories'
+alias repos='cd ~/repositories'
 alias ls='colorls -A --sd'
-alias bup='brew cu -a --cleanup'
 alias py='python'
 
 # Preferred editor for local and remote sessions
@@ -150,14 +146,12 @@ if nvim_loc="$(type -p "nvim")" || [[ -z $nvim_loc ]]; then
   alias v='nvim'
 fi
 
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(rbenv init - zsh)"
+
+source $(dirname $(gem which colorls))/tab_complete.sh
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
-
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
