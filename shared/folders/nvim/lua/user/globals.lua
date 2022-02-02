@@ -3,6 +3,18 @@ local globals = {
 		transparent_background = true, -- transparent background (Default: false)
 		italic_comments = true, -- italic comments (Default: true)
 		italic_keywords = true, -- italic keywords (Default: true)
+		clipboard = {
+			name = "win32yank-wsl",
+			copy = {
+				["+"] = "win32yank.exe -i --crlf",
+				["*"] = "win32yank.exe -i --crlf",
+			},
+			paste = {
+				["+"] = "win32yank.exe -o --lf",
+				["*"] = "win32yank.exe -o --lf",
+			},
+			cache_enabled = 0,
+		},
 	},
 
 	tokyonight = {
