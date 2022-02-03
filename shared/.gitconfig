@@ -25,3 +25,6 @@
 
 [includeIf "gitdir/i:Users/"]
   path = ~/.gitconfig-macos
+
+[include]
+  path = ~/.gitconfig-custom
