@@ -1,27 +1,27 @@
 [user]
-email = cristobalgajardo.v@gmail.com
-name = Cristóbal Gajardo Vera
+  email = cristobalgajardo.v@gmail.com
+  name = Cristóbal Gajardo Vera
 
 [alias]
-co = checkout
-ci = commit
-st = status
-br = branch
-hist = log --graph --abbrev-commit --decorate --date=format:'%a %d %b %Y %H:%M' --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --graph --abbrev-commit --decorate --date=format:'%a %d %b %Y %H:%M' --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
 
 [init]
-defaultBranch = main
+  defaultBranch = main
 
 [core]
-safecrlf = warn
+  safecrlf = warn
 
 # Conditional configuration based on OS
 
 [includeIf "gitdir/i:C:/"]
-path = ~/.gitconfig-windows
+  path = ~/.gitconfig-windows
 
 [includeIf "gitdir/i:D:/"]
-path = ~/.gitconfig-windows
+  path = ~/.gitconfig-windows
 
 [includeIf "gitdir/i:Users/"]
-path = ~/.gitconfig-macos
+  path = ~/.gitconfig-macos
