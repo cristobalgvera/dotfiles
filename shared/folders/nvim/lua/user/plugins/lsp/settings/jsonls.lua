@@ -181,7 +181,7 @@ local schemas = {
 	},
 }
 
-local extended_schemas = vim.tbl_deep_extend("force", schemas, default_schemas or {})
+local extended_schemas = vim.tbl_deep_extend("keep", schemas, default_schemas or {})
 
 local opts = {
 	settings = {
