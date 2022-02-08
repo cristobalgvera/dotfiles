@@ -4,6 +4,23 @@ local nvim_tree_config = util.require("nvim-tree.config")
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
+local options = {
+	indent_markers = 1,
+	git_hl = 1,
+	show_icons = {
+		git = 1,
+		folders = 1,
+		files = 1,
+		folder_arrows = 0,
+	},
+	-- add_trailing = 1,
+	-- group_empty = 1,
+}
+
+for option, value in pairs(options) do
+	vim.g["nvim_tree_" .. option] = value
+end
+
 nvim_tree.setup({
 	disable_netrw = true,
 	hijack_netrw = true,
@@ -64,22 +81,9 @@ nvim_tree.setup({
 		cmd = "trash",
 		require_confirm = true,
 	},
-})
-
-local options = {
-	indent_markers = 1,
-	quit_on_open = 1,
-	git_hl = 1,
-	show_icons = {
-		git = 1,
-		folders = 1,
-		files = 1,
-		folder_arrows = 0,
+	actions = {
+		open_file = {
+			quit_on_open = true,
+		},
 	},
-	-- add_trailing = 1,
-	-- group_empty = 1,
-}
-
-for option, value in pairs(options) do
-	vim.g["nvim_tree_" .. option] = value
-end
+})
