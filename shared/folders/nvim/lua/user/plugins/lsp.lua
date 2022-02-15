@@ -8,6 +8,6 @@ util.require(lsp_path .. "handlers").setup()
 util.require(lsp_path .. "null-ls")
 util.require(lsp_path .. "rust-tools")
 
-vim.cmd([[
-  autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_sync(nil, 1000)
-]])
+-- vim.cmd([[
+--   autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_sync(nil, 1000)
+-- ]])
