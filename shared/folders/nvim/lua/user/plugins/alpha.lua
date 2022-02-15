@@ -53,7 +53,7 @@ dashboard.section.header.opts.hl = "Function"
 -- Menu
 dashboard.section.buttons.val = {
 	button("s", "  Load session", "<cmd>SessionManager load_session<CR>"),
-	button("n", "  New file", "<cmd>ene <BAR> startinsert <CR>"),
+	button("n", "  New file", "<cmd>ene<CR>"),
 	button("f", "  Find file", "<cmd>Telescope find_files<CR>"),
 	button("r", "  Recently opened files", "<cmd>Telescope oldfiles<CR>"),
 	button("w", "  Find word", "<cmd>Telescope live_grep<CR>"),
