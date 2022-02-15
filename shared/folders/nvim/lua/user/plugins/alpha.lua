@@ -65,7 +65,7 @@ dashboard.section.buttons.val = {
 -- Footer
 dashboard.section.footer.val = footer()
 
-dashboard.opts.opts.noautocmd = true
+dashboard.config.opts.noautocmd = true
 
 -- hide tabline on startup screen
 vim.cmd([[
@@ -80,4 +80,4 @@ vim.cmd([[
     autocmd FileType alpha setlocal nofoldenable
 ]])
 
-alpha.setup(dashboard.opts)
+alpha.setup(dashboard.config)
