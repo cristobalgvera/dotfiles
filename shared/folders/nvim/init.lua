@@ -16,7 +16,6 @@ local plugins = {
 	"cmp",
 	"lsp",
 	"telescope",
-	"surround",
 	"treesitter",
 	"hop",
 	"gitsigns",
