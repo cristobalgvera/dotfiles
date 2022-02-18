@@ -104,6 +104,7 @@ local function define_client_capabilities(client)
 		"tsserver",
 		"rust_analyzer",
 		"html",
+    "sumneko_lua",
 	})
 
 	if custom_capabilities_langs[client.name] then
