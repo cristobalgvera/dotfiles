@@ -257,6 +257,13 @@ return packer.startup({
           "nvim-telescope/telescope.nvim",
         },
       },
+      {
+        "theHamsta/nvim-dap-virtual-text", -- variables easy visualization
+        requires = {
+          "mfussenegger/nvim-dap",
+          "nvim-treesitter/nvim-treesitter",
+        },
+      },
 
       -- Common plugins
       "nvim-lua/popup.nvim", -- an implementation of the popup api from vim in neovim
