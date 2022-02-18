@@ -264,6 +264,10 @@ return packer.startup({
           "nvim-treesitter/nvim-treesitter",
         },
       },
+      {
+        "rcarriga/nvim-dap-ui", -- ui layer for nvim-dap
+        requires = "mfussenegger/nvim-dap",
+      },
 
       -- Common plugins
       "nvim-lua/popup.nvim", -- an implementation of the popup api from vim in neovim
