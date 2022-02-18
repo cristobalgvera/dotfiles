@@ -248,30 +248,6 @@ return packer.startup({
       -- Focus
       "beauwilliams/focus.nvim", -- manage focused buffers sizes
 
-      -- Nvim DAP
-      "mfussenegger/nvim-dap", -- debug adapter protocol
-      {
-        "nvim-telescope/telescope-dap.nvim", -- telescope integration for nvim-dap
-        requires = {
-          "mfussenegger/nvim-dap",
-          "nvim-telescope/telescope.nvim",
-        },
-      },
-      {
-        "theHamsta/nvim-dap-virtual-text", -- variables easy visualization
-        requires = {
-          "mfussenegger/nvim-dap",
-          "nvim-treesitter/nvim-treesitter",
-        },
-      },
-      -- {
-      --   "Pocco81/DAPInstall.nvim", -- debug adapters manager for nvim-dap
-      --   requires = "mfussenegger/nvim-dap",
-      -- },
-      {
-        "rcarriga/nvim-dap-ui", -- ui layer for nvim-dap
-        requires = "mfussenegger/nvim-dap",
-      },
 
       -- Common plugins
       "nvim-lua/popup.nvim", -- an implementation of the popup api from vim in neovim

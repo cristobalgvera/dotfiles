@@ -82,17 +82,6 @@ keymap("n", "<Leader>tt", "<cmd>ToggleTerm<CR>")
 -- Neogen
 keymap("n", "<Leader>cg", "<cmd>lua require('neogen').generate()<CR>")
 
--- Nvim DAP
-keymap("n", "<Leader>db", "<cmd>lua require('dap').toggle_breakpoint()<CR>")
-keymap("n", "<Leader>dc", "<cmd>lua require('dap').continue()<CR>")
-keymap("n", "<Leader>dj", "<cmd>lua require('dap').step_over()<CR>")
-keymap("n", "<Leader>dl", "<cmd>lua require('dap').step_into()<CR>")
-keymap("n", "<Leader>dh", "<cmd>lua require('dap').step_out()<CR>")
-keymap("n", "<Leader>dr", "<cmd>lua require('dap').repl.open()<CR>")
-keymap("n", "<Leader>dtb", "<cmd>lua require('telescope').extensions.dap.list_breakpoints()<CR>")
-keymap("n", "<Leader>dtc", "<cmd>lua require('telescope').extensions.dap.commands()<CR>")
-keymap("n", "<Leader>de", "<cmd>lua require('dapui').eval()<CR>")
-keymap("n", "<Leader>df", "<cmd>lua require('dapui').float_element()<CR>")
 
 -- Insert --
 -- Press jk fast to enter

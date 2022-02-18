@@ -29,7 +29,6 @@ local plugins = {
   "whichkey",
   "indent-blankline",
   "close-buffers",
-  "nvim-dap",
 }
 
 for _, plugin in ipairs(plugins) do
