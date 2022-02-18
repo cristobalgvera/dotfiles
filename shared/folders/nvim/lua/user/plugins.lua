@@ -248,6 +248,8 @@ return packer.startup({
       -- Focus
       "beauwilliams/focus.nvim", -- manage focused buffers sizes
 
+      -- Vimspector
+      "puremourning/vimspector", -- debug adapter for vim
 
       -- Common plugins
       "nvim-lua/popup.nvim", -- an implementation of the popup api from vim in neovim

@@ -10,6 +10,11 @@ local globals = {
     trasparent = true, -- disable setting the background color
     italic_keywords = false, -- disable italic in keywords
   },
+
+  vimspector = {
+    install_gadgets = { "vscode-node-debug2", "debugger-for-chrome" },
+    enable_mappings = "HUMAN",
+  },
 }
 
 -- Set each entry in globals variable

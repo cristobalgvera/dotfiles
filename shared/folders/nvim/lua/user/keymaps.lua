@@ -1,5 +1,6 @@
 local util = require("user.util")
 local keymap = util.keymap
+local plugmap = util.plugmap
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>")
@@ -82,6 +83,18 @@ keymap("n", "<Leader>tt", "<cmd>ToggleTerm<CR>")
 -- Neogen
 keymap("n", "<Leader>cg", "<cmd>lua require('neogen').generate()<CR>")
 
+-- Debug
+plugmap("n", "<Leader>dl", "<Plug>VimspectorStepInto")
+plugmap("n", "<Leader>dh", "<Plug>VimspectorStepOut")
+plugmap("n", "<Leader>dj", "<Plug>VimspectorStepOver")
+plugmap("n", "<Leader>dg", "<Plug>VimspectorRunToCursor")
+plugmap("n", "<Leader>db", "<Plug>VimspectorToggleBreakpoint")
+plugmap("n", "<Leader>dt", "<Plug>VimspectorToggleConditionalBreakpoint")
+plugmap("n", "<Leader>ds", "<Plug>VimspectorStop")
+plugmap("n", "<Leader>dr", "<Plug>VimspectorRestart")
+plugmap("n", "<Leader>dp", "<Plug>VimspectorPause")
+plugmap("n", "<Leader>dc", "<Plug>VimspectorContinue")
+plugmap("n", "<Leader>de", "<Plug>VimspectorBalloonEval")
 
 -- Insert --
 -- Press jk fast to enter
