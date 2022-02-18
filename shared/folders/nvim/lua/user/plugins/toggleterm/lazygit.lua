@@ -7,7 +7,7 @@ local lazygit = terminal:new({ cmd = "lazygit", hidden = true })
 local keymap = util.keymap
 
 _G.toggle_lazygit = function()
-	lazygit:toggle()
+  lazygit:toggle()
 end
 
 keymap("n", "<Leader>tg", "<cmd>lua toggle_lazygit()<CR>")

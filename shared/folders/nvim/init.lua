@@ -7,30 +7,30 @@ require("user.keymaps")
 require("user.plugins")
 
 local plugins = {
-	"notify",
-	"fidget",
-	"neogen",
-	"focus",
-	"alpha",
-	"colorscheme",
-	"cmp",
-	"lsp",
-	"telescope",
-	"treesitter",
-	"hop",
-	"gitsigns",
-	"trouble",
-	"bufferline",
-	"comment",
-	"nvim-tree",
-	"lualine",
-	"session-manager",
-	"toggleterm",
-	"whichkey",
-	"indent-blankline",
-	"close-buffers",
+  "notify",
+  "fidget",
+  "neogen",
+  "focus",
+  "alpha",
+  "colorscheme",
+  "cmp",
+  "lsp",
+  "telescope",
+  "treesitter",
+  "hop",
+  "gitsigns",
+  "trouble",
+  "bufferline",
+  "comment",
+  "nvim-tree",
+  "lualine",
+  "session-manager",
+  "toggleterm",
+  "whichkey",
+  "indent-blankline",
+  "close-buffers",
 }
 
 for _, plugin in ipairs(plugins) do
-	pcall(require, "user.plugins." .. plugin)
+  pcall(require, "user.plugins." .. plugin)
 end

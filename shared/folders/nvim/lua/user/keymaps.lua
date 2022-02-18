@@ -30,9 +30,9 @@ keymap("n", "<Leader>r", "<cmd>NvimTreeRefresh<CR>")
 
 -- Telescope
 keymap(
-	"n",
-	"<Leader>ff",
-	":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>"
+  "n",
+  "<Leader>ff",
+  ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>"
 )
 keymap("n", "<Leader>fw", "<cmd>Telescope live_grep<CR>")
 
