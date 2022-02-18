@@ -264,6 +264,10 @@ return packer.startup({
           "nvim-treesitter/nvim-treesitter",
         },
       },
+      -- {
+      --   "Pocco81/DAPInstall.nvim", -- debug adapters manager for nvim-dap
+      --   requires = "mfussenegger/nvim-dap",
+      -- },
       {
         "rcarriga/nvim-dap-ui", -- ui layer for nvim-dap
         requires = "mfussenegger/nvim-dap",
