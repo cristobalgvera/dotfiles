@@ -127,6 +127,7 @@ telescope.setup({
 local extensions = {
 	"fzy_native",
 	"notify",
+  "dap",
 }
 
 for _, extension in ipairs(extensions) do

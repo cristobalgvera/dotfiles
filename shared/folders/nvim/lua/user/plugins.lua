@@ -250,6 +250,13 @@ return packer.startup({
 
       -- Nvim DAP
       "mfussenegger/nvim-dap", -- debug adapter protocol
+      {
+        "nvim-telescope/telescope-dap.nvim", -- telescope integration for nvim-dap
+        requires = {
+          "mfussenegger/nvim-dap",
+          "nvim-telescope/telescope.nvim",
+        },
+      },
 
       -- Common plugins
       "nvim-lua/popup.nvim", -- an implementation of the popup api from vim in neovim

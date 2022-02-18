@@ -89,6 +89,8 @@ keymap("n", "<Leader>dj", "<cmd>lua require('dap').step_over()<CR>")
 keymap("n", "<Leader>dl", "<cmd>lua require('dap').step_into()<CR>")
 keymap("n", "<Leader>dh", "<cmd>lua require('dap').step_out()<CR>")
 keymap("n", "<Leader>dr", "<cmd>lua require('dap').repl.open()<CR>")
+keymap("n", "<Leader>dtb", "<cmd>lua require('telescope').extensions.dap.list_breakpoints()<CR>")
+keymap("n", "<Leader>dtc", "<cmd>lua require('telescope').extensions.dap.commands()<CR>")
 
 -- Insert --
 -- Press jk fast to enter
