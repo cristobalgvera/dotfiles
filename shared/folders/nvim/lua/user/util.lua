@@ -1,5 +1,12 @@
 local M = {}
 
+M.plugmap = function(mode, keybinding, command, options)
+  local default_opts = { silent = true }
+  local opts = options or default_opts
+
+  M.keymap(mode, keybinding, command, opts)
+end
+
 M.keymap = function(mode, keybinding, command, options)
   local global_keymap = vim.api.nvim_set_keymap
 
