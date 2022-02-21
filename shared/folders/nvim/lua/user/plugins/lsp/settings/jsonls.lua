@@ -1,5 +1,5 @@
 local util = require("user.util")
-local jsonls_settings = util.require("nlspsettings.jsonls")
+local jsonls_settings = util.require("nlspsettings.loaders.json")
 
 local default_schemas = jsonls_settings.get_default_schemas()
 
