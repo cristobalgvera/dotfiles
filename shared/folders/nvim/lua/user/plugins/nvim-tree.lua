@@ -57,7 +57,7 @@ nvim_tree.setup({
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 500,
   },
   view = {
@@ -84,6 +84,13 @@ nvim_tree.setup({
   actions = {
     open_file = {
       quit_on_open = true,
+      exclude = {
+        filetype = {
+          "notify",
+          "packer",
+          "Alpha",
+        },
+      },
     },
   },
 })
