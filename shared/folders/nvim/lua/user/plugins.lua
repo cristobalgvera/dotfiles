@@ -48,36 +48,19 @@ return packer.startup({
     use({
       -- Autocompletion plugins
       "hrsh7th/nvim-cmp", -- completion plugin
-      {
-        "hrsh7th/cmp-buffer", -- buffer completions
-        requires = "hrsh7th/nvim-cmp",
-      },
-      {
-        "hrsh7th/cmp-path", -- path completions
-        requires = "hrsh7th/nvim-cmp",
-      },
-      {
-        "hrsh7th/cmp-cmdline", -- cmdline completions
-        requires = "hrsh7th/nvim-cmp",
-      },
-      {
-        "saadparwaiz1/cmp_luasnip", -- snippet completions
-        requires = "hrsh7th/nvim-cmp",
-      },
+      "hrsh7th/cmp-buffer", -- buffer completions
+      "hrsh7th/cmp-path", -- path completions
+      "hrsh7th/cmp-cmdline", -- cmdline completions
+      "saadparwaiz1/cmp_luasnip", -- snippet completions
+      "windwp/nvim-autopairs", -- autopairs when possible
       {
         "hrsh7th/cmp-nvim-lua", -- autocompletion support for lua
         ft = { "lua" },
-        requires = "hrsh7th/nvim-cmp",
-      },
-      {
-        "windwp/nvim-autopairs", -- autopairs when possible
-        requires = "hrsh7th/nvim-cmp",
       },
       {
         "tzachar/cmp-tabnine", -- tabnine ai autocompletion
         after = "nvim-cmp",
         run = tabnine_run,
-        requires = "hrsh7th/nvim-cmp",
       },
 
       -- Snippets
@@ -86,46 +69,22 @@ return packer.startup({
 
       -- LSP
       "neovim/nvim-lspconfig", -- enable lsp
-      {
-        "hrsh7th/cmp-nvim-lsp", -- autocompletion support for lsp
-        requires = "neovim/nvim-lspconfig",
-      },
-      {
-        "williamboman/nvim-lsp-installer", -- simple to use language server installer
-        requires = "neovim/nvim-lspconfig",
-      },
-      {
-        "tamago324/nlsp-settings.nvim", -- language server settings defined in json for
-        requires = "neovim/nvim-lspconfig",
-      },
-      {
-        "ray-x/lsp_signature.nvim", -- show method's signature
-        requires = "neovim/nvim-lspconfig",
-      },
+      "hrsh7th/cmp-nvim-lsp", -- autocompletion support for lsp
+      "williamboman/nvim-lsp-installer", -- simple to use language server installer
+      "tamago324/nlsp-settings.nvim", -- language server settings defined in json for
+      "ray-x/lsp_signature.nvim", -- show method's signature
 
       -- Null-ls
-      {
-        "jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
-        requires = "neovim/nvim-lspconfig",
-      },
+      "jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
 
       -- Rust tools
-      {
-        "simrat39/rust-tools.nvim", -- rust language adition tools
-        requires = "neovim/nvim-lspconfig",
-      },
+      "simrat39/rust-tools.nvim", -- rust language adition tools
 
       -- Comments
-      {
-        "numToStr/Comment.nvim", -- fast comment toggle
-        requires = "neovim/nvim-lspconfig",
-      },
+      "numToStr/Comment.nvim", -- fast comment toggle
 
       -- Fidget
-      {
-        "j-hui/fidget.nvim", -- nvim-lsp progress ui
-        requires = "neovim/nvim-lspconfig",
-      },
+      "j-hui/fidget.nvim", -- nvim-lsp progress ui
 
       -- Telescope
       "nvim-telescope/telescope.nvim", -- telescope support
@@ -136,63 +95,30 @@ return packer.startup({
         "nvim-treesitter/nvim-treesitter", -- treesitter support
         run = ":TSUpdate",
       },
-      {
-        "p00f/nvim-ts-rainbow", -- rainbow brackets
-        requires = "nvim-treesitter/nvim-treesitter",
-      },
-      {
-        "windwp/nvim-ts-autotag", -- auto close html tags
-        requires = "nvim-treesitter/nvim-treesitter",
-      },
-      {
-        "JoosepAlviste/nvim-ts-context-commentstring", -- js world improvement to context support
-        requires = "nvim-treesitter/nvim-treesitter",
-      },
+      "p00f/nvim-ts-rainbow", -- rainbow brackets
+      "windwp/nvim-ts-autotag", -- auto close html tags
+      "JoosepAlviste/nvim-ts-context-commentstring", -- js world improvement to context support
 
       -- Nvim GPS
-      {
-        "SmiteshP/nvim-gps", -- show current position un buffer
-        requires = "nvim-treesitter/nvim-treesitter",
-      },
+      "SmiteshP/nvim-gps", -- show current position un buffer
 
       -- Neogen
-      {
-        "danymat/neogen", -- annotations toolkit
-        requires = "nvim-treesitter/nvim-treesitter",
-      },
+      "danymat/neogen", -- annotations toolkit
 
       -- Lualine
-      {
-        "nvim-lualine/lualine.nvim", -- statuline
-        requires = {
-          "kyazdani42/nvim-web-devicons",
-          "SmiteshP/nvim-gps",
-        },
-      },
+      "nvim-lualine/lualine.nvim", -- statuline
 
       -- Hop
       "phaazon/hop.nvim", -- easymotion-like to nvim
 
       -- Git signs
-      {
-        "lewis6991/gitsigns.nvim", -- shows git changes
-        requires = "nvim-lua/plenary.nvim",
-      },
+      "lewis6991/gitsigns.nvim", -- shows git changes
 
       -- Troubles manager
-      {
-        "folke/trouble.nvim", -- troubles easy management
-        requires = "kyazdani42/nvim-web-devicons",
-      },
-
-      -- Web development icons
-      "kyazdani42/nvim-web-devicons", -- icons pack
+      "folke/trouble.nvim", -- troubles easy management
 
       -- Bufferline
-      {
-        "akinsho/bufferline.nvim", -- tabs-like buffer usage
-        requires = "kyazdani42/nvim-web-devicons",
-      },
+      "akinsho/bufferline.nvim", -- tabs-like buffer usage
 
       -- BDelete
       "kazhala/close-buffers.nvim", -- easily close buffers
@@ -219,10 +145,7 @@ return packer.startup({
       "mg979/vim-visual-multi", -- easily create multiple cursors
 
       -- NvimTree
-      {
-        "kyazdani42/nvim-tree.lua", -- file tree explorer
-        requires = "kyazdani42/nvim-web-devicons", -- optional, for file icon
-      },
+      "kyazdani42/nvim-tree.lua", -- file tree explorer
 
       -- Alpha
       "goolord/alpha-nvim", -- fancy welcome page
@@ -255,6 +178,10 @@ return packer.startup({
       "nvim-lua/popup.nvim", -- an implementation of the popup api from vim in neovim
       "nvim-lua/plenary.nvim", -- useful lua functions used ny lots of plugins
       "lewis6991/impatient.nvim", -- speed up startup time
+
+      -- Web development icons
+      "kyazdani42/nvim-web-devicons", -- icons pack
+
 
       -- Packer base
       "wbthomason/packer.nvim", -- have packer manage itself
