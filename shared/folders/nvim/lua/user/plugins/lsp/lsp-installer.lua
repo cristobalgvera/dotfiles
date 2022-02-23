@@ -23,7 +23,7 @@ for _, name in pairs(servers) do
   -- Check that the server is supported in nvim-lsp-installer
   if config_ok then
     if not server:is_installed() then
-      print("Installing " .. name)
+      util.notify("LSP Installer", "Installing " .. name, vim.lsp.log_levels.INFO)
       server:install()
     end
   end
