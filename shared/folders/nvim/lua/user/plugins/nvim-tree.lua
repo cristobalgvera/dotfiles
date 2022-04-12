@@ -5,7 +5,7 @@ local nvim_tree_config = util.require("nvim-tree.config")
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 local options = {
-  indent_markers = 1,
+  -- indent_markers = 1,
   git_hl = 1,
   show_icons = {
     git = 1,
@@ -90,6 +90,11 @@ nvim_tree.setup({
           "Alpha",
         },
       },
+    },
+  },
+  renderer = {
+    indent_markers = {
+      enable = true,
     },
   },
 })
