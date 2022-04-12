@@ -18,11 +18,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
 ]])
 
 -- Use a protected call so we don't error out on first use
@@ -130,10 +130,10 @@ return packer.startup({
 
       -- Throws an error that opens CMD windows randomly
       -- Wakatime
-      -- "wakatime/vim-wakatime",                    -- vim wakatime
+      "wakatime/vim-wakatime", -- vim wakatime
 
       -- Github Copilot
-      -- "github/copilot.vim",                       -- github copilot
+      "github/copilot.vim", -- github copilot
 
       -- Neovim Scroll
       -- "karb94/neoscroll.nvim", -- smooth scroll
@@ -181,7 +181,6 @@ return packer.startup({
 
       -- Web development icons
       "kyazdani42/nvim-web-devicons", -- icons pack
-
 
       -- Packer base
       "wbthomason/packer.nvim", -- have packer manage itself
