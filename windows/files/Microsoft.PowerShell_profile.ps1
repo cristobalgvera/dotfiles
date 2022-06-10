@@ -60,8 +60,7 @@ Set-PSFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 
 # Utilities
 function repos {
-  $MyDocuments = [Environment]::GetFolderPath([Environment+SpecialFolder]::MyDocuments)
-  Set-Location "$MyDocuments\Repositories"
+  Set-Location "$Env:UserProfile\Repositories"
 }
 
 function which {
