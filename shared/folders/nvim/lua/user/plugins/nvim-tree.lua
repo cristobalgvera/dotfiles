@@ -6,13 +6,13 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 
 local options = {
   -- indent_markers = 1,
-  git_hl = 1,
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 0,
-  },
+  -- git_hl = 1,
+  -- show_icons = {
+  --   git = 1,
+  --   folders = 1,
+  --   files = 1,
+  --   folder_arrows = 0,
+  -- },
   -- add_trailing = 1,
   -- group_empty = 1,
 }
@@ -83,11 +83,13 @@ nvim_tree.setup({
   actions = {
     open_file = {
       quit_on_open = true,
-      exclude = {
-        filetype = {
-          "notify",
-          "packer",
-          "Alpha",
+      window_picker = {
+        exclude = {
+          filetype = {
+            "notify",
+            "packer",
+            "Alpha",
+          },
         },
       },
     },
@@ -96,5 +98,14 @@ nvim_tree.setup({
     indent_markers = {
       enable = true,
     },
+    icons = {
+      show = {
+        git = true,
+        file = true,
+        folder = true,
+        folder_arrow = false,
+      },
+    },
+    highlight_git = true,
   },
 })
