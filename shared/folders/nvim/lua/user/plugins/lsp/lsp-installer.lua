@@ -15,8 +15,6 @@ local servers = {
   "bashls", -- yarn global add bash-language-server
   "emmet_ls", -- yarn global add emmet-ls
   "pyright", -- just needs python installed
-  "lemminx", -- add lemminx bin (https://download.jboss.org/jbosstools/vscode/stable/lemminx-binary)
-  "terraformls", -- add terraform-ls bin (https://github.com/hashicorp/terraform-ls/releases)
 }
 
 -- Install LSP servers if they're not already installed
