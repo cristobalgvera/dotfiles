@@ -133,9 +133,11 @@ cmp.setup({
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  documentation = {
-    border = "rounded",
-    winhighlight = "Normal:CmpDocumentation,FloatBorder:CmpDocumentationBorder",
+  window = {
+    documentation = {
+      border = "rounded",
+      winhighlight = "Normal:CmpDocumentation,FloatBorder:CmpDocumentationBorder",
+    },
   },
   experimental = {
     ghost_text = false,
