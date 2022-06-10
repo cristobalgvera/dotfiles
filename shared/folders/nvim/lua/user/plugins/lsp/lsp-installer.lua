@@ -15,6 +15,7 @@ local servers = {
   "bashls", -- yarn global add bash-language-server
   "emmet_ls", -- yarn global add emmet-ls
   "pyright", -- just needs python installed
+  "angularls", -- yarn global add @angular/language-server
 }
 
 -- Install LSP servers if they're not already installed
