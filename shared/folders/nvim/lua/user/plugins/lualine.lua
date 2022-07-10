@@ -18,12 +18,11 @@ local lualine_setup = {
   },
 }
 
-local nvim_gps = util.require("nvim-gps")
-nvim_gps.setup()
+local navic = util.require("nvim-navic")
 
 lualine_setup.sections.lualine_c = {
   "filename",
-  { nvim_gps.get_location, cond = nvim_gps.is_available },
+  { navic.get_location, cond = navic.is_available },
 }
 
 local colorscheme = util.require("user.plugins.colorscheme")

@@ -100,7 +100,7 @@ return packer.startup({
       "JoosepAlviste/nvim-ts-context-commentstring", -- js world improvement to context support
 
       -- Nvim GPS
-      "SmiteshP/nvim-gps", -- show current position un buffer
+      "SmiteshP/nvim-navic", -- show current position un buffer
 
       -- Neogen
       "danymat/neogen", -- annotations toolkit
