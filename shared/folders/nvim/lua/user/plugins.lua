@@ -174,6 +174,17 @@ return packer.startup({
       -- Vimspector
       "puremourning/vimspector", -- debug adapter for vim
 
+      -- Markdown Previoew
+      {
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        ft = { "markdown" }
+      },
+
+      -- EditorConfig
+      "gpanders/editorconfig.nvim", -- consistent coding style
+
       -- Common plugins
       "nvim-lua/popup.nvim", -- an implementation of the popup api from vim in neovim
       "nvim-lua/plenary.nvim", -- useful lua functions used ny lots of plugins
