@@ -1,4 +1,5 @@
 local util = require("user.util")
+local navic = util.require("nvim-navic")
 local M = {}
 
 local max_width = math.max(math.floor(vim.o.columns * 0.7), 100)
@@ -129,11 +130,16 @@ local function make_signature_help(bufnr)
   }, bufnr)
 end
 
+local function attach_navic(client, bufnr)
+  navic.attach(client, bufnr)
+end
+
 M.on_attach = function(client, bufnr)
   define_client_capabilities(client)
   lsp_highlight_document(client)
   lsp_keymaps(bufnr)
   make_signature_help(bufnr)
+  attach_navic(client, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
