@@ -40,3 +40,6 @@ nnoremap <S-Left> :action EditorLeftWithSelection<CR>
 nnoremap <S-Right> :action EditorRightWithSelection<CR>
 nnoremap <S-Up> :action EditorUpWithSelection<CR>
 nnoremap <S-Down> :action EditorDownWithSelection<CR>
+
+"Quick actions
+nnoremap <Leader>q :q<CR>
