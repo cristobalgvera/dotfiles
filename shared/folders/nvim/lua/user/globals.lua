@@ -15,6 +15,10 @@ local globals = {
     install_gadgets = { "vscode-node-debug2", "debugger-for-chrome" },
     enable_mappings = "HUMAN",
   },
+
+  navic = {
+    silence = true,
+  },
 }
 
 -- Set each entry in globals variable
