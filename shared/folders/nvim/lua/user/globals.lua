@@ -26,10 +26,12 @@ for category, options in pairs(globals) do
   for option, value in pairs(options) do
     if category == "general" then
       vim.g[option] = value
-      return
+      goto continue
     end
 
     local full_option = category .. "_" .. option
     vim.g[full_option] = value
+
+    ::continue::
   end
 end
