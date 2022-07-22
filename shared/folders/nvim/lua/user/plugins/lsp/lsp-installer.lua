@@ -16,6 +16,7 @@ local servers = {
   "emmet_ls", -- yarn global add emmet-ls
   "pyright", -- just needs python installed
   "angularls", -- yarn global add @angular/language-server
+  "dockerls", -- yarn global add dockerfile-language-server-nodejs
 }
 
 -- Install LSP servers if they're not already installed
