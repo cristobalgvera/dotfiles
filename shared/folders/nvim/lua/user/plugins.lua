@@ -172,14 +172,16 @@ return packer.startup({
       "beauwilliams/focus.nvim", -- manage focused buffers sizes
 
       -- Vimspector
-      "puremourning/vimspector", -- debug adapter for vim
+      -- "puremourning/vimspector", -- debug adapter for vim
 
       -- Markdown Previoew
       {
         "iamcco/markdown-preview.nvim",
         run = "cd app && npm install",
-        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-        ft = { "markdown" }
+        setup = function()
+          vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" },
       },
 
       -- EditorConfig

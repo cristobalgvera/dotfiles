@@ -11,10 +11,10 @@ local globals = {
     italic_keywords = false, -- disable italic in keywords
   },
 
-  vimspector = {
-    install_gadgets = { "vscode-node-debug2", "debugger-for-chrome" },
-    enable_mappings = "HUMAN",
-  },
+  -- vimspector = {
+  --   install_gadgets = { "vscode-node-debug2", "debugger-for-chrome" },
+  --   enable_mappings = "HUMAN",
+  -- },
 
   navic = {
     silence = true,
