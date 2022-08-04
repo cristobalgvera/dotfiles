@@ -39,7 +39,7 @@ null_ls.setup({
     formatting.shfmt.with({
       extra_args = { "-w", "." },
     }), -- go install mvdan.cc/sh/v3/cmd/shfmt@latest
-    -- diagnostics.cspell, -- yarn global add cspell
+    diagnostics.cspell, -- yarn global add cspell
     diagnostics.jsonlint, -- yarn global add jsonlint
     diagnostics.markdownlint, -- yarn global add markdownlint
     diagnostics.yamllint, -- pip install yamllint --user
