@@ -18,6 +18,7 @@ function install_apps {
 		fzf
 		git
 		neovim
+    starship
 		jesseduffield/lazygit/lazygit
 		shellcheck
 	)
@@ -37,8 +38,8 @@ function install_apps {
 		font-caskaydia-cove-nerd-font
 		font-source-code-pro
 		google-chrome
-		google-drive
 		iterm2
+    warp
 		rar
 		raycast
 		visual-studio-code

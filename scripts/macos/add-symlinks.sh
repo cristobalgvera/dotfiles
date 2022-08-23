@@ -38,6 +38,10 @@ function add_symlinks {
 	# Zsh config
 	echo "Linking Zsh config"
 	link_file "$macosFilesPath"/.zshrc ~/.zshrc
+
+	# Starship config
+	echo "Linking Starship config"
+  link_file "$sharedPath"/starship.toml ~/.config/starship.toml
 }
 
 add_symlinks
