@@ -44,6 +44,7 @@ alias repos='cd ~/Documents/Repositories'
 alias ls='colorls -A --sd'
 alias bup='brew cu -a --cleanup'
 alias py='python'
+alias lg='lazygit'
 alias v='nvim'
 
 export EDITOR='nvim'
