@@ -17,6 +17,7 @@ local servers = {
   "pyright", -- just needs python installed
   "angularls", -- yarn global add @angular/language-server
   "dockerls", -- yarn global add dockerfile-language-server-nodejs
+  "terraformls", -- follow this instructions https://github.com/hashicorp/terraform-ls/blob/main/docs/installation.md
 }
 
 -- Install LSP servers if they're not already installed
