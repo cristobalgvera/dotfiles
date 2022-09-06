@@ -18,6 +18,7 @@ local servers = {
   "angularls", -- yarn global add @angular/language-server
   "dockerls", -- yarn global add dockerfile-language-server-nodejs
   "terraformls", -- follow this instructions https://github.com/hashicorp/terraform-ls/blob/main/docs/installation.md
+  "prismals", -- yarn global add @prisma/language-server
 }
 
 -- Install LSP servers if they're not already installed
