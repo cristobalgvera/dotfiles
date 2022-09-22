@@ -19,6 +19,7 @@ local servers = {
   "dockerls", -- yarn global add dockerfile-language-server-nodejs
   "terraformls", -- follow this instructions https://github.com/hashicorp/terraform-ls/blob/main/docs/installation.md
   "prismals", -- yarn global add @prisma/language-server
+  "astro", -- yarn global add @astrojs/language-server
 }
 
 -- Install LSP servers if they're not already installed
