@@ -21,6 +21,7 @@ function install_apps {
     starship
 		jesseduffield/lazygit/lazygit
 		shellcheck
+    git-delta
 	)
 
 	for formulae in "${formulaes[@]}"; do
