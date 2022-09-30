@@ -89,6 +89,11 @@ function AddScoopApps {
         },
 
         [PSCustomObject]@{
+            CLI  = "delta";
+            Name = "delta";
+        },
+
+        [PSCustomObject]@{
             CLI  = "shellcheck";
             Name = "shellcheck";
         }
