@@ -22,6 +22,8 @@ function install_apps {
 		jesseduffield/lazygit/lazygit
 		shellcheck
     git-delta
+    rbenv
+    ruby-build
 	)
 
 	for formulae in "${formulaes[@]}"; do

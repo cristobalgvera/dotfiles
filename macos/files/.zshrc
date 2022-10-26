@@ -19,6 +19,8 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
+# Init RbEnv
+eval "$(rbenv init - zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
