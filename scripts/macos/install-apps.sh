@@ -24,6 +24,7 @@ function install_apps {
     git-delta
     rbenv
     ruby-build
+    exa
 	)
 
 	for formulae in "${formulaes[@]}"; do
@@ -41,7 +42,6 @@ function install_apps {
 		font-caskaydia-cove-nerd-font
 		font-source-code-pro
 		google-chrome
-		iterm2
     warp
 		rar
 		raycast
