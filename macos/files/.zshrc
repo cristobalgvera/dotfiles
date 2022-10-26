@@ -19,7 +19,6 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-source $(dirname $(gem which colorls))/tab_complete.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -40,7 +39,6 @@ ZSHZ_CASE=smart
 
 # Aliases
 alias repos='cd ~/Documents/Repositories'
-alias ls='colorls -A --sd'
 alias bup='brew cu -a --cleanup'
 alias py='python'
 alias lg='lazygit'
