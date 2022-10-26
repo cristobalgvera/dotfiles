@@ -1,6 +1,5 @@
 local util = require("user.util")
 local keymap = util.keymap
-local plugmap = util.plugmap
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>")
