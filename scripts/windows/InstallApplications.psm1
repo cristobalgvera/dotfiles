@@ -44,11 +44,6 @@ function ConfigureScoop {
 function AddScoopApps {
     $Applications = @(
         [PSCustomObject]@{
-            CLI  = "aria2";
-            Name = "aria2";
-        },
-
-        [PSCustomObject]@{
             CLI  = "fzf";
             Name = "fzf";
         },
