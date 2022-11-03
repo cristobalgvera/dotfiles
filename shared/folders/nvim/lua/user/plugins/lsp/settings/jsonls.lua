@@ -6,6 +6,11 @@ local default_schemas = jsonls_settings.get_default_schemas()
 -- Find more schemas here: https://www.schemastore.org/json/
 local schemas = {
   {
+    description = "Lint-staged configuration file",
+    fileMatch = { ".lintstagedrc.json" },
+    url = "http://json.schemastore.org/lintstagedrc.schema",
+  },
+  {
     description = "TypeScript compiler configuration file",
     fileMatch = {
       "tsconfig.json",
