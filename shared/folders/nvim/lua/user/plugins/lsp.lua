@@ -11,6 +11,6 @@ util.require(lsp_path .. "rust-tools")
 vim.cmd([[
   augroup LspFormatting
     autocmd! * *.lua
-    autocmd BufWritePre *.lua lua vim.lsp.buf.format(nil, 1000)
+    autocmd BufWritePre *.lua lua vim.lsp.buf.format()
   augroup END
 ]])
