@@ -49,7 +49,7 @@ end
 
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
-  if client.server_capabilities.document_highlight then
+  if client.server_capabilities.documentHighlightProvider then
     vim.api.nvim_exec(
       [[
         augroup lsp_document_highlight
@@ -89,8 +89,8 @@ local function define_capabilities(client, opts)
   end
 
   if opts.disable_formatting then
-    capabilities.document_formatting = false
-    capabilities.document_range_formatting = false
+    capabilities.documentFormattingProvider = false
+    capabilities.documentRangeFormattingProvider = false
   end
 
   return capabilities
