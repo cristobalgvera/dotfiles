@@ -43,7 +43,6 @@ function install_apps {
 		font-source-code-pro
 		google-chrome
     warp
-		rar
 		raycast
 		visual-studio-code
 		whatsapp
