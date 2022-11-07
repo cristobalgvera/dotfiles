@@ -1,2 +1,2 @@
-lvim.log.level = "warn"
-lvim.format_on_save.enabled = false
+lvim.format_on_save.enabled = true
+lvim.format_on_save.pattern = "*.lua"
