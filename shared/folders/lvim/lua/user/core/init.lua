@@ -1,5 +1,6 @@
 local plugins = {
   "treesitter",
+  "which_key",
 }
 
 for _, plugin in ipairs(plugins) do
