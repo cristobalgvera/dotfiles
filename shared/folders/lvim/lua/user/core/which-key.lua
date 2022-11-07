@@ -12,5 +12,6 @@ which_key.mappings["t"] = {
 }
 
 which_key.mappings.g["t"] = {
-  "<cmd>Gitsigns toggle_current_line_blame<cr>", "Toggle current line blame"
+  "<cmd>Gitsigns toggle_current_line_blame<cr>",
+  "Toggle current line blame",
 }
