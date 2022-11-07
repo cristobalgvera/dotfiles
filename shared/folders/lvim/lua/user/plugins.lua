@@ -9,6 +9,9 @@ lvim.plugins = {
     "folke/trouble.nvim",
   },
 
+  -- TypeScript
+  "jose-elias-alvarez/typescript.nvim",
+
   -- Wakatime
   "wakatime/vim-wakatime",
 }

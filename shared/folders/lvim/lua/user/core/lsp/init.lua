@@ -1,7 +1,8 @@
-local plugins = {
+local functionalities = {
   "null-ls",
+  "languages",
 }
 
-for _, plugin in ipairs(plugins) do
-  reload("user.core.lsp." .. plugin)
+for _, functionality in ipairs(functionalities) do
+  reload("user.core.lsp." .. functionality)
 end
