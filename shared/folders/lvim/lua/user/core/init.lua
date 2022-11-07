@@ -1,5 +1,6 @@
 local plugins = {
   "alpha",
+  "nvimtree",
   "treesitter",
   "which_key",
 }
