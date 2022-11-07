@@ -32,10 +32,10 @@ function GetSharedFiles {
             Force = $Force
         },
 
-        # Nvim configuration
+        # LunarVim configuration
         [PSCustomObject]@{
-            From     = "$SHARED\folders\nvim";
-            To       = "$Env:LocalAppData\nvim";
+            From     = "$SHARED\folders\lvim";
+            To       = "$Env:LocalAppData\lvim";
             IsFolder = $true;
             Force    = $Force
         }

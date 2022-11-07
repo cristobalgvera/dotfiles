@@ -42,6 +42,7 @@ function SetConsoleTheme {
 SetConsoleTheme
 
 # Alias
+Set-Alias nvim lvim
 Set-Alias v nvim
 Set-Alias lg lazygit
 
