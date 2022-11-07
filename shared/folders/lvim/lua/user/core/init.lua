@@ -1,5 +1,6 @@
 local plugins = {
   "alpha",
+  "cmp",
   "fidget",
   "hop",
   "gitsigns",
