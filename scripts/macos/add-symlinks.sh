@@ -27,9 +27,9 @@ function add_symlinks {
 	echo "Linking Ideavim config"
 	link_file "$sharedPath"/.ideavimrc ~/.ideavimrc
 
-	# Neovim config
-	echo "Linking Neovim config"
-	link_file "$sharedPath"/folders/nvim ~/.config/nvim
+	# LunarVim config
+	echo "Linking LunarVim config"
+	link_file "$sharedPath"/folders/lvim ~/.config/lvim
 
 	# Lazygit config
 	echo "Linking Lazygit config"
