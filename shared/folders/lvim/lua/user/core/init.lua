@@ -1,4 +1,5 @@
 local plugins = {
+  "alpha",
   "treesitter",
   "which_key",
 }
