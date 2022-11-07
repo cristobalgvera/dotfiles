@@ -46,9 +46,10 @@ alias lt='exa --icons --all --group-directories-first --long --header --git --no
 alias bup='brew cu -a --cleanup'
 alias py='python'
 alias lg='lazygit'
+alias nvim='lvim'
 alias v='nvim'
 
-export EDITOR='nvim'
+export EDITOR='lvim'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
