@@ -8,4 +8,7 @@ lvim.plugins = {
   {
     "folke/trouble.nvim",
   },
+
+  -- Wakatime
+  "wakatime/vim-wakatime",
 }
