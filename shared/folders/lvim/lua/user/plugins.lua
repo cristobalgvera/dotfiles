@@ -1,4 +1,7 @@
 lvim.plugins = {
+  -- Fidget
+  "j-hui/fidget.nvim",
+
   -- Treesitter
   "p00f/nvim-ts-rainbow",
   "windwp/nvim-ts-autotag",

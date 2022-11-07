@@ -1,5 +1,6 @@
 local plugins = {
   "alpha",
+  "fidget",
   "gitsigns",
   "lsp",
   "nvimtree",
