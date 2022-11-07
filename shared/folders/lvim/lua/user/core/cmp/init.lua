@@ -1,5 +1,6 @@
 local features = {
   "tabnine",
+  "copilot",
 }
 
 for _, feature in ipairs(features) do

@@ -2,6 +2,16 @@ lvim.plugins = {
   -- Fidget
   "j-hui/fidget.nvim",
 
+  -- GitHub Copilot
+  {
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua", "nvim-cmp" },
+  },
+
   -- Hop
   "phaazon/hop.nvim",
 
