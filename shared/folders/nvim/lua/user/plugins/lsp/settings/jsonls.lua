@@ -6,6 +6,11 @@ local default_schemas = jsonls_settings.get_default_schemas()
 -- Find more schemas here: https://www.schemastore.org/json/
 local schemas = {
   {
+    description = "GraphQL configuration file",
+    fileMatch = { ".graphqlrc", ".graphqlrc.json", "graphql.config.json" },
+    url = "https://unpkg.com/graphql-config@4.3.6/config-schema.json",
+  },
+  {
     description = "Lint-staged configuration file",
     fileMatch = { ".lintstagedrc.json" },
     url = "http://json.schemastore.org/lintstagedrc.schema",
