@@ -2,6 +2,9 @@ lvim.plugins = {
   -- Fidget
   "j-hui/fidget.nvim",
 
+  -- Hop
+  "phaazon/hop.nvim",
+
   -- Treesitter
   "p00f/nvim-ts-rainbow",
   "windwp/nvim-ts-autotag",
