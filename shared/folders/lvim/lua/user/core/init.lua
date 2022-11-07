@@ -1,6 +1,7 @@
 local plugins = {
   "alpha",
   "gitsigns",
+  "lsp",
   "nvimtree",
   "treesitter",
   "which-key",
