@@ -1,0 +1,6 @@
+reload("user.globals")
+reload("user.options")
+reload("user.keymaps")
+reload("user.theme")
+reload("user.plugins")
+reload("user.core")
