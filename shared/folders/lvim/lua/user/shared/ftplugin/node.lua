@@ -3,7 +3,7 @@ local M = {}
 local default_config = require_safe("user.shared.ftplugin.default-config")
 
 M.mappings = {
-  n = {
+  N = {
     name = "+Node",
     i = { "<cmd>TypescriptAddMissingImports<Cr>", "AddMissingImports" },
     o = { "<cmd>TypescriptOrganizeImports<cr>", "OrganizeImports" },
@@ -14,6 +14,6 @@ M.mappings = {
   },
 }
 
-M.setup = default_config.setup(M.mappings)
+M.setup = default_config.setup_default(M.mappings)
 
 return M

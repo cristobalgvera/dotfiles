@@ -11,15 +11,26 @@ M.options = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 
-M.setup = function(default_mappings, default_options)
+local function register(mappings, options)
+  which_key.register(mappings, options)
+end
+
+M.setup_default = function(default_mappings, default_options)
   local _default_options = default_options or M.options
 
   return function(mappings, options)
     local _mappings = mappings or default_mappings
     local _options = options or _default_options
 
-    which_key.register(_mappings, _options)
+    register(_mappings, _options)
   end
+end
+
+M.setup = function(mappings, options)
+  local _mappings = mappings or {}
+  local _options = options or M.options
+
+  register(_mappings, _options)
 end
 
 return M
