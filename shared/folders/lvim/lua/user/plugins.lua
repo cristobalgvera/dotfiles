@@ -5,6 +5,9 @@ lvim.plugins = {
   -- Hop
   "phaazon/hop.nvim",
 
+  -- LspSignature
+  "ray-x/lsp_signature.nvim",
+
   -- Treesitter
   "p00f/nvim-ts-rainbow",
   "windwp/nvim-ts-autotag",
