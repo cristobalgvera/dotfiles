@@ -15,6 +15,7 @@
  
 [core]
   safecrlf = warn
+  editor = nvim
  
 [push]
 	autoSetupRemote = true
