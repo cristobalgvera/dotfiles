@@ -3,7 +3,7 @@ local plugins = {
   "gitsigns",
   "nvimtree",
   "treesitter",
-  "which_key",
+  "which-key",
 }
 
 for _, plugin in ipairs(plugins) do
