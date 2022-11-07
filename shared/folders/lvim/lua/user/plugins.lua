@@ -25,6 +25,15 @@ lvim.plugins = {
     run = "./install.sh",
   },
 
+  -- Themes
+  {
+    "rose-pine/neovim",
+    as = "rose-pine",
+  },
+  {
+    "NTBBloodbath/doom-one.nvim",
+  },
+
   -- Treesitter
   "p00f/nvim-ts-rainbow",
   "windwp/nvim-ts-autotag",
