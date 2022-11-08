@@ -36,12 +36,10 @@ lvim.plugins = {
   },
 
   -- Themes
+  "NTBBloodbath/doom-one.nvim",
   {
     "rose-pine/neovim",
     as = "rose-pine",
-  },
-  {
-    "NTBBloodbath/doom-one.nvim",
   },
 
   -- Treesitter
@@ -50,9 +48,7 @@ lvim.plugins = {
   "RRethy/nvim-treesitter-textsubjects",
 
   -- Trouble
-  {
-    "folke/trouble.nvim",
-  },
+  "folke/trouble.nvim",
 
   -- TypeScript
   "jose-elias-alvarez/typescript.nvim",
