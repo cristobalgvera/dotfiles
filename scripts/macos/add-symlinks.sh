@@ -17,6 +17,7 @@ function add_symlinks {
 	local basePath=$HOME/Documents/Repositories/dotfiles/$(dirname $0)/../..
 	local sharedPath=$basePath/shared
 	local macosFilesPath=$basePath/macos/files
+  local macosFoldersPath=$basePath/macos/folders
 
 	# Git config
 	echo "Linking Git config"
@@ -30,6 +31,10 @@ function add_symlinks {
 	# Neovim config
 	echo "Linking Neovim config"
 	link_file "$sharedPath"/folders/nvim ~/.config/nvim
+
+  # Warp config
+  echo "Linking Warp config"
+  link_file "$macosFoldersPath"/.warp ~/.warp
 
 	# Lazygit config
 	echo "Linking Lazygit config"
