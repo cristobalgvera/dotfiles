@@ -10,6 +10,15 @@ function install_apps {
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/null
 	fi
 
+	# Tap
+	local taps=(
+    		homebrew/cask-fonts
+	)
+
+	for tap in "${taps[@]}"; do
+		/bin/bash -c "($basePath/brew-install.sh $tap tap)"
+	done
+
 	brew update
 
 	# Formulae
@@ -17,13 +26,13 @@ function install_apps {
 		fzf
 		git
 		neovim
-    starship
+    		starship
 		jesseduffield/lazygit/lazygit
 		shellcheck
-    git-delta
-    rbenv
-    ruby-build
-    exa
+    		git-delta
+    		rbenv
+    		ruby-build
+    		exa
 	)
 
 	for formulae in "${formulaes[@]}"; do
@@ -34,9 +43,8 @@ function install_apps {
 	local casks=(
 		fig
 		font-caskaydia-cove-nerd-font
-		font-source-code-pro
 		google-chrome
-    warp
+    		warp
 		raycast
 		visual-studio-code
 		whatsapp
