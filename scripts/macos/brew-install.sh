@@ -4,8 +4,13 @@ function install_cask {
 		echo "$1 is already installed"
 	else
 		brew install --cask "$1"
-		echo "$1 was installed"
+		echo "cask '$1' was installed"
 	fi
+}
+
+function install_tap {
+  	brew tap "$1"
+  	echo "tap '$1' was installed"
 }
 
 function install_formulae {
@@ -13,18 +18,26 @@ function install_formulae {
 		echo "$1 is already installed"
 	else
 		brew install "$1"
-		echo "$1 was installed"
+		echo "formulae '$1' was installed"
 	fi
 }
 
 function brew_install {
-	echo "Installing $1..."
+	echo "Installing '$1'..."
 
-	if [ "$2" == "cask" ]; then
-		install_cask "$1"
-	else
-		install_formulae "$1"
-	fi
+  	case "$2" in
+  	  	cask)
+  	    		install_cask "$1"
+  	    		;;
+
+  	  	tap)
+  	    		install_tap "$1"
+  	    		;;
+
+  	  	*)
+  	    		install_formulae "$1"
+  	    		;;
+  	esac
 }
 
 brew_install "$1" "$2"
