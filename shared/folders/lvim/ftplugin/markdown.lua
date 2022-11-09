@@ -1,4 +1,4 @@
-local config = require_safe("user.shared.ftplugin.default-config")
+local config = reload("user.shared.ftplugin.default-config")
 
 local mappings = {
   M = {

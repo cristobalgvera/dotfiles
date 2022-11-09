@@ -1,4 +1,4 @@
-local utils = require_safe("user.utils")
+local utils = reload("user.utils")
 
 local personal_shell = utils.is_windows and "pwsh --nologo" or vim.o.shell
 

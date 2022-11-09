@@ -1,4 +1,4 @@
-local lsp_signature = require_safe("lsp_signature")
+local lsp_signature = reload("lsp_signature")
 
 local max_width = math.max(math.floor(vim.o.columns * 0.7), 100)
 local max_height = math.max(math.floor(vim.o.lines * 0.3), 30)

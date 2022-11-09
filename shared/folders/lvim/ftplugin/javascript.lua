@@ -1,3 +1,3 @@
-local node = require_safe("user.shared.ftplugin.node")
+local node = reload("user.shared.ftplugin.node")
 
 node.setup()

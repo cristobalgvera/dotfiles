@@ -8,8 +8,8 @@ which_key.mappings["C"] = {
 }
 
 vim.schedule(function()
-  local copilot = require_safe("copilot")
-  local copilot_cmp = require_safe("copilot_cmp")
+  local copilot = reload("copilot")
+  local copilot_cmp = reload("copilot_cmp")
 
   copilot.setup({
     plugin_manager_path = os.getenv("LUNARVIM_RUNTIME_DIR") .. "/site/pack/packer",

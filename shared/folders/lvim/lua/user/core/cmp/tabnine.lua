@@ -1,4 +1,4 @@
-local tabnine = require_safe("cmp_tabnine.config")
+local tabnine = reload("cmp_tabnine.config")
 
 tabnine.setup({
   max_lines = 1000,

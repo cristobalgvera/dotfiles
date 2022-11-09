@@ -1,6 +1,6 @@
 local M = {}
 
-local which_key = require_safe("which-key")
+local which_key = reload("which-key")
 
 M.options = {
   mode = "n", -- NORMAL mode

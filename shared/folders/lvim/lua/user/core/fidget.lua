@@ -1,3 +1,3 @@
-local fidget = require_safe("fidget")
+local fidget = reload("fidget")
 
 fidget.setup()
