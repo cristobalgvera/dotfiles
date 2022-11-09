@@ -14,7 +14,7 @@ function link_file {
 }
 
 function add_symlinks {
-	local basePath=$HOME/Documents/Repositories/dotfiles/$(dirname $0)/../..
+	local basePath=$HOME/Documents/Repositories/dotfiles/$(dirname "$0")/../..
 	local sharedPath=$basePath/shared
 	local macosFilesPath=$basePath/macos/files
   local macosFoldersPath=$basePath/macos/folders

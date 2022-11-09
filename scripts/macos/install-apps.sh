@@ -79,7 +79,7 @@ function install_brew_apps {
 }
 
 function install_apps {
-	local basePath=$(dirname $0)
+	local basePath=$(dirname "$0")
 
 	echo "Installing apps..."
 
