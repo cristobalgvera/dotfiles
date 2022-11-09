@@ -14,7 +14,6 @@ function install_apps {
 
 	# Formulae
 	local formulaes=(
-		go
 		fzf
 		git
 		neovim
@@ -30,11 +29,6 @@ function install_apps {
 	for formulae in "${formulaes[@]}"; do
 		/bin/bash -c "($basePath/brew-install.sh $formulae)"
 	done
-
-	# Create a Go workspace if it doesn't exist
-	if [ ! -d "$HOME"/go ]; then
-		mkdir -p "$HOME"/go/{src,pkg,bin}
-	fi
 
 	# Cask
 	local casks=(
