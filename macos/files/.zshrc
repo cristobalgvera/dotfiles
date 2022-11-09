@@ -40,6 +40,9 @@ eval "$(rbenv init - zsh)"
 # Init Starship theme
 eval "$(starship init zsh)"
 
+# Init Zoxide
+eval "$(zoxide init zsh)"
+
 # Exports
 export EDITOR='lvim'
 

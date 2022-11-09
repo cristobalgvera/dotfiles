@@ -33,6 +33,7 @@ function install_apps {
     		rbenv
     		ruby-build
     		exa
+    zoxide
 	)
 
 	for formulae in "${formulaes[@]}"; do
