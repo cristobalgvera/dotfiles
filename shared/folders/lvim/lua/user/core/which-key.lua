@@ -10,8 +10,3 @@ which_key.mappings["t"] = {
   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 }
-
-which_key.mappings.g["t"] = {
-  "<cmd>Gitsigns toggle_current_line_blame<cr>",
-  "Toggle current line blame",
-}

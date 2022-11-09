@@ -1,16 +1,20 @@
-local gitsigns = lvim.builtin.gitsigns.opts
+local which_key = lvim.builtin.which_key
+local gitsigns_opts = lvim.builtin.gitsigns.opts
 
-gitsigns.current_line_blame = false
-gitsigns.current_line_blame_opts.delay = 300
+which_key.mappings.g["t"] = {
+  "<cmd>Gitsigns toggle_current_line_blame<cr>",
+  "Toggle current line blame",
+}
 
-gitsigns.current_line_blame_formatter_opts.relative_time = true
-gitsigns.current_line_blame_formatter = function(name, blame_info, opts)
+local function format_current_line_blame(name, blame_info, opts)
   if blame_info.author == name then
     blame_info.author = "You"
   end
+
   local text
+
   -- Default author name when none commit were created
-  if blame_info.author == "Not Committed Yet" then
+  if blame_info.author == "Not Committed Yet" then -- Not working in LunarVim
     text = "ﰜ Not commited yet"
   else
     local date_time
@@ -23,3 +27,9 @@ gitsigns.current_line_blame_formatter = function(name, blame_info, opts)
   end
   return { { " " .. text, "GitSignsCurrentLineBlame" } }
 end
+
+gitsigns_opts.current_line_blame = false
+gitsigns_opts.current_line_blame_opts.delay = 300
+
+gitsigns_opts.current_line_blame_formatter_opts.relative_time = true
+gitsigns_opts.current_line_blame_formatter = format_current_line_blame
