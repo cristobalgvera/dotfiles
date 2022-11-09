@@ -2,6 +2,7 @@ local formatters = require_safe("lvim.lsp.null-ls.formatters")
 
 formatters.setup({
   { command = "stylua" }, -- cargo install stylua
+  { command = "shellharden" }; -- cargo install shellharden
   {
     command = "prettier", -- yarn global add prettier
     extra_filetypes = { "toml" },
