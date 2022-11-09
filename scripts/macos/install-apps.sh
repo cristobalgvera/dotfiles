@@ -57,6 +57,7 @@ function install_brew_apps {
    	exa
     zoxide
 	)
+    bat
 
 	for formulae in "${formulaes[@]}"; do
 		/bin/bash -c "($basePath/brew-install.sh $formulae)"
