@@ -72,6 +72,7 @@ function install_brew_apps {
     raycast
     visual-studio-code
     whatsapp
+    alt-tab
   )
 
   for cask in "${casks[@]}"; do
