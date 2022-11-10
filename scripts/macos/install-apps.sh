@@ -32,57 +32,57 @@ function install_curl_apps {
 }
 
 function install_brew_apps {
-	# Tap
-	local taps=(
+  # Tap
+  local taps=(
     homebrew/cask-fonts
-	)
+  )
 
-	for tap in "${taps[@]}"; do
-		/bin/bash -c "($basePath/brew-install.sh $tap tap)"
-	done
+  for tap in "${taps[@]}"; do
+    /bin/bash -c "($basePath/brew-install.sh $tap tap)"
+  done
 
-	brew update
+  brew update
 
-	# Formulae
-	local formulaes=(
-		fzf
-		git
-		neovim
-   	starship
-		jesseduffield/lazygit/lazygit
-		shellcheck
-   	git-delta
-   	rbenv
-   	ruby-build
-   	exa
+  # Formulae
+  local formulaes=(
+    fzf
+    git
+    neovim
+    starship
+    jesseduffield/lazygit/lazygit
+    shellcheck
+    git-delta
+    rbenv
+    ruby-build
+    exa
     zoxide
-	)
     bat
+  )
 
-	for formulae in "${formulaes[@]}"; do
-		/bin/bash -c "($basePath/brew-install.sh $formulae)"
-	done
+  for formulae in "${formulaes[@]}"; do
+    /bin/bash -c "($basePath/brew-install.sh $formulae)"
+  done
+  
+  # Cask
+  local casks=(
+    fig
+    font-caskaydia-cove-nerd-font
+    google-chrome
+    warp
+    raycast
+    visual-studio-code
+    whatsapp
+  )
 
-	# Cask
-	local casks=(
-		fig
-		font-caskaydia-cove-nerd-font
-		google-chrome
-   	warp
-		raycast
-		visual-studio-code
-		whatsapp
-	)
-
-	for cask in "${casks[@]}"; do
-		/bin/bash -c "($basePath/brew-install.sh $cask cask)"
-	done
+  for cask in "${casks[@]}"; do
+    /bin/bash -c "($basePath/brew-install.sh $cask cask)"
+  done
 }
 
 function install_apps {
-	local basePath=$(dirname "$0")
+  local basePath=$(dirname "$0")
 
-	echo "Installing apps..."
+  echo "Installing apps..."
 
   install_curl_apps
   install_brew_apps
