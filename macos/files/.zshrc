@@ -26,6 +26,7 @@ alias py='python'
 alias lg='lazygit'
 alias nvim='lvim'
 alias v='nvim'
+alias cat='bat --theme=base16'
 
 # Sourcing
 if ng_loc="$(type -p "ng")" || [[ -z $ng_loc ]]; then
