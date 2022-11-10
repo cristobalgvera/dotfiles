@@ -1,7 +1,7 @@
 [user]
   email = cristobalgajardo.v@gmail.com
   name = Cristóbal Gajardo Vera
- 
+ 
 [alias]
   co = checkout
   ci = commit
@@ -9,10 +9,10 @@
   br = branch
   d = diff
   hist = log --graph --abbrev-commit --decorate --date=format:'%a %d %b %Y %H:%M' --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
- 
+ 
 [init]
   defaultBranch = main
- 
+ 
 [core]
   safecrlf = warn
   editor = lvim
@@ -42,15 +42,15 @@
   colorMoved = default
 
 # Conditional configuration based on OS
- 
+ 
 [includeIf "gitdir/i:C:/"]
   path = ~/.gitconfig-windows
- 
+ 
 [includeIf "gitdir/i:D:/"]
   path = ~/.gitconfig-windows
- 
+ 
 [includeIf "gitdir/i:Users/"]
   path = ~/.gitconfig-macos
- 
+ 
 [include]
   path = ~/.gitconfig-custom
