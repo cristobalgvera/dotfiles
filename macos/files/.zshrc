@@ -26,6 +26,7 @@ alias py='python'
 alias lg='lazygit'
 alias nvim='lvim'
 alias v='nvim'
+alias g='git'
 alias cat='bat --theme=base16'
 
 # Sourcing
