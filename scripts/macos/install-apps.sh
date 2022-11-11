@@ -35,6 +35,7 @@ function install_brew_apps {
   # Tap
   local taps=(
     homebrew/cask-fonts
+    buo/cask-upgrade
   )
 
   for tap in "${taps[@]}"; do
