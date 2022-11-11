@@ -74,6 +74,7 @@ function install_brew_apps {
     visual-studio-code
     whatsapp
     alt-tab
+    docker
   )
 
   for cask in "${casks[@]}"; do
