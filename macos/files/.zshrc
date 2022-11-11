@@ -1,6 +1,5 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # Zsh configs
 ZSHZ_CASE=smart
 
@@ -21,7 +20,7 @@ fi
 alias repos='cd ~/Documents/Repositories'
 alias ls='exa --icons --all --group-directories-first --long --header --git --no-user --octal-permissions'
 alias lt='exa --icons --all --group-directories-first --long --header --git --no-user --octal-permissions --tree --level 2'
-alias bup='brew cu -a --cleanup'
+alias bup='brew cu -a --cleanup && brew upgrade'
 alias py='python'
 alias lg='lazygit'
 alias nvim='lvim'
