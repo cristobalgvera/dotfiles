@@ -66,7 +66,6 @@ function install_brew_apps {
   
   # Cask
   local casks=(
-    fig
     font-caskaydia-cove-nerd-font
     google-chrome
     warp
