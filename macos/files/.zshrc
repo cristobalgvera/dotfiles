@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Zsh configs
 ZSHZ_CASE=smart
 
@@ -20,7 +18,7 @@ fi
 alias repos='cd ~/Documents/Repositories'
 alias ls='exa --icons --all --group-directories-first --long --header --git --no-user --octal-permissions'
 alias lt='exa --icons --all --group-directories-first --long --header --git --no-user --octal-permissions --tree --level 2'
-alias bup='brew cu -a --cleanup && brew upgrade'
+alias bup='brew cu -a --cleanup && brew upgrade && brew cleanup'
 alias py='python'
 alias lg='lazygit'
 alias nvim='lvim'
@@ -64,6 +62,3 @@ export PATH="${PYENVPATH}/shims:${VOLTA_HOME}/bin:${LOCALPATH}/bin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
