@@ -1,5 +1,6 @@
 local plugins = {
   "alpha",
+  "bufferline",
   "cmp",
   "fidget",
   "hop",
