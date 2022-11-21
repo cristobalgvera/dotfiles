@@ -17,7 +17,7 @@ fi
 # Aliases
 alias repos='cd ~/Documents/Repositories'
 alias ls='exa --icons --all --group-directories-first --long --header --git --no-user --octal-permissions'
-alias lt='exa --icons --all --group-directories-first --long --header --git --no-user --octal-permissions --tree --level 2'
+alias lt='ls --tree --level 3'
 alias bup='brew cu -a --cleanup && brew upgrade && brew cleanup'
 alias py='python'
 alias lg='lazygit'
