@@ -1,3 +1,6 @@
+autoload -Uz compinit
+compinit
+
 # Zsh configs
 ZSHZ_CASE=smart
 
