@@ -8,6 +8,7 @@ local plugins = {
   "gitsigns",
   "lsp",
   "nvimtree",
+  "surround",
   "treesitter",
   "which-key",
 }

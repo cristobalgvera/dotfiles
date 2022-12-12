@@ -31,6 +31,9 @@ lvim.plugins = {
     ft = { "markdown" },
   },
 
+  -- Surround
+  "kylechui/nvim-surround",
+
   -- TabNine
   {
     "tzachar/cmp-tabnine",
