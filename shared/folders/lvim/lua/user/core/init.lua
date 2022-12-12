@@ -2,6 +2,7 @@ local plugins = {
   "alpha",
   "bufferline",
   "cmp",
+  "dressing",
   "fidget",
   "hop",
   "gitsigns",

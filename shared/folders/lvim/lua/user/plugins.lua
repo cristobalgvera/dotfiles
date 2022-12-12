@@ -1,4 +1,7 @@
 lvim.plugins = {
+  -- Dressing
+  "stevearc/dressing.nvim",
+
   -- Fidget
   "j-hui/fidget.nvim",
 
