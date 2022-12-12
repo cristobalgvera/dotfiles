@@ -18,7 +18,7 @@
   editor = lvim
  
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
 
 # Git-Delta configuration
 [core]
