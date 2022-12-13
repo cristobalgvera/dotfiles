@@ -1,5 +1,6 @@
 local null_ls_builtins = {
   "formatters",
+  "hovers",
   "linters",
   "code-actions",
 }
