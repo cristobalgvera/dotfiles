@@ -74,6 +74,9 @@ function install_brew_apps {
     whatsapp
     alt-tab
     docker
+    the-unarchiver
+    meetingbar
+    monitorcontrol
   )
 
   for cask in "${casks[@]}"; do
