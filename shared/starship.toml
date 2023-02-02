@@ -1,4 +1,9 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 [aws]
-disabled = true
+format = 'on [$symbol$profile]($style) '
+symbol = ' '
+
+[gcloud]
+format = 'on [$symbol$active]($style) '
+symbol = '️󱇶 '
