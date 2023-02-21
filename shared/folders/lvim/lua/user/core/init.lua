@@ -1,6 +1,7 @@
 local plugins = {
   "alpha",
   "bufferline",
+  "chat-gpt",
   "cmp",
   "dressing",
   "fidget",

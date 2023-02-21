@@ -1,4 +1,14 @@
 lvim.plugins = {
+  -- ChatGPT
+  {
+    "jackMort/ChatGPT.nvim",
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+  },
+
   -- Dressing
   "stevearc/dressing.nvim",
 
