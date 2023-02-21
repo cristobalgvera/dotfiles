@@ -7,6 +7,7 @@ local plugins = {
   "hop",
   "gitsigns",
   "lsp",
+  "noice",
   "notify",
   "nvimtree",
   "surround",

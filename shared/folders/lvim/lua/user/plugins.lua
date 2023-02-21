@@ -31,6 +31,15 @@ lvim.plugins = {
     ft = { "markdown" },
   },
 
+  -- Noice
+  {
+    "folke/noice.nvim",
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+  },
+
   -- Nvim Notify
   "rcarriga/nvim-notify",
 
