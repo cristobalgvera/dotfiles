@@ -1,0 +1,12 @@
+#!/bin/bash
+
+alias repos='cd ~/Documents/Repositories'
+alias ls='exa --icons --all --group-directories-first --long --header --git --no-user --octal-permissions'
+alias lt='ls --tree --level 3'
+alias bup='brew cu -a --cleanup && brew upgrade && brew cleanup'
+alias py='python'
+alias lg='lazygit'
+alias nvim='lvim'
+alias v='nvim'
+alias g='git'
+alias cat='bat --theme=base16'
