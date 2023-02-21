@@ -8,7 +8,7 @@ lsp_signature.setup({
   handler_opts = {
     border = "rounded",
   },
-  hint_prefix = "📝 ", -- virtual text prefix icon
+  hint_prefix = " ", -- virtual text prefix icon
   floating_window = false, -- show hint in a floating window, set to false for virtual text only mode
   transparency = nil, -- disabled by default, allow floating win transparent value 1~100
   toggle_key = "<C-s>", -- toggle signature on and off in insert mode,  e.g. toggle_key = '<M-x>'
