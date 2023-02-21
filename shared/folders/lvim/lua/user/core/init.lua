@@ -13,6 +13,7 @@ local plugins = {
   "surround",
   "telescope",
   "treesitter",
+  "todo-comments",
   "which-key",
 }
 

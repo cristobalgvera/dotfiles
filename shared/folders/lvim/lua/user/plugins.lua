@@ -60,6 +60,13 @@ lvim.plugins = {
     as = "rose-pine",
   },
 
+  -- Todo Comments
+  {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    event = "BufRead",
+  },
+
   -- Treesitter
   "p00f/nvim-ts-rainbow",
   "windwp/nvim-ts-autotag",
