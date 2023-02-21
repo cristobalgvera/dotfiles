@@ -22,7 +22,7 @@ notify.setup({
     WARN = "",
     ERROR = "",
   },
-  level = vim.log.levels.INFO,
+  level = vim.log.levels.WARN,
   minimum_width = 50,
   max_width = 60,
   -- max_height = 20,
