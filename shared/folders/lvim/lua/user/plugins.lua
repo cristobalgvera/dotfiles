@@ -31,6 +31,9 @@ lvim.plugins = {
     ft = { "markdown" },
   },
 
+  -- Nvim Notify
+  "rcarriga/nvim-notify",
+
   -- Surround
   "kylechui/nvim-surround",
 

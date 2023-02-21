@@ -7,8 +7,10 @@ local plugins = {
   "hop",
   "gitsigns",
   "lsp",
+  "notify",
   "nvimtree",
   "surround",
+  "telescope",
   "treesitter",
   "which-key",
 }
