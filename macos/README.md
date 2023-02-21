@@ -3,5 +3,5 @@
 Bootstrap MacOS configuration
 
 ```bash
-sh install.sh
+sh install.sh -af
 ```

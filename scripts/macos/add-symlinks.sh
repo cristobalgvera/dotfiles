@@ -3,13 +3,12 @@ function link_file {
   local sourceFile=$1
   local targetFile=$2
 
-  echo "Linking: ${sourceFile} to ${targetFile}"
-
   if [ -e "$targetFile" ]; then
     echo "Creating backup of $targetFile"
     mv "$targetFile" "$targetFile".backup
   fi
 
+  echo "Linking: ${sourceFile} to ${targetFile}"
   ln -sf "$sourceFile" "$targetFile"
 }
 
@@ -43,6 +42,10 @@ function add_symlinks {
   # Zsh config
   echo "Linking Zsh config"
   link_file "$macosFilesPath"/.zshrc ~/.zshrc
+  link_file "$macosFilesPath"/.zshrc.alias ~/.zshrc.alias
+  link_file "$macosFilesPath"/.zshrc.source ~/.zshrc.source
+  link_file "$macosFilesPath"/.zshenv ~/.zshenv
+  link_file "$macosFilesPath"/.zshenv.secret ~/.zshenv.secret
 
   # Starship config
   echo "Linking Starship config"
