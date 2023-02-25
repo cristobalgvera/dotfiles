@@ -8,7 +8,8 @@ local function split_string_by_line(text)
   return lines
 end
 
-lvim.builtin.alpha.dashboard.section.header.val = split_string_by_line([[
+local headers = {
+  [[
    ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣴⣶⣶⣶⣶⣶⠶⣶⣤⣤⣀
  ⠀⠀⠀⠀⠀⠀⠀⢀⣤⣾⣿⣿⣿⠁⠀⢀⠈⢿⢀⣀⠀⠹⣿⣿⣿⣦⣄
  ⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⠿⠀⠀⣟⡇⢘⣾⣽⠀⠀⡏⠉⠙⢛⣿⣷⡖
@@ -23,4 +24,7 @@ lvim.builtin.alpha.dashboard.section.header.val = split_string_by_line([[
                    
            Dani y Cris
                    
-]])
+]],
+}
+
+lvim.builtin.alpha.dashboard.section.header.val = split_string_by_line(headers[math.random(#headers)])
