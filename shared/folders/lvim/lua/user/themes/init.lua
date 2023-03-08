@@ -1,9 +1,8 @@
-local themes = {}
+local M = {}
 
-for _, theme in ipairs(themes) do
-  reload("user.core.themes." .. theme)
-end
+reload("user.themes.keymaps")
+local config = reload("user.themes.config")
 
-local theme = "tokyonight-moon"
+M.toggle_theme = config.toggle_light_and_dark_theme
 
-lvim.colorscheme = theme
+return M
