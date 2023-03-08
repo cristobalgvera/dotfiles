@@ -3,11 +3,7 @@ local formatters = reload("lvim.lsp.null-ls.formatters")
 formatters.setup({
   { command = "stylua" }, -- cargo install stylua
   { command = "shellharden" }, -- cargo install shellharden
-  {
-    command = "prettier", -- yarn global add prettier
-    extra_filetypes = { "toml" },
-    timeout = 1000,
-  },
+  { command = "prettierd" }, -- npm install -g @fsouza/prettierd
   {
     command = "rustfmt", -- rustup component add rustfmt
     extra_args = function(params)

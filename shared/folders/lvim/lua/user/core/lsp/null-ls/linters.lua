@@ -1,15 +1,7 @@
 local linters = reload("lvim.lsp.null-ls.linters")
 
 linters.setup({
-  { command = "markdownlint" }, -- yarn global add markdownlint
+  { command = "markdownlint" }, -- npm install -g markdownlint
   { command = "shellcheck" }, -- brew install shellcheck
-  {
-    command = "eslint",
-    filetypes = {
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-    },
-  }, -- npm install eslint
+  { command = "eslint_d" }, -- npm install -g eslint_d
 })
