@@ -6,3 +6,5 @@ treesitter.rainbow.enable = true
 treesitter.textsubjects.enable = true
 treesitter.textsubjects.keymaps[";"] = "textsubjects-container-outer"
 treesitter.textsubjects.keymaps["i;"] = "textsubjects-container-inner"
+
+treesitter.auto_install = true
