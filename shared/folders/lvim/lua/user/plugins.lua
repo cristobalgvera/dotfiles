@@ -59,6 +59,9 @@ lvim.plugins = {
     requires = "nvim-lua/plenary.nvim",
   },
 
+  -- Nvim Highlight Colors
+  "brenoprata10/nvim-highlight-colors",
+
   -- Nvim Notify
   "rcarriga/nvim-notify",
 

@@ -7,6 +7,7 @@ utils.require_from("user.core")({
   "cmp",
   "dressing",
   "fidget",
+  "highlight-colors",
   "hop",
   "gitsigns",
   "lsp",
