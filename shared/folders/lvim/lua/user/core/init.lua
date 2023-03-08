@@ -15,7 +15,7 @@ local plugins = {
   "telescope",
   "treesitter",
   "todo-comments",
-  "which-key",
+  "trouble",
 }
 
 for _, plugin in ipairs(plugins) do
