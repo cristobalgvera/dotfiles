@@ -1,4 +1,7 @@
 lvim.plugins = {
+  -- Catppuccin (Theme)
+  { "catppuccin/nvim", as = "catppuccin" },
+
   -- ChatGPT
   {
     "jackMort/ChatGPT.nvim",

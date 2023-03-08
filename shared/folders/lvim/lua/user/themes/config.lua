@@ -20,7 +20,7 @@ end
 --- Managed themes
 M.themes = {
   [THEME_TYPE.DARK] = "tokyonight-moon",
-  [THEME_TYPE.LIGHT] = "tokyonight-day",
+  [THEME_TYPE.LIGHT] = "catppuccin-latte",
 }
 
 M.default_theme = M.themes[THEME_TYPE.DARK]
