@@ -59,6 +59,9 @@ lvim.plugins = {
   -- Nvim Notify
   "rcarriga/nvim-notify",
 
+  -- Nvim Numbertoggle
+  "sitiom/nvim-numbertoggle",
+
   -- Package Info
   {
     "vuki656/package-info.nvim",
