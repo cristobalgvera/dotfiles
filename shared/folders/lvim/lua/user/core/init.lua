@@ -1,4 +1,6 @@
-local plugins = {
+local utils = require("user.utils")
+
+utils.require_from("user.core")({
   "alpha",
   "bufferline",
   "chat-gpt",
@@ -8,17 +10,13 @@ local plugins = {
   "hop",
   "gitsigns",
   "lsp",
+  "nvim-coverage",
   "noice",
   "notify",
-  "nvim-coverage",
   "nvimtree",
   "surround",
   "telescope",
   "treesitter",
   "todo-comments",
   "trouble",
-}
-
-for _, plugin in ipairs(plugins) do
-  reload("user.core." .. plugin)
-end
+})

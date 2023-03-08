@@ -1,8 +1,6 @@
-local features = {
+local utils = require("user.utils")
+
+utils.require_from("user.core.cmp")({
   "tabnine",
   "copilot",
-}
-
-for _, feature in ipairs(features) do
-  reload("user.core.cmp." .. feature)
-end
+})

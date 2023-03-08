@@ -1,9 +1,7 @@
-local features = {
+local utils = require("user.utils")
+
+utils.require_from("user.core.lsp")({
   "null-ls",
   "languages",
   "plugins",
-}
-
-for _, feature in ipairs(features) do
-  reload("user.core.lsp." .. feature)
-end
+})

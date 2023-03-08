@@ -1,7 +1,3 @@
-local languages = {
-  "node",
-}
+local utils = require("user.utils")
 
-for _, language in ipairs(languages) do
-  reload("user.core.lsp.languages." .. language)
-end
+utils.require_from("user.core.lsp.languages")({ "node" })

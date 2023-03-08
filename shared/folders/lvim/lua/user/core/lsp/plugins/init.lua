@@ -1,7 +1,5 @@
-local plugins = {
-  "lsp-signature",
-}
+local utils = require("user.utils")
 
-for _, plugin in ipairs(plugins) do
-  reload("user.core.lsp.plugins." .. plugin)
-end
+utils.require_from("user.core.lsp.plugins")({
+  "lsp-signature",
+})

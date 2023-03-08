@@ -1,10 +1,8 @@
-local null_ls_builtins = {
+local utils = require("user.utils")
+
+utils.require_from("user.core.lsp.null-ls")({
   "formatters",
   "hovers",
   "linters",
   "code-actions",
-}
-
-for _, builtin in ipairs(null_ls_builtins) do
-  reload("user.core.lsp.null-ls." .. builtin)
-end
+})

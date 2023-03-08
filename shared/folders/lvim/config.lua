@@ -1,7 +1,11 @@
-reload("user.globals")
-reload("user.options")
-reload("user.keymaps")
-reload("user.themes")
-reload("user.plugins")
-reload("user.autocommands")
-reload("user.core")
+local utils = require("user.utils")
+
+utils.require_from("user")({
+  "globals",
+  "options",
+  "keymaps",
+  "themes",
+  "plugins",
+  "autocommands",
+  "core",
+})
