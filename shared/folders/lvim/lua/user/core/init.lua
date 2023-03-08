@@ -10,6 +10,7 @@ local plugins = {
   "lsp",
   "noice",
   "notify",
+  "nvim-coverage",
   "nvimtree",
   "surround",
   "telescope",

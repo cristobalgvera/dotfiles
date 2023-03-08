@@ -50,6 +50,12 @@ lvim.plugins = {
     },
   },
 
+  -- Nvim Coverage
+  {
+    "andythigpen/nvim-coverage",
+    requires = "nvim-lua/plenary.nvim",
+  },
+
   -- Nvim Notify
   "rcarriga/nvim-notify",
 
