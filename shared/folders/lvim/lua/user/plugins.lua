@@ -74,6 +74,9 @@ lvim.plugins = {
     requires = "MunifTanjim/nui.nvim",
   },
 
+  -- Search Replace
+  "roobert/search-replace.nvim",
+
   -- Surround
   "kylechui/nvim-surround",
 
