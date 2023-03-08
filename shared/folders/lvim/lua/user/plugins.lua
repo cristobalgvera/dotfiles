@@ -85,7 +85,6 @@ lvim.plugins = {
   {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
-    event = "BufRead",
   },
 
   -- Treesitter
