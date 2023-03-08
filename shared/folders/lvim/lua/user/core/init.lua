@@ -10,7 +10,7 @@ utils.require_from("user.core")({
   "hop",
   "gitsigns",
   "lsp",
-  "nvim-coverage", -- FIX: The highlights are not showing properly
+  "nvim-coverage",
   "noice",
   "notify",
   "nvimtree",
