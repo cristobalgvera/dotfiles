@@ -59,6 +59,12 @@ lvim.plugins = {
   -- Nvim Notify
   "rcarriga/nvim-notify",
 
+  -- Package Info
+  {
+    "vuki656/package-info.nvim",
+    requires = "MunifTanjim/nui.nvim",
+  },
+
   -- Surround
   "kylechui/nvim-surround",
 
