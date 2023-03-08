@@ -32,7 +32,9 @@ M.setup_from = function(base_mod)
     local config = M.require_from(base_mod)(config_file_names)
 
     for file_name, file in pairs(config) do
-      if file.setup then
+      local is_configurable = type(file) == "table" and type(file.setup) == "function"
+
+      if is_configurable then
         file.setup()
       else
         vim.notify(string.format("No setup function found in %s", file_name), "error")
