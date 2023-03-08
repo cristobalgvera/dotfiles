@@ -41,6 +41,9 @@ lvim.plugins = {
     ft = { "markdown" },
   },
 
+  -- Neodim
+  "zbirenbaum/neodim",
+
   -- Noice
   {
     "folke/noice.nvim",
