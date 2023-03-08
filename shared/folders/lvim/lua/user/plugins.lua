@@ -63,13 +63,6 @@ lvim.plugins = {
     run = "./install.sh",
   },
 
-  -- Themes
-  "NTBBloodbath/doom-one.nvim",
-  {
-    "rose-pine/neovim",
-    as = "rose-pine",
-  },
-
   -- Todo Comments
   {
     "folke/todo-comments.nvim",
