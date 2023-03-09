@@ -18,8 +18,12 @@ utils.require_from("user.core")({
   "search-replace",
   "surround",
   "telescope",
-  "treesitter",
   "themes",
   "todo-comments",
   "trouble",
+})
+
+-- Configure Treesitter last to properly add extensions
+utils.require_from("user.core")({
+  "treesitter",
 })
