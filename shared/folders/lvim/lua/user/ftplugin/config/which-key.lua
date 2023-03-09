@@ -2,14 +2,7 @@ local M = {}
 
 local which_key = reload("which-key")
 
-M.options = {
-  mode = "n", -- NORMAL mode
-  prefix = "<leader>",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
-  noremap = true, -- use `noremap` when creating keymaps
-  nowait = true, -- use `nowait` when creating keymaps
-}
+M.options = lvim.builtin.which_key.opts
 
 local function register(mappings, options)
   which_key.register(mappings, options)

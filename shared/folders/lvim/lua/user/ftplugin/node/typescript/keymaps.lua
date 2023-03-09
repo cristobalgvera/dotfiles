@@ -1,6 +1,6 @@
 local M = {}
 
-local default_config = reload("user.shared.ftplugin.default-config")
+local which_key = require("user.ftplugin.config.which-key")
 
 M.mappings = {
   N = {
@@ -14,6 +14,6 @@ M.mappings = {
   },
 }
 
-M.setup = default_config.setup_default(M.mappings)
+M.setup = which_key.setup_default(M.mappings)
 
 return M
