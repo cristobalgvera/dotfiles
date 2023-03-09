@@ -1,9 +1,5 @@
 local M = {}
 
---- True if current OS is Windows,
---- false otherwise.
-M.is_windows = vim.fn.has("win32") == 1
-
 --- Obtain an iterator function to require
 --- files from a given base path
 --- @param base_mod string
