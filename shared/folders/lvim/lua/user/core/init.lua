@@ -15,7 +15,6 @@ utils.require_from("user.core")({
   "nvim-coverage",
   "noice",
   "notify",
-  "nvimtree",
   "search-replace",
   "surround",
   "telescope",
