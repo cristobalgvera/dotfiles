@@ -19,6 +19,7 @@ utils.require_from("user.core")({
   "surround",
   "telescope",
   "treesitter",
+  "themes",
   "todo-comments",
   "trouble",
 })
