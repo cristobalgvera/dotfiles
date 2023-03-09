@@ -1,4 +1,6 @@
-local function split_string_by_line(text)
+local M = {}
+
+M.split_string_by_line = function(text)
   local lines = {}
 
   for line in text:gmatch("([^\n]*)\n?") do
@@ -8,7 +10,7 @@ local function split_string_by_line(text)
   return lines
 end
 
-local headers = {
+M.headers = {
   [[
    ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣴⣶⣶⣶⣶⣶⠶⣶⣤⣤⣀
  ⠀⠀⠀⠀⠀⠀⠀⢀⣤⣾⣿⣿⣿⠁⠀⢀⠈⢿⢀⣀⠀⠹⣿⣿⣿⣦⣄
@@ -27,4 +29,4 @@ local headers = {
 ]],
 }
 
-lvim.builtin.alpha.dashboard.section.header.val = split_string_by_line(headers[math.random(#headers)])
+return M
