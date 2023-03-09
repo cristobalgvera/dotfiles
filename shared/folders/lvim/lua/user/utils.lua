@@ -37,7 +37,7 @@ M.setup_from = function(base_mod)
       if is_configurable then
         file.setup()
       else
-        vim.notify(string.format("No setup function found in %s", file_name), "error")
+        vim.notify(string.format("No setup function found in %s", base_mod .. "." .. file_name), "error")
       end
     end
   end
