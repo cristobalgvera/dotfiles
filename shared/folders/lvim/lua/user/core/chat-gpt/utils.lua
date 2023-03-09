@@ -1,6 +1,6 @@
-local chat_gpt = reload("chatgpt")
+local M = {}
 
-local WELCOME_MESSAGE = [[
+M.WELCOME_MESSAGE = [[
       _____
      /    /|_ ___________________________________________
     /    // /|                                          /|
@@ -14,6 +14,4 @@ local WELCOME_MESSAGE = [[
   | |                                             | |
 ]]
 
-chat_gpt.setup({
-  welcome_message = WELCOME_MESSAGE,
-})
+return M
