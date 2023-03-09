@@ -105,7 +105,10 @@ M.setup = function()
     "RRethy/nvim-treesitter-textsubjects",
 
     -- Trouble
-    "folke/trouble.nvim",
+    {
+      "folke/trouble.nvim",
+      requires = "nvim-tree/nvim-web-devicons",
+    },
 
     -- TypeScript
     "jose-elias-alvarez/typescript.nvim",
