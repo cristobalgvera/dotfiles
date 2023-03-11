@@ -17,13 +17,13 @@ utils.require_from("user.core")({
   "notify",
   "search-replace",
   "surround",
-  "telescope",
+  "treesitter",
   "themes",
   "todo-comments",
   "trouble",
 })
 
--- Configure Treesitter last to properly add extensions
+-- Configure Telescope last to properly add extensions
 utils.require_from("user.core")({
-  "treesitter",
+  "telescope",
 })
