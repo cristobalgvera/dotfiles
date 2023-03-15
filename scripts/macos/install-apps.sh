@@ -58,6 +58,7 @@ function install_brew_apps {
     exa
     zoxide
     bat
+    commitizen
   )
 
   for formulae in "${formulaes[@]}"; do
