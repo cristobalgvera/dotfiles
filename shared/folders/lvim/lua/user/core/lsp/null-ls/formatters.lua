@@ -7,7 +7,7 @@ M.setup = function()
   formatters.setup({
     { command = "stylua" }, -- cargo install stylua
     { command = "shellharden" }, -- cargo install shellharden
-    { command = "prettierd" }, -- npm install -g @fsouza/prettierd
+    { command = "prettier" }, -- npm install -g prettier
     {
       command = "rustfmt",
       extra_args = null_ls_utils.rust.formatter.extra_args,
