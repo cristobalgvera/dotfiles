@@ -103,6 +103,10 @@ M.setup = function()
     "p00f/nvim-ts-rainbow",
     "windwp/nvim-ts-autotag",
     "RRethy/nvim-treesitter-textsubjects",
+    {
+      "elgiano/nvim-treesitter-angular",
+      branch = "topic/jsx-fix",
+    },
 
     -- Trouble
     {
