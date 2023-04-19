@@ -41,13 +41,13 @@ M.setup = function()
     "zbirenbaum/neodim",
 
     -- Noice
-    {
-      "folke/noice.nvim",
-      requires = {
-        "MunifTanjim/nui.nvim",
-        "rcarriga/nvim-notify",
-      },
-    },
+    -- {
+    --   "folke/noice.nvim",
+    --   dependencies = {
+    --     "MunifTanjim/nui.nvim",
+    --     "rcarriga/nvim-notify",
+    --   },
+    -- },
 
     -- Nvim Coverage
     {
