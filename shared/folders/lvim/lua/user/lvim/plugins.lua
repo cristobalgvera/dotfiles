@@ -3,7 +3,7 @@ local M = {}
 M.setup = function()
   lvim.plugins = {
     -- Catppuccin (Theme)
-    { "catppuccin/nvim", as = "catppuccin" },
+    { "catppuccin/nvim", name = "catppuccin" },
 
     -- Dressing
     "stevearc/dressing.nvim",
@@ -18,7 +18,7 @@ M.setup = function()
     },
     {
       "zbirenbaum/copilot-cmp",
-      after = { "copilot.lua", "nvim-cmp" },
+      dependencies = { "copilot.lua", "nvim-cmp" },
     },
 
     -- Hop
@@ -30,8 +30,8 @@ M.setup = function()
     -- MarkdownPreview
     {
       "iamcco/markdown-preview.nvim",
-      run = "cd app && npm install",
-      setup = function()
+      build = "cd app && npm install",
+      init = function()
         vim.g.mkdp_filetypes = { "markdown" }
       end,
       ft = { "markdown" },
@@ -52,7 +52,7 @@ M.setup = function()
     -- Nvim Coverage
     {
       "andythigpen/nvim-coverage",
-      requires = "nvim-lua/plenary.nvim",
+      dependencies = { "nvim-lua/plenary.nvim" },
     },
 
     -- Nvim Highlight Colors
@@ -67,7 +67,7 @@ M.setup = function()
     -- Package Info
     {
       "vuki656/package-info.nvim",
-      requires = "MunifTanjim/nui.nvim",
+      dependencies = { "MunifTanjim/nui.nvim" },
     },
 
     -- Search Replace
@@ -79,14 +79,14 @@ M.setup = function()
     -- TabNine
     {
       "tzachar/cmp-tabnine",
-      after = "nvim-cmp",
-      run = "./install.sh",
+      build = "./install.sh",
+      dependencies = { "nvim-cmp" },
     },
 
     -- Todo Comments
     {
       "folke/todo-comments.nvim",
-      requires = "nvim-lua/plenary.nvim",
+      dependencies = { "nvim-lua/plenary.nvim" },
     },
 
     -- Treesitter
@@ -101,7 +101,7 @@ M.setup = function()
     -- Trouble
     {
       "folke/trouble.nvim",
-      requires = "nvim-tree/nvim-web-devicons",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 
     -- TypeScript
