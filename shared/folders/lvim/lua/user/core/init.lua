@@ -3,7 +3,6 @@ local utils = require("user.utils")
 utils.require_from("user.core")({
   "alpha",
   "bufferline",
-  "chat-gpt",
   "cmp",
   "dressing",
   "fidget",
