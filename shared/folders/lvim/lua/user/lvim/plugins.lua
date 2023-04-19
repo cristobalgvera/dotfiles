@@ -100,7 +100,7 @@ M.setup = function()
     },
 
     -- Treesitter
-    "p00f/nvim-ts-rainbow",
+    "HiPhish/nvim-ts-rainbow2",
     "windwp/nvim-ts-autotag",
     "RRethy/nvim-treesitter-textsubjects",
     {
