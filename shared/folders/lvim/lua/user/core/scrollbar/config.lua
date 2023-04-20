@@ -19,6 +19,9 @@ M.setup = function()
       search = false,
       ale = false,
     },
+    excluded_filetypes = {
+      "alpha",
+    },
   })
 end
 
