@@ -15,6 +15,7 @@ utils.require_from("user.core")({
   -- "noice",
   "notify",
   "search-replace",
+  "scrollbar",
   "surround",
   "treesitter",
   "themes",

@@ -70,6 +70,9 @@ M.setup = function()
       dependencies = { "MunifTanjim/nui.nvim" },
     },
 
+    -- Scrollbar
+    "petertriho/nvim-scrollbar",
+
     -- Search Replace
     "roobert/search-replace.nvim",
 
