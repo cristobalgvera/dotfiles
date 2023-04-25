@@ -17,6 +17,7 @@ utils.require_from("user.core")({
   "search-replace",
   "scrollbar",
   "surround",
+  "toggleterm",
   "treesitter",
   "themes",
   "todo-comments",
