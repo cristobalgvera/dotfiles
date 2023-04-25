@@ -39,6 +39,10 @@ function add_symlinks {
   echo "Linking Lazygit config"
   link_file "$sharedPath"/config.lazygit.yml ~/Library/Application\ Support/lazygit/config.yml
 
+  # LazyDocker config
+  echo "Linking LazyDocker config"
+  link_file "$sharedPath"/config.lazydocker.yml ~/Library/Application\ Support/lazydocker/config.yml
+
   # Zsh config
   echo "Linking Zsh config"
   link_file "$macosFilesPath"/.zshrc ~/.zshrc

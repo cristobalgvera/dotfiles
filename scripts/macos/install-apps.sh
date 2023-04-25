@@ -51,6 +51,7 @@ function install_brew_apps {
     neovim
     starship
     jesseduffield/lazygit/lazygit
+    jesseduffield/lazydocker/lazydocker
     shellcheck
     git-delta
     rbenv
