@@ -8,9 +8,6 @@ M.setup = function()
     -- Dressing
     "stevearc/dressing.nvim",
 
-    -- Fidget
-    "j-hui/fidget.nvim",
-
     -- GitHub Copilot
     {
       "zbirenbaum/copilot.lua",
