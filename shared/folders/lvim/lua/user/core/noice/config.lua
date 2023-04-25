@@ -8,6 +8,9 @@ M.setup = function()
       signature = {
         enabled = false, -- disable signature help if `lsp-signature` is being used
       },
+      hover = {
+        enabled = false,
+      },
       -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
       override = {
         ["vim.lsp.util.convert_input_to_markdown_lines"] = true,

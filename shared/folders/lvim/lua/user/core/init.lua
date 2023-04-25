@@ -12,7 +12,7 @@ utils.require_from("user.core")({
   "lsp",
   "neodim",
   "nvim-coverage",
-  -- "noice",
+  "noice",
   "notify",
   "search-replace",
   "scrollbar",
