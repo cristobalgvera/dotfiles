@@ -32,6 +32,13 @@ function GetSharedFiles {
             Force = $Force
         },
 
+        # Lazydocker configuration
+        [PSCustomObject]@{
+            From  = "$SHARED\config.lazydocker.yml";
+            To    = "$Env:AppData\lazydocker\config.yml";
+            Force = $Force
+        },
+
         # LunarVim configuration
         [PSCustomObject]@{
             From     = "$SHARED\folders\lvim";

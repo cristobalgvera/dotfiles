@@ -45,6 +45,7 @@ SetConsoleTheme
 Set-Alias nvim lvim
 Set-Alias v nvim
 Set-Alias lg lazygit
+Set-Alias lzd lazydocker
 
 # Z port to PowerShell
 ImportModule z

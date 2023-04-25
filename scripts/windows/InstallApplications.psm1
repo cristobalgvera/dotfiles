@@ -150,6 +150,7 @@ function AddChocolateyApps {
         "googlechrome",
         "google-drive-file-stream",
         "lazygit",
+        "lazydocker",
         "lightshot.install",
         "llvm",
         "microsoft-windows-terminal",
