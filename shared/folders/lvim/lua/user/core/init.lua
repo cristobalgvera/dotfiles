@@ -13,7 +13,6 @@ utils.require_from("user.core")({
   "neodim",
   "nvim-coverage",
   "noice",
-  "notify",
   "search-replace",
   "scrollbar",
   "surround",

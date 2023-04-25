@@ -45,7 +45,6 @@ M.setup = function()
       "folke/noice.nvim",
       dependencies = {
         "MunifTanjim/nui.nvim",
-        "rcarriga/nvim-notify",
       },
     },
 
@@ -57,9 +56,6 @@ M.setup = function()
 
     -- Nvim Highlight Colors
     "brenoprata10/nvim-highlight-colors",
-
-    -- Nvim Notify
-    "rcarriga/nvim-notify",
 
     -- Nvim Numbertoggle
     "sitiom/nvim-numbertoggle",
