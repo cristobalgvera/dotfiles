@@ -6,10 +6,6 @@ gui:
     selectedRangeBgColor:
       - reverse
 
-keybinding:
-  universal:
-    appendNewline: "<tab>"
-
 customCommands:
   - key: "C"
     command: "git cz c"
