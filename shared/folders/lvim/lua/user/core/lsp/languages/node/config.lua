@@ -32,9 +32,9 @@ end
 M.setup = function()
   setup_typescript()
 
-  -- setup_custom_servers({
-  --   "angularls",
-  -- })
+  setup_custom_servers({
+    "angularls",
+  })
 end
 
 return M
