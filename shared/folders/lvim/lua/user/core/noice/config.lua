@@ -9,7 +9,7 @@ M.setup = function()
         enabled = false, -- disable signature help if `lsp-signature` is being used
       },
       hover = {
-        enabled = false,
+        enabled = false, -- disable signature help if `lsp-signature` is being used
       },
       -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
       override = {
