@@ -23,6 +23,7 @@ end
 --- @param servers table<any, string>
 local function setup_custom_servers(servers)
   local lsp_manager = require_safe("lvim.lsp.manager")
+  lvim.lsp.installer.setup.ensure_installed = servers
 
   for _, server in pairs(servers) do
     lsp_manager.setup(server)
@@ -31,10 +32,7 @@ end
 
 M.setup = function()
   setup_typescript()
-
-  setup_custom_servers({
-    "angularls",
-  })
+  setup_custom_servers({ "angularls" })
 end
 
 return M
