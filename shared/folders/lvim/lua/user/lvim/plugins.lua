@@ -57,6 +57,21 @@ M.setup = function()
     -- Nvim Numbertoggle
     "sitiom/nvim-numbertoggle",
 
+    -- Nvim UFO
+    {
+      "kevinhwang91/nvim-ufo",
+      event = "BufReadPost",
+      dependencies = {
+        "kevinhwang91/promise-async",
+        "luukvbaal/statuscol.nvim",
+      },
+    },
+    {
+      "anuvyklack/fold-preview.nvim",
+      event = "BufReadPost",
+      dependencies = { "anuvyklack/keymap-amend.nvim" },
+    },
+
     -- Package Info
     {
       "vuki656/package-info.nvim",

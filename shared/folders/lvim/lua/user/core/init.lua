@@ -20,6 +20,7 @@ utils.require_from("user.core")({
   "themes",
   "todo-comments",
   "trouble",
+  "ufo",
 })
 
 -- Configure Telescope last to properly add extensions
