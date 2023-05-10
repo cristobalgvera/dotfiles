@@ -68,7 +68,7 @@ function install_brew_apps {
   
   # Cask
   local casks=(
-    font-caskaydia-cove-nerd-font
+    font-victor-mono-nerd-font
     google-chrome
     warp
     raycast
@@ -87,7 +87,8 @@ function install_brew_apps {
 }
 
 function install_apps {
-  local basePath=$(dirname "$0")
+  local basePath
+  basePath=$(dirname "$0")
 
   echo "Installing apps..."
 
