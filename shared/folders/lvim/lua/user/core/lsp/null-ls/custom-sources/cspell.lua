@@ -12,6 +12,8 @@ M.setup = function()
     cspell.diagnostics.with(cspell_config_extension()),
     cspell.code_actions.with(cspell_config_extension()),
   })
+
+  null_ls.disable({ name = "cspell" })
 end
 
 return M
