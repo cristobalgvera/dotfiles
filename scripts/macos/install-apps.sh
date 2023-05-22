@@ -25,9 +25,10 @@ function install_curl_apps {
   fi
 
   # LunarVim
+  # FIX: Install command is not working
 	if ! [ -x "$(command -v lvim)" ]; then
 		echo "Installing LunarVim..."
-    LV_BRANCH='release-1.2/neovim-0.8' /bin/bash <(curl -fsSL https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+    # LV_BRANCH='release-1.3/neovim-0.9' /bin/bash <(curl -fsSL https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
   fi
 }
 
