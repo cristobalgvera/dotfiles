@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 [aws]
-format = 'on [$symbol$profile]($style) '
+format = 'on [$symbol($profile )(\($region\))]($style)'
 symbol = ' '
 
 [gcloud]
