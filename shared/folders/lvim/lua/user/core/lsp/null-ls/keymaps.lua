@@ -5,7 +5,7 @@ M.setup = function()
 
   which_key.mappings["l"]["t"] = {
     name = "Toggle",
-    s = { "<cmd>lua require('null-ls').toggle({ name = 'cspell' })<cr>", "CSpell" },
+    s = { "<cmd>lua Toggle_spell()<cr>", "CSpell" },
   }
 end
 
