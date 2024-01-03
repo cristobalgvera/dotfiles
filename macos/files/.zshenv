@@ -1,11 +1,19 @@
 . "$HOME/.cargo/env"
 
 export EDITOR="lvim"
+
 export LOCALPATH=$HOME/.local
+export PATH="$LOCALPATH/bin:$PATH"
+
 export PYENVPATH=$HOME/.pyenv
+export PATH="$PYENVPATH/shims:$PATH"
+
 export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
 export DOCKER_PATH="$HOME/.docker"
-export PATH="$PYENVPATH/shims:$VOLTA_HOME/bin:$LOCALPATH/bin:$DOCKER_PATH/bin:$PATH"
+export PATH="$DOCKER_PATH/bin:$PATH"
+
 
 if aws_loc="$(type -p "aws")" || [[ -z $aws_loc ]]; then
   export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id)
