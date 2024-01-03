@@ -1,6 +1,5 @@
 #!/bin/bash
 
-alias repos='cd ~/Documents/Repositories'
 alias ls='exa --icons --all --group-directories-first --long --header --git --no-user --octal-permissions'
 alias lt='ls --tree --level 3'
 alias bup='brew cu --cleanup && brew upgrade && brew cleanup'

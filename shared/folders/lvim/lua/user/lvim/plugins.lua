@@ -115,10 +115,7 @@ M.setup = function()
     "HiPhish/nvim-ts-rainbow2",
     "windwp/nvim-ts-autotag",
     "RRethy/nvim-treesitter-textsubjects",
-    {
-      "elgiano/nvim-treesitter-angular",
-      branch = "topic/jsx-fix",
-    },
+    "nvim-treesitter/nvim-treesitter-angular",
 
     -- Trouble
     {
