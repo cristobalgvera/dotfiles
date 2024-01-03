@@ -54,7 +54,7 @@ M.setup = function()
     },
 
     -- NullLS CSpell
-    { "davidmh/cspell.nvim" },
+    "davidmh/cspell.nvim",
 
     -- Nvim Coverage
     {
