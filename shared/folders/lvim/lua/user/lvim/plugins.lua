@@ -83,6 +83,12 @@ M.setup = function()
       dependencies = { "anuvyklack/keymap-amend.nvim" },
     },
 
+    -- Oil
+    {
+      "stevearc/oil.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+
     -- Package Info
     {
       "vuki656/package-info.nvim",
