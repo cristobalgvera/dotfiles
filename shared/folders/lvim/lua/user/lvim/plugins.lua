@@ -54,7 +54,7 @@ M.setup = function()
     },
 
     -- NullLS CSpell
-    { "davidmh/cspell.nvim" },
+    "davidmh/cspell.nvim",
 
     -- Nvim Coverage
     {
@@ -81,6 +81,12 @@ M.setup = function()
       "anuvyklack/fold-preview.nvim",
       event = "BufReadPost",
       dependencies = { "anuvyklack/keymap-amend.nvim" },
+    },
+
+    -- Oil
+    {
+      "stevearc/oil.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 
     -- Package Info
