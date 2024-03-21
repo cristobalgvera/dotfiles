@@ -42,9 +42,6 @@ M.setup = function()
       end,
     },
 
-    -- Neodim
-    "zbirenbaum/neodim",
-
     -- Noice
     {
       "folke/noice.nvim",

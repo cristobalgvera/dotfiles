@@ -9,7 +9,6 @@ utils.require_from("user.core")({
   "hop",
   "gitsigns",
   "lsp",
-  "neodim",
   "nvim-coverage",
   "noice",
   "oil",
