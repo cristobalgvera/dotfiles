@@ -18,12 +18,6 @@ function install_curl_apps {
 	  /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" </dev/null
   fi
 
-	# Volta
-	if ! [ -x "$(command -v volta)" ]; then
-		echo "Installing Volta..."
-	  /bin/bash -c "$(curl -fsSL https://get.volta.sh)" </dev/null
-  fi
-
   # LunarVim
   # FIX: Install command is not working
 	if ! [ -x "$(command -v lvim)" ]; then

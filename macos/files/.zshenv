@@ -8,9 +8,6 @@ export PATH="$LOCALPATH/bin:$PATH"
 export PYENVPATH=$HOME/.pyenv
 export PATH="$PYENVPATH/shims:$PATH"
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
 export DOCKER_PATH="$HOME/.docker"
 export PATH="$DOCKER_PATH/bin:$PATH"
 
