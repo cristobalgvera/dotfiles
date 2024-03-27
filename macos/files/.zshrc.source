@@ -5,8 +5,8 @@ compinit
 
 # Google Cloud
 if gcloud_loc="$(type -p "gcloud")" || [[ -z $gcloud_loc ]]; then
-  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+  source "$GCLOUD_HOME/path.zsh.inc"
+  source "$GCLOUD_HOME/completion.zsh.inc"
 fi
 
 if pack_lock="$(type -p "pack")" || [[ -z $pack_lock ]]; then
