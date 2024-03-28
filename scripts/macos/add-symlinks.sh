@@ -54,6 +54,11 @@ function add_symlinks {
   # Starship config
   echo "Linking Starship config"
   link_file "$sharedPath"/starship.toml ~/.config/starship.toml
+
+  # Asdf config
+  echo "Linking Asdf config"
+  link_file "$sharedPath"/asdf/.tool-versions ~/.tool-versions
+  link_file "$sharedPath"/asdf/.asdfrc ~/.asdfrc
 }
 
 add_symlinks

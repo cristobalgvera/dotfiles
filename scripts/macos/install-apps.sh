@@ -19,10 +19,18 @@ function install_curl_apps {
   fi
 
   # LunarVim
-  # FIX: Install command is not working
 	if ! [ -x "$(command -v lvim)" ]; then
 		echo "Installing LunarVim..."
+    # FIX: Install command is not working
     # LV_BRANCH='release-1.3/neovim-0.9' /bin/bash <(curl -fsSL https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+  fi
+}
+
+function install_git_apps {
+	# Asdf
+	if ! [ -x "$(command -v asdf)" ]; then
+		echo "Installing Asdf..."
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
   fi
 }
 
@@ -55,6 +63,8 @@ function install_brew_apps {
     zoxide
     bat
     commitizen
+    coreutils
+    curl
   )
 
   for formulae in "${formulaes[@]}"; do
@@ -89,6 +99,7 @@ function install_apps {
 
   install_curl_apps
   install_brew_apps
+  install_git_apps
 }
 
 install_apps
