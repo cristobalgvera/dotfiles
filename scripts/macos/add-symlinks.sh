@@ -59,6 +59,7 @@ function add_symlinks {
   echo "Linking Asdf config"
   link_file "$sharedPath"/asdf/.tool-versions ~/.tool-versions
   link_file "$sharedPath"/asdf/.asdfrc ~/.asdfrc
+  link_file "$sharedPath"/asdf/.default-npm-packages ~/.default-npm-packages
 }
 
 add_symlinks

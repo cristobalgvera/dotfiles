@@ -31,6 +31,11 @@ function install_git_apps {
 	if ! [ -x "$(command -v asdf)" ]; then
 		echo "Installing Asdf..."
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+
+    . "$HOME"/.asdf/asdf.sh
+
+    echo "Installint Asdf NodeJS plugin..."
+    asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
   fi
 }
 
