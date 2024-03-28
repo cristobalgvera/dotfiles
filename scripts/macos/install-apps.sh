@@ -34,8 +34,11 @@ function install_git_apps {
 
     . "$HOME"/.asdf/asdf.sh
 
-    echo "Installint Asdf NodeJS plugin..."
+    echo "Installing Asdf NodeJS plugin..."
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
+    echo "Installing Asdf Erlang plugin..."
+    asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
   fi
 }
 
@@ -70,6 +73,11 @@ function install_brew_apps {
     commitizen
     coreutils
     curl
+    autoconf
+    openssl
+    wxwidgets
+    libxslt
+    fop
   )
 
   for formulae in "${formulaes[@]}"; do
