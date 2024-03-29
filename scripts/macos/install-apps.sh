@@ -32,16 +32,25 @@ function install_git_apps {
 		echo "Installing Asdf..."
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
-    . "$HOME"/.asdf/asdf.sh
+    source "$HOME/.asdf/asdf.sh"
+  else
+	  if ! [ -x "$(command -v node)" ]; then
+      echo "Installing Asdf NodeJS plugin..."
+      asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
-    echo "Installing Asdf NodeJS plugin..."
-    asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+      echo "Enabling pnpm..."
+      corepack enable
+      corepack prepare pnpm@latest --activate
+      asdf reshim nodejs
+    fi
 
-    echo "Installing Asdf Erlang plugin..."
-    asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
+	  if ! [ -x "$(command -v gleam)" ]; then
+      echo "Installing Asdf Erlang plugin..."
+      asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
 
-    echo "Installing Asdf Gleam plugin..."
-    asdf plugin add gleam https://github.com/asdf-community/asdf-gleam.git
+      echo "Installing Asdf Gleam plugin..."
+      asdf plugin add gleam https://github.com/asdf-community/asdf-gleam.git
+    fi
   fi
 }
 
