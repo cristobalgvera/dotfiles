@@ -60,6 +60,7 @@ function add_symlinks {
   link_file "$sharedPath"/asdf/.tool-versions ~/.tool-versions
   link_file "$sharedPath"/asdf/.asdfrc ~/.asdfrc
   link_file "$sharedPath"/asdf/.default-npm-packages ~/.default-npm-packages
+  link_file "$sharedPath"/asdf/.default-python-packages ~/.default-python-packages
 }
 
 add_symlinks

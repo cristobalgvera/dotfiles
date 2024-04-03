@@ -51,6 +51,11 @@ function install_git_apps {
       echo "Installing Asdf Gleam plugin..."
       asdf plugin add gleam https://github.com/asdf-community/asdf-gleam.git
     fi
+
+	  if ! [ -x "$(command -v python)" ]; then
+      echo "Installing Asdf Python plugin..."
+      asdf plugin add python https://github.com/asdf-community/asdf-python.git
+    fi
   fi
 }
 
