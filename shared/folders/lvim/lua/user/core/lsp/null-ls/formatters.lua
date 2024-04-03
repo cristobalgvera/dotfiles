@@ -12,6 +12,10 @@ M.setup = function()
       command = "rustfmt",
       extra_args = null_ls_utils.rust.formatter.extra_args,
     }, -- rustup component add rustfmt
+    {
+      command = "sqlfluff",
+      extra_args = null_ls_utils.sqlfluff.formatter.extra_args,
+    } -- pip install sqlfluff
   })
 end
 

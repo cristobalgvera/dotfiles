@@ -20,4 +20,13 @@ M.rust = {
   },
 }
 
+M.sqlfluff = {
+  linter = {
+    extra_args = { "--dialect", "postgres" },
+  },
+  formatter = {
+    extra_args = { "--dialect", "postgres" },
+  },
+}
+
 return M
