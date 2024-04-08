@@ -5,9 +5,6 @@ export EDITOR="lvim"
 export LOCALPATH=$HOME/.local
 export PATH="$LOCALPATH/bin:$PATH"
 
-export PYENVPATH=$HOME/.pyenv
-export PATH="$PYENVPATH/shims:$PATH"
-
 export DOCKER_PATH="$HOME/.docker"
 export PATH="$DOCKER_PATH/bin:$PATH"
 
