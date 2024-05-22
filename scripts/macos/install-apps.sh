@@ -56,6 +56,14 @@ function install_git_apps {
       echo "Installing Asdf Python plugin..."
       asdf plugin add python https://github.com/asdf-community/asdf-python.git
     fi
+
+	  if ! [ -x "$(command -v nvim)" ]; then
+      echo "Installing Asdf Neovim plugin..."
+      asdf plugin add neovim https://github.com/richin13/asdf-neovim.git
+
+      echo "Installing Neovim..."
+      asdf install neovim stable
+    fi
   fi
 }
 
@@ -76,7 +84,6 @@ function install_brew_apps {
   local formulaes=(
     fzf
     git
-    neovim
     starship
     jesseduffield/lazygit/lazygit
     jesseduffield/lazydocker/lazydocker
