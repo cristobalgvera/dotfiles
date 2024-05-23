@@ -6,3 +6,4 @@ neovim
 prettier
 cspell
 markdownlint-cli
+npm-check-updates
