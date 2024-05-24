@@ -5,6 +5,7 @@ utils.require_from("user.core")({
   "bufferline",
   "cmp",
   "dressing",
+  "hardtime",
   "highlight-colors",
   "hop",
   "gitsigns",

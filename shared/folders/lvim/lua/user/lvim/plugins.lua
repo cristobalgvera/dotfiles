@@ -18,6 +18,12 @@ M.setup = function()
       dependencies = { "copilot.lua", "nvim-cmp" },
     },
 
+    -- Hardtime
+    {
+      "m4xshen/hardtime.nvim",
+      dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    },
+
     -- Hop
     "phaazon/hop.nvim",
 
