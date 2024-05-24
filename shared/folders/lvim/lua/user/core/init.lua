@@ -13,6 +13,7 @@ utils.require_from("user.core")({
   "nvim-coverage",
   "noice",
   "oil",
+  "precognition",
   "scrollbar",
   "search-replace",
   "surround",

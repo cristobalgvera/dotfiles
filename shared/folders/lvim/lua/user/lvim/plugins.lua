@@ -98,6 +98,9 @@ M.setup = function()
       dependencies = { "MunifTanjim/nui.nvim" },
     },
 
+    -- Precognition
+    "tris203/precognition.nvim",
+
     -- Scrollbar
     "petertriho/nvim-scrollbar",
 
