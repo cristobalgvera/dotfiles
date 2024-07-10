@@ -15,7 +15,6 @@ M.setup = function()
       mirror = true,
       preview_cutoff = 0.4,
     },
-    flip_columns = 96,
     height = 0.94,
     width = 0.86,
   }
