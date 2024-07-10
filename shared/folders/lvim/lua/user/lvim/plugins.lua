@@ -127,7 +127,6 @@ M.setup = function()
     "HiPhish/nvim-ts-rainbow2",
     "windwp/nvim-ts-autotag",
     "RRethy/nvim-treesitter-textsubjects",
-    "nvim-treesitter/nvim-treesitter-angular",
 
     -- Trouble
     {
