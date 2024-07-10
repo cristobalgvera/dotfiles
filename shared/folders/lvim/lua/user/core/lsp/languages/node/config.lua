@@ -39,7 +39,7 @@ end
 M.setup = function()
   setup_typescript()
   setup_custom_servers({
-    { "angularls", { filetypes = { "angular.html" } } },
+    { "angularls" },
   })
 end
 
