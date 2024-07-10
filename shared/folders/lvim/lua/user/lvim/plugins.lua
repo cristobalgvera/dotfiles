@@ -124,7 +124,7 @@ M.setup = function()
     },
 
     -- Treesitter
-    "HiPhish/nvim-ts-rainbow2",
+    "HiPhish/rainbow-delimiters.nvim",
     "windwp/nvim-ts-autotag",
     "RRethy/nvim-treesitter-textsubjects",
 

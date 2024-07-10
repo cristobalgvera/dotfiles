@@ -21,7 +21,6 @@ M.setup = function()
   treesitter.auto_install = true
 
   treesitter.autotag.enable = true
-  treesitter.rainbow.enable = true
 
   treesitter.textsubjects.enable = true
 
