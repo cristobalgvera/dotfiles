@@ -91,7 +91,7 @@ function install_brew_apps {
     git-delta
     rbenv
     ruby-build
-    exa
+    eza
     zoxide
     bat
     commitizen
