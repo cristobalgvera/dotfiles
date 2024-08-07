@@ -48,6 +48,9 @@ function install_git_apps {
       echo "Installing Asdf Erlang plugin..."
       asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
 
+      echo "Installing Asdf Rebar plugin"
+      asdf plugin add rebar https://github.com/Stratus3D/asdf-rebar.git
+
       echo "Installing Asdf Gleam plugin..."
       asdf plugin add gleam https://github.com/asdf-community/asdf-gleam.git
     fi

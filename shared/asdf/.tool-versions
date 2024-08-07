@@ -1,5 +1,6 @@
 nodejs 20.12.0
-erlang 26.2.3
-gleam 1.0.0
+erlang 27.0
+gleam 1.4.1
 python 3.12.2
 neovim 0.10.0
+rebar 3.23.0
