@@ -4,8 +4,8 @@ M.setup = function()
   vim.api.nvim_create_autocmd("BufEnter", {
     desc = "Disable diagnostics on environment files",
     pattern = { ".env*" },
-    callback = function(args)
-      vim.diagnostic.enable(false, args.buf)
+    callback = function()
+      vim.diagnostic.enable(false)
     end,
   })
 end
