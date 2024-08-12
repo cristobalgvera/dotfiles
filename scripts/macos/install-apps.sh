@@ -114,6 +114,8 @@ function install_brew_apps {
     the-unarchiver
     meetingbar
     monitorcontrol
+    beekeeper-studio
+    postman
   )
 
   for cask in "${casks[@]}"; do
