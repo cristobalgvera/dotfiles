@@ -98,11 +98,6 @@ function install_brew_apps {
     commitizen
     coreutils
     curl
-    autoconf
-    openssl
-    wxwidgets
-    libxslt
-    fop
   )
 
   for formulae in "${formulaes[@]}"; do
