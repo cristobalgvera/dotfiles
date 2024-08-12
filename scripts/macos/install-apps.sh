@@ -32,8 +32,14 @@ function install_git_apps {
 		echo "Installing Asdf..."
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
+    # shellcheck disable=1091
     source "$HOME/.asdf/asdf.sh"
-  else
+  fi
+
+  install_asdf_plugins
+}
+
+function install_asdf_plugins {
 	  if ! [ -x "$(command -v node)" ]; then
       echo "Installing Asdf NodeJS plugin..."
       asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
@@ -67,7 +73,6 @@ function install_git_apps {
       echo "Installing Neovim..."
       asdf install neovim stable
     fi
-  fi
 }
 
 function install_brew_apps {
