@@ -66,7 +66,6 @@ function install_asdf_plugins {
 function install_brew_apps {
   # Tap
   local taps=(
-    homebrew/cask-fonts
     buo/cask-upgrade
   )
 
