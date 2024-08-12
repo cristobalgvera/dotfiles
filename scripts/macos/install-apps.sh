@@ -11,13 +11,6 @@ function install_curl_apps {
 		echo "Installing Rust..."
 	  /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" </dev/null
   fi
-
-  # LunarVim
-	if ! [ -x "$(command -v lvim)" ]; then
-		echo "Installing LunarVim..."
-    export LV_BRANCH='release-1.4/neovim-0.9'
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)" </dev/null
-  fi
 }
 
 function install_git_apps {
@@ -123,6 +116,15 @@ function install_brew_apps {
   done
 }
 
+function install_lunarvim {
+  # LunarVim
+	if ! [ -x "$(command -v lvim)" ]; then
+		echo "Installing LunarVim..."
+    export LV_BRANCH='release-1.4/neovim-0.9'
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)" </dev/null
+  fi
+}
+
 function install_apps {
   local basePath
   basePath=$(dirname "$0")
@@ -132,6 +134,7 @@ function install_apps {
   install_curl_apps
   install_brew_apps
   install_git_apps
+  install_lunarvim
 }
 
 install_apps
