@@ -91,6 +91,7 @@ function install_brew_apps {
     commitizen
     coreutils
     curl
+    ripgrep
   )
 
   for formulae in "${formulaes[@]}"; do
