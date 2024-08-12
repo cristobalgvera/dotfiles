@@ -4,6 +4,7 @@ function install_curl_apps {
 	if ! [ -x "$(command -v brew)" ]; then
 		echo "Installing Homebrew..."
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/null
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 	fi
 
 	# Rust
