@@ -3,6 +3,10 @@ local M = {}
 M.setup = function()
   local defaults = lvim.builtin.telescope.defaults
 
+  defaults.file_ignore_patterns = {
+    ".git",
+  }
+
   defaults.sorting_strategy = "ascending"
   defaults.layout_strategy = "flex"
   defaults.layout_config = {
