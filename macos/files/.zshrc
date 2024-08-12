@@ -25,7 +25,3 @@ fi
 
 # Export custom local configuration if found
 [[ -s "$HOME/.zshrc.custom" ]] && source "$HOME/.zshrc.custom"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

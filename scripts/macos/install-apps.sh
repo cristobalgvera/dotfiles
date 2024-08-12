@@ -6,12 +6,6 @@ function install_curl_apps {
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/null
 	fi
 
-	# Sdkman
-	if ! [ -x "$(command -v sdk)" ]; then
-		echo "Installing Sdkman..."
-	  /bin/bash -c "$(curl -fsSL https://get.sdkman.io?rcupdate=false)" </dev/null
-  fi
-
 	# Rust
 	if ! [ -x "$(command -v rustc)" ]; then
 		echo "Installing Rust..."
