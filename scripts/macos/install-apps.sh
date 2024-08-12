@@ -107,12 +107,9 @@ function install_brew_apps {
   # Cask
   local casks=(
     font-victor-mono-nerd-font
-    google-chrome
     warp
     raycast
     visual-studio-code
-    whatsapp
-    alt-tab
     docker
     the-unarchiver
     meetingbar
