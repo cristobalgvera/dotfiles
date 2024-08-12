@@ -23,7 +23,10 @@ end
 
 function Toggle_spell()
   -- It can be `spell` or `nospell`
-  local current_spell = vim.api.nvim_exec("set spell?", true)
+  local current_spell = vim.api.nvim_cmd({
+    cmd = "set",
+    args = { "spell?" },
+  }, { output = true })
 
   if current_spell:find("nospell", 1, true) then
     enable_spell()

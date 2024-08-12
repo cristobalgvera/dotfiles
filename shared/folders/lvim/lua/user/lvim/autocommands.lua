@@ -5,7 +5,7 @@ M.setup = function()
     desc = "Disable diagnostics on environment files",
     pattern = { ".env*" },
     callback = function(args)
-      vim.diagnostic.disable(args.buf)
+      vim.diagnostic.enable(false, args.buf)
     end,
   })
 end
