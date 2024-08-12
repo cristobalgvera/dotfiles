@@ -5,6 +5,7 @@ M.setup = function()
 
   mason_null_ls.setup({
     ensure_installed = {
+      "typescript_language_server",
       "eslint_d",
       "prettierd",
       "markdownlint",
