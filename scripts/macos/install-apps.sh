@@ -90,7 +90,6 @@ function install_brew_apps {
     starship
     jesseduffield/lazygit/lazygit
     jesseduffield/lazydocker/lazydocker
-    shellcheck
     git-delta
     rbenv
     ruby-build

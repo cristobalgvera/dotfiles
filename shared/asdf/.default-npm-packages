@@ -1,9 +1,5 @@
 nx
 @angular/cli
 @nestjs/cli
-eslint_d
 neovim
-prettier
-cspell
-markdownlint-cli
 npm-check-updates

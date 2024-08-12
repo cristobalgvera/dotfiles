@@ -5,9 +5,9 @@ M.setup = function()
   local null_ls_utils = require("user.core.lsp.null-ls.utils")
 
   formatters.setup({
-    { command = "stylua" }, -- cargo install stylua
-    { command = "shellharden" }, -- cargo install shellharden
-    { command = "prettier" }, -- npm install -g prettier
+    { command = "stylua" },
+    { command = "shellharden" },
+    { command = "prettierd" },
     {
       command = "rustfmt",
       extra_args = null_ls_utils.rust.formatter.extra_args,
@@ -15,7 +15,7 @@ M.setup = function()
     {
       command = "sqlfluff",
       extra_args = null_ls_utils.sqlfluff.formatter.extra_args,
-    } -- pip install sqlfluff
+    },
   })
 end
 

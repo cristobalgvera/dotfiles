@@ -48,6 +48,12 @@ M.setup = function()
       end,
     },
 
+    -- Mason
+    {
+      "jay-babu/mason-null-ls.nvim",
+      event = { "BufReadPre", "BufNewFile" },
+    },
+
     -- Noice
     {
       "folke/noice.nvim",

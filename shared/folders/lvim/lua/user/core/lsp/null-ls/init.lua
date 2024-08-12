@@ -7,4 +7,5 @@ utils.setup_from("user.core.lsp.null-ls")({
   "linters",
   "code-actions",
   "keymaps",
+  "install-sources",
 })
