@@ -26,6 +26,9 @@ fi
 # Asdf
 [ -f ~/.asdf/asdf.sh ] && . ~/.asdf/asdf.sh
 
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Init RbEnv
 eval "$(rbenv init - zsh)"
 
