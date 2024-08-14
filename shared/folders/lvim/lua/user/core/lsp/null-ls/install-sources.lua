@@ -6,7 +6,7 @@ M.setup = function()
   mason_null_ls.setup({
     ensure_installed = {
       "typescript_language_server",
-      "eslint_d",
+      "eslint_d@13.1.2", -- NOTE: This version has no issues with legacy non-flat config
       "prettierd",
       "markdownlint",
       "sqlfluff",
