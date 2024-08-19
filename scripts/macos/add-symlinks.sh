@@ -28,8 +28,8 @@ function add_symlinks {
   link_file "$sharedPath"/.ideavimrc ~/.ideavimrc
 
   # LunarVim config
-  echo "Linking LunarVim config"
-  link_file "$sharedPath"/folders/lvim ~/.config/lvim
+  echo "Linking Neovim config"
+  link_file "$sharedPath"/nvim ~/.config/nvim
 
   # Warp config
   echo "Linking Warp config"

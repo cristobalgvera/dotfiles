@@ -41,8 +41,8 @@ function GetSharedFiles {
 
         # LunarVim configuration
         [PSCustomObject]@{
-            From     = "$SHARED\folders\lvim";
-            To       = "$Env:LocalAppData\lvim";
+            From     = "$SHARED\nvim";
+            To       = "$Env:LocalAppData\nvim";
             IsFolder = $true;
             Force    = $Force
         }
