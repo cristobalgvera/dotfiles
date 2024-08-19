@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.fuzzy-finder.fzf-lua" },
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.indent.mini-indentscope" },
+  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
