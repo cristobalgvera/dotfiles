@@ -20,8 +20,31 @@ local function setup_typescript()
   })
 end
 
+--- @param servers_with_options table<any, [string, table]>]>
+local function setup_custom_servers(servers_with_options)
+  local lsp_manager = require_safe("lvim.lsp.manager")
+  local servers = {}
+
+  for _, server_with_options in pairs(servers_with_options) do
+    local server = server_with_options[1]
+    local options = server_with_options[2] or {}
+
+    table.insert(servers, server)
+    lsp_manager.setup(server, options)
+  end
+
+  lvim.lsp.installer.setup.ensure_installed = servers
+end
+
 M.setup = function()
   setup_typescript()
+  setup_custom_servers({
+    { "angularls" },
+    { "tailwindcss" },
+    { "html" },
+    { "cssls" },
+    { "emmet_ls" },
+  })
 end
 
 return M

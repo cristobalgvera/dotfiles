@@ -7,6 +7,10 @@ M.setup = function()
     ensure_installed = {
       "typescript_language_server",
       "angular-language-server",
+      "tailwindcss-language-server",
+      "css-lsp",
+      "html-lsp",
+      "emmet-ls",
       "eslint_d@13.1.2", -- NOTE: This version has no issues with legacy non-flat config
       "prettierd",
       "markdownlint",
