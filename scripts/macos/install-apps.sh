@@ -105,7 +105,7 @@ function install_brew_apps {
 
   # Cask
   local casks=(
-    font-victor-mono-nerd-font
+    font-iosevka-term-nerd-font
     warp
     raycast
     visual-studio-code
