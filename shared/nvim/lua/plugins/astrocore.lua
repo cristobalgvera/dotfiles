@@ -14,6 +14,21 @@ return {
         -- navigate buffer tabs
         ["<S-l>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["<S-h>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+
+        -- move current line
+        ["<A-j>"] = { ":m .+1<CR>==", noremap = true, silent = true },
+        ["<A-k>"] = { ":m .-2<CR>==", noremap = true, silent = true },
+
+        -- resize buffers
+        ["<A-Up>"] = { ":resize -2<CR>", noremap = true, silent = true },
+        ["<A-Down>"] = { ":resize +2<CR>", noremap = true, silent = true },
+        ["<A-Left>"] = { ":vertical resize -2<CR>", noremap = true, silent = true },
+        ["<A-Right>"] = { ":vertical resize +2<CR>", noremap = true, silent = true },
+      },
+      v = {
+        -- move current line / block
+        ["<A-j>"] = { ":m '>+1<CR>gv-gv", noremap = true, silent = true },
+        ["<A-k>"] = { ":m '<-2<CR>gv-gv", noremap = true, silent = true },
       },
     },
   },
