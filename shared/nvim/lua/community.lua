@@ -24,7 +24,6 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.markdown" },
-  { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
@@ -34,5 +33,6 @@ return {
   { import = "astrocommunity.test.nvim-coverage" },
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.utility.mason-tool-installer-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
 }
