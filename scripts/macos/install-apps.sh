@@ -1,23 +1,23 @@
 #!/bin/bash
 function install_curl_apps {
-	# Homebrew
-	if ! [ -x "$(command -v brew)" ]; then
-		echo "Installing Homebrew..."
-		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/null
+  # Homebrew
+  if ! [ -x "$(command -v brew)" ]; then
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/null
     eval "$(/opt/homebrew/bin/brew shellenv)"
-	fi
+  fi
 
-	# Rust
-	if ! [ -x "$(command -v rustc)" ]; then
-		echo "Installing Rust..."
-	  /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" </dev/null
+  # Rust
+  if ! [ -x "$(command -v rustc)" ]; then
+    echo "Installing Rust..."
+    /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" </dev/null
   fi
 }
 
 function install_git_apps {
-	# Asdf
-	if ! [ -x "$(command -v asdf)" ]; then
-		echo "Installing Asdf..."
+  # Asdf
+  if ! [ -x "$(command -v asdf)" ]; then
+    echo "Installing Asdf..."
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
     # shellcheck disable=1091
@@ -28,39 +28,44 @@ function install_git_apps {
 }
 
 function install_asdf_plugins {
-	  if ! [ -x "$(command -v node)" ]; then
-      echo "Installing Asdf NodeJS plugin..."
-      asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  if ! [ -x "$(command -v node)" ]; then
+    echo "Installing Asdf NodeJS plugin..."
+    asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
-      echo "Enabling pnpm..."
-      corepack enable
-      corepack prepare pnpm@latest --activate
-      asdf reshim nodejs
-    fi
+    echo "Enabling pnpm..."
+    corepack enable
+    corepack prepare pnpm@latest --activate
+    asdf reshim nodejs
+  fi
 
-	  if ! [ -x "$(command -v gleam)" ]; then
-      echo "Installing Asdf Erlang plugin..."
-      asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
+  if ! [ -x "$(command -v gleam)" ]; then
+    echo "Installing Asdf Erlang plugin..."
+    asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
 
-      echo "Installing Asdf Rebar plugin"
-      asdf plugin add rebar https://github.com/Stratus3D/asdf-rebar.git
+    echo "Installing Asdf Rebar plugin"
+    asdf plugin add rebar https://github.com/Stratus3D/asdf-rebar.git
 
-      echo "Installing Asdf Gleam plugin..."
-      asdf plugin add gleam https://github.com/asdf-community/asdf-gleam.git
-    fi
+    echo "Installing Asdf Gleam plugin..."
+    asdf plugin add gleam https://github.com/asdf-community/asdf-gleam.git
+  fi
 
-	  if ! [ -x "$(command -v python)" ]; then
-      echo "Installing Asdf Python plugin..."
-      asdf plugin add python https://github.com/asdf-community/asdf-python.git
-    fi
+  if ! [ -x "$(command -v python)" ]; then
+    echo "Installing Asdf Python plugin..."
+    asdf plugin add python https://github.com/asdf-community/asdf-python.git
+  fi
 
-	  if ! [ -x "$(command -v nvim)" ]; then
-      echo "Installing Asdf Neovim plugin..."
-      asdf plugin add neovim https://github.com/richin13/asdf-neovim.git
+  if ! [ -x "$(command -v go)" ]; then
+    echo "Installing Asdf Go plugin..."
+    asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
+  fi
 
-      echo "Installing Neovim..."
-      asdf install neovim stable
-    fi
+  if ! [ -x "$(command -v nvim)" ]; then
+    echo "Installing Asdf Neovim plugin..."
+    asdf plugin add neovim https://github.com/richin13/asdf-neovim.git
+
+    echo "Installing Neovim..."
+    asdf install neovim stable
+  fi
 }
 
 function install_brew_apps {
@@ -97,7 +102,7 @@ function install_brew_apps {
   for formulae in "${formulaes[@]}"; do
     /bin/bash -c "($basePath/brew-install.sh $formulae)"
   done
-  
+
   # Cask
   local casks=(
     font-victor-mono-nerd-font

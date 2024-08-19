@@ -4,3 +4,4 @@ gleam 1.4.1
 python 3.12.2
 neovim 0.10.1
 rebar 3.23.0
+golang 1.23.0

@@ -26,17 +26,17 @@ function brew_install {
   echo "Installing '$1'..."
 
   case "$2" in
-    cask)
-      install_cask "$1"
-      ;;
+  cask)
+    install_cask "$1"
+    ;;
 
-    tap)
-      install_tap "$1"
-      ;;
+  tap)
+    install_tap "$1"
+    ;;
 
-    *)
-      install_formulae "$1"
-      ;;
+  *)
+    install_formulae "$1"
+    ;;
   esac
 }
 

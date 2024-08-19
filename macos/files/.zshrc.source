@@ -37,3 +37,6 @@ eval "$(starship init zsh)"
 
 # Init Zoxide
 eval "$(zoxide init zsh)"
+
+# GOROOT
+. ~/.asdf/plugins/golang/set-env.zsh
