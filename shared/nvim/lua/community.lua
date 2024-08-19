@@ -5,9 +5,18 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
+
+  -- UI
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
+
+  -- Recipes
   { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   { import = "astrocommunity.recipes.heirline-clock-statusline" },
   { import = "astrocommunity.recipes.telescope-nvchad-theme" },
+
+  -- LSP
+  { import = "astrocommunity.pack.lua" },
+
+  -- Completion
+  { import = "astrocommunity.completion.copilot-cmp" },
 }
