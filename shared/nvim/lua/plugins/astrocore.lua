@@ -26,6 +26,9 @@ return {
         ["<A-Right>"] = { ":vertical resize +2<CR>", noremap = true, silent = true },
       },
       v = {
+        -- don't copy text when overwriting with p
+        ["p"] = { [["_dP]], noremap = true, silent = true },
+
         -- move current line / block
         ["<A-j>"] = { ":m '>+1<CR>gv-gv", noremap = true, silent = true },
         ["<A-k>"] = { ":m '<-2<CR>gv-gv", noremap = true, silent = true },
