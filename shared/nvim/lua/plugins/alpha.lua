@@ -40,11 +40,11 @@ return {
 
     -- Layout customization
     opts.config.layout = {
-      { type = "padding", val = 2 },
+      { type = "padding", val = 1 },
       opts.section.header,
       { type = "padding", val = 2 },
       opts.section.buttons,
-      { type = "padding", val = 2 },
+      { type = "padding", val = 1 },
       opts.section.footer,
     }
   end,
