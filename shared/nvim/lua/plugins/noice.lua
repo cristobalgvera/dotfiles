@@ -2,12 +2,9 @@
 return {
   "folke/noice.nvim",
   opts = function(_, opts)
-    local utils = require "astrocore"
+    opts.presets.lsp_doc_border = true
 
-    return utils.extend_tbl(opts or {}, {
-      presets = utils.extend_tbl(opts.presets or {}, {
-        lsp_doc_border = true, -- add a border to hover docs and signature help
-      }),
-    })
+    if not opts.lsp.signature then opts.lsp.signature = {} end
+    opts.lsp.signature.enabled = false
   end,
 }
