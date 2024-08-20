@@ -32,6 +32,7 @@ return {
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
   { import = "astrocommunity.test.nvim-coverage" },
   { import = "astrocommunity.test.neotest" },
+  { import = "astrocommunity.utility.neodim" },
   { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.utility.mason-tool-installer-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
