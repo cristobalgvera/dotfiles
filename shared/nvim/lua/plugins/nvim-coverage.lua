@@ -1,4 +1,5 @@
-local prefix = "<Leader>T"
+local tests_prefix = "<Leader>T"
+local coverage_prefix = tests_prefix .. "C"
 
 ---@type LazySpec
 return {
@@ -15,10 +16,11 @@ return {
         local maps = opts.mappings
 
         maps.n = utils.extend_tbl(maps.n or {}, {
-          [prefix] = { desc = "󰗇 Tests" },
-          [prefix .. "C"] = { desc = "Coverage" },
-          [prefix .. "Cl"] = { function() require("coverage").load(true) end, desc = "Load and show coverage" },
-          [prefix .. "Ct"] = { function() require("coverage").toggle() end, desc = "Toggle coverage" },
+          [tests_prefix] = { desc = "󰗇 Tests" },
+          [coverage_prefix] = { desc = "Coverage" },
+          [coverage_prefix .. "l"] = { function() require("coverage").load(true) end, desc = "Load and show coverage" },
+          [coverage_prefix .. "t"] = { function() require("coverage").toggle() end, desc = "Toggle coverage" },
+          [coverage_prefix .. "s"] = { function() require("coverage").summary() end, desc = "Show coverage summary" },
         })
       end,
     },
