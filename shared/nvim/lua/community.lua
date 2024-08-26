@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.completion.copilot-cmp" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.docker.lazydocker" },
+  { import = "astrocommunity.editing-support.conform-nvim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.fuzzy-finder.fzf-lua" },
