@@ -50,6 +50,7 @@
   "neoconf.nvim": { "branch": "main", "commit": "f5befe4772c9d94c43bd3dd318f5546cf955ba3f" },
   "neodim": { "branch": "master", "commit": "d87470828690342d0139efc2fd56ea0b29e9ecb3" },
   "neotest": { "branch": "master", "commit": "6d6ad113f56edc7c3f2a77a0836ea8c1b955ebea" },
+  "neotest-jest": { "branch": "main", "commit": "514fd4eae7da15fd409133086bb8e029b65ac43f" },
   "night-owl.nvim": { "branch": "main", "commit": "dee7f700265c240dd04bed6ca1afae2b9415644d" },
   "noice.nvim": { "branch": "main", "commit": "448bb9c524a7601035449210838e374a30153172" },
   "none-ls.nvim": { "branch": "main", "commit": "203f5ebde4a1af48ba2eb146401b5be2e7866942" },
