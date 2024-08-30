@@ -35,6 +35,7 @@
   "lazydocker.nvim": { "branch": "main", "commit": "38c0fbc3cb77e38fd2cdc70b709cf841a38782f5" },
   "lsp_signature.nvim": { "branch": "master", "commit": "a38da0a61c172bb59e34befc12efe48359884793" },
   "lspkind.nvim": { "branch": "master", "commit": "cff4ae321a91ee3473a92ea1a8c637e3a9510aec" },
+  "lua-json5": { "branch": "master", "commit": "18d8308656f79fdaa5936b4e42bb07b4bbd2354e" },
   "luvit-meta": { "branch": "main", "commit": "ce76f6f6cdc9201523a5875a4471dcfe0186eb60" },
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
   "markview.nvim": { "branch": "main", "commit": "4695a699ebd87889c815de07e1408331e5c1df61" },
