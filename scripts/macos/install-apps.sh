@@ -31,9 +31,11 @@ function install_asdf_plugins {
   if ! [ -x "$(command -v node)" ]; then
     echo "Installing Asdf NodeJS plugin..."
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+    asdf install nodejs
 
-    echo "Enabling pnpm..."
+    echo "Enabling Corepack..."
     corepack enable
+    corepack prepare npm@latest --activate
     corepack prepare pnpm@latest --activate
     asdf reshim nodejs
   fi
@@ -64,7 +66,7 @@ function install_asdf_plugins {
     asdf plugin add neovim https://github.com/richin13/asdf-neovim.git
 
     echo "Installing Neovim..."
-    asdf install neovim stable
+    asdf install neovim
   fi
 }
 
