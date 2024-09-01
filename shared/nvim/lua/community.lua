@@ -27,6 +27,7 @@ return {
   utils.add_pack "html-css",
   utils.add_pack "lua",
   utils.add_pack "markdown",
+  utils.add_pack "rust",
   utils.add_pack "tailwindcss",
   utils.add_pack "typescript",
   utils.add_pack "yaml",
