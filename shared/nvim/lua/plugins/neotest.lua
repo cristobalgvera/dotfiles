@@ -11,18 +11,27 @@ return {
       opts = {
         mappings = {
           n = {
-            [watch_prefix] = { desc = "Toggle Watch" },
+            [watch_prefix] = { desc = " Watch" },
             [watch_prefix .. "t"] = {
               function() require("neotest").watch.toggle() end,
-              desc = "Watch test",
+              desc = "Toggle watch test",
             },
             [watch_prefix .. "f"] = {
               function() require("neotest").watch.toggle(vim.fn.expand "%") end,
-              desc = "Watch all test in file",
+              desc = "Toggle watch all test in file",
             },
             [watch_prefix .. "p"] = {
               function() require("neotest").watch.toggle(vim.fn.getcwd()) end,
-              desc = "Watch all tests in project",
+              desc = "Toggle watch all tests in project",
+            },
+            [watch_prefix .. "S"] = {
+              function()
+                --- NOTE: The proper type of the argument is missing in the documentation
+                ---@see https://github.com/nvim-neotest/neotest/blob/master/doc/neotest.txt#L626
+                ---@diagnostic disable-next-line: missing-parameter
+                require("neotest").watch.stop()
+              end,
+              desc = "Stop all watches",
             },
           },
         },
