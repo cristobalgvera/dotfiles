@@ -1,6 +1,6 @@
 . "$HOME/.cargo/env"
 
-export EDITOR="lvim"
+export EDITOR="nvim"
 
 export LOCALPATH=$HOME/.local
 export PATH="$LOCALPATH/bin:$PATH"
