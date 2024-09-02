@@ -5,7 +5,6 @@ local watch_prefix = test_prefix .. "W"
 return {
   "nvim-neotest/neotest",
   dependencies = {
-    "nvim-neotest/neotest-jest",
     {
       "AstroNvim/astrocore",
       opts = {
@@ -38,9 +37,4 @@ return {
       },
     },
   },
-  opts = function(_, opts)
-    opts.adapters = {
-      require "neotest-jest" {},
-    }
-  end,
 }
