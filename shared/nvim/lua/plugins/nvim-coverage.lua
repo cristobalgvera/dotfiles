@@ -1,27 +1,39 @@
-local tests_prefix = "<Leader>T"
-local coverage_prefix = tests_prefix .. "C"
-
 ---@type LazySpec
 return {
   "andythigpen/nvim-coverage",
+  opts = function(_, opts) opts.auto_reload = true end,
   dependencies = {
+    {
+      "AstroNvim/astroui",
+      opts = {
+        icons = {
+          Tests = "󰗇",
+          Coverage = "",
+        },
+      },
+    },
     {
       "AstroNvim/astrocore",
       optional = true,
       opts = function(_, opts)
-        local utils = require "astrocore"
-
-        if utils.is_available "coverage" then return end
-
+        local astroui = require "astroui"
         local maps = opts.mappings
 
-        maps.n = utils.extend_tbl(maps.n or {}, {
-          [tests_prefix] = { desc = "󰗇 Tests" },
-          [coverage_prefix] = { desc = "Coverage" },
-          [coverage_prefix .. "l"] = { function() require("coverage").load(true) end, desc = "Load and show coverage" },
-          [coverage_prefix .. "t"] = { function() require("coverage").toggle() end, desc = "Toggle coverage" },
-          [coverage_prefix .. "s"] = { function() require("coverage").summary() end, desc = "Show coverage summary" },
-        })
+        local tests_prefix = "<Leader>T"
+        local coverage_prefix = tests_prefix .. "C"
+
+        -- INFO: Compatibility with `neotest` and `vim-test`
+        maps.n[tests_prefix] = { desc = astroui.get_icon("Tests", 1, true) .. "Tests" }
+
+        maps.n[coverage_prefix] = { desc = astroui.get_icon("Coverage", 1, true) .. "Coverage" }
+        maps.n[coverage_prefix .. "t"] = { function() require("coverage").toggle() end, desc = "Toggle coverage" }
+        maps.n[coverage_prefix .. "s"] =
+          { function() require("coverage").summary() end, desc = "Show coverage summary" }
+        maps.n[coverage_prefix .. "c"] = { function() require("coverage").clear() end, desc = "Clear coverage" }
+        maps.n[coverage_prefix .. "l"] = {
+          function() require("coverage").load(true) end,
+          desc = "Load and show coverage",
+        }
       end,
     },
   },
