@@ -25,6 +25,7 @@ return {
   utils.add_pack "docker",
   utils.add_pack "gleam",
   utils.add_pack "html-css",
+  utils.add_pack "json",
   utils.add_pack "lua",
   utils.add_pack "markdown",
   utils.add_pack "rust",
