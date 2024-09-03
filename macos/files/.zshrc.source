@@ -11,13 +11,9 @@ if gcloud_loc="$(type -p "gcloud")" || [[ -z $gcloud_loc ]]; then
   source "$GCLOUD_HOME/completion.zsh.inc"
 fi
 
-if pack_lock="$(type -p "pack")" || [[ -z $pack_lock ]]; then
-  . "$(pack completion --shell zsh)"
-fi
-
 # Angular
 if ng_loc="$(type -p "ng")" || [[ -z $ng_loc ]]; then
-  source <(ng completion script)
+  source "$(ng completion script)"
 fi
 
 # Fuzzy Finder
