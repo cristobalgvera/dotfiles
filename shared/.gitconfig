@@ -23,6 +23,9 @@
 [push]
   autoSetupRemote = true
 
+[pull]
+  rebase = true
+
 # Git-Delta configuration
 [core]
   pager = delta
