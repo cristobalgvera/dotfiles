@@ -2,6 +2,7 @@
 return {
   "nvim-neotest/neotest",
   dependencies = {
+    { "AstroNvim/astroui", opts = { icons = { Watch = "" } } },
     {
       "AstroNvim/astrocore",
       opts = function(_, opts)
@@ -9,7 +10,9 @@ return {
 
         local watch_prefix = "<Leader>TW"
 
-        maps.n[watch_prefix] = { desc = " Watch" }
+        maps.n[watch_prefix] = {
+          desc = require("astroui").get_icon("Watch", 1, true) .. "Watch",
+        }
         maps.n[watch_prefix .. "t"] = {
           function() require("neotest").watch.toggle() end,
           desc = "Toggle watch test",
