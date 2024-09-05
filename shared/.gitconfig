@@ -12,6 +12,7 @@
   hist = log --graph --abbrev-commit --decorate --date=format:'%a %d %b %Y %H:%M' --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
 	ignore = "!gi() { IFS=\",\"; curl -L -s \"https://www.toptal.com/developers/gitignore/api/$*\" | tee .gitignore;}; gi"
   parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
+  cb = "!_() { if ! [[ -n $1 ]]; then echo \"Missing environment\" && exit 1; fi; git fetch && git switch -c \"$([[ -n $2 ]] && echo $2 || git branch --show-current)\"_\"$1\" && git branch -u origin/\"$1\" && git pull --rebase;}; _"
  
 [init]
   defaultBranch = main
