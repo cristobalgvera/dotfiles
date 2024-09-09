@@ -17,6 +17,7 @@ return {
   utils.add_git "blame-nvim",
   utils.add_indent "mini-indentscope",
   utils.add_markdown_and_latex "markdown-preview-nvim",
+  utils.add_markdown_and_latex "render-markdown-nvim",
   utils.add_media "vim-wakatime",
   utils.add_motion "flash-nvim",
   utils.add_motion "nvim-surround",
