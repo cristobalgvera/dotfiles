@@ -1,6 +1,6 @@
 local utils = require "user.community.utilities"
 
-local VAULTS_BASE_PATH = vim.env.HOME .. "/obsidian-vaults"
+local NOTES_BASE_PATH = vim.env.HOME .. "/notes"
 
 ---@type LazySpec
 return {
@@ -9,13 +9,13 @@ return {
     "epwalsh/obsidian.nvim",
     version = "*", -- NOTE: Use latest release
     event = {
-      string.format("BufReadPre %s/*.md", VAULTS_BASE_PATH),
-      string.format("BufNewFile %s/*.md", VAULTS_BASE_PATH),
+      string.format("BufReadPre %s/*.md", NOTES_BASE_PATH),
+      string.format("BufNewFile %s/*.md", NOTES_BASE_PATH),
     },
     opts = {
       workspaces = {
-        { name = "personal", path = VAULTS_BASE_PATH .. "/personal" },
-        { name = "work", path = VAULTS_BASE_PATH .. "/work" },
+        { name = "personal", path = NOTES_BASE_PATH .. "/personal" },
+        { name = "work", path = NOTES_BASE_PATH .. "/work" },
       },
 
       -- INFO: Choose the picker to use when doing Obsidian's actions
