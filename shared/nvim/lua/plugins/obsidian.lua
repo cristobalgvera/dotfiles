@@ -35,7 +35,6 @@ return {
       new_notes_location = "notes_subdir",
       daily_notes = {
         folder = "notes/dailies",
-        alias_format = "%B %-d, %Y",
         template = "daily-note",
       },
 
@@ -137,6 +136,7 @@ return {
           local new_note_prefix = prefix .. "n"
           maps.n[new_note_prefix] = { desc = create_description("New note", "ObsidianNew") }
           maps.n[new_note_prefix .. "n"] = { "<Cmd>ObsidianNew<CR>", desc = "Empty note" }
+          maps.n[new_note_prefix .. "d"] = { "<Cmd>ObsidianToday<CR>", desc = "Daily note" }
           maps.n[new_note_prefix .. "t"] = { "<Cmd>ObsidianNewFromTemplate<CR>", desc = "From template" }
 
           local find_prefix = prefix .. "f"
