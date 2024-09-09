@@ -99,6 +99,7 @@ function install_brew_apps {
     coreutils
     curl
     ripgrep
+    pngpaste
   )
 
   for formulae in "${formulaes[@]}"; do
@@ -117,6 +118,7 @@ function install_brew_apps {
     monitorcontrol
     beekeeper-studio
     postman
+    obsidian
   )
 
   for cask in "${casks[@]}"; do
