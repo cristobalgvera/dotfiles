@@ -1,11 +1,13 @@
 local M = {}
 
 ---Create a function that adds a community module to the LazySpec
----@param scope string
+---@param scope string The scope of the community module
 local create_scope_adder = function(scope)
   ---Add a community module to the LazySpec
-  ---@param name string
+  ---@param name string The name of the community module
+  ---@return LazySpec lazy_spec The community spec to add
   return function(name)
+    ---@type LazySpec
     return {
       import = "astrocommunity." .. scope .. "." .. name,
     }
