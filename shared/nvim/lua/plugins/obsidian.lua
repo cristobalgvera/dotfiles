@@ -97,10 +97,71 @@ return {
       { "hrsh7th/nvim-cmp", optional = true },
       { "nvim-treesitter/nvim-treesitter", optional = true },
       {
+        "AstroNvim/astroui",
+        optional = true,
+        opts = {
+          icons = {
+            Obsidian = "󰹕",
+            ObsidianNew = "󰎜",
+            ObsidianActions = "󱞁",
+            ObsidianFind = "󱙓",
+            ObsidianSwitch = "󰚸",
+          },
+        },
+      },
+      {
         "AstroNvim/astrocore",
         optional = true,
         opts = function(_, opts)
+          local astroui = require "astroui"
           local maps = opts.mappings
+
+          ---@param title string
+          ---@param icon_name string
+          ---@return string description The formatted description
+          local create_description = function(title, icon_name) return astroui.get_icon(icon_name, 1, true) .. title end
+
+          local prefix = "<Leader>o"
+          local main_description = create_description("Obsidian", "Obsidian")
+
+          maps.n[prefix] = { desc = main_description }
+          maps.n[prefix .. "d"] = { "<Cmd>ObsidianDailies -10 0<CR>", desc = "Daily notes" }
+          maps.n[prefix .. "p"] = { "<Cmd>ObsidianPasteImg<CR>", desc = "Paste image" }
+
+          local actions_prefix = prefix .. "a"
+          maps.n[actions_prefix] = { desc = create_description("Actions", "ObsidianActions") }
+          maps.n[actions_prefix .. "o"] = { "<Cmd>ObsidianOpen<CR>", desc = "Open note in Obsidian" }
+          maps.n[actions_prefix .. "t"] = { "<Cmd>ObsidianTemplate<CR>", desc = "Use template" }
+          maps.n[actions_prefix .. "r"] = { "<Cmd>ObsidianRename<CR>", desc = "Rename note" }
+
+          local new_note_prefix = prefix .. "n"
+          maps.n[new_note_prefix] = { desc = create_description("New note", "ObsidianNew") }
+          maps.n[new_note_prefix .. "n"] = { "<Cmd>ObsidianNew<CR>", desc = "Empty note" }
+          maps.n[new_note_prefix .. "t"] = { "<Cmd>ObsidianNewFromTemplate<CR>", desc = "From template" }
+
+          local find_prefix = prefix .. "f"
+          maps.n[find_prefix] = { desc = create_description("Find", "ObsidianFind") }
+          maps.n[find_prefix .. "n"] = { "<Cmd>ObsidianSearch<CR>", desc = "Notes" }
+          maps.n[find_prefix .. "t"] = { "<Cmd>ObsidianTags<CR>", desc = "Tags" }
+          maps.n[find_prefix .. "l"] = { "<Cmd>ObsidianLinks<CR>", desc = "Links" }
+          maps.n[find_prefix .. "b"] = { "<Cmd>ObsidianBacklinks<CR>", desc = "Backlinks" }
+          maps.n[find_prefix .. "c"] = { "<Cmd>ObsidianTOC<CR>", desc = "Contents (TOC)" }
+
+          local switch_prefix = prefix .. "s"
+          maps.n[switch_prefix] = { desc = create_description("Switch", "ObsidianSwitch") }
+          maps.n[switch_prefix .. "n"] = { "<Cmd>ObsidianQuickSwitch<CR>", desc = "Note" }
+          maps.n[switch_prefix .. "w"] = { "<Cmd>ObsidianWorkspace<CR>", desc = "Workspace" }
+
+          maps.v[prefix] = { desc = main_description }
+          maps.v[prefix .. "l"] = { "<Cmd>ObsidianLink<CR>", desc = "Link  to an existing note" }
+          maps.v[prefix .. "n"] = { "<Cmd>ObsidianLinkNew<CR>", desc = "Link to a new note" }
+          maps.v[prefix .. "e"] = {
+            function()
+              local title = vim.fn.input { prompt = "Enter title (optional): " }
+              vim.cmd("ObsidianExtractNote " .. title)
+            end,
+            desc = "Extract text into a new note",
+          }
 
           maps.n["gf"] = {
             function()
@@ -108,7 +169,7 @@ return {
 
               return "<Cmd>ObsidianFollowLink<CR>"
             end,
-            desc = "Obsidian Follow Link",
+            desc = "Obsidian follow link",
           }
         end,
       },
