@@ -186,7 +186,7 @@ return {
 
           local find_prefix = prefix .. "f"
           maps.n[find_prefix] = { desc = create_description("Find", "ObsidianFind") }
-          maps.n[find_prefix .. "n"] = { "<Cmd>ObsidianSearch<CR>", desc = "Notes" }
+          maps.n[find_prefix .. "f"] = { "<Cmd>ObsidianSearch<CR>", desc = "Notes" }
           maps.n[find_prefix .. "t"] = { "<Cmd>ObsidianTags<CR>", desc = "Tags" }
           maps.n[find_prefix .. "l"] = { "<Cmd>ObsidianLinks<CR>", desc = "Links" }
           maps.n[find_prefix .. "b"] = { "<Cmd>ObsidianBacklinks<CR>", desc = "Backlinks" }
@@ -198,7 +198,7 @@ return {
           maps.n[switch_prefix .. "w"] = { "<Cmd>ObsidianWorkspace<CR>", desc = "Workspace" }
 
           maps.v[prefix] = { desc = main_description }
-          maps.v[prefix .. "l"] = { "<Cmd>ObsidianLink<CR>", desc = "Link  to an existing note" }
+          maps.v[prefix .. "l"] = { "<Cmd>ObsidianLink<CR>", desc = "Link to an existing note" }
           maps.v[prefix .. "n"] = { "<Cmd>ObsidianLinkNew<CR>", desc = "Link to a new note" }
           maps.v[prefix .. "e"] = {
             function()
