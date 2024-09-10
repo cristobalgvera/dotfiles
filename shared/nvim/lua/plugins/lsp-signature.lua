@@ -11,7 +11,18 @@ return {
       floating_window = false,
       max_width = math.max(math.floor(vim.o.columns * 0.7), 100),
       max_height = math.max(math.floor(vim.o.lines * 0.3), 30),
+      hint_enable = true,
       hint_prefix = " ",
     })
   end,
+  dependencies = {
+    {
+      "folke/noice.nvim",
+      optional = true,
+      opts = function(_, opts)
+        if not opts.lsp then opts.lsp = {} end
+        opts.lsp.hover = { enabled = true }
+      end,
+    },
+  },
 }
