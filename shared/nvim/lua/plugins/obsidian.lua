@@ -1,6 +1,6 @@
 local utils = require "user.community.utilities"
 
-local NOTES_BASE_PATH = vim.env.HOME .. "/notes"
+local NOTES_BASE_PATH = string.format("%s/notes", vim.env.HOME)
 
 ---@type LazySpec
 return {
@@ -12,47 +12,23 @@ return {
       string.format("BufReadPre %s/*.md", NOTES_BASE_PATH),
       string.format("BufNewFile %s/*.md", NOTES_BASE_PATH),
     },
-    opts = {
-      workspaces = {
-        {
-          name = "personal",
-          path = NOTES_BASE_PATH .. "/personal",
-        },
-        {
-          name = "work",
-          path = NOTES_BASE_PATH .. "/work",
-          overrides = {
-            daily_notes = {
-              default_tags = { "work-daily-note" },
-            },
-          },
-        },
-      },
-
-      -- INFO: Choose the picker to use when doing Obsidian's actions
-      picker = { name = "fzf-lua" },
-
-      -- INFO: Disabled to avoid conflicts with other markdown renderers
-      ui = { enable = false },
-
-      templates = {
-        folder = "templates",
-        date_format = "%Y-%m-%d",
-        time_format = "%H:%M",
-      },
-
-      -- INFO: Keep notes in a specific subdirectory of your vault
-      notes_subdir = "notes",
-      new_notes_location = "notes_subdir",
-      daily_notes = {
-        folder = "notes/dailies",
-        template = "daily-note",
-      },
-
+    -- INFO: Loading when triggering commands let use the plugin more naturally.
+    -- E.g.:
+    --  - Accessing to the daily note from everywhere.
+    --  - Creating a new note with a template from everywhere.
+    cmd = {
+      "ObsidianDailies",
+      "ObsidianToday",
+      "ObsidianNew",
+      "ObsidianNewFromTemplate",
+      "ObsidianWorkspace",
+      "ObsidianSearch",
+    },
+    opts = function()
       ---Format the file name of the note based on the title provided by the user.
       ---@param title string The title of the note written by the user.
       ---@return string file_name The file name of the note formatted as `timestamp-title.md`.
-      note_id_func = function(title)
+      local note_id_func = function(title)
         local suffix = ""
         if title ~= nil then
           -- If title is given, transform it into valid file name.
@@ -65,16 +41,12 @@ return {
         end
 
         return tostring(os.time()) .. "-" .. suffix
-      end,
-
-      -- INFO: Open when you follow an external link. It will be ignored by default
-      follow_url_func = vim.ui.open,
-      follow_img_func = vim.ui.open,
+      end
 
       ---Format the frontmatter fields to be added to the note.
       ---@param note table Note with existing metadata.
       ---@return table note_metadata Frontmatter fields to be added to the note.
-      note_frontmatter_func = function(note)
+      local note_frontmatter_func = function(note)
         if note.title then note:add_alias(note.title) end
 
         local default_metadata = {
@@ -104,20 +76,66 @@ return {
         }
 
         return default_metadata
-      end,
+      end
 
-      attachments = {
-        ---@return string img_name_suffix The suffix of the image file formatted as `suffix-`.
-        img_name_func = function()
-          local client = require("obsidian").get_client()
+      ---Set the suffix of the image file based on the note id.
+      ---@return string img_name_suffix The suffix of the image file formatted as `suffix-`.
+      local img_name_func = function()
+        local client = require("obsidian").get_client()
 
-          local note = client:current_note()
-          local suffix = note and note.id or os.time()
+        local note = client:current_note()
+        local suffix = note and note.id or os.time()
 
-          return string.format("%s-", suffix)
-        end,
-      },
-    },
+        return string.format("%s-", suffix)
+      end
+
+      return {
+        workspaces = {
+          {
+            name = "work",
+            path = NOTES_BASE_PATH .. "/work",
+            overrides = {
+              daily_notes = {
+                default_tags = { "work-daily-note" },
+              },
+            },
+          },
+          {
+            name = "personal",
+            path = NOTES_BASE_PATH .. "/personal",
+          },
+        },
+
+        -- INFO: Choose the picker to use when doing Obsidian's actions
+        picker = { name = "fzf-lua" },
+
+        -- INFO: Control the behavior of the image attachments
+        attachments = { img_name_func = img_name_func },
+
+        templates = {
+          folder = "templates",
+          date_format = "%Y-%m-%d",
+          time_format = "%H:%M",
+        },
+
+        -- INFO: Keep notes in a specific subdirectory of your vault
+        notes_subdir = "notes",
+        new_notes_location = "notes_subdir",
+        note_id_func = note_id_func,
+        note_frontmatter_func = note_frontmatter_func,
+        daily_notes = {
+          folder = "notes/dailies",
+          template = "daily-note",
+        },
+
+        -- INFO: Handle external links using the system's default
+        follow_url_func = vim.ui.open,
+        follow_img_func = vim.ui.open,
+
+        -- HACK: Disabled to avoid conflicts with other markdown renderers
+        ui = { enable = false },
+      }
+    end,
     dependencies = {
       "nvim-lua/plenary.nvim", -- NOTE: Required dependency
       { "hrsh7th/nvim-cmp", optional = true },
