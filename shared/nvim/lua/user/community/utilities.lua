@@ -15,6 +15,7 @@ local create_scope_adder = function(scope)
 end
 
 M.add_colorscheme = create_scope_adder "colorscheme"
+M.add_comment = create_scope_adder "comment"
 M.add_completion = create_scope_adder "completion"
 M.add_diagnostics = create_scope_adder "diagnostics"
 M.add_debugging = create_scope_adder "debugging"
