@@ -14,8 +14,19 @@ return {
     },
     opts = {
       workspaces = {
-        { name = "personal", path = NOTES_BASE_PATH .. "/personal" },
-        { name = "work", path = NOTES_BASE_PATH .. "/work" },
+        {
+          name = "personal",
+          path = NOTES_BASE_PATH .. "/personal",
+        },
+        {
+          name = "work",
+          path = NOTES_BASE_PATH .. "/work",
+          overrides = {
+            daily_notes = {
+              default_tags = { "work-daily-note" },
+            },
+          },
+        },
       },
 
       -- INFO: Choose the picker to use when doing Obsidian's actions
