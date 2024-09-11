@@ -23,6 +23,7 @@ return {
   utils.add_media "vim-wakatime",
   utils.add_motion "flash-nvim",
   utils.add_motion "nvim-surround",
+  utils.add_neovim_lua_development "helpview-nvim",
   utils.add_pack "angular",
   utils.add_pack "bash",
   utils.add_pack "docker",
