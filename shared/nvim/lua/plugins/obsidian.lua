@@ -44,7 +44,7 @@ return {
       end
 
       ---Format the frontmatter fields to be added to the note.
-      ---@param note table Note with existing metadata.
+      ---@param note obsidian.Note Note with existing metadata.
       ---@return table note_metadata Frontmatter fields to be added to the note.
       local note_frontmatter_func = function(note)
         if note.title then note:add_alias(note.title) end
