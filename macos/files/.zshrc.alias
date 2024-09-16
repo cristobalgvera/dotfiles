@@ -9,13 +9,4 @@ alias lzd='lazydocker'
 alias v='nvim'
 alias g='git'
 alias cat='bat --theme=base16'
-
-# Docker
-alias d='docker'
-alias dcd='d compose down'
-alias dcdv='dcd --volumes'
-alias dcu='d compose up'
-alias dcubd='dcu --build -d'
-
-# Notes
 alias n='cd ~/notes && v'
