@@ -16,4 +16,4 @@ fi
 [[ -s "$HOME/.zshenv.secret" ]] && source "$HOME/.zshenv.secret"
 
 # Export custom local configuration if found
-[[ -s "$HOME/.zshrc.custom" ]] && source "$HOME/.zshrc.custom"
+[[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"

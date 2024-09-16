@@ -41,6 +41,7 @@ function add_symlinks {
   link_file "$configs_path"/zsh/.zshrc.source ~/.zshrc.source
   link_file "$configs_path"/zsh/.zshenv ~/.zshenv
   link_file "$configs_path"/zsh/.zshenv.secret ~/.zshenv.secret
+  touch ~/.zshrc.local
 
   echo "Linking Starship config"
   link_file "$configs_path"/starship/starship.toml ~/.config/starship.toml
