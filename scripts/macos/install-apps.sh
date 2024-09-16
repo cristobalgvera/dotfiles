@@ -15,6 +15,9 @@ function install_curl_apps {
 }
 
 function install_git_apps {
+  # Load git submodules
+  git submodule update --init --recursive
+
   # Asdf
   if ! [ -x "$(command -v asdf)" ]; then
     echo "Installing Asdf..."
