@@ -37,6 +37,7 @@ function add_symlinks {
 
   # Tmux config
   echo "Linking Tmux config"
+  ! [ -e "$HOME/.config/tmux" ] && mkdir -p "$HOME/.config/tmux"
   link_file "$sharedPath"/.tmux/.tmux.conf ~/.config/tmux/tmux.conf
   link_file "$sharedPath"/tmux.conf.local ~/.config/tmux/tmux.conf.local
 
