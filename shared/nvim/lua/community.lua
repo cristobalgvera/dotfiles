@@ -28,6 +28,7 @@ return {
   utils.add_pack "bash",
   utils.add_pack "docker",
   utils.add_pack "gleam",
+  utils.add_pack "harper",
   utils.add_pack "html-css",
   utils.add_pack "json",
   utils.add_pack "lua",
