@@ -119,6 +119,7 @@ function install_brew_apps {
     beekeeper-studio
     postman
     obsidian
+    wezterm
   )
 
   for cask in "${casks[@]}"; do

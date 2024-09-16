@@ -31,6 +31,10 @@ function add_symlinks {
   echo "Linking Neovim config"
   link_file "$sharedPath"/nvim ~/.config/nvim
 
+  # WezTerm config
+  echo "Linking WezTerm config"
+  link_file "$sharedPath"/wezterm ~/.config/wezterm
+
   # Warp config
   echo "Linking Warp config"
   link_file "$macosFoldersPath"/.warp ~/.warp
