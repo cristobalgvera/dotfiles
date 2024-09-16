@@ -3,11 +3,6 @@ function link_file {
   local sourceFile=$1
   local targetFile=$2
 
-  if [ -e "$targetFile" ]; then
-    echo "Creating backup of $targetFile"
-    mv "$targetFile" "$targetFile".backup
-  fi
-
   echo "Linking: ${sourceFile} to ${targetFile}"
   ln -sf "$sourceFile" "$targetFile"
 }
