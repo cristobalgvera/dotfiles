@@ -100,6 +100,7 @@ function install_brew_apps {
     curl
     ripgrep
     pngpaste
+    tmux
   )
 
   for formulae in "${formulaes[@]}"; do

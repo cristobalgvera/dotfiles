@@ -1,0 +1,3 @@
+[submodule "shared/.tmux"]
+	path = shared/.tmux
+	url = git@github.com:gpakosz/.tmux.git

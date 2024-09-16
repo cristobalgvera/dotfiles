@@ -36,7 +36,6 @@ return {
   utils.add_pack "tailwindcss",
   utils.add_pack "typescript",
   utils.add_pack "yaml",
-  utils.add_recipes "heirline-clock-statusline",
   utils.add_recipes "heirline-mode-text-statusline",
   utils.add_scrolling "nvim-scrollbar",
   utils.add_test "nvim-coverage",
