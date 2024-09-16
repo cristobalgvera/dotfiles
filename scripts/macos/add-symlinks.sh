@@ -52,6 +52,7 @@ function add_symlinks {
   # Zsh config
   echo "Linking Zsh config"
   link_file "$macosFilesPath"/.zshrc ~/.zshrc
+  link_file "$macosFilesPath"/.zshrc.oh-my-zsh ~/.zshrc.oh-my-zsh
   link_file "$macosFilesPath"/.zshrc.alias ~/.zshrc.alias
   link_file "$macosFilesPath"/.zshrc.source ~/.zshrc.source
   link_file "$macosFilesPath"/.zshenv ~/.zshenv

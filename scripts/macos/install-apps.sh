@@ -25,6 +25,42 @@ function install_git_apps {
   fi
 
   install_asdf_plugins
+
+  # Oh my Zsh
+  if ! [ -e "$HOME/.oh-my-zsh" ]; then
+    echo "Installing Oh my Zsh!..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  fi
+
+  install_oh_my_zsh_plugins
+}
+
+function install_oh_my_zsh_plugins {
+  local ZSH_PLUGIN_DIR="$HOME/.oh-my-zsh/custom/plugins"
+
+  local FZF_TAB_DIR="$ZSH_PLUGIN_DIR/fzf-tab"
+  if ! [ -e "$FZF_TAB_DIR" ]; then
+    echo "Installing fzf-tab..."
+    git clone https://github.com/Aloxaf/fzf-tab "${FZF_TAB_DIR}"
+  fi
+
+  local ZSH_AUTOSUGGESTIONS_DIR="$ZSH_PLUGIN_DIR/zsh-autosuggestions"
+  if ! [ -e "$ZSH_AUTOSUGGESTIONS_DIR" ]; then
+    echo "Installing zsh-autosuggestions..."
+    git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_AUTOSUGGESTIONS_DIR}"
+  fi
+
+  local FAST_SYNTAX_HIGHLIGHTING_DIR="$ZSH_PLUGIN_DIR/fast-syntax-highlighting"
+  if ! [ -e "$FAST_SYNTAX_HIGHLIGHTING_DIR" ]; then
+    echo "Installing fast-syntax-highlighting..."
+    git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git "${FAST_SYNTAX_HIGHLIGHTING_DIR}"
+  fi
+
+  local ZSH_COMPLETIONS_DIR="$ZSH_PLUGIN_DIR/zsh-completions"
+  if ! [ -e "$ZSH_COMPLETIONS_DIR" ]; then
+    echo "Installing zsh-completions..."
+    git clone https://github.com/zsh-users/zsh-completions "${ZSH_COMPLETIONS_DIR}"
+  fi
 }
 
 function install_asdf_plugins {

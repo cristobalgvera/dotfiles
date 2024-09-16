@@ -1,9 +1,12 @@
 #!/bin/bash
 
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
-
 autoload -Uz compinit && compinit
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Asdf
+[ -f ~/.asdf/asdf.sh ] && . ~/.asdf/asdf.sh
 
 # Google Cloud
 if gcloud_loc="$(type -p "gcloud")" || [[ -z $gcloud_loc ]]; then
@@ -15,15 +18,6 @@ fi
 if ng_loc="$(type -p "ng")" || [[ -z $ng_loc ]]; then
   source <(ng completion script)
 fi
-
-# Fuzzy Finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Asdf
-[ -f ~/.asdf/asdf.sh ] && . ~/.asdf/asdf.sh
-
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Init RbEnv
 eval "$(rbenv init - zsh)"
