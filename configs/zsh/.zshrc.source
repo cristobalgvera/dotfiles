@@ -1,0 +1,32 @@
+#!/bin/bash
+
+autoload -Uz compinit && compinit
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Asdf
+[ -f ~/.asdf/asdf.sh ] && . ~/.asdf/asdf.sh
+
+# Google Cloud
+if gcloud_loc="$(type -p "gcloud")" || [[ -z $gcloud_loc ]]; then
+  source "$GCLOUD_HOME/path.zsh.inc"
+  source "$GCLOUD_HOME/completion.zsh.inc"
+fi
+
+# Angular
+if ng_loc="$(type -p "ng")" || [[ -z $ng_loc ]]; then
+  source <(ng completion script)
+fi
+
+# Init RbEnv
+eval "$(rbenv init - zsh)"
+
+# Init Starship theme
+eval "$(starship init zsh)"
+
+# Init Zoxide
+eval "$(zoxide init zsh)"
+
+# GOROOT
+. ~/.asdf/plugins/golang/set-env.zsh
