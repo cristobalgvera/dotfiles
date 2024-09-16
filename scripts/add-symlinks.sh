@@ -15,8 +15,6 @@ function add_symlinks {
   link_file "$configs_path"/git/.gitconfig ~/.gitconfig
   link_file "$configs_path"/git/.gitconfig-macos ~/.gitconfig-macos
 
-  echo "Linking Ideavim config"
-  link_file "$configs_path"/jetbrains/.ideavimrc ~/.ideavimrc
 
   echo "Linking Neovim config"
   link_file "$configs_path"/nvim ~/.config/nvim
