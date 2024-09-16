@@ -56,4 +56,4 @@
   path = ~/.gitconfig-macos
  
 [include]
-  path = ~/.gitconfig-custom
+  path = ~/.gitconfig-local

@@ -14,7 +14,8 @@ function add_symlinks {
   echo "Linking Git config"
   link_file "$configs_path"/git/.gitconfig ~/.gitconfig
   link_file "$configs_path"/git/.gitconfig-macos ~/.gitconfig-macos
-
+  # Create a local gitconfig file for org specific configurations
+  printf '[includeIf "gitdir/i:projects/org-name/"]\n  path = ~/.gitconfig-org-name' >~/.gitconfig-local
 
   echo "Linking Neovim config"
   link_file "$configs_path"/nvim ~/.config/nvim
