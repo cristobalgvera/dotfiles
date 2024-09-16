@@ -444,10 +444,6 @@ set -g @nightowl-show-weather false
 set -g @nightowl-show-timezone false
 set -g @nightowl-show-network false
 
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @continuum-restore 'on'
-
 # -- custom variables ----------------------------------------------------------
 
 # to define a custom #{foo} variable, define a POSIX shell function between the
