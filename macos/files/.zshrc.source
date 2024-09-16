@@ -13,7 +13,7 @@ fi
 
 # Angular
 if ng_loc="$(type -p "ng")" || [[ -z $ng_loc ]]; then
-  source "$(ng completion script)"
+  source <(ng completion script)
 fi
 
 # Fuzzy Finder
