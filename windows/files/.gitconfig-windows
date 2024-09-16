@@ -1,6 +1,0 @@
-[core]
-  longpaths = true
-  autocrlf = true
-
-[credential]
-  helper = manager-core
