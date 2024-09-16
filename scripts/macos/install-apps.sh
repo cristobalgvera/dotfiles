@@ -110,7 +110,6 @@ function install_brew_apps {
   # Cask
   local casks=(
     font-iosevka-term-nerd-font
-    warp
     raycast
     visual-studio-code
     docker

@@ -40,10 +40,6 @@ function add_symlinks {
   link_file "$sharedPath"/.tmux/.tmux.conf ~/.config/tmux/tmux.conf
   link_file "$sharedPath"/tmux.conf.local ~/.config/tmux/tmux.conf.local
 
-  # Warp config
-  echo "Linking Warp config"
-  link_file "$macosFoldersPath"/.warp ~/.warp
-
   # Lazygit config
   echo "Linking Lazygit config"
   link_file "$sharedPath"/config.lazygit.yml ~/Library/Application\ Support/lazygit/config.yml
