@@ -37,6 +37,7 @@ return {
   utils.add_pack "tailwindcss",
   utils.add_pack "typescript",
   utils.add_pack "yaml",
+  utils.add_search "grug-far-nvim",
   utils.add_scrolling "nvim-scrollbar",
   utils.add_test "nvim-coverage",
   utils.add_test "neotest",
