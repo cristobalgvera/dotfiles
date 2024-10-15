@@ -1,7 +1,7 @@
-nodejs 20.16.0
-erlang 27.0
-gleam 1.4.1
-python 3.12.2
-neovim 0.10.1
-rebar 3.23.0
-golang 1.23.0
+nodejs 20.18.0
+erlang 27.1.1
+gleam 1.5.1
+python 3.13.0
+neovim 0.10.2
+rebar 3.24.0
+golang 1.23.2
