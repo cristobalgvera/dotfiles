@@ -1,8 +1,3 @@
-# Custom stuff when Warp Terminal is used
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-  # What you want to disable for Warp
-fi
-
 # Load Oh my Zsh
 [[ -s "$HOME/.zshrc.oh-my-zsh" ]] && source "$HOME/.zshrc.oh-my-zsh"
 
