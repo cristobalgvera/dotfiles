@@ -35,6 +35,7 @@ return {
   utils.add_pack "markdown",
   utils.add_pack "rust",
   utils.add_pack "tailwindcss",
+  utils.add_pack "terraform",
   utils.add_pack "typescript",
   utils.add_pack "yaml",
   utils.add_search "grug-far-nvim",
