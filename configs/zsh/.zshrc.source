@@ -31,5 +31,8 @@ eval "$(zoxide init zsh)"
 # Terraform
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
-# GOROOT
+# Asdf Java
+. ~/.asdf/plugins/java/set-java-home.zsh
+
+# Asdf GOROOT
 . ~/.asdf/plugins/golang/set-env.zsh
