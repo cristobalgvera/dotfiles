@@ -99,6 +99,11 @@ function install_asdf_plugins {
     asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
   fi
 
+  if ! [ -x "$(command -v java)" ]; then
+    echo "Installing Asdf Java plugin..."
+    asdf plugin add java https://github.com/halcyon/asdf-java.git
+  fi
+
   if ! [ -x "$(command -v nvim)" ]; then
     echo "Installing Asdf Neovim plugin..."
     asdf plugin add neovim https://github.com/richin13/asdf-neovim.git

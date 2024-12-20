@@ -5,3 +5,4 @@ python 3.13.0
 neovim 0.10.2
 rebar 3.24.0
 golang 1.23.2
+java openjdk-23
