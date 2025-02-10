@@ -7,6 +7,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Asdf
 if [ -f ~/.asdf/asdf.sh ]; then
+  fpath+=(${ASDF_DIR}/completions)
   . ~/.asdf/asdf.sh
 fi
 
