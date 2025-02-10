@@ -17,6 +17,7 @@ plugins=(
   fzf-tab
   zsh-autosuggestions
   terraform
+  vi-mode
 )
 
 source "$ZSH/oh-my-zsh.sh"
