@@ -1,6 +1,7 @@
 #!/bin/bash
 
-autoload -Uz compinit && compinit
+# Docker
+fpath=(/Users/cristobalgajardo/.docker/completions $fpath)
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -51,3 +52,6 @@ fi
 if [ -f ~/.asdf/plugins/golang/set-env.zsh ]; then
   . ~/.asdf/plugins/golang/set-env.zsh
 fi
+
+autoload -Uz compinit
+compinit
