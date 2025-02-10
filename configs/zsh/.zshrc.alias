@@ -6,6 +6,7 @@ alias bup='brew cu --cleanup && brew upgrade && brew cleanup'
 alias py='python'
 alias lg='lazygit'
 alias lzd='lazydocker'
+alias dcdnv='dcdn --volumes' # docker compose down --volumes
 alias v='nvim'
 alias g='git'
 alias cat='bat --theme=base16'
