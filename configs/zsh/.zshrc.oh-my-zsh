@@ -16,6 +16,7 @@ plugins=(
   fzf
   fzf-tab
   zsh-autosuggestions
+  vi-mode
 )
 
 source "$ZSH/oh-my-zsh.sh"
