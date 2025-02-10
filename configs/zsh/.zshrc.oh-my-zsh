@@ -4,7 +4,6 @@ ZSHZ_CASE=smart
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # Zsh plugins
