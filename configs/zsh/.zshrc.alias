@@ -10,4 +10,3 @@ alias dcdnv='dcdn --volumes' # docker compose down --volumes
 alias v='nvim'
 alias g='git'
 alias cat='bat --theme=base16'
-alias n='cd ~/notes && v'
