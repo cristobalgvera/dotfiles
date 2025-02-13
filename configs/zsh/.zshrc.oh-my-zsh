@@ -19,6 +19,8 @@ plugins+=(
   vi-mode
   docker
   docker-compose
+  git
+  gitignore
 )
 
 # Tmux plugin
