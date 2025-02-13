@@ -12,6 +12,7 @@ if [ -f ~/.asdf/asdf.sh ]; then
   . ~/.asdf/asdf.sh
 fi
 
+autoload -U +X bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
 # Google Cloud

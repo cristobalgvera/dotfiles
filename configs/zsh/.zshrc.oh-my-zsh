@@ -21,4 +21,9 @@ plugins+=(
   docker-compose
 )
 
+# Tmux plugin
+plugins+=(tmux)
+ZSH_TMUX_CONFIG=~/.config/tmux/tmux.conf
+ZSH_TMUX_AUTOSTART=true
+
 source "$ZSH/oh-my-zsh.sh"
