@@ -6,12 +6,6 @@ fpath+=(/Users/cristobalgajardo/.docker/completions)
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Asdf
-if [ -f ~/.asdf/asdf.sh ]; then
-  fpath+=(${ASDF_DIR}/completions)
-  . ~/.asdf/asdf.sh
-fi
-
 autoload -U +X bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
