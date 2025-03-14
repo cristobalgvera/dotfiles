@@ -54,12 +54,6 @@ function install_oh_my_zsh_plugins {
     echo "Installing zsh-completions..."
     git clone https://github.com/zsh-users/zsh-completions "${ZSH_COMPLETIONS_DIR}"
   fi
-
-  local ASDF_COMPLETIONS_DIR="$ZSH_PLUGIN_DIR/asdf"
-  if ! [ -e "$ASDF_COMPLETIONS_DIR" ]; then
-    echo "Installing asdf completions..."
-    git clone https://github.com/kiurchv/asdf.plugin.zsh "${ASDF_COMPLETIONS_DIR}"
-  fi
 }
 
 function install_asdf_plugins {
