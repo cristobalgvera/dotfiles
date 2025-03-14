@@ -74,17 +74,6 @@ function install_asdf_plugins {
     asdf reshim nodejs
   fi
 
-  if ! is_installed "gleam"; then
-    echo "Installing Asdf Erlang plugin..."
-    asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
-
-    echo "Installing Asdf Rebar plugin"
-    asdf plugin add rebar https://github.com/Stratus3D/asdf-rebar.git
-
-    echo "Installing Asdf Gleam plugin..."
-    asdf plugin add gleam https://github.com/asdf-community/asdf-gleam.git
-  fi
-
   if ! is_installed "python"; then
     echo "Installing Asdf Python plugin..."
     asdf plugin add python https://github.com/asdf-community/asdf-python.git
