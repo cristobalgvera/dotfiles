@@ -1,8 +1,8 @@
-nodejs 22.11.0
+nodejs 22.14.0
 erlang 27.1.1
 gleam 1.5.1
-python 3.13.0
-neovim 0.10.3
+python 3.13.2
+neovim 0.10.4
 rebar 3.24.0
-golang 1.23.2
-java openjdk-23
+golang 1.24.1
+java openjdk-24
