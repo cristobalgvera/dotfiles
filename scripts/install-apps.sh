@@ -57,7 +57,12 @@ function install_oh_my_zsh_plugins {
 }
 
 function install_asdf_plugins {
-  if ! [ -x "$(command -v node)" ]; then
+  function is_installed {
+    local plugin="$1"
+    asdf list | grep -q "$plugin"
+  }
+
+  if ! is_installed "nodejs"; then
     echo "Installing Asdf NodeJS plugin..."
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
     asdf install nodejs
@@ -69,7 +74,7 @@ function install_asdf_plugins {
     asdf reshim nodejs
   fi
 
-  if ! [ -x "$(command -v gleam)" ]; then
+  if ! is_installed "gleam"; then
     echo "Installing Asdf Erlang plugin..."
     asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
 
@@ -80,22 +85,22 @@ function install_asdf_plugins {
     asdf plugin add gleam https://github.com/asdf-community/asdf-gleam.git
   fi
 
-  if ! [ -x "$(command -v python)" ]; then
+  if ! is_installed "python"; then
     echo "Installing Asdf Python plugin..."
     asdf plugin add python https://github.com/asdf-community/asdf-python.git
   fi
 
-  if ! [ -x "$(command -v go)" ]; then
+  if ! is_installed "golang"; then
     echo "Installing Asdf Go plugin..."
     asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
   fi
 
-  if ! [ -x "$(command -v java)" ]; then
+  if ! is_installed "java"; then
     echo "Installing Asdf Java plugin..."
     asdf plugin add java https://github.com/halcyon/asdf-java.git
   fi
 
-  if ! [ -x "$(command -v nvim)" ]; then
+  if ! is_installed "neovim"; then
     echo "Installing Asdf Neovim plugin..."
     asdf plugin add neovim https://github.com/richin13/asdf-neovim.git
 
