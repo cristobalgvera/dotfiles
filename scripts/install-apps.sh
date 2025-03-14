@@ -24,15 +24,6 @@ function install_git_apps {
   # Load git submodules
   git submodule update --init --recursive
 
-  # Asdf
-  if ! [ -x "$(command -v asdf)" ]; then
-    echo "Installing Asdf..."
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
-
-    # shellcheck disable=1091
-    source "$HOME/.asdf/asdf.sh"
-  fi
-
   install_asdf_plugins
   install_oh_my_zsh_plugins
 }
@@ -155,6 +146,7 @@ function install_brew_apps {
     pngpaste
     tmux
     hashicorp/tap/terraform
+    asdf
   )
 
   for formulae in "${formulaes[@]}"; do
