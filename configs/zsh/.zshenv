@@ -10,3 +10,5 @@ export PATH="$DOCKER_PATH/bin:$PATH"
 
 export GCLOUD_HOME="$HOME/google-cloud-sdk"
 export PATH="$GCLOUD_HOME/bin:$PATH"
+
+export COMPOSE_BAKE=true
