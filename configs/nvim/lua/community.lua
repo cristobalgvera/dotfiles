@@ -6,6 +6,7 @@ return {
   utils.add_colorscheme "night-owl-nvim",
   utils.add_comment "ts-comments-nvim",
   utils.add_completion "copilot-cmp",
+  utils.add_completion "avante-nvim",
   utils.add_diagnostics "trouble-nvim",
   utils.add_debugging "nvim-dap-repl-highlights",
   utils.add_debugging "nvim-dap-virtual-text",
