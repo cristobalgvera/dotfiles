@@ -31,7 +31,7 @@ fi
 
 # Init Zoxide
 if zoxide_loc="$(type -p "zoxide")" || [[ -z $zoxide_loc ]]; then
-  eval "$(zoxide init zsh)"
+  plugins+=(zoxide)
 fi
 
 # Terraform
