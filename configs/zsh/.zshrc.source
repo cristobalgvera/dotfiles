@@ -21,7 +21,7 @@ fi
 
 # Init RbEnv
 if rbenv_loc="$(type -p "rbenv")" || [[ -z $rbenv_loc ]]; then
-  eval "$(rbenv init - zsh)"
+  plugins+=(rbenv)
 fi
 
 # Init Starship theme
