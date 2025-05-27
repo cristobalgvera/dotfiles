@@ -19,11 +19,6 @@ if gcloud_loc="$(type -p "gcloud")" || [[ -z $gcloud_loc ]]; then
   plugins+=(gcloud)
 fi
 
-# Angular
-if ng_loc="$(type -p "ng")" || [[ -z $ng_loc ]]; then
-  source <(ng completion script)
-fi
-
 # Init RbEnv
 if rbenv_loc="$(type -p "rbenv")" || [[ -z $rbenv_loc ]]; then
   eval "$(rbenv init - zsh)"
