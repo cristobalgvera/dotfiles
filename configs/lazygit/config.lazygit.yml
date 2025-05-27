@@ -1,15 +1,13 @@
----
 gui:
   theme:
     selectedLineBgColor:
       - reverse
     selectedRangeBgColor:
       - reverse
-
 customCommands:
   - key: "C"
     command: "git cz c"
     description: "commit changes with commitizen"
     context: "files"
     loadingText: "opening commitizen commit tool"
-    subprocess: true
+    output: terminal
