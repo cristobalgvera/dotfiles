@@ -26,7 +26,7 @@ fi
 
 # Init Starship theme
 if starship_loc="$(type -p "starship")" || [[ -z $starship_loc ]]; then
-  eval "$(starship init zsh)"
+  plugins+=(starship)
 fi
 
 # Init Zoxide
