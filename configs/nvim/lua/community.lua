@@ -34,6 +34,7 @@ return {
   utils.add_pack "lua",
   utils.add_pack "markdown",
   utils.add_pack "proto",
+  utils.add_pack "python",
   utils.add_pack "rust",
   utils.add_pack "tailwindcss",
   utils.add_pack "terraform",
