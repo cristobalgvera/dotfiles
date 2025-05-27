@@ -11,8 +11,12 @@ autoload -Uz compinit && compinit
 
 # Google Cloud
 if gcloud_loc="$(type -p "gcloud")" || [[ -z $gcloud_loc ]]; then
-  source "$GCLOUD_HOME/path.zsh.inc"
-  source "$GCLOUD_HOME/completion.zsh.inc"
+  export CLOUDSDK_HOME
+  CLOUDSDK_HOME=$(gcloud info --format="value(installation.sdk_root)")
+  export GCLOUD_HOME=$CLOUDSDK_HOME
+  export PATH="$GCLOUD_HOME/bin:$PATH"
+
+  plugins+=(gcloud)
 fi
 
 # Angular
