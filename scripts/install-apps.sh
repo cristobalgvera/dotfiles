@@ -77,6 +77,9 @@ function install_asdf_plugins {
   if ! is_installed "python"; then
     echo "Installing Asdf Python plugin..."
     asdf plugin add python https://github.com/asdf-community/asdf-python.git
+
+    echo "Installing Asdf UV plugin..."
+    asdf plugin add uv https://github.com/asdf-community/asdf-uv.git
   fi
 
   if ! is_installed "golang"; then
