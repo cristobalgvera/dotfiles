@@ -8,8 +8,8 @@ function link_file {
 }
 
 function add_symlinks {
-  # TODO: Make the base path relative to the script location
-  local configs_path=$HOME/Documents/Repositories/dotfiles/configs
+  local configs_path
+  configs_path=$(dirname "$(realpath "$0")")/../configs
 
   echo "Linking Git config"
   link_file "$configs_path"/git/.gitconfig ~/.gitconfig
