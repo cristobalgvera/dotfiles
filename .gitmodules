@@ -1,3 +1,4 @@
 [submodule "configs/tmux/.tmux"]
 	path = configs/tmux/.tmux
-	url = git@github.com:gpakosz/.tmux.git
+	url = https://github.com/gpakosz/.tmux.git
+	branch = master
