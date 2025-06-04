@@ -14,8 +14,12 @@ function add_symlinks {
   echo "Linking Git config"
   link_file "$configs_path"/git/.gitconfig ~/.gitconfig
   link_file "$configs_path"/git/.gitconfig-macos ~/.gitconfig-macos
+
   # Create a local gitconfig file for org specific configurations
-  printf '[includeIf "gitdir/i:projects/org-name/"]\n  path = ~/.gitconfig-org-name' >>~/.gitconfig-local
+  if [ ! -e ~/.gitconfig-local ]; then
+    echo "Creating example ~/.gitconfig-local file"
+    printf '[includeIf "gitdir/i:projects/org-name/"]\n  path = ~/.gitconfig-org-name' >>~/.gitconfig-local
+  fi
 
   echo "Linking Neovim config"
   link_file "$configs_path"/nvim ~/.config/nvim
@@ -41,7 +45,12 @@ function add_symlinks {
   link_file "$configs_path"/zsh/.zshrc.source ~/.zshrc.source
   link_file "$configs_path"/zsh/.zshenv ~/.zshenv
   link_file "$configs_path"/zsh/.zshenv.secret ~/.zshenv.secret
-  touch ~/.zshrc.local
+
+  # Create a local zshrc file for laptop's specific configurations
+  if [ ! -e ~/.zshrc.local ]; then
+    echo "Creating empty ~/.zshrc.local file"
+    touch ~/.zshrc.local
+  fi
 
   echo "Linking Starship config"
   link_file "$configs_path"/starship/starship.toml ~/.config/starship.toml
