@@ -154,7 +154,6 @@ function install_brew_apps {
     meetingbar
     monitorcontrol
     beekeeper-studio
-    obsidian
     wezterm
   )
 
