@@ -138,6 +138,7 @@ function install_brew_apps {
     tmux
     hashicorp/tap/terraform
     asdf
+    fd
   )
 
   for formulae in "${formulaes[@]}"; do
