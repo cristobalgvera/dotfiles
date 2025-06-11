@@ -38,11 +38,6 @@ if is_installed "zoxide"; then
   plugins+=(zoxide)
 fi
 
-# Terraform
-if [ -f /opt/homebrew/bin/terraform ]; then
-  complete -o nospace -C /opt/homebrew/bin/terraform terraform
-fi
-
 # Asdf Java
 if [ -f ~/.asdf/plugins/java/set-java-home.zsh ]; then
   . ~/.asdf/plugins/java/set-java-home.zsh
