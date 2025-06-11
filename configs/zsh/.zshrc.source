@@ -47,3 +47,14 @@ fi
 if [ -f ~/.asdf/plugins/golang/set-env.zsh ]; then
   . ~/.asdf/plugins/golang/set-env.zsh
 fi
+
+# uv
+if is_installed "uv"; then
+  plugins+=(uv)
+fi
+
+# Python
+if is_installed "python"; then
+  export PYTHON_AUTO_VRUN=true
+  plugins+=(python)
+fi
