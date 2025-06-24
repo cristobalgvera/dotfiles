@@ -398,6 +398,12 @@ tmux_conf_urlscan_options="--compact --dedupe"
 # move status line to top
 #set -g status-position top
 
+# remove conflicting bindings due to terminal issues
+unbind C-S-H
+unbind C-S-L
+bind -r Left swap-window -t -1 \; select-window -t -1  # swap current window with the previous one
+bind -r Right swap-window -t +1 \; select-window -t +1  # swap current window with the next one
+
 
 # -- tpm -----------------------------------------------------------------------
 
