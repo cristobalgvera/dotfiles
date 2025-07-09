@@ -3,3 +3,4 @@ nx
 @nestjs/cli
 neovim
 npm-check-updates
+npmrc
