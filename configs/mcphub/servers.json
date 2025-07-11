@@ -1,4 +1,38 @@
 {
-  "nativeMCPServers": [],
-  "mcpServers": {}
+  "mcpServers": {
+    "sequentialthinking": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "command": "npx"
+    },
+    "memory": {
+      "custom_instructions": {
+        "text": "Follow these steps for each interaction:\n\n1. User Identification:\n   - You should assume that you are interacting with default_user\n   - If you have not identified default_user, proactively try to do so.\n\n2. Memory Retrieval:\n   - Always begin your chat by saying only \"Remembering...\" and retrieve all relevant information from your knowledge graph\n   - Always refer to your knowledge graph as your \"memory\"\n\n3. Memory\n   - While conversing with the user, be attentive to any new information that falls into these categories:\n     a) Basic Identity (age, gender, location, job title, education level, etc.)\n     b) Behaviors (interests, habits, etc.)\n     c) Preferences (communication style, preferred language, etc.)\n     d) Goals (goals, targets, aspirations, etc.)\n     e) Relationships (personal and professional relationships up to 3 degrees of separation)\n\n4. Memory Update:\n   - If any new information was gathered during the interaction, update your memory as follows:\n     a) Create entities for recurring organizations, people, and significant events\n     b) Connect them to the current entities using relations\n     c) Store facts about them as observations"
+      },
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "command": "npx"
+    },
+    "context7": {
+      "env": {
+        "DEFAULT_MINIMUM_TOKENS": "6000"
+      },
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "command": "npx"
+    },
+    "fetch": {
+      "args": [
+        "mcp-server-fetch"
+      ],
+      "command": "uvx"
+    }
+  },
+  "nativeMCPServers": []
 }
