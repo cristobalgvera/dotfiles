@@ -16,7 +16,7 @@ function install_curl_apps {
   # Oh my Zsh
   if ! [ -e "$HOME/.oh-my-zsh" ]; then
     echo "Installing Oh my Zsh!..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   fi
 }
 
