@@ -24,6 +24,9 @@ function add_symlinks {
   echo "Linking Neovim config"
   link_file "$configs_path"/nvim ~/.config/nvim
 
+  echo "Linking MCPHub config"
+  link_file "$configs_path"/mcphub ~/.config/mcphub
+
   echo "Linking WezTerm config"
   link_file "$configs_path"/wezterm ~/.config/wezterm
 
