@@ -6,6 +6,8 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # append completions to fpath
 fpath+=(${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src)
 
+zstyle ':omz:update' mode auto
+
 # Zsh plugins
 plugins+=(
   asdf
@@ -30,9 +32,9 @@ ZSH_TMUX_AUTOSTART=true
 
 # Aliases plugin
 plugins+=(aliases alias-finder)
-zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
-zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
-zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
-zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
+zstyle ':omz:plugins:alias-finder' autoload yes
+zstyle ':omz:plugins:alias-finder' longer yes
+zstyle ':omz:plugins:alias-finder' exact yes
+zstyle ':omz:plugins:alias-finder' cheaper yes
 
 source "$ZSH/oh-my-zsh.sh"
