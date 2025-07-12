@@ -28,6 +28,7 @@ return {
   utils.add_neovim_lua_development "helpview-nvim",
   utils.add_pack "angular",
   utils.add_pack "bash",
+  utils.add_pack "biome",
   utils.add_pack "docker",
   utils.add_pack "eslint",
   utils.add_pack "gleam",
