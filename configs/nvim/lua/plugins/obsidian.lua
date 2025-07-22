@@ -1,6 +1,6 @@
 local utils = require "user.community.utilities"
 
-local NOTES_BASE_PATH = string.format("%s/notes", vim.env.HOME)
+local NOTES_BASE_PATH = string.format("%s/.notes", vim.env.HOME)
 
 ---@type LazySpec
 return {
