@@ -15,6 +15,7 @@ return {
   utils.add_editing_support "conform-nvim",
   utils.add_editing_support "mcphub-nvim",
   utils.add_editing_support "rainbow-delimiters-nvim",
+  utils.add_editing_support "vector-code-nvim",
   utils.add_file_explorer "oil-nvim",
   utils.add_fuzzy_finder "fzf-lua",
   utils.add_git "blame-nvim",
