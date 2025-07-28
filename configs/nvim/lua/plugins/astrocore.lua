@@ -11,9 +11,6 @@ return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
-    features = {
-      notifications = false,
-    },
     mappings = {
       n = {
         -- navigate buffer tabs
