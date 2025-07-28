@@ -139,6 +139,7 @@ function install_brew_apps {
     hashicorp/tap/terraform
     asdf
     fd
+    wakatime-cli
   )
 
   for formulae in "${formulaes[@]}"; do
