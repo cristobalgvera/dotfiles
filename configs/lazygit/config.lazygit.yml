@@ -5,3 +5,107 @@ gui:
     selectedRangeBgColor:
       - reverse
 customCommands:
+  - key: C
+    description: Pick AI commit
+    context: files
+    output: terminal
+    command: |
+      SELECTED_MSG="$(
+        aichat "Please suggest 10 commit messages, given the following diff:
+
+          \`\`\`sh
+          $(git diff --cached)
+          \`\`\`
+
+          Commit Message Rules:
+
+          1. Format: \`<type>(<scope>): <description>\`
+            - All lowercase.
+            - \`<scope>\` optional; if present, use a single word or dash-separated phrase.
+            - Wrap relevant names in backticks (e.g., \`aichat\`, \`oh-my-zsh\`, \`mcphub\`).
+          2. Avoid mentioning a module unless directly relevant.
+          3. Clearly and concisely describe the change at a higher level — not just code edits.
+          4. Consider the impact: bug fixes, features, performance, refactoring, docs.
+          5. Capture all changes in each suggestion — multiple changes should appear in each.
+          6. Number messages from 1 to N, where N is 10.
+          7. Commit messages should be useful for understanding project history.
+          8. Use the present tense (e.g., "fix" not "fixed").
+          9. Avoid using "this commit" or "this change" in the message.
+          10. Keep messages concise, ideally under 100 characters for the description.
+
+          Examples:
+
+          - fix(app): add password regex pattern
+          - test(unit): add new test cases
+          - style: remove unused imports
+          - refactor(pages): extract common code to \`utils/wait.ts\`
+          - docs(ux-ui): explain new design system in \`README\`
+
+          Recent commits for reference:
+
+          \`\`\`sh
+          $(git log -n 10 --pretty=format:'%h %s')
+          \`\`\`
+
+          Output:
+
+          - Only raw commit messages, one per line.
+          - No extra spaces, no numbering, no decorations.
+
+          Example Output:
+
+          fix(app): add password regex pattern
+          test(unit): add new test cases
+          style: remove unused imports
+          refactor(pages): extract common code to \`utils/wait.ts\`
+
+          Instructions:
+
+          - Take a moment to understand the changes made in the diff.
+
+          - Think about the impact of these changes on the project (e.g., bug fixes, new
+          features, performance improvements, code refactoring, documentation updates).
+          It's critical to my career you abstract the changes to a higher level and not
+          just describe the code changes.
+
+          - Generate commit messages that accurately describe these changes, ensuring they
+          are helpful to someone reading the project's history.
+
+          - Remember, a well-crafted commit message can significantly aid in the maintenance
+          and understanding of the project over time.
+
+          - If multiple changes are present, make sure you capture them all in each commit
+          message.
+
+          Keep in mind you will suggest many commit messages. Only 1 will be used. It's
+          better to push yourself (esp to synthesize to a higher level) and maybe wrong
+          about some of the other commits because only one needs to be good. I'm looking
+          for your best commit, not the best average commit, keep that in mind. It's better
+          to cover more scenarios than include a lot of overlap.
+
+          Write your commit messages below in the format shown in Output Template section above." \
+        | fzf --height 40% --border --ansi --preview "echo {}" --preview-window=up:wrap
+      )"
+
+      # Early exit if no selection
+      if [[ -z "$SELECTED_MSG" ]]; then
+          echo "No commit message selected, aborting."
+          exit 0
+      fi
+
+      # Create temporary commit message file
+      COMMIT_MSG_FILE=$(mktemp)
+      echo "$SELECTED_MSG" > "$COMMIT_MSG_FILE"
+
+      # Let user edit the commit message
+      ${EDITOR:-vim} "$COMMIT_MSG_FILE"
+
+      # Commit if file is not empty
+      if [[ -s "$COMMIT_MSG_FILE" ]]; then
+          git commit -F "$COMMIT_MSG_FILE"
+      else
+          echo "Commit message is empty, commit aborted."
+      fi
+
+      # Clean up
+      rm -f "$COMMIT_MSG_FILE"
