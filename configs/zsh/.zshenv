@@ -9,3 +9,5 @@ export DOCKER_PATH="$HOME/.docker"
 export PATH="$DOCKER_PATH/bin:$PATH"
 
 export COMPOSE_BAKE=true
+
+export AICHAT_CONFIG_DIR="$HOME/.config/aichat"

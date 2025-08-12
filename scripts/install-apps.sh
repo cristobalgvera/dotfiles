@@ -140,6 +140,7 @@ function install_brew_apps {
     asdf
     fd
     wakatime-cli
+    aichat
   )
 
   for formulae in "${formulaes[@]}"; do
