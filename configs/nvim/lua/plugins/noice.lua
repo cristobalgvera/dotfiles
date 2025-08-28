@@ -16,7 +16,15 @@ return {
       -- that use `vim.tbl_islist` internally.
       {
         event = "msg_show",
+        kind = "echomsg",
         message = "vim.tbl_islist is deprecated",
+      },
+      -- INFO: Do not show error messages related to `vim.schedule` callbacks.
+      -- These errors are often non-critical and can be ignored.
+      {
+        event = "msg_show",
+        kind = "lua_error",
+        message = "Error executing vim.schedule lua callback",
       },
     }
 
@@ -26,6 +34,7 @@ return {
         {
           filter = {
             event = notification.event,
+            kind = notification.kind,
             find = notification.message,
           },
           opts = {
