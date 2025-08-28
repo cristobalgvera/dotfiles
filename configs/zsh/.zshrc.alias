@@ -9,3 +9,4 @@ alias lzd='lazydocker'
 alias dcdnv='dcdn --volumes' # docker compose down --volumes
 alias v='nvim'
 alias cat='bat --theme=base16'
+alias vc='vectorcode'
