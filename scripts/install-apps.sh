@@ -152,7 +152,7 @@ function install_brew_apps {
     font-iosevka-term-nerd-font
     raycast
     visual-studio-code
-    docker
+    docker-desktop
     the-unarchiver
     meetingbar
     monitorcontrol
