@@ -42,16 +42,6 @@ if is_installed "zoxide"; then
   plugins+=(zoxide)
 fi
 
-# Asdf Java
-if [ -f ~/.asdf/plugins/java/set-java-home.zsh ]; then
-  . ~/.asdf/plugins/java/set-java-home.zsh
-fi
-
-# Asdf GOROOT
-if [ -f ~/.asdf/plugins/golang/set-env.zsh ]; then
-  . ~/.asdf/plugins/golang/set-env.zsh
-fi
-
 # uv
 if is_installed "uv"; then
   plugins+=(uv)

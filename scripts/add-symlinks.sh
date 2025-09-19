@@ -58,12 +58,6 @@ function add_symlinks {
   echo "Linking Starship config"
   link_file "$configs_path"/starship/starship.toml ~/.config/starship.toml
 
-  echo "Linking Asdf config"
-  link_file "$configs_path"/asdf/.tool-versions ~/.tool-versions
-  link_file "$configs_path"/asdf/.asdfrc ~/.asdfrc
-  link_file "$configs_path"/asdf/.default-npm-packages ~/.default-npm-packages
-  link_file "$configs_path"/asdf/.default-python-packages ~/.default-python-packages
-
   echo "Linking mise-en-place config"
   link_file "$configs_path"/mise ~/.config/mise
   link_file "$configs_path"/mise/.default-npm-packages ~/.default-npm-packages

@@ -30,7 +30,6 @@ function install_git_apps {
   # Load git submodules
   git submodule update --init --recursive
 
-  install_asdf_plugins
   install_mise_tools
   install_oh_my_zsh_plugins
 }
@@ -65,51 +64,11 @@ function install_oh_my_zsh_plugins {
 
 function install_mise_tools {
   sh ~/.local/bin/mise install
-}
 
-function install_asdf_plugins {
-  function is_installed {
-    local plugin="$1"
-    asdf list | grep -q "$plugin"
-  }
-
-  if ! is_installed "nodejs"; then
-    echo "Installing Asdf NodeJS plugin..."
-    asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-    asdf install nodejs
-
-    echo "Enabling Corepack..."
-    corepack enable
-    corepack prepare npm@latest --activate
-    corepack prepare pnpm@latest --activate
-    asdf reshim nodejs
-  fi
-
-  if ! is_installed "python"; then
-    echo "Installing Asdf Python plugin..."
-    asdf plugin add python https://github.com/asdf-community/asdf-python.git
-
-    echo "Installing Asdf UV plugin..."
-    asdf plugin add uv https://github.com/asdf-community/asdf-uv.git
-  fi
-
-  if ! is_installed "golang"; then
-    echo "Installing Asdf Go plugin..."
-    asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
-  fi
-
-  if ! is_installed "java"; then
-    echo "Installing Asdf Java plugin..."
-    asdf plugin add java https://github.com/halcyon/asdf-java.git
-  fi
-
-  if ! is_installed "neovim"; then
-    echo "Installing Asdf Neovim plugin..."
-    asdf plugin add neovim https://github.com/richin13/asdf-neovim.git
-
-    echo "Installing Neovim..."
-    asdf install neovim
-  fi
+  # INFO: NodeJS with Corepack
+  corepack enable
+  corepack prepare npm@latest --activate
+  corepack prepare pnpm@latest --activate
 }
 
 function install_brew_apps {
@@ -148,7 +107,6 @@ function install_brew_apps {
     pngpaste
     tmux
     hashicorp/tap/terraform
-    asdf
     fd
     wakatime-cli
     aichat

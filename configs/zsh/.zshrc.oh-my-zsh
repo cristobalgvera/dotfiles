@@ -10,7 +10,6 @@ zstyle ':omz:update' mode auto
 
 # Zsh plugins
 plugins+=(
-  asdf
   ng
   rust
   fast-syntax-highlighting
