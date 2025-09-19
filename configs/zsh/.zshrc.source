@@ -13,6 +13,10 @@ function is_installed {
   command -v "$1" >/dev/null 2>&1
 }
 
+if is_installed "mise"; then
+  plugins+=(mise)
+fi
+
 # Google Cloud
 if is_installed "gcloud"; then
   export CLOUDSDK_HOME

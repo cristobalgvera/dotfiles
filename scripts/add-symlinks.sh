@@ -64,6 +64,11 @@ function add_symlinks {
   link_file "$configs_path"/asdf/.default-npm-packages ~/.default-npm-packages
   link_file "$configs_path"/asdf/.default-python-packages ~/.default-python-packages
 
+  echo "Linking mise-en-place config"
+  link_file "$configs_path"/mise ~/.config/mise
+  link_file "$configs_path"/mise/.default-npm-packages ~/.default-npm-packages
+  link_file "$configs_path"/mise/.default-python-packages ~/.default-python-packages
+
   echo "Linking AIChat config"
   link_file "$configs_path"/aichat ~/.config/aichat
 }

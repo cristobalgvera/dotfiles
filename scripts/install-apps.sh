@@ -13,6 +13,12 @@ function install_curl_apps {
     /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" </dev/null
   fi
 
+  # mise-en-place
+  if ! [ -x "$(command -v mise)" ]; then
+    echo "Installing mise-en-place..."
+    /bin/bash -c "$(curl https://mise.run | sh)" </dev/null
+  fi
+
   # Oh my Zsh
   if ! [ -e "$HOME/.oh-my-zsh" ]; then
     echo "Installing Oh my Zsh!..."
@@ -25,6 +31,7 @@ function install_git_apps {
   git submodule update --init --recursive
 
   install_asdf_plugins
+  install_mise_tools
   install_oh_my_zsh_plugins
 }
 
@@ -54,6 +61,10 @@ function install_oh_my_zsh_plugins {
     echo "Installing zsh-completions..."
     git clone https://github.com/zsh-users/zsh-completions "${ZSH_COMPLETIONS_DIR}"
   fi
+}
+
+function install_mise_tools {
+  sh ~/.local/bin/mise install
 }
 
 function install_asdf_plugins {
