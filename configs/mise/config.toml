@@ -6,3 +6,8 @@ go = "1.25.1"
 java = "25.0.0"
 uv = "0.8.22"
 usage = "2.2.2"
+
+[settings]
+experimental = true
+python.uv_venv_auto = true
+idiomatic_version_file_enable_tools = []
