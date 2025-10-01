@@ -22,13 +22,13 @@ function add_symlinks {
   fi
 
   echo "Linking Neovim config"
-  link_file "$configs_path"/nvim ~/.config/nvim
+  link_file "$configs_path"/nvim ~/.config
 
   echo "Linking MCPHub config"
-  link_file "$configs_path"/mcphub ~/.config/mcphub
+  link_file "$configs_path"/mcphub ~/.config
 
   echo "Linking WezTerm config"
-  link_file "$configs_path"/wezterm ~/.config/wezterm
+  link_file "$configs_path"/wezterm ~/.config
 
   echo "Linking Tmux config"
   ! [ -e "$HOME/.config/tmux" ] && mkdir -p "$HOME/.config/tmux"
@@ -59,7 +59,7 @@ function add_symlinks {
   link_file "$configs_path"/starship/starship.toml ~/.config/starship.toml
 
   echo "Linking mise-en-place config"
-  link_file "$configs_path"/mise ~/.config/mise
+  link_file "$configs_path"/mise ~/.config
   link_file "$configs_path"/mise/.default-npm-packages ~/.default-npm-packages
   link_file "$configs_path"/mise/.default-python-packages ~/.default-python-packages
 
