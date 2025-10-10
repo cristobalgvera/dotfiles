@@ -13,12 +13,6 @@ function install_curl_apps {
     /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" </dev/null
   fi
 
-  # mise-en-place
-  if ! [ -x "$(command -v mise)" ]; then
-    echo "Installing mise-en-place..."
-    /bin/bash -c "$(curl https://mise.run | sh)" </dev/null
-  fi
-
   # Oh my Zsh
   if ! [ -e "$HOME/.oh-my-zsh" ]; then
     echo "Installing Oh my Zsh!..."
@@ -110,6 +104,7 @@ function install_brew_apps {
     fd
     wakatime-cli
     aichat
+    mise
   )
 
   for formulae in "${formulaes[@]}"; do
