@@ -6,6 +6,7 @@ go = "1.25.2"
 java = "25.0.0"
 uv = "0.9.1"
 usage = "2.3.2"
+protoc = "33.0"
 
 [settings]
 experimental = true
