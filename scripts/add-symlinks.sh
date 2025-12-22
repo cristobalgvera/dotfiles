@@ -21,6 +21,11 @@ function add_symlinks {
     printf '[includeIf "gitdir/i:projects/org-name/"]\n  path = ~/.gitconfig-org-name' >>~/.gitconfig-local
   fi
 
+  # Create `.config` directory if it doesn't exist
+  if [ ! -d "$HOME/.config" ]; then
+    mkdir -p "$HOME/.config"
+  fi
+
   echo "Linking Neovim config"
   link_file "$configs_path"/nvim ~/.config
 
