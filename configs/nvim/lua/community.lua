@@ -3,7 +3,6 @@ local utils = require "user.community.utilities"
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  utils.add_ai "opencode-nvim",
   utils.add_colorscheme "night-owl-nvim",
   utils.add_comment "ts-comments-nvim",
   utils.add_completion "copilot-cmp",
