@@ -4,7 +4,6 @@ local utils = require "user.community.utilities"
 return {
   "AstroNvim/astrocommunity",
   utils.add_colorscheme "night-owl-nvim",
-  utils.add_comment "ts-comments-nvim",
   utils.add_completion "copilot-cmp",
   utils.add_diagnostics "trouble-nvim",
   utils.add_debugging "nvim-dap-repl-highlights",
@@ -52,6 +51,5 @@ return {
   utils.add_utility "lua-json5",
   utils.add_utility "neodim",
   utils.add_utility "noice-nvim",
-  utils.add_utility "mason-tool-installer-nvim",
   utils.add_workflow "hardtime-nvim",
 }
