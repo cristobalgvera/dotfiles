@@ -5,6 +5,7 @@ return {
   "AstroNvim/astrocommunity",
   utils.add_colorscheme "night-owl-nvim",
   utils.add_completion "copilot-cmp",
+  utils.add_completion "blink-copilot",
   utils.add_diagnostics "trouble-nvim",
   utils.add_debugging "nvim-dap-repl-highlights",
   utils.add_debugging "nvim-dap-virtual-text",
