@@ -5,6 +5,7 @@ return {
     dashboard = {
       width = 40,
       sections = {
+        { padding = 0.5 },
         { section = "header", padding = 1 },
         { section = "keys", gap = 1, padding = 2 },
         { section = "startup" },
