@@ -48,6 +48,7 @@ return {
   utils.add_scrolling "nvim-scrollbar",
   utils.add_test "nvim-coverage",
   utils.add_test "neotest",
+  utils.add_utility "live-preview",
   utils.add_utility "lua-json5",
   utils.add_utility "neodim",
   utils.add_utility "noice-nvim",
