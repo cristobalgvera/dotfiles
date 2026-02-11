@@ -2,6 +2,25 @@ local utils = require "user.community.utilities"
 
 local NOTES_BASE_PATH = string.format("%s/.notes", vim.env.HOME)
 
+---Given any `string`, returns a properly structured version
+---of it to be used as filename in a local file system.
+---@param filename string Filename to be sanitized.
+---@param max_length number|nil Maximum characters to allow based on the system.
+---@return string safe_filename Safe filename to be used in the system.
+local function sanitize_filename(filename, max_length)
+  local DEFAULT_FILENAME = "untitled"
+
+  if not filename or filename == "" then return DEFAULT_FILENAME end
+  max_length = max_length or 100
+
+  local valid_chars = "[^A-Za-z0-9áéíóúüñÁÉÍÓÚÜÑ%-]"
+  local result = filename:gsub("%s+", "-"):gsub(valid_chars, ""):gsub("%-+", "-"):gsub("^%-", ""):gsub("%-$", "")
+
+  if #result > max_length then result = result:sub(1, max_length):gsub("%-+$", "") end
+
+  return result ~= "" and result or DEFAULT_FILENAME
+end
+
 ---@type LazySpec
 return {
   utils.add_fuzzy_finder "fzf-lua",
@@ -26,15 +45,15 @@ return {
     },
     opts = function()
       ---Format the file name of the note based on the title provided by the user.
-      ---@param title string The title of the note written by the user.
+      ---@param title string|nil The title of the note written by the user.
       ---@return string file_name The file name of the note formatted as `timestamp-title.md`.
       local note_id_func = function(title)
         local suffix = ""
+
         if title ~= nil then
-          -- If title is given, transform it into valid file name.
-          suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", "")
+          suffix = sanitize_filename(title)
         else
-          -- If title is nil, just add 4 random uppercase letters to the suffix.
+          -- When `title` is `nil`, add 4 random uppercase letters to the suffix.
           for _ = 1, 4 do
             suffix = suffix .. string.char(math.random(65, 90))
           end
