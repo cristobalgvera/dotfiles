@@ -105,6 +105,7 @@ function install_brew_apps {
     wakatime-cli
     aichat
     mise
+    anomalyco/tap/opencode
   )
 
   for formulae in "${formulaes[@]}"; do
