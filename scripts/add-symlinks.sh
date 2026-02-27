@@ -32,6 +32,9 @@ function add_symlinks {
   echo "Linking MCPHub config"
   link_file "$configs_path"/mcphub ~/.config
 
+  echo "Linking OpenCode config"
+  link_file "$configs_path"/opencode ~/.config/opencode
+
   echo "Linking WezTerm config"
   link_file "$configs_path"/wezterm ~/.config
 
