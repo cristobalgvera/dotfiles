@@ -3,11 +3,12 @@ return {
   "ravitemer/mcphub.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim", -- Required for Job and HTTP requests
+    "Joakker/lua-json5",
   },
   build = "npm install -g mcp-hub@latest",
   event = "User AstroFile",
   cmd = "MCPHub",
-  opts = {},
+  opts = function(_, opts) opts.json_decode = require("json5").parse end,
   specs = {
     {
       "olimorris/codecompanion.nvim",
