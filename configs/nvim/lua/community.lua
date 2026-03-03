@@ -52,4 +52,5 @@ return {
   utils.add_utility "neodim",
   utils.add_utility "noice-nvim",
   utils.add_workflow "hardtime-nvim",
+  utils.add_ai "opencode-nvim",
 }
