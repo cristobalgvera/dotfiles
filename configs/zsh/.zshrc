@@ -1,3 +1,6 @@
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
+
 # Export common source files
 [[ -s "$HOME/.zshrc.source" ]] && source "$HOME/.zshrc.source"
 
@@ -12,3 +15,6 @@
 
 # Export custom local configuration if found
 [[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
