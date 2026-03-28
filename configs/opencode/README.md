@@ -192,7 +192,7 @@ Add a login endpoint
 - ✅ Context-aware code generation
 - ✅ 7 specialized subagents (task-manager, context-scout, context-manager, coder-agent, test-engineer, code-reviewer, external-scout)
 - ✅ 9 workflow skills + 6 user commands
-- ✅ Flexible context discovery (.oac config, .claude/context, context, /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context)
+- ✅ Flexible context discovery (.oac config, .claude/context, context, {context_root})
 - ✅ Add context from GitHub, worktrees, local files, or URLs
 - ✅ Easy feature planning with `/oac:plan`
 
@@ -265,7 +265,7 @@ Ships without refactoring ✅
 
 **The team problem:** Every developer writes code differently. Inconsistent patterns. Hard to maintain.
 
-**The OAC solution:** Store team patterns in `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project/`. Commit to repo. Everyone uses same standards.
+**The OAC solution:** Store team patterns in `{context_root}/project-intelligence/`. Commit to repo. Everyone uses same standards.
 
 **Example workflow:**
 ```bash
@@ -274,7 +274,7 @@ Ships without refactoring ✅
 # Answers questions with team standards
 
 # Commit to repo
-git add /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/
+git add {context_root}/
 git commit -m "Add team coding standards"
 git push
 
@@ -366,7 +366,7 @@ Files designed for quick loading:
 Result: Lower token usage vs loading entire codebase.
 
 **6. Team Patterns - Repeatable Results**  
-Store patterns in `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project/`. Commit to repo. Entire team uses same standards. New developers inherit patterns automatically.
+Store patterns in `{context_root}/project-intelligence/`. Commit to repo. Entire team uses same standards. New developers inherit patterns automatically.
 
 ---
 
@@ -474,7 +474,7 @@ Your coding standards automatically loaded by agents:
 ContextScout discovers context files using a **local-first** approach:
 
 ```
-1. Check local: /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/navigation.md
+1. Check local: {context_root}/core/navigation.md
    ↓ Found? → Use local for everything. Done.
    ↓ Not found?
 2. Check global: ~/.config/opencode/context/core/navigation.md
@@ -485,16 +485,16 @@ ContextScout discovers context files using a **local-first** approach:
 **Key rules:**
 - **Local always wins** — if you installed locally, global is never checked
 - **Global fallback is only for `core/`** (standards, workflows, guides) — universal files that are the same across projects
-- **Project intelligence is always local** — your tech stack, patterns, and naming conventions live in `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project-intelligence/` and are never loaded from global
+- **Project intelligence is always local** — your tech stack, patterns, and naming conventions live in `{context_root}/project-intelligence/` and are never loaded from global
 - **One-time check** — ContextScout resolves the core location once at startup (max 2 glob checks), not per-file
 
 **Common setups:**
 
 | Setup | Core files from | Project intelligence from |
 |-------|----------------|--------------------------|
-| Local install (`bash install.sh developer`) | `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/` | `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project-intelligence/` |
-| Global install + `/add-context` | `~/.config/opencode/context/core/` | `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project-intelligence/` |
-| Both local and global | `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/` (local wins) | `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project-intelligence/` |
+| Local install (`bash install.sh developer`) | `{context_root}/core/` | `{context_root}/project-intelligence/` |
+| Global install + `/add-context` | `~/.config/opencode/context/core/` | `{context_root}/project-intelligence/` |
+| Both local and global | `{context_root}/core/` (local wins) | `{context_root}/project-intelligence/` |
 
 ---
 
@@ -698,7 +698,7 @@ A: Any model from any provider (Claude, GPT, Gemini, local models). No vendor lo
 ### For Teams
 
 **Q: How do I share context with my team?**  
-A: Commit `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project/` to your repo. Team members automatically use same patterns.
+A: Commit `{context_root}/project-intelligence/` to your repo. Team members automatically use same patterns.
 
 **Q: How do we ensure everyone follows the same standards?**  
 A: Add team patterns to context once. All agents load them automatically. Consistent code across entire team.

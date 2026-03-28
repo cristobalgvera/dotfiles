@@ -68,7 +68,7 @@ You are [doing specific task].
 **Request:** $ARGUMENTS
 
 **Context Loaded:**
-@/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/essential-patterns.md
+@{context_root}/core/essential-patterns.md
 @[additional context files]
 
 Execute [task] now.

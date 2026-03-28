@@ -96,4 +96,4 @@ Apply `content-creation` principles to your CLI output:
 
 ---
 
-**Reference**: See `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/adding-skill-basics.md` for the full, detailed walkthrough.
+**Reference**: See `{context_root}/openagents-repo/guides/adding-skill-basics.md` for the full, detailed walkthrough.

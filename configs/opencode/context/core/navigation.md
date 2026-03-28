@@ -30,10 +30,6 @@ core/
 │   ├── session-management.md
 │   └── design-iteration-overview.md
 │
-├── guides/
-│   ├── navigation.md
-│   └── resuming-sessions.md
-│
 ├── task-management/
 │   ├── navigation.md
 │   ├── standards/
@@ -71,7 +67,7 @@ core/
 | **Review code** | `workflows/code-review.md` |
 | **Delegate task** | `workflows/task-delegation-basics.md` |
 | **Break down feature** | `workflows/feature-breakdown.md` |
-| **Resume session** | `guides/resuming-sessions.md` |
+| **Resume session** | `workflows/session-management.md` |
 | **Manage tasks** | `task-management/navigation.md` |
 | **Task CLI commands** | `task-management/lookup/task-commands.md` |
 | **Context system** | `context-system.md` |

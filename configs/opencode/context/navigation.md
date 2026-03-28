@@ -9,7 +9,7 @@
 ## Structure
 
 ```
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/
+{context_root}/
 ├── core/                   # Universal standards & workflows
 ├── openagents-repo/        # OpenAgents Control repository work
 ├── development/            # Software development (all stacks)

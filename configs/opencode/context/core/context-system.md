@@ -4,7 +4,7 @@
 
 **Purpose**: Minimal, concern-based knowledge organization for AI agents
 
-**Last Updated**: 2026-01-08
+**Last Updated**: 2026-02-15
 
 ---
 
@@ -78,7 +78,7 @@ Filenames should tell you what's inside:
 ### 6. Knowledge Harvesting
 Extract valuable context from AI summaries/overviews, then delete them. Workspace stays clean, knowledge persists.
 
-### 5. Technology Context Organization
+### 7. Technology Context Organization
 
 **Purpose**: Ensure consistent placement of new technologies (frameworks, libraries, tools) to maintain discoverability.
 
@@ -102,7 +102,7 @@ Extract valuable context from AI summaries/overviews, then delete them. Workspac
 **Use for**: Repository-specific context (e.g., `openagents-repo/`)
 
 ```
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/{category}/
+{context_root}/{category}/
 ├── navigation.md              # Fast, token-efficient navigation
 ├── quick-start.md             # Optional: 2-minute orientation
 │
@@ -138,7 +138,7 @@ Extract valuable context from AI summaries/overviews, then delete them. Workspac
 **Use for**: Multi-technology development context (e.g., `development/`)
 
 ```
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/{category}/
+{context_root}/{category}/
 ├── navigation.md                       # Main navigation
 ├── {concern}-navigation.md             # Specialized navigation (optional)
 │
@@ -238,7 +238,7 @@ development/
 
 ### 1. Core Standards (Universal)
 
-Location: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/`
+Location: `{context_root}/core/standards/`
 
 **Purpose**: Universal standards that apply to ALL development
 

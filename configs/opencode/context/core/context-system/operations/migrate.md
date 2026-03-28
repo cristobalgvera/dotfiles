@@ -2,7 +2,7 @@
 
 # Context Migrate Operation
 
-**Purpose**: Copy context files from global (`~/.config/opencode/context/`) to local (`/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/`) so they're project-specific and git-committed.
+**Purpose**: Copy context files from global (`~/.config/opencode/context/`) to local (`{context_root}/`) so they're project-specific and git-committed.
 
 **Last Updated**: 2026-02-06
 
@@ -35,7 +35,7 @@ Found:
     navigation.md (800 bytes, Version: 1.0)
     business-domain.md (1.5 KB, Version: 1.1)
 
-Local location: /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/
+Local location: {context_root}/
 
 Status: No local project-intelligence/ found
 ```
@@ -63,7 +63,7 @@ Nothing to migrate. Use /add-context to create project intelligence.
 
 ### Stage 2: Check for Conflicts
 
-If local `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project-intelligence/` already exists:
+If local `{context_root}/project-intelligence/` already exists:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -126,7 +126,7 @@ Migration Plan
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Will copy from: ~/.config/opencode/context/project-intelligence/
-Will copy to:   /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project-intelligence/
+Will copy to:   {context_root}/project-intelligence/
 
 Files to copy:
   ✓ technical-domain.md (1.2 KB)
@@ -142,7 +142,7 @@ Proceed? [y/n]: _
 ```
 
 **Actions on approval:**
-1. Create `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project-intelligence/` if it doesn't exist
+1. Create `{context_root}/project-intelligence/` if it doesn't exist
 2. Copy each file from global → local
 3. Validate copied files (frontmatter, MVI compliance)
 
@@ -155,7 +155,7 @@ Proceed? [y/n]: _
 Migration Complete
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Copied 3 files to /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project-intelligence/
+Copied 3 files to {context_root}/project-intelligence/
 
   ✓ technical-domain.md
   ✓ navigation.md
@@ -201,7 +201,7 @@ Choose [1/2] (default: 1): _
 
 **Permission denied:**
 ```
-Error: Cannot write to /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project-intelligence/
+Error: Cannot write to {context_root}/project-intelligence/
 Check directory permissions and try again.
 ```
 
@@ -220,4 +220,4 @@ If you installed to a custom location, set OPENCODE_INSTALL_DIR:
 
 - `/add-context` — Create new project intelligence (interactive wizard)
 - `/context harvest` — Extract knowledge from summaries
-- Context path resolution: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/system/context-paths.md`
+- Context path resolution: `{context_root}/core/system/context-paths.md`

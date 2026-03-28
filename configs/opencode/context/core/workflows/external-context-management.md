@@ -33,7 +33,7 @@ External context is live documentation fetched from external libraries and frame
 
 ### Naming Conventions
 
-- **Package name** (directory): Exact npm package name (kebab-case)
+- **Package name** (directory): Exact npm package name (verbatim)
   - ✅ `drizzle-orm`, `better-auth`, `next.js`, `@tanstack/react-query`
   - ❌ `drizzle`, `nextjs`, `tanstack-query`
 
@@ -226,8 +226,8 @@ When TaskManager creates subtask JSONs, it should include external context files
   "id": "01-drizzle-schema-setup",
   "title": "Set up Drizzle schema with modular organization",
   "context_files": [
-    "/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md",
-    "/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/test-coverage.md"
+    "{context_root}/core/standards/code-quality.md",
+    "{context_root}/core/standards/test-coverage.md"
   ],
   "reference_files": [
     "package.json",
@@ -401,6 +401,6 @@ After deleting external context files, update `.manifest.json`:
 ## References
 
 - **ExternalScout**: `.opencode/agent/subagents/core/externalscout.md` — Fetches and persists external docs
-- **Task Delegation**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/task-delegation-basics.md` — How to reference external context in sessions
-- **Session Management**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/session-management.md` — Session lifecycle
-- **Library Registry**: `.opencode/skills/context7/library-registry.md` — Supported libraries and query patterns
+- **Task Delegation**: `{context_root}/core/workflows/task-delegation-basics.md` — How to reference external context in sessions
+- **Session Management**: `{context_root}/core/workflows/session-management.md` — Session lifecycle
+- **Library Registry**: `configs/opencode/skills/context7/library-registry.md` — Supported libraries and query patterns

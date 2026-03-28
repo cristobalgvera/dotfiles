@@ -61,7 +61,7 @@
 ### 2. Choose Pattern
 - Use decision tree above
 - Consider future growth
-- Check existing patterns in `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/`
+- Check existing patterns in `{context_root}/`
 
 ### 3. Create Directory Structure
 ```bash

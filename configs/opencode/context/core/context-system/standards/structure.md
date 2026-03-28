@@ -22,7 +22,7 @@
 </rule>
 
 ```
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/{category}/
+{context_root}/{category}/
 ├── navigation.md              # Navigation map (REQUIRED)
 ├── concepts/              # What it is
 │   └── {topic}.md

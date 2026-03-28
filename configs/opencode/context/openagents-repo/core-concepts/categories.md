@@ -105,7 +105,7 @@ evals/agents/{category}/        # Tests by category
 ├── frontend-specialist.md
 └── devops-specialist.md
 
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/development/
+{context_root}/development/
 ├── navigation.md
 ├── clean-code.md
 ├── react-patterns.md
@@ -197,7 +197,7 @@ The system resolves agent paths flexibly:
 mkdir -p .opencode/agent/{category}
 
 # Create context directory
-mkdir -p /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/{category}
+mkdir -p {context_root}/{category}
 
 # Create eval directory
 mkdir -p evals/agents/{category}
@@ -220,7 +220,7 @@ EOF
 ### Step 3: Add Context README
 
 ```bash
-cat > /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/{category}/navigation.md << 'EOF'
+cat > {context_root}/{category}/navigation.md << 'EOF'
 # Category Name Context
 
 Context files for {category} specialists.
@@ -286,7 +286,7 @@ EOF
 ### Category Context Structure
 
 ```
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/{category}/
+{context_root}/{category}/
 ├── navigation.md               # Overview
 ├── {topic-1}.md           # Specific topic
 ├── {topic-2}.md           # Specific topic
@@ -301,7 +301,7 @@ Agents load category context based on task:
 <!-- Context: development/react-patterns | Priority: high -->
 ```
 
-Loads: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/react-patterns.md`
+Loads: `{context_root}/ui/web/react-patterns.md`
 
 ---
 

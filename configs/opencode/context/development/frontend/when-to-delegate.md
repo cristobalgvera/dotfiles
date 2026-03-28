@@ -114,9 +114,9 @@ task(
   subagent_type="frontend-specialist",
   description="Create landing page design",
   prompt="Context to load:
-  - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/design-systems.md
-  - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/ui-styling-standards.md
-  - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/animation-basics.md
+  - {context_root}/ui/web/design-systems.md
+  - {context_root}/ui/web/ui-styling-standards.md
+  - {context_root}/ui/web/animation-basics.md
   
   Task: Create a landing page with:
   - Hero section with headline, subheadline, CTA button
@@ -351,9 +351,9 @@ task(
   subagent_type="frontend-specialist",
   description="Create SaaS landing page",
   prompt="Context to load:
-  - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/design-systems.md
-  - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/ui-styling-standards.md
-  - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/animation-basics.md
+  - {context_root}/ui/web/design-systems.md
+  - {context_root}/ui/web/ui-styling-standards.md
+  - {context_root}/ui/web/animation-basics.md
   
   Task: Create a SaaS landing page with:
   - Hero section (headline, subheadline, CTA)
@@ -415,8 +415,8 @@ task(
   subagent_type="frontend-specialist",
   description="Implement Tailwind + Shadcn design system",
   prompt="Context to load:
-  - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/design-systems.md
-  - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/ui-styling-standards.md
+  - {context_root}/ui/web/design-systems.md
+  - {context_root}/ui/web/ui-styling-standards.md
   
   Task: Implement design system using Tailwind CSS and Shadcn/ui
   

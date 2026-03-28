@@ -129,9 +129,9 @@ tags:
 
 ## Related Files
 
-- **Testing subagents**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/testing-subagents.md`
-- **Subagent invocation**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/subagent-invocation.md`
-- **Agent concepts**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/agents.md`
+- **Testing subagents**: `{context_root}/openagents-repo/guides/testing-subagents.md`
+- **Subagent invocation**: `{context_root}/openagents-repo/guides/subagent-invocation.md`
+- **Agent concepts**: `{context_root}/openagents-repo/core-concepts/agents.md`
 
 ---
 

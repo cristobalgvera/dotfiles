@@ -21,7 +21,7 @@ Cache context when:
 .tmp/sessions/{session-id}/
 ├── context.md (main session context)
 ├── .cache/
-│   ├── test-coverage.md (cached from /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/)
+│   ├── test-coverage.md (cached from {context_root}/)
 │   ├── code-quality.md
 │   └── code-review.md
 └── .manifest.json (tracks cache status)
@@ -37,7 +37,7 @@ Cache context when:
   "created_at": "2026-01-28T14:30:22Z",
   "cache": {
     "test-coverage.md": {
-      "source": "/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/test-coverage.md",
+      "source": "{context_root}/core/standards/test-coverage.md",
       "cached_at": "2026-01-28T14:30:25Z",
       "used_by": ["subtask_01", "subtask_02"],
       "status": "valid"
@@ -70,9 +70,9 @@ Cache context when:
 // Before delegating to subagent
 IF cache exists AND cache is valid:
   USE cached context file
-  SKIP re-reading from /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/
+  SKIP re-reading from {context_root}/
 ELSE:
-  READ from /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/
+  READ from {context_root}/
   CACHE the file
 ```
 

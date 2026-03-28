@@ -17,7 +17,7 @@ task(
   subagent_type="Image Specialist",
   description="Generate/edit visual content",
   prompt="Context to load:
-          - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/visual-development.md
+          - {context_root}/core/visual-development.md
           
           Task: [Specific visual requirement]
           

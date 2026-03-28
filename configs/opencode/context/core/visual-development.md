@@ -59,7 +59,7 @@ task(
   subagent_type="Image Specialist",
   description="[Brief 3-5 word description]",
   prompt="Context to load:
-          - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/visual-development.md
+          - {context_root}/core/visual-development.md
           
           Task: [Detailed visual requirement]
           
@@ -447,12 +447,12 @@ After receiving output:
 
 ## Related Context
 
-- **UI Design Workflow**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/design-iteration-overview.md`
-- **Design Systems**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/design-systems.md`
-- **UI Styling Standards**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/ui-styling-standards.md`
-- **Animation Patterns**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/animation-basics.md`, `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/animation-advanced.md`
-- **Subagent Invocation Guide**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/subagent-invocation.md`
-- **Agent Capabilities**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/agents.md`
+- **UI Design Workflow**: `{context_root}/core/workflows/design-iteration-overview.md`
+- **Design Systems**: `{context_root}/ui/web/design-systems.md`
+- **UI Styling Standards**: `{context_root}/ui/web/ui-styling-standards.md`
+- **Animation Patterns**: `{context_root}/ui/web/animation-basics.md`, `{context_root}/ui/web/animation-advanced.md`
+- **Subagent Invocation Guide**: `{context_root}/openagents-repo/guides/subagent-invocation.md`
+- **Agent Capabilities**: `{context_root}/openagents-repo/core-concepts/agents.md`
 
 ---
 

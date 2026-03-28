@@ -61,8 +61,8 @@ Validates consistency between:
     Scan agent files for context references:
     
     **Search patterns**:
-    - `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/` (direct path references)
-    - `@/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/` (@ symbol references)
+    - `{context_root}/` (direct path references)
+    - `@{context_root}/` (@ symbol references)
     - `context:` (dependency declarations in frontmatter)
     
     **Locations**:
@@ -95,7 +95,7 @@ Validates consistency between:
     
     **Check existence**:
     ```bash
-    test -f /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md
+    test -f {context_root}/core/standards/code-quality.md
     ```
     
     **Check registry**:
@@ -127,8 +127,8 @@ Validates consistency between:
     ### opencoder
     **Uses but not declared**:
     - context:core/standards/code (referenced 3 times)
-      - Line 64: "Code tasks → /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md (MANDATORY)"
-      - Line 170: "Read /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md NOW"
+      - Line 64: "Code tasks → {context_root}/core/standards/code-quality.md (MANDATORY)"
+      - Line 170: "Read {context_root}/core/standards/code-quality.md NOW"
       - Line 229: "NEVER execute write/edit without loading required context first"
     
     **Current dependencies**: subagent:task-manager, subagent:coder-agent
@@ -229,12 +229,12 @@ Validates consistency between:
 
 **Find direct path references**:
 ```bash
-grep -rn "\/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/" .opencode/agent/ .opencode/command/
+grep -rn "{context_root}/" .opencode/agent/ .opencode/command/
 ```
 
 **Find @ references**:
 ```bash
-grep -rn "@\/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/" .opencode/agent/ .opencode/command/
+grep -rn "@{context_root}/" .opencode/agent/ .opencode/command/
 ```
 
 **Find dependency declarations**:
@@ -245,8 +245,8 @@ grep -rn "^\s*-\s*context:" .opencode/agent/ .opencode/command/
 ### Path Normalization
 
 **Convert to dependency format**:
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md` → `context:core/standards/code`
-- `@/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/quick-start.md` → `context:openagents-repo/quick-start`
+- `{context_root}/core/standards/code-quality.md` → `context:core/standards/code`
+- `@{context_root}/openagents-repo/quick-start.md` → `context:openagents-repo/quick-start`
 - `context/core/standards/code` → `context:core/standards/code`
 
 **Rules**:
@@ -285,8 +285,8 @@ task(
        - .opencode/command/**/*.md
     
     2. Search for these patterns:
-       - "/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/" (direct paths)
-       - "@/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/" (@ references)
+       - "{context_root}/core/" (direct paths)
+       - "@{context_root}/" (@ references)
        - "context:" in frontmatter (dependency declarations)
     
     3. For each agent file found:
@@ -295,7 +295,7 @@ task(
        - Check registry.json for declared dependencies
        - Identify missing dependency declarations
     
-    4. For each context file in /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/:
+    4. For each context file in {context_root}/core/:
        - Count how many agents reference it
        - Check if it exists in registry.json
        - Identify unused context files
@@ -369,9 +369,9 @@ Run /check-context-deps --fix to auto-update frontmatter
 Analyzing agent: contextscout
 
 Context files referenced:
-✓ /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/context-system.md (1 reference)
+✓ {context_root}/core/context-system.md (1 reference)
   - Line 15: "Load: context:core/context-system"
-✓ /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/context-system/standards/mvi.md (2 references)
+✓ {context_root}/core/context-system/standards/mvi.md (2 references)
   - Line 16: "Load: context:core/context-system/standards/mvi"
   - Line 89: "MVI-aware prioritization"
 
@@ -430,4 +430,4 @@ Next: Run ./scripts/registry/auto-detect-components.sh to update registry
 
 - **Registry validation**: `./scripts/registry/validate-registry.sh`
 - **Auto-detect components**: `./scripts/registry/auto-detect-components.sh`
-- **Context guide**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/quality/registry-dependencies.md`
+- **Context guide**: `{context_root}/openagents-repo/quality/registry-dependencies.md`

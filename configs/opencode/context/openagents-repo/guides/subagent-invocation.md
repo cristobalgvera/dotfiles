@@ -231,7 +231,7 @@ task(
 
 ## ContextScout Special Case
 
-**Status**: ⚠️ May not be registered in OpenCode CLI yet
+**Status**: ⚠️ Not guaranteed to be registered in OpenCode CLI
 
 The `ContextScout` subagent exists in the repository but may not be registered in the OpenCode CLI's available agent types.
 
@@ -249,13 +249,13 @@ task(
 
 // ✅ Use direct operations instead
 // 1. Use glob to find context files
-glob(pattern="**/*.md", path="/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context")
+glob(pattern="**/*.md", path="{context_root}")
 
 // 2. Use grep to search content
-grep(pattern="registry", path="/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context")
+grep(pattern="registry", path="{context_root}")
 
 // 3. Read relevant files directly
-read(filePath="/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/registry.md")
+read(filePath="{context_root}/openagents-repo/core-concepts/registry.md")
 ```
 
 ---

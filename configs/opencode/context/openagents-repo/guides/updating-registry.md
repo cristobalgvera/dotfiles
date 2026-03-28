@@ -134,7 +134,7 @@ dependencies:
 ---
 ```
 
-**Context** (`/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/category/your-context.md`):
+**Context** (`{context_root}/category/your-context.md`):
 ```yaml
 ---
 description: What knowledge this context provides
@@ -463,7 +463,7 @@ Currently, aliases must be added **manually** to `registry.json` (auto-detect do
   "id": "session-management",
   "name": "Session Management",
   "type": "context",
-  "path": "/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/session-management.md",
+  "path": "{context_root}/core/workflows/session-management.md",
   "aliases": [
     "workflows-sessions",
     "sessions"

@@ -17,7 +17,7 @@
 - First-time setup
 - Version upgrades
 
-**Rule**: If it's not in `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/`, use ExternalScout.
+**Rule**: If it's not in `{context_root}/`, use ExternalScout.
 
 ---
 
@@ -124,7 +124,7 @@ task(
 | Aspect | ContextScout | ExternalScout |
 |--------|--------------|---------------|
 | **Searches** | Internal project files | External documentation |
-| **Location** | `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/` | Internet (Context7, docs) |
+| **Location** | `{context_root}/` | Internet (Context7, docs) |
 | **Returns** | Project standards | Library APIs |
 | **Use for** | "How we do things here" | "How this library works" |
 | **Speed** | Fast (local) | Slower (network) |
@@ -150,7 +150,7 @@ Before implementing with external libraries:
 
 ## Supported Libraries
 
-**See**: `.opencode/skills/context7/library-registry.md`
+**See**: `configs/opencode/skills/context7/library-registry.md`
 
 **Categories:** Database/ORM | Auth | Frontend | Infrastructure | UI | State | Validation | Testing
 
@@ -162,4 +162,4 @@ Not listed? ExternalScout can still fetch from official docs.
 
 - `external-libraries-workflow.md` - Core workflow
 - `external-libraries-scenarios.md` - Common scenarios
-- `.opencode/agent/subagents/core/externalscout.md` - ExternalScout agent
+- `configs/opencode/agent/subagents/core/externalscout.md` - ExternalScout agent

@@ -51,7 +51,7 @@ Status: in_progress
 
 ## Context Files (Standards to Follow)
 Paths ContextScout discovered. Downstream agents load these for coding standards.
-- /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md
+- {context_root}/core/standards/code-quality.md
 - {other paths}
 
 ## Reference Files (Source Material)
@@ -95,7 +95,7 @@ Live docs fetched via ExternalScout. Read-only cache.
 **Step 5: Delegate**
 ```javascript
 task(
-  subagent_type="TaskManager",
+  subagent_type="Task Manager",
   description="{brief}",
   prompt="Load context from .tmp/sessions/{session-id}/context.md
           {specific instructions}"
@@ -112,7 +112,7 @@ task(
 
 | Field | Contains | Example |
 |-------|----------|---------|
-| `context_files` | **Standards only** | `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md` |
+| `context_files` | **Standards only** | `{context_root}/core/standards/code-quality.md` |
 | `reference_files` | **Source material only** | `src/auth/service.ts` |
 | `external_context` | **External docs only** (read-only) | `.tmp/external-context/drizzle/schemas.md` |
 

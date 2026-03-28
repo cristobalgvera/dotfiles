@@ -72,7 +72,7 @@ opencode-agents/
 | **Category agents** | `.opencode/agent/{category}/` |
 | **Subagents** | `.opencode/agent/subagents/` |
 | **Commands** | `.opencode/command/` |
-| **Context files** | `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/` |
+| **Context files** | `{context_root}/` |
 | **Prompt variants** | `.opencode/prompts/{category}/{agent}/` |
 | **Tools** | `.opencode/tool/` |
 | **Plugins** | `.opencode/plugin/` |
@@ -95,7 +95,7 @@ opencode-agents/
 | **New category agent** | `.opencode/agent/{category}/{name}.md` |
 | **New subagent** | `.opencode/agent/subagents/{category}/{name}.md` |
 | **New command** | `.opencode/command/{name}.md` |
-| **New context** | `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/{category}/{name}.md` |
+| **New context** | `{context_root}/{category}/{name}.md` |
 | **Agent tests** | `evals/agents/{category}/{agent}/tests/` |
 | **Test config** | `evals/agents/{category}/{agent}/config/config.yaml` |
 | **Documentation** | `docs/{section}/{topic}.md` |
@@ -152,12 +152,12 @@ README.md                            # Main documentation
 ### Core Context
 
 ```
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/documentation.md
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/test-coverage.md
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/security-patterns.md
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/task-delegation-basics.md
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/code-review.md
+{context_root}/core/standards/code-quality.md
+{context_root}/core/standards/documentation.md
+{context_root}/core/standards/test-coverage.md
+{context_root}/core/standards/security-patterns.md
+{context_root}/core/workflows/task-delegation-basics.md
+{context_root}/core/workflows/code-review.md
 ```
 
 ### Registry Scripts
@@ -203,13 +203,13 @@ evals/framework/src/types/            # TypeScript types
 ### Context
 
 ```
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/{category}/{topic}.md
+{context_root}/{category}/{topic}.md
 ```
 
 **Examples**:
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md`
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/ui/web/react-patterns.md`
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/content-creation/principles/copywriting-frameworks.md`
+- `{context_root}/core/standards/code-quality.md`
+- `{context_root}/ui/web/react-patterns.md`
+- `{context_root}/content-creation/principles/copywriting-frameworks.md`
 
 ### Tests
 
@@ -282,10 +282,10 @@ find evals/agents -name "*.yaml"
 
 ```bash
 # By category
-ls /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/{category}/
+ls {context_root}/{category}/
 
 # All context
-find /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context -name "*.md"
+find {context_root} -name "*.md"
 ```
 
 ### Find Script

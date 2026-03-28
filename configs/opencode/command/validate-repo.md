@@ -119,7 +119,7 @@ For each profile (essential, developer, business, full, advanced):
 
 ### Step 5: Validate Context File Structure
 
-1. List all files in `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/`
+1. List all files in `{context_root}/`
 2. Check against registry context entries
 3. Identify orphaned files (exist but not in registry)
 4. Identify missing files (in registry but don't exist)
@@ -227,7 +227,7 @@ Generated: 2025-11-19 14:30:00
 ## ⚠️ Warnings (3)
 
 1. **Orphaned Context File**
-   - File: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/legacy/old-patterns.md`
+- File: `{context_root}/legacy/old-patterns.md`
    - Issue: Exists but not referenced in registry
    - Recommendation: Add to registry or remove file
 
@@ -247,7 +247,7 @@ Generated: 2025-11-19 14:30:00
 
 1. **Missing Context File**
    - Component: `context:advanced-patterns`
-   - Expected path: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/advanced-patterns.md`
+- Expected path: `{context_root}/core/advanced-patterns.md`
    - Referenced in: developer, full, advanced profiles
    - Action: Create file or remove from registry
 
@@ -295,7 +295,7 @@ Generated: 2025-11-19 14:30:00
 ## 🔧 Recommended Actions
 
 ### High Priority (Errors)
-1. Create missing file: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/advanced-patterns.md`
+1. Create missing file: `{context_root}/core/advanced-patterns.md`
 2. Fix broken dependency in `opencoder`
 
 ### Medium Priority (Warnings)

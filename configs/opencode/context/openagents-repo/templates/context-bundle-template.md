@@ -31,36 +31,36 @@ Status: in_progress
 ## Relevant Standards (Load These Before Starting)
 
 **Core Standards**:
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code.md` → Modular, functional code patterns
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/tests.md` → Testing requirements and TDD
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/docs.md` → Documentation standards
-- (example: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/patterns.md`) → Error handling, security patterns
+- `{context_root}/core/standards/code.md` → Modular, functional code patterns
+- `{context_root}/core/standards/tests.md` → Testing requirements and TDD
+- `{context_root}/core/standards/docs.md` → Documentation standards
+- (example: `{context_root}/core/standards/patterns.md`) → Error handling, security patterns
 
 **Core Workflows**:
-- (example: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/delegation.md`) → Delegation process
-- (example: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/task-breakdown.md`) → Task breakdown methodology
-- (example: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/review.md`) → Code review guidelines
+- (example: `{context_root}/core/workflows/delegation.md`) → Delegation process
+- (example: `{context_root}/core/workflows/task-breakdown.md`) → Task breakdown methodology
+- (example: `{context_root}/core/workflows/review.md`) → Code review guidelines
 
 ## Repository-Specific Context (Load These Before Starting)
 
 **Quick Start** (ALWAYS load first):
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/quick-start.md` → Repo orientation and common commands
+- `{context_root}/openagents-repo/quick-start.md` → Repo orientation and common commands
 
 **Core Concepts** (Load based on task type):
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/agents.md` → How agents work
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/evals.md` → How testing works
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/registry.md` → How registry works
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/categories.md` → How organization works
+- `{context_root}/openagents-repo/core-concepts/agents.md` → How agents work
+- `{context_root}/openagents-repo/core-concepts/evals.md` → How testing works
+- `{context_root}/openagents-repo/core-concepts/registry.md` → How registry works
+- `{context_root}/openagents-repo/core-concepts/categories.md` → How organization works
 
 **Guides** (Load for specific workflows):
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/adding-agent-basics.md` → Step-by-step agent creation
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/testing-agent.md` → Testing workflow
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/updating-registry.md` → Registry workflow
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/debugging.md` → Troubleshooting
+- `{context_root}/openagents-repo/guides/adding-agent-basics.md` → Step-by-step agent creation
+- `{context_root}/openagents-repo/guides/testing-agent.md` → Testing workflow
+- `{context_root}/openagents-repo/guides/updating-registry.md` → Registry workflow
+- `{context_root}/openagents-repo/guides/debugging.md` → Troubleshooting
 
 **Lookup** (Quick reference):
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/lookup/file-locations.md` → Where everything is
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/lookup/commands.md` → Command reference
+- `{context_root}/openagents-repo/lookup/file-locations.md` → Where everything is
+- `{context_root}/openagents-repo/lookup/commands.md` → Command reference
 
 ## Key Requirements
 
@@ -199,7 +199,7 @@ Create a context bundle when:
 
 2. **Copy template**:
    ```bash
-   cp /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/templates/context-bundle-template.md \
+   cp {context_root}/openagents-repo/templates/context-bundle-template.md \
       .tmp/context/{session-id}/bundle.md
    ```
 
@@ -242,7 +242,7 @@ Create a context bundle when:
 
 ### Example Context Bundle
 
-See `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/examples/context-bundle-example.md` for a complete example.
+See `{context_root}/openagents-repo/examples/context-bundle-example.md` for a complete example.
 
 ---
 

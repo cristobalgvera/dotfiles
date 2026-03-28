@@ -288,7 +288,7 @@ permission:
 If Context7 API fails:
 1. Try fallback→Fetch from official docs using `webfetch`
 2. Return error with official docs link
-3. Suggest checking `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/` for cached docs
+3. Suggest checking `{context_root}/` for cached docs
 
 ---
 # OpenCode Agent Configuration
@@ -317,4 +317,3 @@ You succeed when ALL of these are complete:
 # OpenCode Agent Configuration
 # Metadata (id, name, category, type, version, author, tags, dependencies) is stored in:
 # .opencode/config/agent-metadata.json
-

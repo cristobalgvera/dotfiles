@@ -20,7 +20,7 @@ Use ExternalScout to fetch external context when:
 
 **Don't use** when:
 - Question is about internal project code
-- Answer is in `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/` (use ContextScout instead)
+- Answer is in `{context_root}/` (use ContextScout instead)
 - User is asking for general programming concepts
 
 ---
@@ -197,8 +197,8 @@ Status: in_progress
 Set up Drizzle ORM with Better Auth in a Next.js application
 
 ## Context Files (Standards to Follow)
-- /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md
-- /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/test-coverage.md
+- {context_root}/core/standards/code-quality.md
+- {context_root}/core/standards/test-coverage.md
 
 ## Reference Files (Source Material)
 - package.json
@@ -251,7 +251,7 @@ These are live documentation files fetched from external libraries. Subagents sh
 
 ```javascript
 task(
-  subagent_type="TaskManager",
+  subagent_type="Task Manager",
   description="Break down Drizzle + Better Auth integration",
   prompt="Load context from .tmp/sessions/2026-01-28-drizzle-auth/context.md
 
@@ -282,8 +282,8 @@ TaskManager creates subtask JSONs like:
   "title": "Set up Drizzle schema with modular organization",
   "description": "Create modular Drizzle schema following best practices",
   "context_files": [
-    "/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md",
-    "/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/test-coverage.md"
+    "{context_root}/core/standards/code-quality.md",
+    "{context_root}/core/standards/test-coverage.md"
   ],
   "reference_files": [
     "package.json",
@@ -439,7 +439,7 @@ CoderAgent reads subtask JSON and:
 **Problem**: External docs are outdated
 
 **Solution**:
-1. Delete stale files: `scripts/external-context/manage-external-context.sh delete-package {package}`
+1. Delete stale files: `rm -rf .tmp/external-context/{package}/`
 2. Re-run ExternalScout to fetch fresh docs
 3. Update session context with new file paths
 
@@ -448,7 +448,7 @@ CoderAgent reads subtask JSON and:
 **Problem**: `.manifest.json` doesn't match actual files
 
 **Solution**:
-1. Regenerate manifest: `scripts/external-context/manage-external-context.sh regenerate-manifest`
+1. Regenerate manifest: rebuild `.manifest.json` from the file list in `.tmp/external-context/`
 2. Verify all files have metadata headers
 
 ---
@@ -456,6 +456,6 @@ CoderAgent reads subtask JSON and:
 ## References
 
 - **ExternalScout**: `.opencode/agent/subagents/core/externalscout.md`
-- **External Context Management**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/external-context-management.md`
-- **Task Delegation**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/task-delegation-basics.md`
+- **External Context Management**: `{context_root}/core/workflows/external-context-management.md`
+- **Task Delegation**: `{context_root}/core/workflows/task-delegation-basics.md`
 - **Management Script**: `scripts/external-context/manage-external-context.sh`

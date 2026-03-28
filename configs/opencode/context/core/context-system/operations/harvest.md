@@ -260,8 +260,8 @@ Choose [1/2/3] (default: 1): _
    - Deleted: .tmp/IMPLEMENTATION-NOTES.md (no valuable content)
 
 📊 Updated navigation maps:
-   - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/navigation.md
-   - /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/development/navigation.md
+   - {context_root}/core/navigation.md
+   - {context_root}/development/navigation.md
 
 💾 Disk space freed: 6.8 KB
 ```

@@ -7,7 +7,7 @@
 ## Structure
 
 ```
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/project-intelligence/
+{context_root}/project-intelligence/
 ├── navigation.md              # This file - quick overview
 ├── business-domain.md         # Business context and problem statement
 ├── technical-domain.md        # Stack, architecture, technical decisions
@@ -42,10 +42,10 @@
 ## Integration
 
 This folder is referenced from:
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/project-intelligence.md` (standards and patterns)
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/system/context-guide.md` (context loading)
+- `{context_root}/core/standards/project-intelligence.md` (standards and patterns)
+- `{context_root}/core/system/context-guide.md` (context loading)
 
-See `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/context-system.md` for the broader context architecture.
+See `{context_root}/core/context-system.md` for the broader context architecture.
 
 ## Maintenance
 
@@ -55,11 +55,11 @@ Keep this folder current:
 - Review `living-notes.md` regularly
 - Archive resolved items from decisions-log.md
 
-**Management Guide**: See `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/project-intelligence-management.md` for complete lifecycle management including:
+**Management Guide**: See `{context_root}/core/standards/project-intelligence-management.md` for complete lifecycle management including:
 - How to update, add, and remove files
 - How to create new subfolders
 - Version tracking and frontmatter standards
 - Quality checklists and anti-patterns
 - Governance and ownership
 
-See `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/project-intelligence.md` for the standard itself.
+See `{context_root}/core/standards/project-intelligence.md` for the standard itself.

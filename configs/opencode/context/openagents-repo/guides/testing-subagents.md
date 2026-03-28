@@ -149,7 +149,7 @@ Tool Calls: 1
 Tools Used: glob
 
 Tool Call Details:
-  1. glob: {"pattern":"*.md","path":"/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core"}
+  1. glob: {"pattern":"*.md","path":"{context_root}/core"}
 ```
 
 **Red Flags**:
@@ -246,17 +246,17 @@ evals/agents/ContextScout/tests/
 ```yaml
 prompts:
   - text: |
-      List all markdown files in /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/
+      List all markdown files in {context_root}/core/
 ```
 
 ✅ **Explicit** (works):
 ```yaml
 prompts:
   - text: |
-      Use the glob tool to find all markdown files in /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/
+      Use the glob tool to find all markdown files in {context_root}/core/
       
       You MUST use the glob tool like this:
-      glob(pattern="*.md", path="/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core")
+      glob(pattern="*.md", path="{context_root}/core")
       
       Then list the files you found.
 ```

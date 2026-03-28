@@ -18,28 +18,28 @@ Create a new data analyst agent for the OpenAgents Control repository. This agen
 ## Relevant Standards (Load These Before Starting)
 
 **Core Standards**:
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md` → Modular, functional code patterns
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/test-coverage.md` → Testing requirements and TDD
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/documentation.md` → Documentation standards
+- `{context_root}/core/standards/code-quality.md` → Modular, functional code patterns
+- `{context_root}/core/standards/test-coverage.md` → Testing requirements and TDD
+- `{context_root}/core/standards/documentation.md` → Documentation standards
 
 **Core Workflows**:
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/feature-breakdown.md` → Task breakdown methodology
+- `{context_root}/core/workflows/feature-breakdown.md` → Task breakdown methodology
 
 ## Repository-Specific Context (Load These Before Starting)
 
 **Quick Start** (ALWAYS load first):
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/quick-start.md` → Repo orientation and common commands
+- `{context_root}/openagents-repo/quick-start.md` → Repo orientation and common commands
 
 **Core Concepts** (Load based on task type):
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/agents.md` → How agents work
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/evals.md` → How testing works
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/registry.md` → How registry works
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/categories.md` → How organization works
+- `{context_root}/openagents-repo/core-concepts/agents.md` → How agents work
+- `{context_root}/openagents-repo/core-concepts/evals.md` → How testing works
+- `{context_root}/openagents-repo/core-concepts/registry.md` → How registry works
+- `{context_root}/openagents-repo/core-concepts/categories.md` → How organization works
 
 **Guides** (Load for specific workflows):
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/adding-agent-basics.md` → Step-by-step agent creation
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/testing-agent.md` → Testing workflow
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/updating-registry.md` → Registry workflow
+- `{context_root}/openagents-repo/guides/adding-agent-basics.md` → Step-by-step agent creation
+- `{context_root}/openagents-repo/guides/testing-agent.md` → Testing workflow
+- `{context_root}/openagents-repo/guides/updating-registry.md` → Registry workflow
 
 ## Key Requirements
 
@@ -92,7 +92,7 @@ Create a new data analyst agent for the OpenAgents Control repository. This agen
 
 **Modify**:
 - `registry.json` - Add data-analyst agent entry
-- `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/navigation.md` - Add data category context if needed
+- `{context_root}/navigation.md` - Add data category context if needed
 
 ## Success Criteria
 

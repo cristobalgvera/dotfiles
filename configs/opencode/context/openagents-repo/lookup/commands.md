@@ -336,7 +336,7 @@ find .opencode/agent -name "{agent-name}.md"
 find evals/agents -name "*.yaml"
 
 # Find context
-find /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context -name "*.md"
+find {context_root} -name "*.md"
 
 # Find scripts
 find scripts -name "*.sh"

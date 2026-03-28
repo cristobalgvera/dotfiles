@@ -85,7 +85,7 @@ Agents reference context files in their prompts but often don't declare them as 
 ```markdown
 <!-- In agent prompt -->
 BEFORE any code implementation, ALWAYS load:
-- Code tasks → /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md (MANDATORY)
+- Code tasks → {context_root}/core/standards/code-quality.md (MANDATORY)
 ```
 
 **Without dependency declaration**:
@@ -116,7 +116,7 @@ dependencies:
 
 **Path normalization**:
 ```
-File path:     /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md
+File path:     {context_root}/core/standards/code-quality.md
 Dependency:    context:core/standards/code
                ^^^^^^^ ^^^^^^^^^^^^^^^^^^^
                type    path (no .opencode/, no .md)
@@ -125,9 +125,9 @@ Dependency:    context:core/standards/code
 **Examples**:
 ```
 dependencies:
-  - context:core/standards/code           # /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md
-  - context:core/standards/docs           # /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/documentation.md
-  - context:core/workflows/delegation     # /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/workflows/task-delegation-basics.md
+  - context:core/standards/code           # {context_root}/core/standards/code-quality.md
+  - context:core/standards/docs           # {context_root}/core/standards/documentation.md
+  - context:core/workflows/delegation     # {context_root}/core/workflows/task-delegation-basics.md
   - context:openagents-repo/guides/adding-agent  # Project-specific context
 ```
 
@@ -212,7 +212,7 @@ Before committing changes to agents, commands, or context files:
 ### opencoder
 Uses but not declared:
 - context:core/standards/code (referenced 3 times)
-  - Line 64: "Code tasks → /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md"
+  - Line 64: "Code tasks → {context_root}/core/standards/code-quality.md"
   
 Recommended fix:
 dependencies:
@@ -352,7 +352,7 @@ jq '.components[] | .[] | select(.dependencies[]? | contains("context:core/stand
 **2. Update context file**:
 ```bash
 # Make your changes
-vim /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md
+vim {context_root}/core/standards/code-quality.md
 ```
 
 **3. Validate no broken references**:
@@ -441,7 +441,7 @@ dependencies:
 **Fix**:
 ```bash
 # Check if file exists
-ls -la /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-quality.md
+ls -la {context_root}/core/standards/code-quality.md
 
 # If exists, add to registry
 ./scripts/registry/auto-detect-components.sh --auto-add
@@ -463,7 +463,7 @@ ls -la /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/sta
 # Edit agent frontmatter to add dependency
 
 # Option 2: Remove if truly unused
-rm /Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/core/standards/code-analysis.md
+rm {context_root}/core/standards/code-analysis.md
 ./scripts/registry/auto-detect-components.sh --auto-add
 ```
 
@@ -560,9 +560,9 @@ jobs:
 
 ## Related Documentation
 
-- **Registry Guide**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/updating-registry.md`
-- **Registry Concepts**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/core-concepts/registry.md`
-- **Adding Agents**: `/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/openagents-repo/guides/adding-agent-basics.md`
+- **Registry Guide**: `{context_root}/openagents-repo/guides/updating-registry.md`
+- **Registry Concepts**: `{context_root}/openagents-repo/core-concepts/registry.md`
+- **Adding Agents**: `{context_root}/openagents-repo/guides/adding-agent-basics.md`
 - **Command Reference**: `/check-context-deps` command
 
 ---

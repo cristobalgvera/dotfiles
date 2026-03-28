@@ -73,7 +73,7 @@ install.sh                               # Installer
 scripts/registry/validate-registry.sh    # Validate registry
 scripts/registry/auto-detect-components.sh # Auto-detect components
 scripts/validation/validate-test-suites.sh # Validate tests
-/Users/cristobalgvera/.repos/dotfiles/configs/opencode/./context/                       # Context files
+{context_root}/                       # Context files
 .opencode/command/                       # Slash commands
 docs/                                    # Documentation
 VERSION                                  # Current version
