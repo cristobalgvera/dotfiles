@@ -11,7 +11,6 @@ return {
   utils.add_debugging "nvim-dap-virtual-text",
   utils.add_debugging "persistent-breakpoints-nvim",
   utils.add_docker "lazydocker",
-  utils.add_editing_support "codecompanion-nvim",
   utils.add_editing_support "conform-nvim",
   utils.add_editing_support "rainbow-delimiters-nvim",
   utils.add_editing_support "vector-code-nvim",
@@ -53,4 +52,5 @@ return {
   utils.add_utility "noice-nvim",
   utils.add_workflow "hardtime-nvim",
   utils.add_ai "opencode-nvim",
+  utils.add_ai "codecompanion-nvim",
 }
