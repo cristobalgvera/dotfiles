@@ -70,9 +70,6 @@ function add_symlinks {
   link_file "$configs_path"/mise ~/.config
   link_file "$configs_path"/mise/.default-npm-packages ~/.default-npm-packages
   link_file "$configs_path"/mise/.default-python-packages ~/.default-python-packages
-
-  echo "Linking AIChat config"
-  link_file "$configs_path"/aichat ~/.config/aichat
 }
 
 add_symlinks

@@ -103,7 +103,6 @@ function install_brew_apps {
     hashicorp/tap/terraform
     fd
     wakatime-cli
-    aichat
     mise
     anomalyco/tap/opencode
   )
