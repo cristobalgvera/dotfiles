@@ -10,6 +10,11 @@ local function create_map(cmd) return { cmd = cmd, noremap = true, silent = true
 return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
+  filetypes = {
+    pattern = {
+      [".*/.env.*"] = "sh",
+    },
+  },
   opts = {
     mappings = {
       n = {

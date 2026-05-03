@@ -1,11 +1,12 @@
 ---@type LazySpec
 return {
   {
-    "nvim-treesitter/nvim-treesitter",
+    "AstroNvim/astrocore",
     opts = function(_, opts)
-      if opts.ensure_installed ~= "all" then
-        opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "sql" })
-      end
+      opts.treesitter = opts.treesitter or {}
+
+      opts.treesitter.ensure_installed =
+        require("astrocore").list_insert_unique(opts.treesitter.ensure_installed, { "sql" })
     end,
   },
   {
@@ -22,7 +23,7 @@ return {
 
       if null_ls.is_registered "sqlfluff" then null_ls.deregister "sqlfluff" end
 
-      opts.sources = require("astrocore").extend_tbl(opts.sources, {
+      opts.sources = require("astrocore").list_insert_unique(opts.sources, {
         null_ls.builtins.formatting.sqlfluff.with {
           extra_args = { "--dialect", dialect },
         },
