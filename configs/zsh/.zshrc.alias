@@ -6,14 +6,5 @@ alias bup='brew cu --yes && brew upgrade && brew cleanup'
 alias py='uv run python'
 alias lg='lazygit'
 alias lzd='lazydocker'
-alias dcdnv='dcdn --volumes' # docker compose down --volumes
 alias v='nvim'
 alias cat='bat --theme=base16'
-
-# VectorCode
-alias vc='vectorcode'
-alias vcv='vc vectorise'
-alias vcu='vc update'
-alias vci='vc init'
-alias vcd='vc drop'
-alias vcc='vc clean'
