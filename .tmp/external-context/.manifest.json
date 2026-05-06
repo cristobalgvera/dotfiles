@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-05-05T00:00:00Z",
+  "libraries": {
+    "opencode": {
+      "files": [
+        {
+          "filename": "config-structure.md",
+          "topic": "repo-level config structure (.opencode)",
+          "tech_stack": "OpenCode",
+          "fetched": "2026-05-05T00:00:00Z",
+          "source": "OpenCode Docs (opencode.ai/docs/config)"
+        }
+      ]
+    }
+  }
+}
