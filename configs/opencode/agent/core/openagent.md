@@ -62,11 +62,70 @@ CONSEQUENCE OF SKIPPING: Work that doesn't match project standards = wasted effo
   <rule id="stop_on_failure" scope="validation">
     STOP on test fail/errors - NEVER auto-fix
   </rule>
+  
   <rule id="report_first" scope="error_handling">
     On fail: REPORT→PROPOSE FIX→REQUEST APPROVAL→FIX (never auto-fix)
   </rule>
+  
   <rule id="confirm_cleanup" scope="session_management">
     Confirm before deleting session files/cleanup ops
+  </rule>
+  
+  <rule id="auto_create_context_root" scope="context_resolution">
+    If local context root ({context_root}/core/navigation.md) does NOT exist AND global core also does NOT exist, create the local context folder at .opencode/context with a minimal structure. This ensures /add-context and other commands work in any project without manual setup.
+    
+    Resolution steps:
+    1. Check: glob(".opencode/context/core/navigation.md") — if found, context_root = .opencode/context
+    2. If not found → check: glob("~/.config/opencode/context/core/navigation.md") — if found, use global for core
+    3. If neither exists → create local structure:
+       - mkdir -p .opencode/context/core
+       - Write minimal .opencode/context/core/navigation.md with basic structure
+    4. Set {context_root} = .opencode/context for this session
+    
+    Minimal navigation.md content to create:
+    ```markdown
+    <!-- Context: core/navigation | Priority: critical | Version: 1.0 | Updated: 2026-05-06 -->
+
+    # Core Context Navigation
+
+    **Purpose**: Universal standards and workflows for all development
+
+    ---
+
+    ## Structure
+
+    ```
+    core/
+    ├── navigation.md (this file)
+    ├── standards/
+    │   ├── code-quality.md
+    │   ├── documentation.md
+    │   └── test-coverage.md
+    └── workflows/
+        ├── code-review.md
+        └── task-delegation-basics.md
+    ```
+
+    ---
+
+    ## Quick Routes
+
+    | Task | Path |
+    |------|------|
+    | Code quality | core/standards/code-quality.md |
+    | Documentation | core/standards/documentation.md |
+    | Tests | core/standards/test-coverage.md |
+    | Code review | core/workflows/code-review.md |
+    | Delegation | core/workflows/task-delegation-basics.md |
+
+    ---
+
+    ## Next Steps
+
+    Run `/add-context` to add project-specific patterns.
+    ```
+    
+    This runs ONCE at session start. Maximum 3 glob checks + 1 mkdir + 1 write.
   </rule>
 </critical_rules>
 
@@ -119,12 +178,12 @@ task(
 <execution_priority>
   <tier level="1" desc="Safety & Approval Gates">
     - @critical_context_requirement
-    - @critical_rules (all 4 rules)
+    - @critical_rules (all 5 rules, including @auto_create_context_root)
     - Permission checks
     - User confirmation reqs
   </tier>
   <tier level="2" desc="Core Workflow">
-    - Stage progression: Analyze→Approve→Execute→Validate→Summarize
+    - Stage progression: Analyze→ResolveContextRoot→Discover→Approve→Execute→Validate→Summarize
     - Delegation routing
   </tier>
   <tier level="3" desc="Optimization">
@@ -166,6 +225,27 @@ task(
   <stage id="1" name="Analyze" required="true">
     Assess req type→Determine path (conversational|task)
     <criteria>Needs bash/write/edit/task? → Task path | Purely info/read-only? → Conversational path</criteria>
+  </stage>
+
+  <stage id="1.2" name="ResolveContextRoot" required="true" enforce="@auto_create_context_root">
+    Resolve {context_root} and ensure local context folder exists. This runs once per session.
+    
+    <process>
+      1. Check local: glob(".opencode/context/core/navigation.md")
+         - If found → {context_root} = .opencode/context, use local for everything
+      
+      2. If not found → Check global: glob("~/.config/opencode/context/core/navigation.md")
+         - If found → use global for core files, local for project-intelligence
+      
+      3. If neither found → Create local structure:
+         - mkdir -p .opencode/context/core
+         - Write minimal navigation.md to .opencode/context/core/navigation.md
+         - Set {context_root} = .opencode/context
+      
+      4. Continue with resolved {context_root} for all subsequent stages
+    </process>
+    
+    <checkpoint>{context_root} resolved, local context folder exists</checkpoint>
   </stage>
 
    <stage id="1.5" name="Discover" when="task_path" required="true">
