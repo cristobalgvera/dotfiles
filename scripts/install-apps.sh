@@ -72,7 +72,6 @@ function install_brew_apps {
   # Tap
   local taps=(
     buo/cask-upgrade
-    hashicorp/tap
   )
 
   for tap in "${taps[@]}"; do
@@ -100,7 +99,6 @@ function install_brew_apps {
     ripgrep
     pngpaste
     tmux
-    hashicorp/tap/terraform
     fd
     wakatime-cli
     mise
