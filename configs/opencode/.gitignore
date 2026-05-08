@@ -1,5 +1,5 @@
 node_modules
 package.json
-bun.lock
-.env
 package-lock.json
+bun.lock
+.gitignore
