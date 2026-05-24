@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Docker
-fpath+=(/Users/cristobalgajardo/.docker/completions)
+fpath+=(~/.docker/completions)
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
