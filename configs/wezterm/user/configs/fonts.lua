@@ -5,6 +5,6 @@ return {
     "DankMono Nerd Font Mono",
     "IosevkaTerm Nerd Font Mono",
   },
-  font_size = 26,
+  font_size = 24,
   line_height = 1.25,
 }
