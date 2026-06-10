@@ -1,5 +1,13 @@
 {
   "$schema": "https://opencode.ai/tui.json",
   "theme": "nightowl",
-  "plugin": ["opencode-subagent-statusline", "opencode-sdd-engram-manage"]
+  "keybinds": {
+    "messages_page_up": "ctrl+u",
+    "messages_page_down": "ctrl+d"
+  },
+  "plugin": [
+    "opencode-subagent-statusline",
+    "opencode-sdd-engram-manage",
+    "vimcode@git+https://github.com/oribarilan/vimcode.git#v0.13.0"
+  ]
 }
