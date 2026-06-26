@@ -296,7 +296,7 @@
       "type": "local"
     }
   },
-  "model": "opencode/deepseek-v4-flash-free",
+  "model": "ollama/qwen3.6:35b-128k",
   "permission": {
     "bash": {
       "*": "allow",
@@ -327,5 +327,22 @@
   "plugin": [
     "opencode-wakatime"
   ],
+  "provider": {
+    "ollama": {
+      "models": {
+        "qwen3.6:27b-128k": {
+          "name": "Qwen 3.6 27B (128K)"
+        },
+        "qwen3.6:35b-128k": {
+          "name": "Qwen 3.6 35B-A3B (128K)"
+        }
+      },
+      "name": "Ollama (local)",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      }
+    }
+  },
   "share": "disabled"
 }
