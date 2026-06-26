@@ -10,4 +10,4 @@ export PATH="$DOCKER_PATH/bin:$PATH"
 
 export COMPOSE_BAKE=true
 
-export AICHAT_CONFIG_DIR="$HOME/.config/aichat"
+export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
