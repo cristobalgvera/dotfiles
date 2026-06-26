@@ -245,7 +245,24 @@
       "type": "local"
     }
   },
-  "model": "opencode/deepseek-v4-flash-free",
+  "model": "ollama/qwen3.6:35b-128k",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "qwen3.6:35b-128k": {
+          "name": "Qwen 3.6 35B-A3B (128K)"
+        },
+        "qwen3.6:27b-128k": {
+          "name": "Qwen 3.6 27B (128K)",
+        }
+      }
+    }
+  },
   "permission": {
     "bash": {
       "*": "allow",
