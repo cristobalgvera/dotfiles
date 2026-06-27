@@ -110,11 +110,8 @@ function install_brew_apps {
 
   # Cask
   local casks=(
-    font-iosevka-term-nerd-font
     raycast
-    visual-studio-code
     docker-desktop
-    the-unarchiver
     meetingbar
     monitorcontrol
     beekeeper-studio
