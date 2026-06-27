@@ -102,6 +102,10 @@ function install_brew_apps {
     fd
     wakatime-cli
     mise
+    docker
+    docker-compose
+    docker-buildx
+    colima
   )
 
   for formulae in "${formulaes[@]}"; do
@@ -111,7 +115,6 @@ function install_brew_apps {
   # Cask
   local casks=(
     raycast
-    docker-desktop
     meetingbar
     monitorcontrol
     beekeeper-studio
