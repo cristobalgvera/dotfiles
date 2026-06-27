@@ -29,9 +29,6 @@ function add_symlinks {
   echo "Linking Neovim config"
   link_file "$configs_path"/nvim ~/.config
 
-  echo "Linking MCPHub config"
-  link_file "$configs_path"/mcphub ~/.config
-
   echo "Linking OpenCode config"
   link_file "$configs_path"/opencode ~/.config/opencode
 
