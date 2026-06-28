@@ -9,13 +9,14 @@ if [[ ${#} -eq 0 ]]; then
   sh "$base_path"/scripts/usage.sh
 fi
 
-optstring=":afh"
+optstring=":afhd"
 
 # Check if the user has passed any arguments
 while getopts "$optstring" arg; do
   case "$arg" in
   a) install_apps=1 ;;
   f) add_configuration_files=1 ;;
+  d) dry_run_mode=1 ;;
   h) sh "$base_path"/scripts/usage.sh ;;
   *)
     echo "Invalid option: -${OPTARG}" >&2
@@ -25,9 +26,9 @@ while getopts "$optstring" arg; do
   esac
 done
 
-if [[ -n $add_configuration_files ]]; then
+if [[ -n $add_configuration_files ]] || [[ -n $dry_run_mode ]]; then
   echo ">> Adding configuration files"
-  sh "$base_path"/scripts/add-symlinks.sh
+  DRY_RUN="${dry_run_mode:-}" sh "$base_path"/scripts/add-symlinks.sh
 fi
 
 if [[ -n $install_apps ]]; then
