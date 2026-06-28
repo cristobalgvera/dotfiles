@@ -1,0 +1,14 @@
+# tuxedo config
+theme = Night Owl
+week_start = monday
+density = cozy
+sort = priority
+show_left = true
+show_right = false
+show_line_num = true
+show_status_bar = true
+show_done = false
+show_future = false
+share_token = 8bd1535290014e5c119f7a9defb8f9195d1aaf8f988efb9da9fbc3acb22f04aa
+share_port = 50961
+hide_keys = uid, sync
