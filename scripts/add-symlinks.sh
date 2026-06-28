@@ -30,7 +30,7 @@ function add_symlinks {
   link_file "$configs_path"/nvim ~/.config
 
   echo "Linking OpenCode config"
-  link_file "$configs_path"/opencode ~/.config/opencode
+  link_file "$configs_path"/opencode ~/.config
 
   echo "Linking WezTerm config"
   link_file "$configs_path"/wezterm ~/.config
