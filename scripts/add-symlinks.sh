@@ -67,6 +67,9 @@ function add_symlinks {
   link_file "$configs_path"/mise ~/.config
   link_file "$configs_path"/mise/.default-npm-packages ~/.default-npm-packages
   link_file "$configs_path"/mise/.default-python-packages ~/.default-python-packages
+
+  echo "Linking Tuxedo config"
+  link_file "$configs_path"/tuxedo ~/.config
 }
 
 add_symlinks

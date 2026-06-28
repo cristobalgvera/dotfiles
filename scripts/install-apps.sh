@@ -106,6 +106,7 @@ function install_brew_apps {
     docker-compose
     docker-buildx
     colima
+    tuxedo
   )
 
   for formulae in "${formulaes[@]}"; do

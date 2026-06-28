@@ -1,0 +1,37 @@
+# Night Owl theme for Tuxedo
+# Original Night Owl palette: https://github.com/sdras/night-owl-vscode-theme
+# Tuxedo theme adaptation from Gogh YAML
+
+name = Night Owl
+
+bg = #011627
+panel = #011221
+border = #122d42
+
+fg = #D6DEEB
+dim = #637777
+accent = #82AAFF
+
+cursor = #1d3b53
+selection = #1d3b53
+selected = #1d3b53
+
+statusbar = #011627
+status_fg = #5f7e97
+mode_fg = #011627
+mode_bg = #82AAFF
+
+pri_a = #EF5350
+pri_b = #ADDB67
+pri_c = #22DA6E
+pri_d = #82AAFF
+pri_other = #C792EA
+
+project = #82AAFF
+context = #21C7A8
+
+done = #575656
+matched = #FFEB95
+due = #FFEB95
+overdue = #EF5350
+today = #EF5350
