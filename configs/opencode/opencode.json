@@ -231,6 +231,15 @@
     }
   },
   "mcp": {
+    "codegraph": {
+      "command": [
+        "codegraph",
+        "serve",
+        "--mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
     "context7": {
       "enabled": true,
       "type": "remote",
