@@ -1,7 +1,5 @@
-nx
 @angular/cli
 @nestjs/cli
 neovim
 npm-check-updates
-@fission-ai/openspec
 corepack
