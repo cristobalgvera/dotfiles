@@ -93,8 +93,6 @@ function install_brew_apps {
     jesseduffield/lazygit/lazygit
     jesseduffield/lazydocker/lazydocker
     git-delta
-    rbenv
-    ruby-build
     eza
     zoxide
     bat
