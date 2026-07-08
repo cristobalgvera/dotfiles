@@ -57,7 +57,12 @@ function install_oh_my_zsh_plugins {
 }
 
 function install_mise_tools {
-  sh ~/.local/bin/mise install
+  if command -v mise &>/dev/null; then
+    mise install
+  else
+    echo "mise not found in PATH — skipping tool installation"
+    return 1
+  fi
 
   # INFO: NodeJS with Corepack
   corepack enable
