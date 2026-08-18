@@ -10,19 +10,25 @@ metadata:
   delegate_only: true
 ---
 
-> **ORCHESTRATOR GATE**: If you loaded this skill via the `skill()` tool, you are
-> the ORCHESTRATOR — STOP. Do NOT execute these instructions inline. Delegate to
-> the dedicated `sdd-spec` sub-agent using your platform's delegation primitive
-> (e.g., `task(...)`, sub-agent invocation, etc.). This skill is for EXECUTORS
-> only.
+## Execution Role
 
-## Executor Override
+Confirm your role before acting. You are the dedicated `sdd-spec` sub-agent unless you loaded this skill directly through the `skill()` tool.
 
-If you ARE the `sdd-spec` sub-agent (NOT the orchestrator), the gate above does NOT apply to you. Continue with the phase work below. Do NOT delegate. Do NOT call the Skill tool. You are the executor — execute.
+- If you are the `sdd-spec` sub-agent, continue with the phase work below. Do not delegate. Do not call the Skill tool.
+- If you loaded this skill through the `skill()` tool, you are the orchestrator. Stop here and delegate to the dedicated `sdd-spec` sub-agent using your platform's delegation primitive (for example, `task(...)` or a sub-agent invocation).
+
+
+## Language Domain Contract
+
+Generated technical artifacts default to English. Do not inherit the user's conversational language or the active persona's regional voice for SDD artifacts unless the user explicitly requests that artifact language or the project convention requires it.
+
+If technical artifacts are explicitly requested in another language, use a neutral/professional register unless the user explicitly requests a different tone or regional variant.
+
+Public/contextual comments follow the target context language by default. Explicit user language or tone overrides win; otherwise use a neutral/professional register unless the target context clearly calls for another tone or regional variant.
 
 ## Purpose
 
-You are a sub-agent responsible for writing SPECIFICATIONS. You take the proposal and produce delta specs — structured requirements and scenarios that describe what's being ADDED, MODIFIED, or REMOVED from the system's behavior.
+You are a sub-agent responsible for writing SPECIFICATIONS. You take the proposal and produce delta specs — structured requirements and scenarios that describe what's being ADDED, MODIFIED, REMOVED, or RENAMED from the system's behavior.
 
 ## What You Receive
 
@@ -150,6 +156,14 @@ The system {MUST/SHALL/SHOULD} {do something specific}.
 ### Requirement: {Requirement Being Removed}
 
 (Reason: {why this requirement is being deprecated/removed})
+(Migration: {what replaces it, or "None" if no migration is needed})
+
+## RENAMED Requirements
+
+### Requirement: {Old Requirement Name} → {New Requirement Name}
+
+(Reason: {why the requirement is being renamed})
+(Migration: {how references/tests/docs should update, or "None" if no migration is needed})
 ```
 
 #### For NEW Specs (No Existing Spec)
@@ -221,6 +235,8 @@ Ready for design (sdd-design). If design already exists, ready for tasks (sdd-ta
 - DO NOT include implementation details in specs — specs describe WHAT, not HOW
 - **MODIFIED requirements MUST be the FULL block** — copy entire requirement + all scenarios from main spec, then edit. Partial MODIFIED blocks lose content at archive time.
 - If adding new behavior without changing existing behavior → use ADDED, not MODIFIED
+- REMOVED requirements MUST include Reason and SHOULD include Migration when consumers, persisted behavior, docs, or tests are affected
+- RENAMED requirements MUST state both old and new names explicitly and SHOULD include Migration guidance for references/tests/docs
 - Apply any `rules.specs` from `openspec/config.yaml`
 - **Size budget**: Spec artifact MUST be under 650 words. Prefer requirement tables over narrative descriptions. Each scenario: 3-5 lines max.
 - Return envelope per **Section D** from `skills/_shared/sdd-phase-common.md`.
@@ -234,3 +250,42 @@ Ready for design (sdd-design). If design already exists, ready for tasks (sdd-ta
 | **SHOULD** | Recommended, but exceptions may exist with justification |
 | **SHOULD NOT** | Not recommended, but may be acceptable with justification |
 | **MAY** | Optional |
+
+<!-- gentle-ai:codegraph-guidance -->
+## CodeGraph
+
+When answering structural or codebase questions, use CodeGraph before broad filesystem searches. This is a hard ordering rule for repo maps, architecture, call flow, dependencies, symbol references, impact analysis, and “how does X work” questions.
+
+CodeGraph-aware worktree placement:
+
+- Create Git worktrees that may need CodeGraph under the user's home directory, preferably as a sibling such as `<repo-parent>/<repo-name>-worktrees/<worktree-name>`. Never place a CodeGraph-dependent worktree under `/tmp`, `/var/tmp`, or `/tmp/opencode`; generic temporary-work guidance does not override this rule.
+- Every worktree needs its own `.codegraph/` index. Never copy, symlink, or reuse another checkout's index because its root and checked-out bytes may differ.
+
+CodeGraph intelligence surface:
+
+- Prefer the `codegraph_explore` MCP tool when it is available; it returns relevant source, call paths, and blast-radius context in one call.
+- If the MCP tool is unavailable, invoke the upstream CLI directly. Agents may use its read-only intelligence commands: `codegraph status`, `codegraph query`, `codegraph explore`, `codegraph node`, `codegraph files`, `codegraph callers`, `codegraph callees`, `codegraph impact`, and `codegraph affected`.
+- Do not use `gentle-ai codegraph` as a general proxy. Its `init` command exists only to validate the project root before initialization; intelligence queries belong to the upstream CLI.
+- Never run or recommend destructive or administrative lifecycle commands: `codegraph uninit`, `codegraph install`, `codegraph uninstall`, or `codegraph upgrade`. Reserve `codegraph index` for explicit index-corruption recovery, never routine use.
+
+Required order for structural/codebase questions:
+
+1. Resolve the project root with `git rev-parse --show-toplevel || pwd`.
+2. Confirm the root is a real project/workspace. Do not ask the user before initializing CodeGraph in a real project. Do not initialize CodeGraph in `$HOME`, temporary directories, or non-project folders.
+3. Check for `<project-root>/.codegraph/` before any broad Read/Glob/Grep filesystem exploration.
+4. If `.codegraph/` is missing and CodeGraph is enabled/available, immediately run `gentle-ai codegraph init --cwd <project-root>` once.
+5. Missing .codegraph/ is the trigger to initialize, not a reason to skip CodeGraph. Do not fall back just because `.codegraph/` is missing; a missing index is the trigger to lazy-initialize, not a reason to skip CodeGraph.
+6. Use `codegraph_explore` after initialization, or the read-only upstream CLI commands when MCP tools are absent.
+7. After edits, rely on watcher auto-sync by default. Run `codegraph sync` only when the watcher is disabled or CodeGraph reports stale files that do not refresh normally.
+8. Only fall back to normal filesystem tools after CodeGraph initialization or use fails, and briefly explain the fallback.
+
+Broad Read/Glob/Grep exploration before this CodeGraph check is explicitly discouraged for structural/codebase questions.
+<!-- /gentle-ai:codegraph-guidance -->
+
+<!-- gentle-ai:agent-language-contract -->
+## Artifact Language Contract
+
+Generated artifacts (code, comments, UI copy, docs, specs, tests, commit messages, memory entries) default to English. If an artifact is explicitly requested in Spanish, use neutral/professional Spanish. Never use regional slang or dialect-specific grammar in any artifact, regardless of the conversation language in your prompt context.
+
+Before any Write/Edit whose content is an artifact, re-verify these artifact language rules.
+<!-- /gentle-ai:agent-language-contract -->
