@@ -353,7 +353,7 @@
       "type": "local"
     }
   },
-  "model": "opencode/deepseek-v4-flash-free",
+  "model": "opencode/x-preview-f-free",
   "permission": {
     "bash": {
       "*": "allow",
