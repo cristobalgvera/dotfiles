@@ -353,7 +353,7 @@
       "type": "local"
     }
   },
-  "model": "opencode/x-preview-f-free",
+  "model": "opencode/big-pickle",
   "permission": {
     "bash": {
       "*": "allow",
