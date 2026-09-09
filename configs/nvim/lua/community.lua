@@ -31,6 +31,7 @@ return {
   utils.add_pack "json",
   utils.add_pack "lua",
   utils.add_pack "markdown",
+  utils.add_pack "oxlint",
   utils.add_pack "proto",
   utils.add_pack "prettier",
   utils.add_pack "python.base",
