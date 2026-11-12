@@ -1,6 +1,6 @@
 ---
 name: work-unit-commits
-description: "Plan commits as reviewable work units. Trigger: implementation, commit splitting, chained PRs, or keeping tests and docs with code."
+description: "Plan commits as reviewable work units. Trigger: commit splitting, chained PRs, or keeping tests and docs with code."
 license: Apache-2.0
 metadata:
   author: gentleman-programming
@@ -17,7 +17,7 @@ Use it for:
 - Preparing commits before opening a PR.
 - Turning a large change into chained or stacked PRs.
 - Keeping reviewer cognitive load healthy.
-- Closing an ODD task with a work-unit commit.
+- Committing ODD work units in reviewable slices.
 
 ## Critical Rules
 
@@ -29,7 +29,7 @@ Use it for:
 | Keep docs with the user-visible change | Docs belong with the feature or workflow they explain. |
 | Tell a story | A reviewer should understand why each commit exists from its diff and message. |
 | Future PR-ready | Each commit should be a candidate chained PR when the change grows. |
-| Budget is not code-golf | Never shrink a diff by deleting comments, blank lines, docs, or tests, or by compressing code, to fit the review budget (400 by default, or the session `review_budget_lines`). Slice by work unit or report the overage. |
+| Budget is not code-golf | Never shrink a diff by deleting comments, blank lines, docs, or tests, or by compressing code, to fit the review budget (about 400 authored changed lines). Slice by work unit or report the overage. |
 
 ## Work Unit Checklist
 
@@ -64,12 +64,12 @@ Use work-unit commits as the foundation for chained PRs:
 
 ## ODD Relationship
 
-Organic Driven Development (ODD) closes every substantial task with a work-unit commit on the feature branch:
+Organic Driven Development (ODD) commits substantial work in reviewable slices on the feature branch, not one commit per task:
 
-- Every ODD task closes with at least one work-unit commit, branch first when on the default branch, with tests and docs alongside the behavior and a Conventional Commit message.
+- Commit work units in reviewable slices of about 400 authored changed lines, branch first when on the default branch, with tests and docs alongside the behavior and a Conventional Commit message. A unit whose Risk line names a high-risk item gets its own commit so native review can take it alone, and the last slice closes the feature.
 - The native review candidate is that commit, or the PR slice it belongs to when review is deferred, against the previous reviewed boundary. It is never a TODO checkbox and never the accumulated feature branch.
 - The running authored line count from work-unit commits feeds the delivery-strategy vocabulary: `ask-on-risk`, `auto-chain`, `single-pr`, `exception-ok`.
-- The ODD feature document records the commit identity as evidence and, once a delivery strategy applies, the chosen chain strategy and slice boundaries (which commits each PR holds).
+- The ODD feature document records the commit that holds each task as evidence and, once a delivery strategy applies, the chosen chain strategy and slice boundaries (which commits each PR holds).
 
 ## Commands
 
