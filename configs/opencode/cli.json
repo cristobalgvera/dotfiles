@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "nightowl",
+    "mode": "dark"
+  },
+  "keybinds": {
+    "session.page.up": "ctrl+u",
+    "session.page.down": "ctrl+d"
+  },
+  "plugins": [
+    "vimcode@git+https://github.com/oribarilan/vimcode.git#v0.19.2"
+  ],
+  "diffs": {
+    "wrap": "word"
+  },
+  "session": {
+    "sidebar": "auto",
+    "scrollbar": false,
+    "thinking": "show"
+  },
+  "animations": true
+}

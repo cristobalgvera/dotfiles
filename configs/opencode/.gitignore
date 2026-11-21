@@ -6,3 +6,4 @@ bun.lock
 
 # Local AI runtime state
 .atl/
+service.json

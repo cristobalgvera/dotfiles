@@ -6,7 +6,7 @@ java = "25.0.1"
 uv = "0.13.9"
 usage = "7.4.0"
 bun = "1.4.5"
-opencode = { version = "1.19.6", allow_builds = ["@opencode/cli"] }
+opencode = { version = "2.3.2", allow_builds = ["@opencode/cli"] }
 terraform = "1.17.2"
 github-cli = "2.105.0"
 
