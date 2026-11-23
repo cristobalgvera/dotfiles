@@ -17,7 +17,26 @@
   "session": {
     "sidebar": "auto",
     "scrollbar": false,
-    "thinking": "show"
+    "thinking": "show",
+    "verbosity": "low",
+    "permissions": "prompt",
+    "submit_scroll": "bottom",
+    "markdown": "rendered",
+    "new_location": "launch"
   },
-  "animations": true
+  "animations": true,
+  "tabs": {
+    "layout": "horizontal",
+    "indicators": "status"
+  },
+  "terminal": {
+    "title": true,
+    "copy": "select"
+  },
+  "debug": {
+    "devtools": false
+  },
+  "prompt": {
+    "editor": true
+  }
 }
